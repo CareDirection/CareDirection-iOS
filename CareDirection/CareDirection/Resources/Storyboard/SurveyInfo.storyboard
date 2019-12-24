@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jeu-gT-Rol">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -7,16 +7,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Survey InfoVC-->
         <scene sceneID="Fso-bs-J4s">
             <objects>
-                <viewController id="jeu-gT-Rol" sceneMemberID="viewController">
+                <viewController id="jeu-gT-Rol" customClass="SurveyInfoVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8VH-uW-hPc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qel-JE-AU1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.51372549020000002" green="0.80000000000000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박진오 님만의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEr-6h-ON2">
                                 <rect key="frame" x="18" y="164" width="93" height="21"/>
@@ -36,7 +37,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLL-ar-XjF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연령" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLL-ar-XjF">
                                 <rect key="frame" x="40" y="404" width="35" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,7 +57,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6l-kB-l3b">
                                 <rect key="frame" x="40" y="294" width="72" height="72"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="72" id="Id1-dz-tM6"/>
                                     <constraint firstAttribute="height" constant="72" id="t6p-dP-jwL"/>
@@ -67,12 +67,14 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
-                                    <color key="titleColor" red="0.0" green="0.6470588235294118" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.6470588235294118" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="maleBtnSelected:" destination="jeu-gT-Rol" eventType="touchUpInside" id="66m-PM-VI1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4V-tC-oKC">
                                 <rect key="frame" x="130" y="294" width="72" height="72"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="Kqh-Bl-cQg"/>
                                     <constraint firstAttribute="width" constant="72" id="vDW-aV-7lc"/>
@@ -85,19 +87,39 @@
                                 <state key="selected">
                                     <color key="titleColor" red="0.0" green="0.64705882349999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="femaleBtnSelected:" destination="jeu-gT-Rol" eventType="touchUpInside" id="bH3-v5-XuO"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypo-c1-3Ae">
-                                <rect key="frame" x="117.5" y="600" width="142" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypo-c1-3Ae">
+                                <rect key="frame" x="116.5" y="600" width="142" height="49"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="55l-Il-hOT"/>
                                     <constraint firstAttribute="width" constant="142" id="F2L-Yw-BBb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="다음">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TBZ-jC-rfV">
+                                <rect key="frame" x="40" y="442" width="295" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgu-02-Vsk">
+                                        <rect key="frame" x="17" y="9" width="104" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TBZ-jC-rfV" secondAttribute="height" multiplier="295:42" id="Ett-h0-jFu"/>
+                                    <constraint firstItem="Xgu-02-Vsk" firstAttribute="leading" secondItem="TBZ-jC-rfV" secondAttribute="leading" constant="17" id="Gdb-Qh-Y7n"/>
+                                    <constraint firstItem="Xgu-02-Vsk" firstAttribute="centerY" secondItem="TBZ-jC-rfV" secondAttribute="centerY" id="Rc2-rC-Rjd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -118,14 +140,25 @@
                             <constraint firstAttribute="bottom" secondItem="Qel-JE-AU1" secondAttribute="bottom" id="SAW-fo-vDY"/>
                             <constraint firstItem="dEr-6h-ON2" firstAttribute="top" secondItem="wgJ-vb-CMs" secondAttribute="bottom" constant="28" id="Zz0-UR-lKx"/>
                             <constraint firstItem="wgJ-vb-CMs" firstAttribute="top" secondItem="tlR-zp-cEU" secondAttribute="bottom" constant="7" id="dWu-xa-5o1"/>
+                            <constraint firstItem="TBZ-jC-rfV" firstAttribute="top" secondItem="CLL-ar-XjF" secondAttribute="bottom" constant="12" id="g3T-iY-rvm"/>
                             <constraint firstItem="pSn-eY-aYz" firstAttribute="top" secondItem="dEr-6h-ON2" secondAttribute="bottom" constant="5" id="hTv-xc-wHh"/>
                             <constraint firstItem="tlR-zp-cEU" firstAttribute="leading" secondItem="med-2W-nJi" secondAttribute="leading" constant="18" id="iF6-N2-Bse"/>
                             <constraint firstItem="wgJ-vb-CMs" firstAttribute="leading" secondItem="med-2W-nJi" secondAttribute="leading" constant="18" id="qSP-QA-soK"/>
-                            <constraint firstItem="ypo-c1-3Ae" firstAttribute="centerX" secondItem="Qel-JE-AU1" secondAttribute="centerX" constant="48" id="uif-Zg-ZDc"/>
+                            <constraint firstItem="med-2W-nJi" firstAttribute="trailing" secondItem="TBZ-jC-rfV" secondAttribute="trailing" constant="40" id="r87-I8-hHn"/>
+                            <constraint firstItem="ypo-c1-3Ae" firstAttribute="centerX" secondItem="Qel-JE-AU1" secondAttribute="centerX" id="uif-Zg-ZDc"/>
                             <constraint firstItem="pSn-eY-aYz" firstAttribute="leading" secondItem="med-2W-nJi" secondAttribute="leading" constant="18" id="xcg-Ma-lIn"/>
+                            <constraint firstItem="TBZ-jC-rfV" firstAttribute="leading" secondItem="med-2W-nJi" secondAttribute="leading" constant="40" id="y9V-SX-ARd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="med-2W-nJi"/>
                     </view>
+                    <connections>
+                        <outlet property="femaleBtn" destination="A4V-tC-oKC" id="jOI-J5-N52"/>
+                        <outlet property="maleBtn" destination="e6l-kB-l3b" id="Rrc-1m-i53"/>
+                        <outlet property="nameLbl" destination="tlR-zp-cEU" id="Z51-EU-12L"/>
+                        <outlet property="nameLbl2" destination="dEr-6h-ON2" id="LpP-Cz-olQ"/>
+                        <outlet property="nextBtn" destination="ypo-c1-3Ae" id="TQn-vF-Bq3"/>
+                        <outlet property="userAgeView" destination="TBZ-jC-rfV" id="s8t-f5-vHB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeD-Y7-2Pj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

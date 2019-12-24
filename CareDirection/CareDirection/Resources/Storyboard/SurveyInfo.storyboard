@@ -91,7 +91,7 @@
                                     <action selector="femaleBtnSelected:" destination="jeu-gT-Rol" eventType="touchUpInside" id="bH3-v5-XuO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypo-c1-3Ae">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypo-c1-3Ae">
                                 <rect key="frame" x="116.5" y="600" width="142" height="49"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -99,25 +99,33 @@
                                     <constraint firstAttribute="width" constant="142" id="F2L-Yw-BBb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="다음">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.074509803921568626" green="0.6470588235294118" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TBZ-jC-rfV">
-                                <rect key="frame" x="40" y="442" width="295" height="42"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBZ-jC-rfV">
+                                <rect key="frame" x="40" y="440" width="295" height="42"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgu-02-Vsk">
-                                        <rect key="frame" x="17" y="9" width="104" height="24"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="선택해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2VL-5n-mtp">
+                                        <rect key="frame" x="17" y="0.0" width="278" height="42"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.0" green="0.6470588235294118" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="2VL-5n-mtp" firstAttribute="leading" secondItem="TBZ-jC-rfV" secondAttribute="leading" constant="17" id="5Wg-lo-YsC"/>
+                                    <constraint firstItem="2VL-5n-mtp" firstAttribute="centerY" secondItem="TBZ-jC-rfV" secondAttribute="centerY" id="5eU-Zy-E2B"/>
                                     <constraint firstAttribute="width" secondItem="TBZ-jC-rfV" secondAttribute="height" multiplier="295:42" id="Ett-h0-jFu"/>
-                                    <constraint firstItem="Xgu-02-Vsk" firstAttribute="leading" secondItem="TBZ-jC-rfV" secondAttribute="leading" constant="17" id="Gdb-Qh-Y7n"/>
-                                    <constraint firstItem="Xgu-02-Vsk" firstAttribute="centerY" secondItem="TBZ-jC-rfV" secondAttribute="centerY" id="Rc2-rC-Rjd"/>
+                                    <constraint firstItem="2VL-5n-mtp" firstAttribute="top" secondItem="TBZ-jC-rfV" secondAttribute="top" id="KHh-AT-vtc"/>
+                                    <constraint firstAttribute="bottom" secondItem="2VL-5n-mtp" secondAttribute="bottom" id="UIB-TI-Udn"/>
+                                    <constraint firstAttribute="trailing" secondItem="2VL-5n-mtp" secondAttribute="trailing" id="ivh-jb-wR9"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -157,6 +165,7 @@
                         <outlet property="nameLbl" destination="tlR-zp-cEU" id="Z51-EU-12L"/>
                         <outlet property="nameLbl2" destination="dEr-6h-ON2" id="LpP-Cz-olQ"/>
                         <outlet property="nextBtn" destination="ypo-c1-3Ae" id="TQn-vF-Bq3"/>
+                        <outlet property="userAgeTxtField" destination="2VL-5n-mtp" id="9bH-lH-ief"/>
                         <outlet property="userAgeView" destination="TBZ-jC-rfV" id="s8t-f5-vHB"/>
                     </connections>
                 </viewController>

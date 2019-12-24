@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		F492FB6323B216C900FE5D11 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB6223B216C900FE5D11 /* UIViewController+Extensions.swift */; };
 		F492FB6523B216FE00FE5D11 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB6423B216FE00FE5D11 /* UIColor+Extensions.swift */; };
 		F492FB6723B217E600FE5D11 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB6623B217E600FE5D11 /* UIImageView+Extensions.swift */; };
+		F492FB6D23B2412900FE5D11 /* Survey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F492FB6C23B2412900FE5D11 /* Survey.storyboard */; };
+		F492FB6F23B2449F00FE5D11 /* SurveyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB6E23B2449F00FE5D11 /* SurveyVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F492FB6223B216C900FE5D11 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		F492FB6423B216FE00FE5D11 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		F492FB6623B217E600FE5D11 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		F492FB6C23B2412900FE5D11 /* Survey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Survey.storyboard; sourceTree = "<group>"; };
+		F492FB6E23B2449F00FE5D11 /* SurveyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +68,6 @@
 				7261AFEDA7F414A722F6F33D /* Pods-CareDirection.debug.xcconfig */,
 				4A39791A4DB28D8A95440297 /* Pods-CareDirection.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -122,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				F492FB4923B215B200FE5D11 /* ViewController.swift */,
+				F492FB6E23B2449F00FE5D11 /* SurveyVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -156,6 +160,7 @@
 			children = (
 				F492FB4B23B215B200FE5D11 /* Main.storyboard */,
 				F492FB5023B215B300FE5D11 /* LaunchScreen.storyboard */,
+				F492FB6C23B2412900FE5D11 /* Survey.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			files = (
 				F492FB5223B215B300FE5D11 /* LaunchScreen.storyboard in Resources */,
 				F492FB4F23B215B300FE5D11 /* Assets.xcassets in Resources */,
+				F492FB6D23B2412900FE5D11 /* Survey.storyboard in Resources */,
 				F492FB4D23B215B200FE5D11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F492FB6F23B2449F00FE5D11 /* SurveyVC.swift in Sources */,
 				F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */,
 				F492FB6723B217E600FE5D11 /* UIImageView+Extensions.swift in Sources */,
 				F492FB6523B216FE00FE5D11 /* UIColor+Extensions.swift in Sources */,

@@ -15,6 +15,7 @@
 		7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */; };
 		7FCCEAC623B2BCFE00F832B8 /* SurveyDiseaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */; };
 		7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */; };
+		F464828023B3673400F63712 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F464827F23B3673400F63712 /* Signup.storyboard */; };
 		F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4523B215B200FE5D11 /* AppDelegate.swift */; };
 		F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4723B215B200FE5D11 /* SceneDelegate.swift */; };
 		F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4923B215B200FE5D11 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		F492FB7123B2469C00FE5D11 /* SurveyDisease.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F492FB7023B2469C00FE5D11 /* SurveyDisease.storyboard */; };
 		F492FB8123B33C9E00FE5D11 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F492FB8023B33C9E00FE5D11 /* Login.storyboard */; };
 		F492FB8323B340D000FE5D11 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB8223B340D000FE5D11 /* LoginVC.swift */; };
+		F492FB8523B35B3F00FE5D11 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F492FB8423B35B3F00FE5D11 /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,7 @@
 		7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySymptomVC.swift; sourceTree = "<group>"; };
 		7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDiseaseVC.swift; sourceTree = "<group>"; };
 		7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDiseaseCell.swift; sourceTree = "<group>"; };
+		F464827F23B3673400F63712 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		F492FB4223B215B200FE5D11 /* CareDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492FB4523B215B200FE5D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F492FB4723B215B200FE5D11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		F492FB7023B2469C00FE5D11 /* SurveyDisease.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveyDisease.storyboard; sourceTree = "<group>"; };
 		F492FB8023B33C9E00FE5D11 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F492FB8223B340D000FE5D11 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F492FB8423B35B3F00FE5D11 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,11 +153,9 @@
 				F492FB6E23B2449F00FE5D11 /* SurveyVC.swift */,
 				7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */,
 				7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */,
-
 				F492FB8223B340D000FE5D11 /* LoginVC.swift */,
 				7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */,
 				7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */,
-
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,11 +193,10 @@
 				7F033C8323B225DE00ABD866 /* SurveyInfo.storyboard */,
 				F492FB6C23B2412900FE5D11 /* Survey.storyboard */,
 				F492FB7023B2469C00FE5D11 /* SurveyDisease.storyboard */,
-
 				F492FB8023B33C9E00FE5D11 /* Login.storyboard */,
-
 				7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */,
-
+				F492FB8423B35B3F00FE5D11 /* Home.storyboard */,
+				F464827F23B3673400F63712 /* Signup.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -263,10 +264,12 @@
 				7FC773A623B31CFD00449239 /* SurveySymptom.storyboard in Resources */,
 				F492FB5223B215B300FE5D11 /* LaunchScreen.storyboard in Resources */,
 				F492FB4F23B215B300FE5D11 /* Assets.xcassets in Resources */,
+				F492FB8523B35B3F00FE5D11 /* Home.storyboard in Resources */,
 				F492FB8123B33C9E00FE5D11 /* Login.storyboard in Resources */,
 				7F033C8423B225DE00ABD866 /* SurveyInfo.storyboard in Resources */,
 				F492FB6D23B2412900FE5D11 /* Survey.storyboard in Resources */,
 				F492FB7123B2469C00FE5D11 /* SurveyDisease.storyboard in Resources */,
+				F464828023B3673400F63712 /* Signup.storyboard in Resources */,
 				F492FB4D23B215B200FE5D11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

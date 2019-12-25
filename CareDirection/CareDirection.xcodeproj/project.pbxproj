@@ -25,6 +25,8 @@
 		7FC773B623B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC773B523B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard */; };
 		7FCCEAC623B2BCFE00F832B8 /* SurveyDiseaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */; };
 		7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */; };
+		F464828023B3673400F63712 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F464827F23B3673400F63712 /* Signup.storyboard */; };
+		F464828223B36B8500F63712 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464828123B36B8500F63712 /* SignupVC.swift */; };
 		F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4523B215B200FE5D11 /* AppDelegate.swift */; };
 		F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4723B215B200FE5D11 /* SceneDelegate.swift */; };
 		F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4923B215B200FE5D11 /* ViewController.swift */; };
@@ -38,6 +40,9 @@
 		F492FB6D23B2412900FE5D11 /* Survey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F492FB6C23B2412900FE5D11 /* Survey.storyboard */; };
 		F492FB6F23B2449F00FE5D11 /* SurveyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB6E23B2449F00FE5D11 /* SurveyVC.swift */; };
 		F492FB7123B2469C00FE5D11 /* SurveyDisease.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F492FB7023B2469C00FE5D11 /* SurveyDisease.storyboard */; };
+		F492FB8123B33C9E00FE5D11 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F492FB8023B33C9E00FE5D11 /* Login.storyboard */; };
+		F492FB8323B340D000FE5D11 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB8223B340D000FE5D11 /* LoginVC.swift */; };
+		F492FB8523B35B3F00FE5D11 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F492FB8423B35B3F00FE5D11 /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +66,8 @@
 		7FC773B523B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveyLifeStyleSecondPoint.storyboard; sourceTree = "<group>"; };
 		7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDiseaseVC.swift; sourceTree = "<group>"; };
 		7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDiseaseCell.swift; sourceTree = "<group>"; };
+		F464827F23B3673400F63712 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
+		F464828123B36B8500F63712 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		F492FB4223B215B200FE5D11 /* CareDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492FB4523B215B200FE5D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F492FB4723B215B200FE5D11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +83,9 @@
 		F492FB6C23B2412900FE5D11 /* Survey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Survey.storyboard; sourceTree = "<group>"; };
 		F492FB6E23B2449F00FE5D11 /* SurveyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyVC.swift; sourceTree = "<group>"; };
 		F492FB7023B2469C00FE5D11 /* SurveyDisease.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveyDisease.storyboard; sourceTree = "<group>"; };
+		F492FB8023B33C9E00FE5D11 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		F492FB8223B340D000FE5D11 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F492FB8423B35B3F00FE5D11 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,13 +175,18 @@
 				F492FB6E23B2449F00FE5D11 /* SurveyVC.swift */,
 				7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */,
 				7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */,
+				F492FB8223B340D000FE5D11 /* LoginVC.swift */,
 				7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */,
 				7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */,
+
 				7FC773AF23B354B400449239 /* SurveyLifeStyleEntryVC.swift */,
 				7FC773B323B3673600449239 /* SurveyLifeStyleFirstPointVC.swift */,
 				7F537CD323B37C8000115A2B /* SurveyLifeStyleSecondPointVC.swift */,
 				7F537CD723B3864600115A2B /* SurveyLifeStyleThirdPointVC.swift */,
 				7F537CDC23B390EC00115A2B /* SurveyLifeStyleLastPointVC.swift */,
+
+				F464828123B36B8500F63712 /* SignupVC.swift */,
+
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -209,12 +224,17 @@
 				7F033C8323B225DE00ABD866 /* SurveyInfo.storyboard */,
 				F492FB6C23B2412900FE5D11 /* Survey.storyboard */,
 				F492FB7023B2469C00FE5D11 /* SurveyDisease.storyboard */,
+				F492FB8023B33C9E00FE5D11 /* Login.storyboard */,
 				7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */,
+
 				7FC773AB23B349E100449239 /* SurveyLifeStyleEntry.storyboard */,
 				7FC773B123B3554C00449239 /* SurveyLifeStyleFirstPoint.storyboard */,
 				7FC773B523B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard */,
 				7F537CD523B3810000115A2B /* SurveyLifeStyleThirdPoint.storyboard */,
 				7F537CD923B38EAB00115A2B /* SurveyLifeStyleLastPoint.storyboard */,
+				F492FB8423B35B3F00FE5D11 /* Home.storyboard */,
+				F464827F23B3673400F63712 /* Signup.storyboard */,
+
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -283,10 +303,14 @@
 				F492FB5223B215B300FE5D11 /* LaunchScreen.storyboard in Resources */,
 				F492FB4F23B215B300FE5D11 /* Assets.xcassets in Resources */,
 				7F537CDA23B38EAB00115A2B /* SurveyLifeStyleLastPoint.storyboard in Resources */,
+				F492FB8523B35B3F00FE5D11 /* Home.storyboard in Resources */,
+				F492FB8123B33C9E00FE5D11 /* Login.storyboard in Resources */,
+
 				7F033C8423B225DE00ABD866 /* SurveyInfo.storyboard in Resources */,
 				F492FB6D23B2412900FE5D11 /* Survey.storyboard in Resources */,
 				7F537CD623B3810000115A2B /* SurveyLifeStyleThirdPoint.storyboard in Resources */,
 				F492FB7123B2469C00FE5D11 /* SurveyDisease.storyboard in Resources */,
+				F464828023B3673400F63712 /* Signup.storyboard in Resources */,
 				F492FB4D23B215B200FE5D11 /* Main.storyboard in Resources */,
 				7FC773AC23B349E100449239 /* SurveyLifeStyleEntry.storyboard in Resources */,
 				7FC773B223B3554C00449239 /* SurveyLifeStyleFirstPoint.storyboard in Resources */,
@@ -346,8 +370,10 @@
 				7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */,
 				7F033C8623B239DE00ABD866 /* SurveyInfoVC.swift in Sources */,
 				F492FB6F23B2449F00FE5D11 /* SurveyVC.swift in Sources */,
+				F492FB8323B340D000FE5D11 /* LoginVC.swift in Sources */,
 				7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */,
 				F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */,
+				F464828223B36B8500F63712 /* SignupVC.swift in Sources */,
 				F492FB6723B217E600FE5D11 /* UIImageView+Extensions.swift in Sources */,
 				F492FB6523B216FE00FE5D11 /* UIColor+Extensions.swift in Sources */,
 				7F537CD423B37C8000115A2B /* SurveyLifeStyleSecondPointVC.swift in Sources */,

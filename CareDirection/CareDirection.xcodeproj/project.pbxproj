@@ -11,6 +11,8 @@
 		7F033C8423B225DE00ABD866 /* SurveyInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F033C8323B225DE00ABD866 /* SurveyInfo.storyboard */; };
 		7F033C8623B239DE00ABD866 /* SurveyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F033C8523B239DE00ABD866 /* SurveyInfoVC.swift */; };
 		7F537CD423B37C8000115A2B /* SurveyLifeStyleSecondPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F537CD323B37C8000115A2B /* SurveyLifeStyleSecondPointVC.swift */; };
+		7F537CD623B3810000115A2B /* SurveyLifeStyleThirdPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F537CD523B3810000115A2B /* SurveyLifeStyleThirdPoint.storyboard */; };
+		7F537CD823B3864600115A2B /* SurveyLifeStyleThirdPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F537CD723B3864600115A2B /* SurveyLifeStyleThirdPointVC.swift */; };
 		7FC773A623B31CFD00449239 /* SurveySymptom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */; };
 		7FC773A823B32E3E00449239 /* SurveySymptomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */; };
 		7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */; };
@@ -43,6 +45,8 @@
 		7F033C8323B225DE00ABD866 /* SurveyInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveyInfo.storyboard; sourceTree = "<group>"; };
 		7F033C8523B239DE00ABD866 /* SurveyInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyInfoVC.swift; sourceTree = "<group>"; };
 		7F537CD323B37C8000115A2B /* SurveyLifeStyleSecondPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyLifeStyleSecondPointVC.swift; sourceTree = "<group>"; };
+		7F537CD523B3810000115A2B /* SurveyLifeStyleThirdPoint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveyLifeStyleThirdPoint.storyboard; sourceTree = "<group>"; };
+		7F537CD723B3864600115A2B /* SurveyLifeStyleThirdPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyLifeStyleThirdPointVC.swift; sourceTree = "<group>"; };
 		7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveySymptom.storyboard; sourceTree = "<group>"; };
 		7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySymptomCell.swift; sourceTree = "<group>"; };
 		7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySymptomVC.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 				7FC773AF23B354B400449239 /* SurveyLifeStyleEntryVC.swift */,
 				7FC773B323B3673600449239 /* SurveyLifeStyleFirstPointVC.swift */,
 				7F537CD323B37C8000115A2B /* SurveyLifeStyleSecondPointVC.swift */,
+				7F537CD723B3864600115A2B /* SurveyLifeStyleThirdPointVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				7FC773AB23B349E100449239 /* SurveyLifeStyleEntry.storyboard */,
 				7FC773B123B3554C00449239 /* SurveyLifeStyleFirstPoint.storyboard */,
 				7FC773B523B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard */,
+				7F537CD523B3810000115A2B /* SurveyLifeStyleThirdPoint.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 				F492FB4F23B215B300FE5D11 /* Assets.xcassets in Resources */,
 				7F033C8423B225DE00ABD866 /* SurveyInfo.storyboard in Resources */,
 				F492FB6D23B2412900FE5D11 /* Survey.storyboard in Resources */,
+				7F537CD623B3810000115A2B /* SurveyLifeStyleThirdPoint.storyboard in Resources */,
 				F492FB7123B2469C00FE5D11 /* SurveyDisease.storyboard in Resources */,
 				F492FB4D23B215B200FE5D11 /* Main.storyboard in Resources */,
 				7FC773AC23B349E100449239 /* SurveyLifeStyleEntry.storyboard in Resources */,
@@ -345,6 +352,7 @@
 				7FC773A823B32E3E00449239 /* SurveySymptomCell.swift in Sources */,
 				F492FB6123B216A100FE5D11 /* UIView+Extensions.swift in Sources */,
 				F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */,
+				7F537CD823B3864600115A2B /* SurveyLifeStyleThirdPointVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

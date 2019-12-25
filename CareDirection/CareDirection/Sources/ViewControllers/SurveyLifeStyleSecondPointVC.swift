@@ -9,6 +9,9 @@
 import UIKit
 
 class SurveyLifeStyleSecondPointVC: UIViewController {
+    var name: String = "박진오"
+    @IBOutlet var nameLbl: UILabel!
+    
     var isSelectVegetableTimes: Bool = false
     var selectedIndex: Int?
     
@@ -22,6 +25,7 @@ class SurveyLifeStyleSecondPointVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLbl.text = "\(name)님은"
         setLayout()
 
         // Do any additional setup after loading the view.
@@ -77,6 +81,15 @@ class SurveyLifeStyleSecondPointVC: UIViewController {
         self.selectedIndex = sender.tag
         
         setLayout()
+    }
+    
+    @IBAction func selectedNextBtn(_ sender: Any) {
+        let surveyLifeStyleThirdPointSB = UIStoryboard.init(name: "SurveyLifeStyleThirdPoint", bundle: nil)
+        let dvc = surveyLifeStyleThirdPointSB.instantiateViewController(withIdentifier: "SurveyLifeStyleThirdPointVC") as! SurveyLifeStyleThirdPointVC
+        
+        dvc.name = self.name
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true)
     }
     
 }

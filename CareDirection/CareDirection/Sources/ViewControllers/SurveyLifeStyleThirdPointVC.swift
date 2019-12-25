@@ -11,6 +11,7 @@ import UIKit
 class SurveyLifeStyleThirdPointVC: UIViewController {
     
     var selectedIndex: Int?
+    var name: String = "박진오"
     
     @IBOutlet var nameLbl: UILabel!
     
@@ -58,5 +59,12 @@ class SurveyLifeStyleThirdPointVC: UIViewController {
         setLayout()
     }
     
+    @IBAction func selectedNextBtn(_ sender: Any) {
+        let surveyLastPoint = UIStoryboard.init(name: "SurveyLifeStyleLastPoint", bundle: nil)
+        let dvc = surveyLastPoint.instantiateViewController(withIdentifier: "SurveyLifeStyleLastPointVC") as! SurveyLifeStyleLastPointVC
+        
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true)
+    }
     
 }

@@ -50,6 +50,17 @@ class SurveyDiseaseVC: UIViewController {
         }
         surveyDiseaseCollectionView.reloadData()
     }
+    @IBAction func selectedNextBtn(_ sender: Any) {
+        let surveySymptomSB = UIStoryboard.init(name: "SurveySymptom", bundle: nil)
+        let dvc = surveySymptomSB.instantiateViewController(withIdentifier: "SurveySymptomVC") as! SurveySymptomVC
+        dvc.modalPresentationStyle = .fullScreen
+        dvc.name = self.name
+        
+        self.present(dvc, animated: true)
+        
+    }
+    
+    
 }
 
 extension SurveyDiseaseVC: UICollectionViewDelegate{

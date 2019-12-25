@@ -1,33 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="68O-MS-z8A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="68O-MS-z8A">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Survey DiseaseVC-->
         <scene sceneID="DeY-3s-IZf">
             <objects>
-                <viewController id="68O-MS-z8A" sceneMemberID="viewController">
+                <viewController id="68O-MS-z8A" customClass="SurveyDiseaseVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ufd-RN-z9g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z48-2C-hnX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.64705882349999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질병" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZG-eA-fqN">
+                                <rect key="frame" x="322" y="44" width="35" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.92156862745098034" green="0.94117647058823528" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymd-W5-DtJ">
+                                <rect key="frame" x="336" y="71" width="19" height="3"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.94117647059999998" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="19" id="FrX-37-zJh"/>
+                                    <constraint firstAttribute="height" constant="3" id="rgr-8s-XlE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92156862750000001" green="0.94117647059999998" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박진오님께서" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pt-6h-ey7">
+                                <rect key="frame" x="18" y="107" width="130" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="갖고계신" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1n-Ze-pN3">
+                                <rect key="frame" x="18" y="149" width="87" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 질병" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Db-us-iwN">
+                                <rect key="frame" x="105" y="149" width="49" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="0.92156862750000001" green="0.94117647059999998" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CcT-Fu-eP2">
+                                <rect key="frame" x="80" y="252" width="215" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="16" sectionInsetReference="safeArea" id="nJz-vd-6te">
+                                    <size key="itemSize" width="95" height="87"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SurveyDiseaseCell" id="YUk-Cr-7Dp" customClass="SurveyDiseaseCell" customModule="CareDirection" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2DS-yM-f3r">
+                                            <rect key="frame" x="0.0" y="0.0" width="95" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질병" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zd-9T-T6Q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="95" height="87"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1zd-9T-T6Q" firstAttribute="top" secondItem="2DS-yM-f3r" secondAttribute="top" id="44y-Ag-Cxk"/>
+                                                <constraint firstItem="1zd-9T-T6Q" firstAttribute="leading" secondItem="2DS-yM-f3r" secondAttribute="leading" id="kNt-MN-V27"/>
+                                                <constraint firstItem="1zd-9T-T6Q" firstAttribute="trailing" secondItem="2DS-yM-f3r" secondAttribute="trailing" id="seb-iZ-fJS"/>
+                                                <constraint firstItem="1zd-9T-T6Q" firstAttribute="bottom" secondItem="2DS-yM-f3r" secondAttribute="bottom" id="uqm-kh-hMK"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="95" height="87"/>
+                                        <connections>
+                                            <outlet property="diseaseLbl" destination="1zd-9T-T6Q" id="8DP-Jy-fpu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nt-7Y-E24">
+                                <rect key="frame" x="116.5" y="601" width="142" height="49"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="5oM-pp-5Vm"/>
+                                    <constraint firstAttribute="height" constant="49" id="xfw-76-6Ww"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="들을 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ost-BE-elB">
+                                <rect key="frame" x="154" y="149" width="186" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="z1n-Ze-pN3" firstAttribute="top" secondItem="3pt-6h-ey7" secondAttribute="bottom" constant="12" id="6HV-uw-8VH"/>
                             <constraint firstItem="Z48-2C-hnX" firstAttribute="top" secondItem="ufd-RN-z9g" secondAttribute="top" id="Dah-9c-UDv"/>
+                            <constraint firstItem="iB5-pz-ed8" firstAttribute="bottom" secondItem="CcT-Fu-eP2" secondAttribute="bottom" constant="175" id="EEa-D9-6s3"/>
+                            <constraint firstItem="2nt-7Y-E24" firstAttribute="centerX" secondItem="ufd-RN-z9g" secondAttribute="centerX" id="Fpr-DH-l0h"/>
+                            <constraint firstItem="iB5-pz-ed8" firstAttribute="trailing" secondItem="CcT-Fu-eP2" secondAttribute="trailing" constant="80" id="Hgp-sU-2oU"/>
                             <constraint firstItem="Z48-2C-hnX" firstAttribute="trailing" secondItem="iB5-pz-ed8" secondAttribute="trailing" id="JFi-92-Gi8"/>
+                            <constraint firstItem="iB5-pz-ed8" firstAttribute="bottom" secondItem="2nt-7Y-E24" secondAttribute="bottom" constant="18" id="KsI-j8-9z0"/>
+                            <constraint firstItem="3pt-6h-ey7" firstAttribute="leading" secondItem="iB5-pz-ed8" secondAttribute="leading" constant="18" id="MFu-5V-ocR"/>
+                            <constraint firstItem="Ymd-W5-DtJ" firstAttribute="top" secondItem="8ZG-eA-fqN" secondAttribute="bottom" constant="3" id="S4v-4m-oLS"/>
+                            <constraint firstItem="CcT-Fu-eP2" firstAttribute="leading" secondItem="iB5-pz-ed8" secondAttribute="leading" constant="80" id="YxF-Ve-H39"/>
+                            <constraint firstItem="8Db-us-iwN" firstAttribute="leading" secondItem="z1n-Ze-pN3" secondAttribute="trailing" id="aqA-0O-F5h"/>
+                            <constraint firstItem="CcT-Fu-eP2" firstAttribute="top" secondItem="z1n-Ze-pN3" secondAttribute="bottom" constant="73" id="c2A-1I-rZC"/>
+                            <constraint firstItem="3pt-6h-ey7" firstAttribute="top" secondItem="iB5-pz-ed8" secondAttribute="top" constant="107" id="ehq-my-TDu"/>
                             <constraint firstItem="Z48-2C-hnX" firstAttribute="leading" secondItem="iB5-pz-ed8" secondAttribute="leading" id="hMm-pa-o2N"/>
+                            <constraint firstItem="iB5-pz-ed8" firstAttribute="trailing" secondItem="8ZG-eA-fqN" secondAttribute="trailing" constant="18" id="iKe-e2-E6x"/>
+                            <constraint firstItem="iB5-pz-ed8" firstAttribute="trailing" secondItem="Ymd-W5-DtJ" secondAttribute="trailing" constant="20" id="iN4-J7-eZT"/>
+                            <constraint firstItem="8ZG-eA-fqN" firstAttribute="top" secondItem="iB5-pz-ed8" secondAttribute="top" constant="44" id="j4r-79-tex"/>
+                            <constraint firstItem="ost-BE-elB" firstAttribute="leading" secondItem="8Db-us-iwN" secondAttribute="trailing" id="jg6-K6-Hsq"/>
                             <constraint firstItem="Z48-2C-hnX" firstAttribute="bottom" secondItem="ufd-RN-z9g" secondAttribute="bottom" id="lbO-Y2-aK3"/>
+                            <constraint firstItem="ost-BE-elB" firstAttribute="top" secondItem="8Db-us-iwN" secondAttribute="top" id="m76-U0-LMT"/>
+                            <constraint firstItem="8Db-us-iwN" firstAttribute="top" secondItem="z1n-Ze-pN3" secondAttribute="top" id="nD3-1w-OKo"/>
+                            <constraint firstItem="z1n-Ze-pN3" firstAttribute="leading" secondItem="3pt-6h-ey7" secondAttribute="leading" id="xzY-Hi-dvS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iB5-pz-ed8"/>
                     </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="2nt-7Y-E24" id="SKQ-mU-8PX"/>
+                        <outlet property="surveyDiseaseCollectionView" destination="CcT-Fu-eP2" id="dd0-iZ-neD"/>
+                        <outlet property="userNameLbl" destination="3pt-6h-ey7" id="vWb-i3-B5c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ywq-jS-gbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

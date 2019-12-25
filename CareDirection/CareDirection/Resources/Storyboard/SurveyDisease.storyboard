@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CcT-Fu-eP2">
-                                <rect key="frame" x="80" y="252" width="215" height="240"/>
+                                <rect key="frame" x="80" y="252" width="215" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="16" sectionInsetReference="safeArea" id="nJz-vd-6te">
                                     <size key="itemSize" width="95" height="87"/>
@@ -93,8 +93,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nt-7Y-E24">
-                                <rect key="frame" x="116.5" y="601" width="142" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nt-7Y-E24">
+                                <rect key="frame" x="116.5" y="600" width="142" height="49"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="142" id="5oM-pp-5Vm"/>
@@ -116,7 +116,7 @@
                         <constraints>
                             <constraint firstItem="z1n-Ze-pN3" firstAttribute="top" secondItem="3pt-6h-ey7" secondAttribute="bottom" constant="12" id="6HV-uw-8VH"/>
                             <constraint firstItem="Z48-2C-hnX" firstAttribute="top" secondItem="ufd-RN-z9g" secondAttribute="top" id="Dah-9c-UDv"/>
-                            <constraint firstItem="iB5-pz-ed8" firstAttribute="bottom" secondItem="CcT-Fu-eP2" secondAttribute="bottom" constant="175" id="EEa-D9-6s3"/>
+                            <constraint firstItem="iB5-pz-ed8" firstAttribute="bottom" secondItem="CcT-Fu-eP2" secondAttribute="bottom" constant="165" id="EEa-D9-6s3"/>
                             <constraint firstItem="2nt-7Y-E24" firstAttribute="centerX" secondItem="ufd-RN-z9g" secondAttribute="centerX" id="Fpr-DH-l0h"/>
                             <constraint firstItem="iB5-pz-ed8" firstAttribute="trailing" secondItem="CcT-Fu-eP2" secondAttribute="trailing" constant="80" id="Hgp-sU-2oU"/>
                             <constraint firstItem="Z48-2C-hnX" firstAttribute="trailing" secondItem="iB5-pz-ed8" secondAttribute="trailing" id="JFi-92-Gi8"/>

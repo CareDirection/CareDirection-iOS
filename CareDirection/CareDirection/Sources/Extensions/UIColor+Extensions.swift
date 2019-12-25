@@ -29,5 +29,12 @@ extension UIColor {
     @nonobjc class var topaz: UIColor {
         return UIColor(red: 19.0 / 255.0, green: 165.0 / 255.0, blue: 168.0 / 255.0, alpha: 1.0)
     }
-
+    
+    @nonobjc class var tealBlue: UIColor {
+      return UIColor(red: 0.0, green: 165.0 / 255.0, blue: 168.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var paleCyan: UIColor {
+      return UIColor(red: 182.0 / 255.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    }
 }

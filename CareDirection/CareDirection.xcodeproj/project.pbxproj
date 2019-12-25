@@ -16,6 +16,7 @@
 		7FCCEAC623B2BCFE00F832B8 /* SurveyDiseaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */; };
 		7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */; };
 		F464828023B3673400F63712 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F464827F23B3673400F63712 /* Signup.storyboard */; };
+		F464828223B36B8500F63712 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464828123B36B8500F63712 /* SignupVC.swift */; };
 		F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4523B215B200FE5D11 /* AppDelegate.swift */; };
 		F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4723B215B200FE5D11 /* SceneDelegate.swift */; };
 		F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4923B215B200FE5D11 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDiseaseVC.swift; sourceTree = "<group>"; };
 		7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDiseaseCell.swift; sourceTree = "<group>"; };
 		F464827F23B3673400F63712 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
+		F464828123B36B8500F63712 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		F492FB4223B215B200FE5D11 /* CareDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492FB4523B215B200FE5D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F492FB4723B215B200FE5D11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				F492FB8223B340D000FE5D11 /* LoginVC.swift */,
 				7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */,
 				7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */,
+				F464828123B36B8500F63712 /* SignupVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				F492FB8323B340D000FE5D11 /* LoginVC.swift in Sources */,
 				7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */,
 				F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */,
+				F464828223B36B8500F63712 /* SignupVC.swift in Sources */,
 				F492FB6723B217E600FE5D11 /* UIImageView+Extensions.swift in Sources */,
 				F492FB6523B216FE00FE5D11 /* UIColor+Extensions.swift in Sources */,
 				7FCCEAC623B2BCFE00F832B8 /* SurveyDiseaseVC.swift in Sources */,

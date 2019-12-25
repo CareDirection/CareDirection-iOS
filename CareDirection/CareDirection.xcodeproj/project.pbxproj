@@ -10,6 +10,7 @@
 		7895E335747A9CF16BD81BB0 /* Pods_CareDirection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4E747B17BA1836E487C847 /* Pods_CareDirection.framework */; };
 		7F033C8423B225DE00ABD866 /* SurveyInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F033C8323B225DE00ABD866 /* SurveyInfo.storyboard */; };
 		7F033C8623B239DE00ABD866 /* SurveyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F033C8523B239DE00ABD866 /* SurveyInfoVC.swift */; };
+		7FC773A623B31CFD00449239 /* SurveySymptom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */; };
 		7FCCEAC623B2BCFE00F832B8 /* SurveyDiseaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */; };
 		7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */; };
 		F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4523B215B200FE5D11 /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 		7C4E747B17BA1836E487C847 /* Pods_CareDirection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareDirection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F033C8323B225DE00ABD866 /* SurveyInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveyInfo.storyboard; sourceTree = "<group>"; };
 		7F033C8523B239DE00ABD866 /* SurveyInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyInfoVC.swift; sourceTree = "<group>"; };
+		7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveySymptom.storyboard; sourceTree = "<group>"; };
 		7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDiseaseVC.swift; sourceTree = "<group>"; };
 		7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDiseaseCell.swift; sourceTree = "<group>"; };
 		F492FB4223B215B200FE5D11 /* CareDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +178,7 @@
 				7F033C8323B225DE00ABD866 /* SurveyInfo.storyboard */,
 				F492FB6C23B2412900FE5D11 /* Survey.storyboard */,
 				F492FB7023B2469C00FE5D11 /* SurveyDisease.storyboard */,
+				7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC773A623B31CFD00449239 /* SurveySymptom.storyboard in Resources */,
 				F492FB5223B215B300FE5D11 /* LaunchScreen.storyboard in Resources */,
 				F492FB4F23B215B300FE5D11 /* Assets.xcassets in Resources */,
 				7F033C8423B225DE00ABD866 /* SurveyInfo.storyboard in Resources */,

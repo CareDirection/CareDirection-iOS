@@ -82,7 +82,8 @@ extension SurveyDiseaseVC: UICollectionViewDataSource{
 }
 extension SurveyDiseaseVC: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellHeight = (collectionView.bounds.size.width - 20) / 3
+        // default width: 100, height: 42
+        let cellHeight = (collectionView.bounds.size.height - 20) / 3
         let cellWidth = (collectionView.bounds.size.width - 16) / 2
         
         return CGSize(width: CGFloat(cellWidth), height: CGFloat(cellHeight))

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IyO-Cr-x1e">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Survey Fin-->
+        <scene sceneID="hCm-CZ-mxp">
+            <objects>
+                <viewController id="IyO-Cr-x1e" customClass="SurveyFin" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iIp-Rg-1jH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="surveyFinImg" translatesAutoresizingMaskIntoConstraints="NO" id="ByW-dO-UQ8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sK3-Y9-2DS">
+                                <rect key="frame" x="117" y="600" width="142" height="49"/>
+                                <color key="backgroundColor" red="0.0" green="0.64705882349999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sK3-Y9-2DS" secondAttribute="height" multiplier="142:49" id="Xwb-1Y-P7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="25"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonClick:" destination="IyO-Cr-x1e" eventType="touchUpInside" id="wr0-sK-qnQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ByW-dO-UQ8" firstAttribute="trailing" secondItem="368-ES-reJ" secondAttribute="trailing" id="5aV-sx-RWE"/>
+                            <constraint firstItem="ByW-dO-UQ8" firstAttribute="top" secondItem="368-ES-reJ" secondAttribute="top" id="CJq-5Y-rtV"/>
+                            <constraint firstItem="ByW-dO-UQ8" firstAttribute="bottom" secondItem="368-ES-reJ" secondAttribute="bottom" id="Nn9-SK-EYM"/>
+                            <constraint firstItem="368-ES-reJ" firstAttribute="trailing" secondItem="sK3-Y9-2DS" secondAttribute="trailing" constant="116" id="XSG-AS-wYl"/>
+                            <constraint firstItem="368-ES-reJ" firstAttribute="bottom" secondItem="sK3-Y9-2DS" secondAttribute="bottom" constant="18" id="apZ-9g-srK"/>
+                            <constraint firstItem="ByW-dO-UQ8" firstAttribute="leading" secondItem="368-ES-reJ" secondAttribute="leading" id="eNd-Z4-mB5"/>
+                            <constraint firstItem="sK3-Y9-2DS" firstAttribute="leading" secondItem="368-ES-reJ" secondAttribute="leading" constant="117" id="x7S-3X-2oF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="368-ES-reJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="sK3-Y9-2DS" id="mLw-OU-8Jo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mCf-9F-byO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50.399999999999999" y="-72.413793103448285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="surveyFinImg" width="375" height="667"/>
+    </resources>
+</document>

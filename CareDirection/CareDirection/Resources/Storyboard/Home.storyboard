@@ -22,37 +22,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRI-9t-fA3">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="905"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8p9-cv-p2H">
-                                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QL-dm-Sog">
-                                                        <rect key="frame" x="329" y="14" width="28" height="28"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" image="settingIc"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rK-2w-aMI">
-                                                        <rect key="frame" x="154" y="19" width="52" height="24"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
-                                                        <state key="normal" title="박진오">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51M-8x-wYT">
-                                                        <rect key="frame" x="210" y="26" width="11" height="15"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic" translatesAutoresizingMaskIntoConstraints="NO" id="tSt-92-kX0">
-                                                        <rect key="frame" x="222" y="19" width="9" height="5"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNl-RB-adI">
                                                 <rect key="frame" x="0.0" y="76" width="375" height="282"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -235,8 +204,112 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEb-nN-Vuv">
+                                                <rect key="frame" x="0.0" y="32" width="375" height="840"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.68999999999999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Oui-FV-PBb">
+                                                <rect key="frame" x="0.0" y="20" width="375" height="208"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8p9-cv-p2H">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QL-dm-Sog">
+                                                                <rect key="frame" x="329" y="14" width="28" height="28"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" image="settingIc"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rK-2w-aMI">
+                                                                <rect key="frame" x="154" y="19" width="52" height="24"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                                <state key="normal" title="박진오">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="userDropDown:" destination="J9C-3r-fs6" eventType="touchUpInside" id="vNN-UI-aNc"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51M-8x-wYT">
+                                                                <rect key="frame" x="210" y="26" width="11" height="15"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic" translatesAutoresizingMaskIntoConstraints="NO" id="tSt-92-kX0">
+                                                                <rect key="frame" x="222" y="19" width="9" height="5"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="56" id="Q6k-HD-6Zy"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="152" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zos-86-aWl" customClass="SelfSizedTableView" customModule="CareDirection" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="56" width="375" height="152"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" rowHeight="60" id="bJI-Tk-juN" customClass="UserCell" customModule="CareDirection" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bJI-Tk-juN" id="uvS-Ti-fMl">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-mc-HIl">
+                                                                            <rect key="frame" x="55" y="5" width="266" height="50"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="50" id="LsA-RH-FVa"/>
+                                                                                <constraint firstAttribute="width" secondItem="tS7-mc-HIl" secondAttribute="height" multiplier="133:25" id="qQL-qE-tCK"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                                            <color key="textColor" red="0.0" green="0.64705882349999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWv-6H-oEz">
+                                                                            <rect key="frame" x="282" y="18" width="24" height="24"/>
+                                                                            <state key="normal" image="btnDelete"/>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="tS7-mc-HIl" firstAttribute="top" secondItem="uvS-Ti-fMl" secondAttribute="top" constant="5" id="1Ho-s3-chU"/>
+                                                                        <constraint firstItem="tS7-mc-HIl" firstAttribute="leading" secondItem="uvS-Ti-fMl" secondAttribute="leading" constant="55" id="3yC-Be-fhO"/>
+                                                                        <constraint firstAttribute="trailingMargin" secondItem="mWv-6H-oEz" secondAttribute="trailing" constant="54" id="MMX-Db-Oid"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="tS7-mc-HIl" secondAttribute="trailing" constant="54" id="Sne-5O-k2I"/>
+                                                                        <constraint firstItem="mWv-6H-oEz" firstAttribute="top" secondItem="uvS-Ti-fMl" secondAttribute="topMargin" constant="7" id="cqv-e0-LAE"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="tS7-mc-HIl" secondAttribute="bottom" constant="5" id="dYg-e2-VnS"/>
+                                                                        <constraint firstAttribute="bottomMargin" secondItem="mWv-6H-oEz" secondAttribute="bottom" constant="7" id="fwo-cV-WBU"/>
+                                                                    </constraints>
+                                                                </tableViewCellContentView>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <connections>
+                                                                    <outlet property="deleteButton" destination="mWv-6H-oEz" id="gT1-DK-Eec"/>
+                                                                    <outlet property="userName" destination="tS7-mc-HIl" id="sg2-Ek-9cR"/>
+                                                                </connections>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="J9C-3r-fs6" id="i4K-8d-Unv"/>
+                                                            <outlet property="delegate" destination="J9C-3r-fs6" id="xp7-L0-0xO"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="zos-86-aWl" firstAttribute="leading" secondItem="Oui-FV-PBb" secondAttribute="leading" id="1PQ-uC-GIZ"/>
+                                                    <constraint firstItem="zos-86-aWl" firstAttribute="top" secondItem="8p9-cv-p2H" secondAttribute="bottom" id="Bgs-nX-wTP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zos-86-aWl" secondAttribute="trailing" id="nPK-Jv-jYC"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Oui-FV-PBb" firstAttribute="leading" secondItem="ZRI-9t-fA3" secondAttribute="leading" id="MGX-m1-fqk"/>
+                                            <constraint firstItem="Oui-FV-PBb" firstAttribute="top" secondItem="ZRI-9t-fA3" secondAttribute="top" constant="20" id="MNC-i7-fV2"/>
+                                            <constraint firstAttribute="trailing" secondItem="Oui-FV-PBb" secondAttribute="trailing" id="iGa-nk-aaC"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -261,11 +334,14 @@
                     <tabBarItem key="tabBarItem" title="홈" image="homeIcSelected" selectedImage="homeIcSelected" id="a9J-7f-vLp"/>
                     <size key="freeformSize" width="375" height="905"/>
                     <connections>
+                        <outlet property="blurView" destination="fEb-nN-Vuv" id="kf8-kb-XgM"/>
+                        <outlet property="dropDownButton" destination="7rK-2w-aMI" id="Ybr-u3-Zw4"/>
                         <outlet property="productCollectionView" destination="DcR-AS-LdF" id="TvA-3M-ICz"/>
                         <outlet property="scrollView" destination="g3m-CI-GcF" id="cyC-dl-pnL"/>
                         <outlet property="showDetailFunction" destination="p3D-Hu-7Fw" id="gJU-wg-dAS"/>
                         <outlet property="showDetailStandard" destination="9hV-NN-Z4S" id="CQw-dc-VoC"/>
                         <outlet property="showSchedule" destination="U2d-oC-95S" id="bm3-2R-h28"/>
+                        <outlet property="userTableView" destination="zos-86-aWl" id="m9G-i9-uHn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51C-Ne-YKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -293,6 +369,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btnDelete" width="24" height="24"/>
         <image name="homeIcSelected" width="28" height="28"/>
         <image name="ic" width="9" height="5"/>
         <image name="settingIc" width="28" height="28"/>

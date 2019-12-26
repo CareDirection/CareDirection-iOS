@@ -30,6 +30,9 @@
 		F464828A23B3F41F00F63712 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464828923B3F41F00F63712 /* HomeVC.swift */; };
 		F464828C23B3F64B00F63712 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464828B23B3F64B00F63712 /* ProductCell.swift */; };
 		F464828E23B3F8B100F63712 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464828D23B3F8B100F63712 /* Product.swift */; };
+		F464829A23B4BE3200F63712 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464829923B4BE3100F63712 /* User.swift */; };
+		F464829C23B4BE8000F63712 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464829B23B4BE8000F63712 /* UserCell.swift */; };
+		F46482A023B4DF6A00F63712 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464829F23B4DF6A00F63712 /* SelfSizedTableView.swift */; };
 		F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4523B215B200FE5D11 /* AppDelegate.swift */; };
 		F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4723B215B200FE5D11 /* SceneDelegate.swift */; };
 		F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4923B215B200FE5D11 /* ViewController.swift */; };
@@ -74,6 +77,9 @@
 		F464828923B3F41F00F63712 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F464828B23B3F64B00F63712 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		F464828D23B3F8B100F63712 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		F464829923B4BE3100F63712 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F464829B23B4BE8000F63712 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		F464829F23B4DF6A00F63712 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
 		F492FB4223B215B200FE5D11 /* CareDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492FB4523B215B200FE5D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F492FB4723B215B200FE5D11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,7 +198,7 @@
 				F464828123B36B8500F63712 /* SignupVC.swift */,
 				F464828923B3F41F00F63712 /* HomeVC.swift */,
 				F464828B23B3F64B00F63712 /* ProductCell.swift */,
-
+				F464829B23B4BE8000F63712 /* UserCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 				F492FB6223B216C900FE5D11 /* UIViewController+Extensions.swift */,
 				F492FB6423B216FE00FE5D11 /* UIColor+Extensions.swift */,
 				F492FB6623B217E600FE5D11 /* UIImageView+Extensions.swift */,
+				F464829F23B4DF6A00F63712 /* SelfSizedTableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				F464828D23B3F8B100F63712 /* Product.swift */,
+				F464829923B4BE3100F63712 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,12 +386,14 @@
 				F492FB8323B340D000FE5D11 /* LoginVC.swift in Sources */,
 				7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */,
 				F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */,
+				F46482A023B4DF6A00F63712 /* SelfSizedTableView.swift in Sources */,
 				F464828223B36B8500F63712 /* SignupVC.swift in Sources */,
 				F492FB6723B217E600FE5D11 /* UIImageView+Extensions.swift in Sources */,
 				F492FB6523B216FE00FE5D11 /* UIColor+Extensions.swift in Sources */,
 				7F537CD423B37C8000115A2B /* SurveyLifeStyleSecondPointVC.swift in Sources */,
 				7FCCEAC623B2BCFE00F832B8 /* SurveyDiseaseVC.swift in Sources */,
 				F464828E23B3F8B100F63712 /* Product.swift in Sources */,
+				F464829C23B4BE8000F63712 /* UserCell.swift in Sources */,
 				F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */,
 				7FC773B023B354B400449239 /* SurveyLifeStyleEntryVC.swift in Sources */,
 				F492FB6323B216C900FE5D11 /* UIViewController+Extensions.swift in Sources */,
@@ -391,6 +401,7 @@
 				F464828A23B3F41F00F63712 /* HomeVC.swift in Sources */,
 				7FC773A823B32E3E00449239 /* SurveySymptomCell.swift in Sources */,
 				7F537CDD23B390EC00115A2B /* SurveyLifeStyleLastPointVC.swift in Sources */,
+				F464829A23B4BE3200F63712 /* User.swift in Sources */,
 				F492FB6123B216A100FE5D11 /* UIView+Extensions.swift in Sources */,
 				F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */,
 				7F537CD823B3864600115A2B /* SurveyLifeStyleThirdPointVC.swift in Sources */,

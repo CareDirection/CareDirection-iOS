@@ -33,5 +33,18 @@ class SurveyVC: UIViewController {
         nextText.textColor = UIColor.topaz
     }
     
+    
+    @IBAction func nextBtnSelected(_ sender: Any) {
+        let surveyInfoSB = UIStoryboard.init(name: "SurveyInfo", bundle: nil)
+        
+        guard let dvc = surveyInfoSB.instantiateViewController(withIdentifier: "SurveyInfoVC") as? SurveyInfoVC else {
+          return
+        }
+        dvc.userName = nameTextField.text
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true)
+        
+    }
+    
 
 }

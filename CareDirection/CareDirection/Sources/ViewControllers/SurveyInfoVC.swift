@@ -118,7 +118,16 @@ class SurveyInfoVC: UIViewController {
         userSexIndex = 1
         checkSexGroupBtn(selectSexIndex: userSexIndex)
     }
-
+    @IBAction func selectedNextBtn(_ sender: Any) {
+        let surveyDiseaseSB = UIStoryboard.init(name: "SurveyDisease", bundle: nil)
+        
+        let dvc = surveyDiseaseSB.instantiateViewController(withIdentifier: "SurveyDiseaseVC") as! SurveyDiseaseVC
+        
+        dvc.modalPresentationStyle = .fullScreen
+        dvc.name = self.userName!
+        self.present(dvc, animated: true)
+        
+    }
 }
 
 extension SurveyInfoVC: UIPickerViewDataSource{
@@ -142,7 +151,7 @@ extension SurveyInfoVC: UIPickerViewDelegate{
         
         if !(userAgeTxtField.text!.isEmpty){
             userAgeView.backgroundColor = UIColor(red: 182.0 / 255, green: 1, blue: 1, alpha: 1.0)
-
+            nextBtn.isEnabled = true
             nextBtn.backgroundColor = UIColor.white
             nextBtn.setTitleColor(UIColor(red: 19.0 / 255.0, green: 165.0 / 255.0, blue: 168.0 / 255.0, alpha: 1.0), for: .normal)
         }

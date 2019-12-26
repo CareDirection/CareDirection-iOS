@@ -10,6 +10,7 @@ import UIKit
 
 class SurveyLifeStyleEntryVC: UIViewController {
     @IBOutlet var nextBtn: UIButton!
+    var name:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,4 +22,12 @@ class SurveyLifeStyleEntryVC: UIViewController {
         nextBtn.makeRounded(cornerRadius: 25)
     }
     
+    @IBAction func selectedNextBtn(_ sender: Any) {
+        let surveyLifeStyleFirstPoint = UIStoryboard.init(name: "SurveyLifeStyleFirstPoint", bundle: nil)
+        let dvc = surveyLifeStyleFirstPoint.instantiateViewController(withIdentifier: "SurveyLifeStyleFirstPointVC") as! SurveyLifeStyleFirstPointVC
+        
+        dvc.modalPresentationStyle = .fullScreen
+        dvc.userName = self.name
+        self.present(dvc, animated: true)
+    }
 }

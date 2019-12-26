@@ -36,6 +36,16 @@ class SurveySymptomVC: UIViewController {
         nextBtn.makeRounded(cornerRadius: 25)
         
     }
+    
+    @IBAction func selectedNextBtn(_ sender: Any) {
+        let surveyLifeStyleEntry = UIStoryboard.init(name: "SurveyLifeStyleEntry", bundle: nil)
+        let dvc = surveyLifeStyleEntry.instantiateViewController(withIdentifier: "SurveyLifeStyleEntryVC") as! SurveyLifeStyleEntryVC
+        
+        dvc.name = self.name
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true)
+    }
+    
 }
 
 extension SurveySymptomVC: UICollectionViewDelegate{

@@ -10,14 +10,13 @@
         <!--Survey Life Style Third PointVC-->
         <scene sceneID="Jil-5O-DmD">
             <objects>
-                <viewController id="YV1-PP-5PV" customClass="SurveyLifeStyleThirdPointVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyLifeStyleThirdPointVC" id="YV1-PP-5PV" customClass="SurveyLifeStyleThirdPointVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9dA-va-lId">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Up-tY-JZq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="4Up-tY-JZq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.51372549020000002" green="0.80000000000000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="라이프 스타일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEQ-E7-apN">
                                 <rect key="frame" x="248" y="44" width="108.5" height="24"/>
@@ -107,6 +106,9 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectedNextBtn:" destination="YV1-PP-5PV" eventType="touchUpInside" id="RBP-W5-hHA"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="I2Q-IZ-waL">
                                 <rect key="frame" x="155.5" y="533" width="64" height="8"/>
@@ -183,6 +185,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg" width="375" height="667"/>
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
         <image name="pencil.circle" catalog="system" width="64" height="60"/>

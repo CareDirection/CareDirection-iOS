@@ -101,6 +101,16 @@ class SurveyLifeStyleFirstPointVC: UIViewController {
         setLayout()
     }
     
+    @IBAction func selectedNextBtn(_ sender: Any) {
+        let surveyLifeStyleSecondPoint = UIStoryboard.init(name: "SurveyLifeStyleSecondPoint", bundle: nil)
+        let dvc = surveyLifeStyleSecondPoint.instantiateViewController(withIdentifier: "SurveyLifeStyleSecondPointVC") as! SurveyLifeStyleSecondPointVC
+        
+        
+        dvc.modalPresentationStyle = .fullScreen
+        dvc.name = self.userName
+        self.present(dvc, animated: true)
+        
+    }
     
     
 }

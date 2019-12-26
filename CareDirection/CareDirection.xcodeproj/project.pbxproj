@@ -190,8 +190,11 @@
 				7F537CD723B3864600115A2B /* SurveyLifeStyleThirdPointVC.swift */,
 				7F537CDC23B390EC00115A2B /* SurveyLifeStyleLastPointVC.swift */,
 				F464828123B36B8500F63712 /* SignupVC.swift */,
+<<<<<<< HEAD
 				F464828923B3F41F00F63712 /* HomeVC.swift */,
 				F464828B23B3F64B00F63712 /* ProductCell.swift */,
+=======
+>>>>>>> 316621b03f5a6103513263ab6ec5c3b445a2de67
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

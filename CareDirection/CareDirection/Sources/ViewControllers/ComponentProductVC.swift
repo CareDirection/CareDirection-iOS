@@ -16,16 +16,21 @@ class ComponentProductVC: UIViewController {
     
     @IBOutlet var productTableView: UITableView!
     @IBOutlet var guideView: UIView!
-    
+    @IBOutlet var tableViewTopConstraint: NSLayoutConstraint!
+    var tableViewInitTopConstraint: CGFloat!
     @IBOutlet var guideLayout: UIView!
     var infoViewDefaultContstraint: CGFloat!
     var resultDataList:[DummyProduct]?
     var selectedCellIndex: Int?
     
+    @IBOutlet var tableViewBottomConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.productTableView.delegate = self
         self.productTableView.dataSource = self
+        tableViewInitTopConstraint = tableViewTopConstraint.constant
+        
         setData()
         setLayout()
         self.infoViewDefaultContstraint = self.infoViewTopConstraint.constant
@@ -33,9 +38,9 @@ class ComponentProductVC: UIViewController {
     }
     
     func setLayout(){
-        self.guideView.layer.cornerRadius = 25
-        self.guideView.clipsToBounds = true
-        self.guideView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+//        self.guideView.layer.cornerRadius = 25
+//        self.guideView.clipsToBounds = true
+//        self.guideView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
         self.infoView.layer.cornerRadius = 25
         self.infoView.clipsToBounds = true
@@ -72,13 +77,20 @@ class ComponentProductVC: UIViewController {
 extension ComponentProductVC: UITableViewDelegate{
     
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        showInfoView()
+        print("Scroll animation end")
+        //showInfoView()
     }
     
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        showInfoView()
+        //showInfoView()
+        print("Scroll drag end")
     }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        showInfoView()
+        print("Scroll end decelerating")
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let yVelocity = scrollView.panGestureRecognizer .velocity(in: scrollView).y
@@ -92,16 +104,33 @@ extension ComponentProductVC: UITableViewDelegate{
     }
     
     func showInfoView(){
+        
         UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
             self.infoView.transform = .identity
             self.productTableView.transform = .identity
+        }){ finished in
+            self.tableViewBottomConstraint.constant = 0
+        }
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            //self.tableViewTopConstraint.constant = self.tableViewInitTopConstraint
+            
         })
+        
     }
     func hideInfoView(){
         UIView.animate(withDuration: 0.25, animations: {
-            self.infoView.transform = CGAffineTransform(translationX: 0, y: -70)
+            //self.tableViewTopConstraint.constant = self.tableViewInitTopConstraint - 84
+            self.tableViewBottomConstraint.constant = -84
+        })
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            self.infoView.transform = CGAffineTransform(translationX: 0, y: -84)
             
-            let move = CGAffineTransform(translationX: 0, y: -70)
+            let move = CGAffineTransform(translationX: 0, y: -84)
+//            let scale = CGAffineTransform(scaleX: 1, y: 1.2)
+//            let scale =
+//            let combine = move.concatenating(scale)
             self.productTableView.transform = move
         })
     }

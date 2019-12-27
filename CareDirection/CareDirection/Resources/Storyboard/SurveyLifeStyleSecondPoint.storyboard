@@ -63,10 +63,10 @@
                                 <rect key="frame" x="44" y="265" width="102" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="   7회 이상" image="pencil.circle" catalog="system">
+                                <state key="normal" title="   7회 이상" image="icUnselected">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <state key="selected" image="pencil.circle.fill" catalog="system"/>
+                                <state key="selected" image="icSelected"/>
                                 <connections>
                                     <action selector="selectedAnswer:" destination="FYJ-c6-MpY" eventType="touchUpInside" id="n13-mP-kSs"/>
                                 </connections>
@@ -75,10 +75,10 @@
                                 <rect key="frame" x="44" y="309" width="114" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="   5회 ~ 6회" image="pencil.circle" catalog="system">
+                                <state key="normal" title="   5회 ~ 6회" image="icUnselected">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <state key="selected" image="pencil.circle.fill" catalog="system"/>
+                                <state key="selected" image="icSelected"/>
                                 <connections>
                                     <action selector="selectedAnswer:" destination="FYJ-c6-MpY" eventType="touchUpInside" id="bB6-bd-UUG"/>
                                 </connections>
@@ -87,10 +87,10 @@
                                 <rect key="frame" x="44" y="353" width="115" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="   3회 ~ 4회" image="pencil.circle" catalog="system">
+                                <state key="normal" title="   3회 ~ 4회" image="icUnselected">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <state key="selected" image="pencil.circle.fill" catalog="system"/>
+                                <state key="selected" image="icSelected"/>
                                 <connections>
                                     <action selector="selectedAnswer:" destination="FYJ-c6-MpY" eventType="touchUpInside" id="L5d-QQ-cmA"/>
                                 </connections>
@@ -99,10 +99,10 @@
                                 <rect key="frame" x="44" y="397" width="102" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="   2회 이하" image="pencil.circle" catalog="system">
+                                <state key="normal" title="   2회 이하" image="icUnselected">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <state key="selected" image="pencil.circle.fill" catalog="system"/>
+                                <state key="selected" image="icSelected"/>
                                 <connections>
                                     <action selector="selectedAnswer:" destination="FYJ-c6-MpY" eventType="touchUpInside" id="rbO-YH-9VW"/>
                                 </connections>
@@ -125,24 +125,24 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="E5e-sq-rtK">
                                 <rect key="frame" x="155.5" y="533" width="64" height="8"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KTC-WF-6fS">
-                                        <rect key="frame" x="0.0" y="1.5" width="8" height="5.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorUnselected" translatesAutoresizingMaskIntoConstraints="NO" id="KTC-WF-6fS">
+                                        <rect key="frame" x="0.0" y="0.0" width="8" height="8"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="8" id="NrV-0c-P5c"/>
                                             <constraint firstAttribute="width" constant="8" id="xYw-qS-B0F"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XAf-ti-d0e">
-                                        <rect key="frame" x="28" y="1.5" width="8" height="5.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorSelected" translatesAutoresizingMaskIntoConstraints="NO" id="XAf-ti-d0e">
+                                        <rect key="frame" x="28" y="0.0" width="8" height="8"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="8" id="Dnd-Py-NB2"/>
                                             <constraint firstAttribute="width" constant="8" id="nuZ-N6-bXS"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U27-lZ-gZN">
-                                        <rect key="frame" x="56" y="1.5" width="8" height="5.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorUnselected" translatesAutoresizingMaskIntoConstraints="NO" id="U27-lZ-gZN">
+                                        <rect key="frame" x="56" y="0.0" width="8" height="8"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="8" id="2GW-cC-yBC"/>
@@ -201,9 +201,9 @@
     </scenes>
     <resources>
         <image name="bg" width="375" height="667"/>
-        <image name="heart" catalog="system" width="64" height="54"/>
-        <image name="heart.fill" catalog="system" width="64" height="54"/>
-        <image name="pencil.circle" catalog="system" width="64" height="60"/>
-        <image name="pencil.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="icSelected" width="20" height="20"/>
+        <image name="icUnselected" width="20" height="20"/>
+        <image name="indicatorSelected" width="8" height="8"/>
+        <image name="indicatorUnselected" width="8" height="8"/>
     </resources>
 </document>

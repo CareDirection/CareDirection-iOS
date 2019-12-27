@@ -81,10 +81,10 @@
                                 <rect key="frame" x="40" y="182" width="56" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="    네" image="pencil.circle" catalog="system">
+                                <state key="normal" title="    네" image="icUnselected">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <state key="selected" image="pencil.circle.fill" catalog="system"/>
+                                <state key="selected" image="icSelected"/>
                                 <connections>
                                     <action selector="selectedYesSmoking:" destination="TIt-rr-TKg" eventType="touchUpInside" id="6GS-pV-oEr"/>
                                 </connections>
@@ -93,10 +93,10 @@
                                 <rect key="frame" x="40" y="421" width="56" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="    네" image="pencil.circle" catalog="system">
+                                <state key="normal" title="    네" image="icUnselected">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <state key="selected" image="pencil.circle.fill" catalog="system"/>
+                                <state key="selected" image="icSelected"/>
                                 <connections>
                                     <action selector="selectedYesSmoking:" destination="TIt-rr-TKg" eventType="touchUpInside" id="IjR-hu-2fA"/>
                                 </connections>
@@ -105,10 +105,10 @@
                                 <rect key="frame" x="40" y="226" width="90" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="    아니요" image="pencil.circle" catalog="system">
+                                <state key="normal" title="    아니요" image="icUnselected">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <state key="selected" image="pencil.circle.fill" catalog="system"/>
+                                <state key="selected" image="icSelected"/>
                                 <connections>
                                     <action selector="selectedYesSmoking:" destination="TIt-rr-TKg" eventType="touchUpInside" id="an2-dc-2S2"/>
                                 </connections>
@@ -117,10 +117,10 @@
                                 <rect key="frame" x="40" y="465" width="90" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="    아니요" image="pencil.circle" catalog="system">
+                                <state key="normal" title="    아니요" image="icUnselected">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <state key="selected" image="pencil.circle.fill" catalog="system"/>
+                                <state key="selected" image="icSelected"/>
                                 <connections>
                                     <action selector="selectedYesSmoking:" destination="TIt-rr-TKg" eventType="touchUpInside" id="nlt-dW-VJC"/>
                                 </connections>
@@ -143,24 +143,24 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G6e-Hs-IbY">
                                 <rect key="frame" x="155.5" y="533" width="64" height="8"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-A2-0dr">
-                                        <rect key="frame" x="0.0" y="1.5" width="8" height="5.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorSelected" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-A2-0dr">
+                                        <rect key="frame" x="0.0" y="0.0" width="8" height="8"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="8" id="PL6-IN-a0c"/>
                                             <constraint firstAttribute="width" constant="8" id="lLf-ww-Lrt"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hJX-ZT-g7T">
-                                        <rect key="frame" x="28" y="1.5" width="8" height="5.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorUnselected" translatesAutoresizingMaskIntoConstraints="NO" id="hJX-ZT-g7T">
+                                        <rect key="frame" x="28" y="0.0" width="8" height="8"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="8" id="He9-BM-URj"/>
                                             <constraint firstAttribute="height" constant="8" id="cJm-nk-1sq"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mvx-I7-06L">
-                                        <rect key="frame" x="56" y="1.5" width="8" height="5.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorUnselected" translatesAutoresizingMaskIntoConstraints="NO" id="Mvx-I7-06L">
+                                        <rect key="frame" x="56" y="0.0" width="8" height="8"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="8" id="Qbf-ce-sQd"/>
@@ -226,9 +226,9 @@
     </scenes>
     <resources>
         <image name="bg" width="375" height="667"/>
-        <image name="heart" catalog="system" width="64" height="54"/>
-        <image name="heart.fill" catalog="system" width="64" height="54"/>
-        <image name="pencil.circle" catalog="system" width="64" height="60"/>
-        <image name="pencil.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="icSelected" width="20" height="20"/>
+        <image name="icUnselected" width="20" height="20"/>
+        <image name="indicatorSelected" width="8" height="8"/>
+        <image name="indicatorUnselected" width="8" height="8"/>
     </resources>
 </document>

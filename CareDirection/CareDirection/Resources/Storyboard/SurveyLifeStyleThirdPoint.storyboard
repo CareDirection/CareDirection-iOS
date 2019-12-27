@@ -63,10 +63,10 @@
                                 <rect key="frame" x="44" y="265" width="125" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="   네시간 이상" image="pencil.circle" catalog="system">
+                                <state key="normal" title="   네시간 이상" image="icUnselected">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <state key="selected" image="pencil.circle.fill" catalog="system"/>
+                                <state key="selected" image="icSelected"/>
                                 <connections>
                                     <action selector="selectAnswer:" destination="YV1-PP-5PV" eventType="touchUpInside" id="63K-DB-e7O"/>
                                 </connections>
@@ -75,10 +75,10 @@
                                 <rect key="frame" x="44" y="309" width="146" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="   1시간 ~ 4시간" image="pencil.circle" catalog="system">
+                                <state key="normal" title="   1시간 ~ 4시간" image="icUnselected">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <state key="selected" image="pencil.circle.fill" catalog="system"/>
+                                <state key="selected" image="icSelected"/>
                                 <connections>
                                     <action selector="selectAnswer:" destination="YV1-PP-5PV" eventType="touchUpInside" id="0bI-yX-d0X"/>
                                 </connections>
@@ -87,10 +87,10 @@
                                 <rect key="frame" x="44" y="353" width="117" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="   1시간 이하" image="pencil.circle" catalog="system">
+                                <state key="normal" title="   1시간 이하" image="icUnselected">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <state key="selected" image="pencil.circle.fill" catalog="system"/>
+                                <state key="selected" image="icSelected"/>
                                 <connections>
                                     <action selector="selectAnswer:" destination="YV1-PP-5PV" eventType="touchUpInside" id="UZf-7k-Vxn"/>
                                 </connections>
@@ -113,24 +113,24 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="I2Q-IZ-waL">
                                 <rect key="frame" x="155.5" y="533" width="64" height="8"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="885-nC-RSV">
-                                        <rect key="frame" x="0.0" y="1.5" width="8" height="5.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorUnselected" translatesAutoresizingMaskIntoConstraints="NO" id="885-nC-RSV">
+                                        <rect key="frame" x="0.0" y="0.0" width="8" height="8"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="8" id="BUm-7N-5B3"/>
                                             <constraint firstAttribute="height" constant="8" id="R4U-1J-Z9P"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="df4-OX-6HY">
-                                        <rect key="frame" x="28" y="1.5" width="8" height="5.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorUnselected" translatesAutoresizingMaskIntoConstraints="NO" id="df4-OX-6HY">
+                                        <rect key="frame" x="28" y="0.0" width="8" height="8"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="8" id="PK4-VM-7lX"/>
                                             <constraint firstAttribute="height" constant="8" id="qcu-T1-x88"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aSC-0N-5yM">
-                                        <rect key="frame" x="56" y="1.5" width="8" height="5.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorSelected" translatesAutoresizingMaskIntoConstraints="NO" id="aSC-0N-5yM">
+                                        <rect key="frame" x="56" y="0.0" width="8" height="8"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="8" id="cq1-NN-bxq"/>
@@ -186,9 +186,9 @@
     </scenes>
     <resources>
         <image name="bg" width="375" height="667"/>
-        <image name="heart" catalog="system" width="64" height="54"/>
-        <image name="heart.fill" catalog="system" width="64" height="54"/>
-        <image name="pencil.circle" catalog="system" width="64" height="60"/>
-        <image name="pencil.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="icSelected" width="20" height="20"/>
+        <image name="icUnselected" width="20" height="20"/>
+        <image name="indicatorSelected" width="8" height="8"/>
+        <image name="indicatorUnselected" width="8" height="8"/>
     </resources>
 </document>

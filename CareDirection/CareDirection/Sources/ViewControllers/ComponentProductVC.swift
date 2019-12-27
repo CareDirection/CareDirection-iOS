@@ -150,8 +150,8 @@ extension ComponentProductVC: UITableViewDataSource{
             cell.delegate = self
             cell.productImg.image = UIImage.init(named: result[indexPath.row].productImg)
             cell.isSelectedLbl.isHidden = true
-            cell.selectInfoBtn.setImage(UIImage.init(named: "settingIc"), for: .normal)
-            cell.selectInfoBtn.setImage(UIImage.init(named: "homeIcSelected"), for: .selected)
+            cell.selectInfoBtn.setImage(UIImage.init(named: "btnBarometerunFilter"), for: .normal)
+            cell.selectInfoBtn.setImage(UIImage.init(named: "btnBarometerFilter"), for: .selected)
             cell.selectInfoBtn.isSelected = false
             
             if let selectedIndex = self.selectedCellIndex{

@@ -29,6 +29,7 @@ class SurveyInfoVC: UIViewController {
     @IBOutlet var nextBtn: UIButton!
     
     @IBOutlet var userAgeTxtField: UITextField!
+    @IBOutlet var arrowImg: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,6 +155,8 @@ extension SurveyInfoVC: UIPickerViewDelegate{
             nextBtn.isEnabled = true
             nextBtn.backgroundColor = UIColor.white
             nextBtn.setTitleColor(UIColor(red: 19.0 / 255.0, green: 165.0 / 255.0, blue: 168.0 / 255.0, alpha: 1.0), for: .normal)
+            arrowImg.image = UIImage.init(named: "arrowIcSelected")
+            
         }
         
     }

@@ -17,7 +17,7 @@ class TakingProductRegistVC: UIViewController {
         super.viewDidLoad()
         
         datePickButton.makeRounded(cornerRadius: 8)
-        datePickButton.dropShadow(color: UIColor.darkGray, offSet: CGSize(width: <#T##CGFloat#>, height: <#T##CGFloat#>), opacity: <#T##Float#>, radius: <#T##CGFloat#>)
+        //datePickButton.dropShadow(color: UIColor.darkGray, offSet: CGSize(width: <#T##CGFloat#>, height: <#T##CGFloat#>), opacity: <#T##Float#>, radius: <#T##CGFloat#>)
     }
     
 

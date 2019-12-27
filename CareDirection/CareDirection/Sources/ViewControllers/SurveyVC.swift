@@ -42,6 +42,7 @@ class SurveyVC: UIViewController {
         }
         dvc.userName = nameTextField.text
         dvc.modalPresentationStyle = .fullScreen
+
         self.present(dvc, animated: true)
         
     }

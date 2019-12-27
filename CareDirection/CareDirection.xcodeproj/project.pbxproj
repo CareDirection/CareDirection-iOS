@@ -56,6 +56,9 @@
 		F4DC232D23B555ED00A72919 /* SurveyFin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC232C23B555ED00A72919 /* SurveyFin.swift */; };
 		F4DC232F23B57AE500A72919 /* TakingProductRegist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DC232E23B57AE500A72919 /* TakingProductRegist.storyboard */; };
 		F4DC233123B60C5C00A72919 /* TakingProductRegistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC233023B60C5C00A72919 /* TakingProductRegistVC.swift */; };
+		F4DC233323B628C600A72919 /* TakingProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC233223B628C600A72919 /* TakingProduct.swift */; };
+		F4DC233523B62AF300A72919 /* TakingProductRegistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC233423B62AF300A72919 /* TakingProductRegistCell.swift */; };
+		F4DC233723B6392F00A72919 /* AddTakingProductRegistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC233623B6392F00A72919 /* AddTakingProductRegistCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +115,9 @@
 		F4DC232C23B555ED00A72919 /* SurveyFin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyFin.swift; sourceTree = "<group>"; };
 		F4DC232E23B57AE500A72919 /* TakingProductRegist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TakingProductRegist.storyboard; sourceTree = "<group>"; };
 		F4DC233023B60C5C00A72919 /* TakingProductRegistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingProductRegistVC.swift; sourceTree = "<group>"; };
+		F4DC233223B628C600A72919 /* TakingProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingProduct.swift; sourceTree = "<group>"; };
+		F4DC233423B62AF300A72919 /* TakingProductRegistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingProductRegistCell.swift; sourceTree = "<group>"; };
+		F4DC233623B6392F00A72919 /* AddTakingProductRegistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTakingProductRegistCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +223,8 @@
 				F464829B23B4BE8000F63712 /* UserCell.swift */,
 				F4DC232C23B555ED00A72919 /* SurveyFin.swift */,
 				F4DC233023B60C5C00A72919 /* TakingProductRegistVC.swift */,
+				F4DC233423B62AF300A72919 /* TakingProductRegistCell.swift */,
+				F4DC233623B6392F00A72919 /* AddTakingProductRegistCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 			children = (
 				F464828D23B3F8B100F63712 /* Product.swift */,
 				F464829923B4BE3100F63712 /* User.swift */,
+				F4DC233223B628C600A72919 /* TakingProduct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -408,6 +417,7 @@
 				7F033C8623B239DE00ABD866 /* SurveyInfoVC.swift in Sources */,
 				F492FB6F23B2449F00FE5D11 /* SurveyVC.swift in Sources */,
 				F4DC233123B60C5C00A72919 /* TakingProductRegistVC.swift in Sources */,
+				F4DC233523B62AF300A72919 /* TakingProductRegistCell.swift in Sources */,
 				F492FB8323B340D000FE5D11 /* LoginVC.swift in Sources */,
 				7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */,
 				F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */,
@@ -422,6 +432,7 @@
 				F464829C23B4BE8000F63712 /* UserCell.swift in Sources */,
 				F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */,
 				7FC773B023B354B400449239 /* SurveyLifeStyleEntryVC.swift in Sources */,
+				F4DC233323B628C600A72919 /* TakingProduct.swift in Sources */,
 				F492FB6323B216C900FE5D11 /* UIViewController+Extensions.swift in Sources */,
 				7F537CE523B4AC5400115A2B /* ComponentProductCell.swift in Sources */,
 				7FC773B423B3673600449239 /* SurveyLifeStyleFirstPointVC.swift in Sources */,
@@ -432,6 +443,7 @@
 				F492FB6123B216A100FE5D11 /* UIView+Extensions.swift in Sources */,
 				F4DC232D23B555ED00A72919 /* SurveyFin.swift in Sources */,
 				F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */,
+				F4DC233723B6392F00A72919 /* AddTakingProductRegistCell.swift in Sources */,
 				7F537CD823B3864600115A2B /* SurveyLifeStyleThirdPointVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

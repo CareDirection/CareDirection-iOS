@@ -8,6 +8,7 @@
 
 import UIKit
 
+// table view size 동적으로 조절하도록
 class SelfSizedTableView: UITableView {
 
     var maxHeight: CGFloat = UIScreen.main.bounds.size.height
@@ -20,11 +21,6 @@ class SelfSizedTableView: UITableView {
     
     override var intrinsicContentSize: CGSize {
       let height = max(contentSize.height, maxHeight)
-        print(contentSize.height)
-        print(contentSize.width)
-        print(maxHeight)
-        print("Height: ")
-        print(height)
       return CGSize(width: contentSize.width, height: height)
     }
     

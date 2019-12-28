@@ -25,16 +25,14 @@ class TakingProductRegistVC: UIViewController {
         
         // date pick button customize
         datePickButton.makeRounded(cornerRadius: 8)
-<<<<<<< HEAD
+
         datePickButton.dropShadow(color: UIColor.darkGray, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 4)
         //datePickButton.dropShadow(color: UIColor.darkGray, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 4)
         
         setTakingProduct()
         
         datePickerView.addTarget(self, action: #selector(changed), for: .valueChanged)
-=======
-        //datePickButton.dropShadow(color: UIColor.darkGray, offSet: CGSize(width: <#T##CGFloat#>, height: <#T##CGFloat#>), opacity: <#T##Float#>, radius: <#T##CGFloat#>)
->>>>>>> c1928d683ee34ab9faaaa027cd2413a0b79fba65
+
     }
     
     @objc func changed() {

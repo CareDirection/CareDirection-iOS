@@ -19,6 +19,7 @@
 		7F537CE323B4ABCE00115A2B /* ComponentProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F537CE223B4ABCE00115A2B /* ComponentProductVC.swift */; };
 		7F537CE523B4AC5400115A2B /* ComponentProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F537CE423B4AC5400115A2B /* ComponentProductCell.swift */; };
 		7F58ABFA23B6196B009126B9 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F58ABF923B6196B009126B9 /* ProductDetail.storyboard */; };
+		7F58AC1C23B74B37009126B9 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F58AC1B23B74B37009126B9 /* ProductDetailVC.swift */; };
 		7FC773A623B31CFD00449239 /* SurveySymptom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */; };
 		7FC773A823B32E3E00449239 /* SurveySymptomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */; };
 		7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */; };
@@ -77,6 +78,7 @@
 		7F537CE223B4ABCE00115A2B /* ComponentProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentProductVC.swift; sourceTree = "<group>"; };
 		7F537CE423B4AC5400115A2B /* ComponentProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentProductCell.swift; sourceTree = "<group>"; };
 		7F58ABF923B6196B009126B9 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
+		7F58AC1B23B74B37009126B9 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveySymptom.storyboard; sourceTree = "<group>"; };
 		7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySymptomCell.swift; sourceTree = "<group>"; };
 		7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySymptomVC.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				F4DC233023B60C5C00A72919 /* TakingProductRegistVC.swift */,
 				F4DC233423B62AF300A72919 /* TakingProductRegistCell.swift */,
 				F4DC233623B6392F00A72919 /* AddTakingProductRegistCell.swift */,
+				7F58AC1B23B74B37009126B9 /* ProductDetailVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				7F537CE523B4AC5400115A2B /* ComponentProductCell.swift in Sources */,
 				7FC773B423B3673600449239 /* SurveyLifeStyleFirstPointVC.swift in Sources */,
 				F464828A23B3F41F00F63712 /* HomeVC.swift in Sources */,
+				7F58AC1C23B74B37009126B9 /* ProductDetailVC.swift in Sources */,
 				7FC773A823B32E3E00449239 /* SurveySymptomCell.swift in Sources */,
 				7F537CDD23B390EC00115A2B /* SurveyLifeStyleLastPointVC.swift in Sources */,
 				F464829A23B4BE3200F63712 /* User.swift in Sources */,

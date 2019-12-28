@@ -18,6 +18,8 @@ class TakingProductRegistVC: UIViewController {
     
     @IBOutlet weak var datePickerView: UIDatePicker!
     
+    @IBOutlet weak var datePickerTotalView: UIView!
+    
     var takingProductList: [TakingProduct] = []
     
     override func viewDidLoad() {
@@ -27,27 +29,35 @@ class TakingProductRegistVC: UIViewController {
         datePickButton.makeRounded(cornerRadius: 8)
 
         datePickButton.dropShadow(color: UIColor.darkGray, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 4)
-        //datePickButton.dropShadow(color: UIColor.darkGray, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 4)
         
         setTakingProduct()
         
         datePickerView.addTarget(self, action: #selector(changed), for: .valueChanged)
+        
+        datePickerTotalView.isHidden = true
 
     }
     
     @objc func changed() {
         let dateformatter = DateFormatter()
-        
+
         dateformatter.locale = NSLocale(localeIdentifier: "ko_KR") as Locale
         dateformatter.dateStyle = .long
         dateformatter.timeStyle = .none
         let date = dateformatter.string(from: datePickerView.date)
-        
+
         dateLabel.text = date
     }
-    
-    //back button action
+
+    // back button action
     @IBAction func backButtonClick(_ sender: Any) {
+    }
+    
+    // date pick button click action
+    @IBAction func datePickButtonClick(_ sender: Any) {
+        
+        datePickerTotalView.isHidden = false
+        datePickerView.isHidden = false
     }
     
     

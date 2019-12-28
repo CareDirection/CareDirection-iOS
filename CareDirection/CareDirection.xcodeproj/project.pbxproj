@@ -65,6 +65,15 @@
 		F4DC233323B628C600A72919 /* TakingProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC233223B628C600A72919 /* TakingProduct.swift */; };
 		F4DC233523B62AF300A72919 /* TakingProductRegistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC233423B62AF300A72919 /* TakingProductRegistCell.swift */; };
 		F4DC233723B6392F00A72919 /* AddTakingProductRegistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC233623B6392F00A72919 /* AddTakingProductRegistCell.swift */; };
+		F4DC233923B6F5A000A72919 /* IngredientStudy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DC233823B6F5A000A72919 /* IngredientStudy.storyboard */; };
+		F4DC233F23B7334900A72919 /* Ingredient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DC233E23B7334800A72919 /* Ingredient.storyboard */; };
+		F4DC234123B73CE800A72919 /* IngredientDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC234023B73CE800A72919 /* IngredientDetailVC.swift */; };
+		F4DC234323B73EAE00A72919 /* Symptom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DC234223B73EAE00A72919 /* Symptom.storyboard */; };
+		F4DC234523B7435900A72919 /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DC234423B7435900A72919 /* Article.storyboard */; };
+		F4DC234723B77A2700A72919 /* StandardDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DC234623B77A2700A72919 /* StandardDetail.storyboard */; };
+		F4DC234923B7875700A72919 /* StandardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC234823B7875700A72919 /* StandardDetailVC.swift */; };
+		F4DC234B23B789F500A72919 /* FunctionDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DC234A23B789F500A72919 /* FunctionDetail.storyboard */; };
+		F4DC234D23B7923E00A72919 /* FunctionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC234C23B7923E00A72919 /* FunctionDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +139,15 @@
 		F4DC233223B628C600A72919 /* TakingProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingProduct.swift; sourceTree = "<group>"; };
 		F4DC233423B62AF300A72919 /* TakingProductRegistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingProductRegistCell.swift; sourceTree = "<group>"; };
 		F4DC233623B6392F00A72919 /* AddTakingProductRegistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTakingProductRegistCell.swift; sourceTree = "<group>"; };
+		F4DC233823B6F5A000A72919 /* IngredientStudy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IngredientStudy.storyboard; sourceTree = "<group>"; };
+		F4DC233E23B7334800A72919 /* Ingredient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ingredient.storyboard; sourceTree = "<group>"; };
+		F4DC234023B73CE800A72919 /* IngredientDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetailVC.swift; sourceTree = "<group>"; };
+		F4DC234223B73EAE00A72919 /* Symptom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Symptom.storyboard; sourceTree = "<group>"; };
+		F4DC234423B7435900A72919 /* Article.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Article.storyboard; sourceTree = "<group>"; };
+		F4DC234623B77A2700A72919 /* StandardDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StandardDetail.storyboard; sourceTree = "<group>"; };
+		F4DC234823B7875700A72919 /* StandardDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardDetailVC.swift; sourceTree = "<group>"; };
+		F4DC234A23B789F500A72919 /* FunctionDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FunctionDetail.storyboard; sourceTree = "<group>"; };
+		F4DC234C23B7923E00A72919 /* FunctionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,11 +255,17 @@
 				F4DC233023B60C5C00A72919 /* TakingProductRegistVC.swift */,
 				F4DC233423B62AF300A72919 /* TakingProductRegistCell.swift */,
 				F4DC233623B6392F00A72919 /* AddTakingProductRegistCell.swift */,
+
 				7F58AC1B23B74B37009126B9 /* ProductDetailVC.swift */,
 				7F571A5523B767B900D892B2 /* ProductFunctionCVCell.swift */,
 				7F571A5723B7776300D892B2 /* ProductComponentInfoTVCell.swift */,
 				7F571A5923B77F7700D892B2 /* ProductNoticeTVCell.swift */,
 				7F571A5B23B783B800D892B2 /* NaverLowestPriceInfoCVCell.swift */,
+
+				F4DC234023B73CE800A72919 /* IngredientDetailVC.swift */,
+				F4DC234823B7875700A72919 /* StandardDetailVC.swift */,
+				F4DC234C23B7923E00A72919 /* FunctionDetailVC.swift */,
+
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -296,6 +320,12 @@
 				F4DC232A23B5548600A72919 /* SurveyFin.storyboard */,
 				F4DC232E23B57AE500A72919 /* TakingProductRegist.storyboard */,
 				7F58ABF923B6196B009126B9 /* ProductDetail.storyboard */,
+				F4DC233823B6F5A000A72919 /* IngredientStudy.storyboard */,
+				F4DC233E23B7334800A72919 /* Ingredient.storyboard */,
+				F4DC234223B73EAE00A72919 /* Symptom.storyboard */,
+				F4DC234423B7435900A72919 /* Article.storyboard */,
+				F4DC234623B77A2700A72919 /* StandardDetail.storyboard */,
+				F4DC234A23B789F500A72919 /* FunctionDetail.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -364,18 +394,24 @@
 				F492FB5223B215B300FE5D11 /* LaunchScreen.storyboard in Resources */,
 				F492FB4F23B215B300FE5D11 /* Assets.xcassets in Resources */,
 				7F537CDA23B38EAB00115A2B /* SurveyLifeStyleLastPoint.storyboard in Resources */,
+				F4DC234323B73EAE00A72919 /* Symptom.storyboard in Resources */,
+				F4DC234523B7435900A72919 /* Article.storyboard in Resources */,
 				F492FB8523B35B3F00FE5D11 /* Home.storyboard in Resources */,
+				F4DC233F23B7334900A72919 /* Ingredient.storyboard in Resources */,
 				F492FB8123B33C9E00FE5D11 /* Login.storyboard in Resources */,
+				F4DC234B23B789F500A72919 /* FunctionDetail.storyboard in Resources */,
 				7F033C8423B225DE00ABD866 /* SurveyInfo.storyboard in Resources */,
 				F492FB6D23B2412900FE5D11 /* Survey.storyboard in Resources */,
 				7F537CD623B3810000115A2B /* SurveyLifeStyleThirdPoint.storyboard in Resources */,
 				F492FB7123B2469C00FE5D11 /* SurveyDisease.storyboard in Resources */,
 				7F537CE123B48C7700115A2B /* Product.storyboard in Resources */,
+				F4DC233923B6F5A000A72919 /* IngredientStudy.storyboard in Resources */,
 				F464828023B3673400F63712 /* Signup.storyboard in Resources */,
 				F4DC232F23B57AE500A72919 /* TakingProductRegist.storyboard in Resources */,
 				F4DC232B23B5548600A72919 /* SurveyFin.storyboard in Resources */,
 				F492FB4D23B215B200FE5D11 /* Main.storyboard in Resources */,
 				7FC773AC23B349E100449239 /* SurveyLifeStyleEntry.storyboard in Resources */,
+				F4DC234723B77A2700A72919 /* StandardDetail.storyboard in Resources */,
 				7FC773B223B3554C00449239 /* SurveyLifeStyleFirstPoint.storyboard in Resources */,
 				7F58ABFA23B6196B009126B9 /* ProductDetail.storyboard in Resources */,
 				7FC773B623B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard in Resources */,
@@ -434,6 +470,7 @@
 				7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */,
 				F464828C23B3F64B00F63712 /* ProductCell.swift in Sources */,
 				7F033C8623B239DE00ABD866 /* SurveyInfoVC.swift in Sources */,
+				F4DC234D23B7923E00A72919 /* FunctionDetailVC.swift in Sources */,
 				F492FB6F23B2449F00FE5D11 /* SurveyVC.swift in Sources */,
 				F4DC233123B60C5C00A72919 /* TakingProductRegistVC.swift in Sources */,
 				F4DC233523B62AF300A72919 /* TakingProductRegistCell.swift in Sources */,
@@ -450,13 +487,18 @@
 				F492FB6523B216FE00FE5D11 /* UIColor+Extensions.swift in Sources */,
 				7F537CD423B37C8000115A2B /* SurveyLifeStyleSecondPointVC.swift in Sources */,
 				7FCCEAC623B2BCFE00F832B8 /* SurveyDiseaseVC.swift in Sources */,
+
 				7F571A5A23B77F7700D892B2 /* ProductNoticeTVCell.swift in Sources */,
+
+				F4DC234123B73CE800A72919 /* IngredientDetailVC.swift in Sources */,
+
 				F464828E23B3F8B100F63712 /* Product.swift in Sources */,
 				F464829C23B4BE8000F63712 /* UserCell.swift in Sources */,
 				F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */,
 				7FC773B023B354B400449239 /* SurveyLifeStyleEntryVC.swift in Sources */,
 				F4DC233323B628C600A72919 /* TakingProduct.swift in Sources */,
 				F492FB6323B216C900FE5D11 /* UIViewController+Extensions.swift in Sources */,
+				F4DC234923B7875700A72919 /* StandardDetailVC.swift in Sources */,
 				7F537CE523B4AC5400115A2B /* ComponentProductCell.swift in Sources */,
 				7FC773B423B3673600449239 /* SurveyLifeStyleFirstPointVC.swift in Sources */,
 				F464828A23B3F41F00F63712 /* HomeVC.swift in Sources */,

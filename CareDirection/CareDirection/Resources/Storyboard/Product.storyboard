@@ -41,6 +41,9 @@
                                             <constraint firstAttribute="width" constant="28" id="fDt-rX-6qn"/>
                                         </constraints>
                                         <state key="normal" image="icBack"/>
+                                        <connections>
+                                            <action selector="selectedBackBtn:" destination="zUG-cF-sQN" eventType="touchUpInside" id="blA-Mb-5ux"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -90,7 +93,7 @@
                                         <rect key="frame" x="99" y="24" width="258" height="43"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="제품을 검색해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W0T-L0-XHr">
-                                                <rect key="frame" x="0.0" y="0.0" width="258" height="43"/>
+                                                <rect key="frame" x="15" y="0.0" width="243" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -101,11 +104,14 @@
                                                     <constraint firstAttribute="width" constant="28" id="gep-tu-CrQ"/>
                                                 </constraints>
                                                 <state key="normal" image="icSearch"/>
+                                                <connections>
+                                                    <action selector="selectedSearchBtn:" destination="zUG-cF-sQN" eventType="touchUpInside" id="I0b-Cr-ozi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="W0T-L0-XHr" firstAttribute="leading" secondItem="R8F-AF-TNy" secondAttribute="leading" id="87R-hG-4vm"/>
+                                            <constraint firstItem="W0T-L0-XHr" firstAttribute="leading" secondItem="R8F-AF-TNy" secondAttribute="leading" constant="15" id="87R-hG-4vm"/>
                                             <constraint firstItem="W0T-L0-XHr" firstAttribute="top" secondItem="R8F-AF-TNy" secondAttribute="top" id="FJ1-V9-8Aw"/>
                                             <constraint firstAttribute="trailing" secondItem="W0T-L0-XHr" secondAttribute="trailing" id="NVr-Nq-tgQ"/>
                                             <constraint firstAttribute="trailing" secondItem="Zmr-6t-WnP" secondAttribute="trailing" constant="10" id="f69-yf-yUx"/>
@@ -393,6 +399,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uGu-Bo-cAi"/>
                     </view>
+                    <connections>
+                        <outlet property="backBtn" destination="6Np-9V-qli" id="e3e-Mn-DAI"/>
+                        <outlet property="defaultTypeView" destination="pJ3-Ib-ojP" id="wgC-ES-hkd"/>
+                        <outlet property="moreProductViewBtn" destination="IHI-4A-K6n" id="UOz-eU-rTS"/>
+                        <outlet property="productMainInfoViewTopConstraint" destination="S3U-dc-uRq" id="GsR-xu-sR7"/>
+                        <outlet property="productTV" destination="e4h-9R-MJq" id="MOr-U3-3j6"/>
+                        <outlet property="productTvTopConstraint" destination="mSu-ua-DWZ" id="1MI-eD-qbJ"/>
+                        <outlet property="searchFilterView" destination="03f-P7-Rvb" id="v50-MN-VuK"/>
+                        <outlet property="searchFiterTxtView" destination="eqc-HV-gbJ" id="wx4-Wp-OaA"/>
+                        <outlet property="searchResultCountLbl" destination="mxY-OJ-8R2" id="kbA-vi-9V5"/>
+                        <outlet property="searchTxtView" destination="W0T-L0-XHr" id="Plt-oN-6jw"/>
+                        <outlet property="searchTypeView" destination="vi4-kP-aEv" id="kFK-94-pY3"/>
+                        <outlet property="searchView" destination="R8F-AF-TNy" id="BGB-r7-rdM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Gy-sz-Yvv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -69,6 +69,7 @@
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="showDetailButtonClick:" destination="J9C-3r-fs6" eventType="touchUpInside" id="4HW-2H-PYP"/>
+                                                                    <action selector="showStandardDetail:" destination="J9C-3r-fs6" eventType="touchUpInside" id="eDI-Ht-89J"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -202,6 +203,9 @@
                                                                 <state key="normal" title="상세보기 &gt;">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="showFunctionalDetail:" destination="J9C-3r-fs6" eventType="touchUpInside" id="EMz-Pz-9ne"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

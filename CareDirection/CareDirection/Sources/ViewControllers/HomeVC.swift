@@ -112,6 +112,26 @@ class HomeVC: UIViewController {
         }
     }
     
+    @IBAction func showStandardDetail(_ sender: Any) {
+        
+        let standardStoryboard = UIStoryboard.init(name: "StandardDetail", bundle: nil)
+        guard let dvc = standardStoryboard.instantiateViewController(withIdentifier: "standard") as? StandardDetailVC else {
+          return
+        }
+        present(dvc, animated: true)
+        
+    }
+    
+    @IBAction func showFunctionalDetail(_ sender: Any) {
+        let functionStoryboard = UIStoryboard.init(name: "FunctionDetail", bundle: nil)
+        guard let dvc = functionStoryboard.instantiateViewController(withIdentifier: "functionDetail") as? FunctionDetailVC else {
+          return
+        }
+        present(dvc, animated: true)
+    }
+    
+    
+    
 }
 
 extension HomeVC : UITableViewDataSource, UITableViewDelegate {

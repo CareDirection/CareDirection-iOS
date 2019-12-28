@@ -72,6 +72,9 @@
                                             <constraint firstAttribute="width" constant="169" id="aPk-Vb-KZD"/>
                                             <constraint firstAttribute="height" constant="39" id="hrw-f3-SxZ"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="datePickButtonClick:" destination="Lty-k7-LUg" eventType="touchUpInside" id="3Eu-k4-394"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnd-cj-OQe">
                                         <rect key="frame" x="10" y="10" width="149" height="19"/>
@@ -373,14 +376,27 @@
                                     <outlet property="dataSource" destination="Lty-k7-LUg" id="vPK-Rv-66k"/>
                                 </connections>
                             </collectionView>
-                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="ReG-4n-st5">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2l-Fw-nS2">
                                 <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <subviews>
+                                    <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="ReG-4n-st5">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ReG-4n-st5" secondAttribute="height" multiplier="125:72" id="KxX-A4-6bv"/>
+                                        </constraints>
+                                        <locale key="locale" localeIdentifier="ko_KR"/>
+                                    </datePicker>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ReG-4n-st5" secondAttribute="height" multiplier="125:72" id="odX-3I-QM3"/>
+                                    <constraint firstItem="ReG-4n-st5" firstAttribute="leading" secondItem="s2l-Fw-nS2" secondAttribute="leading" id="Moo-dz-hno"/>
+                                    <constraint firstAttribute="width" secondItem="s2l-Fw-nS2" secondAttribute="height" multiplier="125:72" id="Ook-Sm-HRF"/>
+                                    <constraint firstAttribute="bottom" secondItem="ReG-4n-st5" secondAttribute="bottom" id="RKV-4C-WWS"/>
+                                    <constraint firstAttribute="trailing" secondItem="ReG-4n-st5" secondAttribute="trailing" id="Wdh-re-GSl"/>
+                                    <constraint firstItem="ReG-4n-st5" firstAttribute="top" secondItem="s2l-Fw-nS2" secondAttribute="top" id="zdt-4P-Ft1"/>
                                 </constraints>
-                                <locale key="locale" localeIdentifier="ko_KR"/>
-                            </datePicker>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -388,9 +404,9 @@
                             <constraint firstItem="TnA-qf-5ZP" firstAttribute="leading" secondItem="eG9-sX-FsT" secondAttribute="leading" id="2OO-cZ-KE7"/>
                             <constraint firstItem="TnA-qf-5ZP" firstAttribute="top" secondItem="qcX-2U-gCb" secondAttribute="top" id="2qk-Eb-Ri9"/>
                             <constraint firstItem="I4P-27-Kqf" firstAttribute="trailing" secondItem="yEG-Nh-GNu" secondAttribute="trailing" constant="188" id="HDK-0I-yzM"/>
-                            <constraint firstItem="ReG-4n-st5" firstAttribute="trailing" secondItem="I4P-27-Kqf" secondAttribute="trailing" id="HJC-Bi-GdV"/>
                             <constraint firstItem="nsU-Qq-6pc" firstAttribute="top" secondItem="TnA-qf-5ZP" secondAttribute="bottom" constant="25" id="HpR-zk-rZZ"/>
                             <constraint firstItem="TnA-qf-5ZP" firstAttribute="leading" secondItem="I4P-27-Kqf" secondAttribute="leading" id="Mfd-6j-rqw"/>
+                            <constraint firstItem="s2l-Fw-nS2" firstAttribute="leading" secondItem="I4P-27-Kqf" secondAttribute="leading" id="TsH-P2-9hA"/>
                             <constraint firstItem="eG9-sX-FsT" firstAttribute="leading" secondItem="I4P-27-Kqf" secondAttribute="leading" id="Xgg-vo-bZC"/>
                             <constraint firstItem="yEG-Nh-GNu" firstAttribute="leading" secondItem="I4P-27-Kqf" secondAttribute="leading" constant="18" id="ae1-r7-lh0"/>
                             <constraint firstItem="yEG-Nh-GNu" firstAttribute="top" secondItem="nsU-Qq-6pc" secondAttribute="bottom" constant="22" id="amF-2u-Knu"/>
@@ -398,15 +414,16 @@
                             <constraint firstItem="eG9-sX-FsT" firstAttribute="top" secondItem="yEG-Nh-GNu" secondAttribute="bottom" constant="20" id="cq6-bB-e4a"/>
                             <constraint firstItem="TnA-qf-5ZP" firstAttribute="trailing" secondItem="I4P-27-Kqf" secondAttribute="trailing" id="eJM-49-Eqw"/>
                             <constraint firstItem="eG9-sX-FsT" firstAttribute="trailing" secondItem="I4P-27-Kqf" secondAttribute="trailing" id="joU-Ep-Ub5"/>
-                            <constraint firstItem="ReG-4n-st5" firstAttribute="leading" secondItem="I4P-27-Kqf" secondAttribute="leading" id="kUN-FT-8rC"/>
-                            <constraint firstItem="ReG-4n-st5" firstAttribute="bottom" secondItem="I4P-27-Kqf" secondAttribute="bottom" id="rGZ-lJ-5Wn"/>
                             <constraint firstItem="I4P-27-Kqf" firstAttribute="trailing" secondItem="nsU-Qq-6pc" secondAttribute="trailing" constant="222.5" id="rJl-qM-wOP"/>
+                            <constraint firstItem="s2l-Fw-nS2" firstAttribute="bottom" secondItem="I4P-27-Kqf" secondAttribute="bottom" id="unJ-Gs-Pfc"/>
+                            <constraint firstItem="s2l-Fw-nS2" firstAttribute="trailing" secondItem="I4P-27-Kqf" secondAttribute="trailing" id="zqQ-mZ-sdP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I4P-27-Kqf"/>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="dl1-Oq-8JY" id="1LW-dM-qdd"/>
                         <outlet property="datePickButton" destination="yEG-Nh-GNu" id="WBh-Qv-J65"/>
+                        <outlet property="datePickerTotalView" destination="s2l-Fw-nS2" id="YFU-dA-hTs"/>
                         <outlet property="datePickerView" destination="ReG-4n-st5" id="l3e-eO-5Ky"/>
                         <outlet property="takingProductCollectionView" destination="eG9-sX-FsT" id="CZd-Tl-bPu"/>
                     </connections>

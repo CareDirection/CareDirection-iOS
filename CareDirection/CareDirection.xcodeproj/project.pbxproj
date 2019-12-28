@@ -22,6 +22,7 @@
 		7F571A5823B7776300D892B2 /* ProductComponentInfoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F571A5723B7776300D892B2 /* ProductComponentInfoTVCell.swift */; };
 		7F571A5A23B77F7700D892B2 /* ProductNoticeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F571A5923B77F7700D892B2 /* ProductNoticeTVCell.swift */; };
 		7F571A5C23B783B800D892B2 /* NaverLowestPriceInfoCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F571A5B23B783B800D892B2 /* NaverLowestPriceInfoCVCell.swift */; };
+		7F571A5E23B7E22D00D892B2 /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F571A5D23B7E22D00D892B2 /* ProductVC.swift */; };
 		7F58ABFA23B6196B009126B9 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F58ABF923B6196B009126B9 /* ProductDetail.storyboard */; };
 		7F58AC1C23B74B37009126B9 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F58AC1B23B74B37009126B9 /* ProductDetailVC.swift */; };
 		7FC773A623B31CFD00449239 /* SurveySymptom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */; };
@@ -94,6 +95,7 @@
 		7F571A5723B7776300D892B2 /* ProductComponentInfoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductComponentInfoTVCell.swift; sourceTree = "<group>"; };
 		7F571A5923B77F7700D892B2 /* ProductNoticeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNoticeTVCell.swift; sourceTree = "<group>"; };
 		7F571A5B23B783B800D892B2 /* NaverLowestPriceInfoCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLowestPriceInfoCVCell.swift; sourceTree = "<group>"; };
+		7F571A5D23B7E22D00D892B2 /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
 		7F58ABF923B6196B009126B9 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		7F58AC1B23B74B37009126B9 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveySymptom.storyboard; sourceTree = "<group>"; };
@@ -255,17 +257,15 @@
 				F4DC233023B60C5C00A72919 /* TakingProductRegistVC.swift */,
 				F4DC233423B62AF300A72919 /* TakingProductRegistCell.swift */,
 				F4DC233623B6392F00A72919 /* AddTakingProductRegistCell.swift */,
-
 				7F58AC1B23B74B37009126B9 /* ProductDetailVC.swift */,
 				7F571A5523B767B900D892B2 /* ProductFunctionCVCell.swift */,
 				7F571A5723B7776300D892B2 /* ProductComponentInfoTVCell.swift */,
 				7F571A5923B77F7700D892B2 /* ProductNoticeTVCell.swift */,
 				7F571A5B23B783B800D892B2 /* NaverLowestPriceInfoCVCell.swift */,
-
 				F4DC234023B73CE800A72919 /* IngredientDetailVC.swift */,
 				F4DC234823B7875700A72919 /* StandardDetailVC.swift */,
 				F4DC234C23B7923E00A72919 /* FunctionDetailVC.swift */,
-
+				7F571A5D23B7E22D00D892B2 /* ProductVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -487,11 +487,8 @@
 				F492FB6523B216FE00FE5D11 /* UIColor+Extensions.swift in Sources */,
 				7F537CD423B37C8000115A2B /* SurveyLifeStyleSecondPointVC.swift in Sources */,
 				7FCCEAC623B2BCFE00F832B8 /* SurveyDiseaseVC.swift in Sources */,
-
 				7F571A5A23B77F7700D892B2 /* ProductNoticeTVCell.swift in Sources */,
-
 				F4DC234123B73CE800A72919 /* IngredientDetailVC.swift in Sources */,
-
 				F464828E23B3F8B100F63712 /* Product.swift in Sources */,
 				F464829C23B4BE8000F63712 /* UserCell.swift in Sources */,
 				F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */,
@@ -506,6 +503,7 @@
 				7FC773A823B32E3E00449239 /* SurveySymptomCell.swift in Sources */,
 				7F537CDD23B390EC00115A2B /* SurveyLifeStyleLastPointVC.swift in Sources */,
 				F464829A23B4BE3200F63712 /* User.swift in Sources */,
+				7F571A5E23B7E22D00D892B2 /* ProductVC.swift in Sources */,
 				F492FB6123B216A100FE5D11 /* UIView+Extensions.swift in Sources */,
 				F4DC232D23B555ED00A72919 /* SurveyFin.swift in Sources */,
 				F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */,

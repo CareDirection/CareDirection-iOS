@@ -124,6 +124,9 @@
                                         <rect key="frame" x="11" y="31" width="28" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="icBack"/>
+                                        <connections>
+                                            <action selector="backButtonClick:" destination="BLO-qI-HXl" eventType="touchUpInside" id="a3h-S5-kGn"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="성분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K81-Pj-ASU">
                                         <rect key="frame" x="172" y="31" width="30" height="21"/>
@@ -157,6 +160,7 @@
                     <connections>
                         <outlet property="goToProductButton" destination="8P1-Od-oj3" id="91i-s0-e98"/>
                         <outlet property="ingredientTableView" destination="nOh-FA-fk9" id="JCo-gS-Gab"/>
+                        <outlet property="navigationBar" destination="tvh-fG-2fy" id="fOT-3s-BGZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkO-Lh-vCJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

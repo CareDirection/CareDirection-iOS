@@ -10,27 +10,39 @@ import UIKit
 
 class HomeVC: UIViewController {
     
+    // 제품 나타내는 collection view
     @IBOutlet weak var productCollectionView: UICollectionView!
     
+    // 문제의 스크롤뷰..ㅎ
     @IBOutlet weak var scrollView: UIScrollView!
     
+    // 상세 뷰로 이어지는 버튼들
     @IBOutlet weak var showDetailStandard: UIButton!
-    
     @IBOutlet weak var showDetailFunction: UIButton!
-    
     @IBOutlet weak var showSchedule: UIButton!
     
+    // 유저 선택 전체적인 뷰
     @IBOutlet weak var userTableView: SelfSizedTableView!
-    
-    
     @IBOutlet weak var dropDownButton: UIButton!
-    
-    
     @IBOutlet weak var blurView: UIView!
+    @IBOutlet weak var navigationBar: UIView!
+    
+    // 뷰의 전체적인 세 가지 뷰들.
+    @IBOutlet weak var ingredientView: UIView!
+    @IBOutlet weak var functionView: UIView!
+    @IBOutlet weak var takingView: UIView!
+    
+    // 차트 나타내는 뷰
+    @IBOutlet weak var chartView: ChartView!
+    
+    // 복용제품 등록하지 않았을 시 나타나는 뷰
+    @IBOutlet weak var noRegistView: UIView!
     
     
+    // 받아올 데이터 리스트들.
+    //1. 유저 리스트
+    //2. 등록한 제품들 리스트
     var userList : [User] = []
-    
     var productList : [Product] = []
     
     override func viewDidLoad() {
@@ -44,7 +56,15 @@ class HomeVC: UIViewController {
         // navigation bar 사용자 추가 isHidden 설정해주기!
         userTableView.isHidden = true
         blurView.isHidden = true
+        navigationBar.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
         
+        // 전체적인 뷰 블록 나누기 효과
+        ingredientView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
+        functionView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
+        takingView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
+        
+        // 차트 뷰 나타내기
+        ChartView.playAnimations()
         
         // table view customize
         userTableView.clipsToBounds = true
@@ -57,8 +77,6 @@ class HomeVC: UIViewController {
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
         
-        // scroll view edgeinset 지정해주기
-        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0)
         
         // button custom 하기
         showDetailStandard.makeRounded(cornerRadius: 13)
@@ -66,11 +84,14 @@ class HomeVC: UIViewController {
         showSchedule.makeRounded(cornerRadius: 13)
         showSchedule.setBorder(borderColor: UIColor.brownishGrey, borderWidth: 1)
         
+        // 복용하는 제품이 없을 시 나타내는 뷰
+        noRegistView.makeRounded(cornerRadius: 18)
+        noRegistView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
+        
     }
     
     
     // 유저 변경 drop down button
-    
     @IBAction func userDropDown(_ sender: Any) {
         if userTableView.isHidden {
             animate(toggle: true)
@@ -78,7 +99,6 @@ class HomeVC: UIViewController {
             animate(toggle: false)
         }
     }
-    
     
     func animate(toggle: Bool) {
         if toggle {
@@ -123,13 +143,10 @@ class HomeVC: UIViewController {
           return
         }
         present(dvc, animated: true)
-        
     }
-    
-    
-    
 }
 
+// 유저 등록 table view datasource & delegate
 extension HomeVC : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userList.count
@@ -200,7 +217,7 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-// collection view datasource
+// 복용하고 있는 제품들 collection view datasource
 extension HomeVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productList.count

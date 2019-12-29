@@ -10,4 +10,5 @@ target 'CareDirection' do
   pod 'Kingfisher', '~> 4.10.1'
   pod 'Hero'
   pod 'XLPagerTabStrip', '~> 9.0'
+  pod "Macaw", "0.9.5"
 end

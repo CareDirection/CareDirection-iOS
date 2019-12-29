@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SWt-Oh-u32">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SWt-Oh-u32">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="선호하는 애칭이나 별명을 적어주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYm-RM-LLJ">
-                                <rect key="frame" x="18" y="297" width="339" height="34"/>
+                                <rect key="frame" x="18" y="316.5" width="339" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="jCB-7M-dTl"/>
                                     <constraint firstAttribute="width" constant="339" id="l1I-0k-YyW"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kD-MJ-MAJ">
-                                <rect key="frame" x="18" y="330" width="339" height="1"/>
+                                <rect key="frame" x="18" y="349.5" width="339" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="339" id="8t9-GH-QNc"/>
@@ -59,7 +59,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고객님의 이름을 정해주시겠어요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQm-s3-qd1">
-                                <rect key="frame" x="18" y="149" width="327" height="30"/>
+                                <rect key="frame" x="18" y="149" width="327" height="49.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QQm-s3-qd1" secondAttribute="height" multiplier="109:10" id="iYq-2n-gZr"/>
                                 </constraints>
@@ -81,9 +81,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Gra-oQ-mZZ" firstAttribute="centerX" secondItem="ytE-jQ-chE" secondAttribute="centerX" id="15K-wf-tU0"/>
-                            <constraint firstItem="9kD-MJ-MAJ" firstAttribute="top" secondItem="uOI-75-lSd" secondAttribute="top" constant="330" id="1IV-5Q-Pnv"/>
                             <constraint firstItem="ytE-jQ-chE" firstAttribute="top" secondItem="uOI-75-lSd" secondAttribute="top" id="570-mK-vKy"/>
                             <constraint firstItem="9kD-MJ-MAJ" firstAttribute="centerX" secondItem="ytE-jQ-chE" secondAttribute="centerX" id="7QS-Ic-hRG"/>
+                            <constraint firstItem="hYm-RM-LLJ" firstAttribute="centerY" secondItem="ytE-jQ-chE" secondAttribute="centerY" id="7qB-jV-dnq"/>
                             <constraint firstItem="s0z-sa-o8x" firstAttribute="bottom" secondItem="RuS-74-sBF" secondAttribute="bottom" constant="28" id="8ju-IQ-f7m"/>
                             <constraint firstItem="s0z-sa-o8x" firstAttribute="trailing" secondItem="u85-oT-QZj" secondAttribute="trailing" constant="257" id="AFJ-fc-44b"/>
                             <constraint firstItem="ytE-jQ-chE" firstAttribute="leading" secondItem="s0z-sa-o8x" secondAttribute="leading" id="Km4-Dh-KK8"/>
@@ -106,6 +106,7 @@
                         <outlet property="nameTextField" destination="hYm-RM-LLJ" id="f9v-JI-LnS"/>
                         <outlet property="nextButton" destination="Gra-oQ-mZZ" id="hN7-99-3aN"/>
                         <outlet property="nextText" destination="RuS-74-sBF" id="ex8-Ve-SOY"/>
+                        <outlet property="viewYCenter" destination="7qB-jV-dnq" id="OPB-3y-rOy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHQ-O1-IpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

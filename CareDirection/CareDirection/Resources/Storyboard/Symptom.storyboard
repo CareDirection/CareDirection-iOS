@@ -64,6 +64,7 @@
                     </view>
                     <connections>
                         <outlet property="goToProductButton" destination="f59-Mr-9jw" id="ply-mY-gDs"/>
+                        <outlet property="navigationBar" destination="WO2-Ta-bgC" id="3RC-Ut-785"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBK-7a-rij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

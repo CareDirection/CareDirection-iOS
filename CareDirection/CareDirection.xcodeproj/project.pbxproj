@@ -89,6 +89,9 @@
 		F4DC234D23B7923E00A72919 /* FunctionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC234C23B7923E00A72919 /* FunctionDetailVC.swift */; };
 		F4DC234F23B7BD4200A72919 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC234E23B7BD4200A72919 /* CustomImageView.swift */; };
 		F4DC235123B8509200A72919 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC235023B8509200A72919 /* CALayer+Extensions.swift */; };
+		F4DFE47B23B8F01600711C26 /* HomeTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFE47A23B8F01600711C26 /* HomeTestVC.swift */; };
+		F4DFE47D23B8F9AC00711C26 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFE47C23B8F9AC00711C26 /* ChartView.swift */; };
+		F4DFE47F23B8FA1600711C26 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFE47E23B8FA1600711C26 /* Chart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +181,9 @@
 		F4DC234C23B7923E00A72919 /* FunctionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionDetailVC.swift; sourceTree = "<group>"; };
 		F4DC234E23B7BD4200A72919 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		F4DC235023B8509200A72919 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
+		F4DFE47A23B8F01600711C26 /* HomeTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTestVC.swift; sourceTree = "<group>"; };
+		F4DFE47C23B8F9AC00711C26 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		F4DFE47E23B8FA1600711C26 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +309,7 @@
 				F44C3EC423B8A87B004F829A /* ArticleCell.swift */,
 				F44C3EC623B8BD9A004F829A /* ArticleDetailVC.swift */,
 				7F5BE25123B8D93900D2A70F /* SurveyLifeStyleFouthPointVC.swift */,
+				F4DFE47A23B8F01600711C26 /* HomeTestVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -317,6 +324,7 @@
 				F464829F23B4DF6A00F63712 /* SelfSizedTableView.swift */,
 				F4DC234E23B7BD4200A72919 /* CustomImageView.swift */,
 				F4DC235023B8509200A72919 /* CALayer+Extensions.swift */,
+				F4DFE47C23B8F9AC00711C26 /* ChartView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,6 +337,7 @@
 				F4DC233223B628C600A72919 /* TakingProduct.swift */,
 				F44C3EBE23B8A552004F829A /* Article.swift */,
 				F44C3EC223B8A81A004F829A /* Ingredient.swift */,
+				F4DFE47E23B8FA1600711C26 /* Chart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -514,7 +523,9 @@
 				F44C3EB723B87FE1004F829A /* SymptomVC.swift in Sources */,
 				7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */,
 				F464828C23B3F64B00F63712 /* ProductCell.swift in Sources */,
+				F4DFE47F23B8FA1600711C26 /* Chart.swift in Sources */,
 				7F033C8623B239DE00ABD866 /* SurveyInfoVC.swift in Sources */,
+				F4DFE47B23B8F01600711C26 /* HomeTestVC.swift in Sources */,
 				F4DC234D23B7923E00A72919 /* FunctionDetailVC.swift in Sources */,
 				F492FB6F23B2449F00FE5D11 /* SurveyVC.swift in Sources */,
 				F44C3EC123B8A709004F829A /* IngredientStudyCell.swift in Sources */,
@@ -538,6 +549,7 @@
 				F44C3EC323B8A81A004F829A /* Ingredient.swift in Sources */,
 				7F571A5A23B77F7700D892B2 /* ProductNoticeTVCell.swift in Sources */,
 				F4DC234123B73CE800A72919 /* IngredientDetailVC.swift in Sources */,
+				F4DFE47D23B8F9AC00711C26 /* ChartView.swift in Sources */,
 				F464828E23B3F8B100F63712 /* Product.swift in Sources */,
 				F4DC235123B8509200A72919 /* CALayer+Extensions.swift in Sources */,
 				F4DC234F23B7BD4200A72919 /* CustomImageView.swift in Sources */,

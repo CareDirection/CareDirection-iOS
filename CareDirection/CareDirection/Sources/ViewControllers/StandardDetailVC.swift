@@ -14,6 +14,7 @@ class StandardDetailVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        ChartView.playAnimations()
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {

@@ -65,7 +65,6 @@ class HomeVC: UIViewController {
         
         // 차트 뷰 나타내기
         ChartView.playAnimations()
-        
         // table view customize
         userTableView.clipsToBounds = true
         userTableView.layer.cornerRadius = 20

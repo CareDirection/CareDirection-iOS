@@ -111,12 +111,12 @@ extension IngredientStudyVC : UICollectionViewDelegate {
 
 extension IngredientStudyVC {
     func setIngredient() {
-        let ingredient1 = Ingredient(image: "")
-        let ingredient2 = Ingredient(image: "")
-        let ingredient3 = Ingredient(image: "")
-        let ingredient4 = Ingredient(image: "")
-        let ingredient5 = Ingredient(image: "")
-        let ingredient6 = Ingredient(image: "")
+        let ingredient1 = Ingredient(image: "hongsam")
+        let ingredient2 = Ingredient(image: "omega")
+        let ingredient3 = Ingredient(image: "milk")
+        let ingredient4 = Ingredient(image: "lutain")
+        let ingredient5 = Ingredient(image: "you")
+        let ingredient6 = Ingredient(image: "vita")
         
         ingredientList = [ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6]
     }

@@ -132,7 +132,7 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kC-c5-fHu">
                                                                         <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3F3-Aj-ZGg">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liver" translatesAutoresizingMaskIntoConstraints="NO" id="3F3-Aj-ZGg" customClass="CustomImageView" customModule="CareDirection" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="66"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="66" id="5f1-dm-lqD"/>
@@ -152,7 +152,6 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIB-ef-cu2">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="90"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <state key="normal" title="Button"/>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -171,14 +170,14 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQ9-BL-O4s">
                                                                         <rect key="frame" x="96" y="0.0" width="66" height="91"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hq6-ZC-rjg">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fatigueRecovery" translatesAutoresizingMaskIntoConstraints="NO" id="Hq6-ZC-rjg" customClass="CustomImageView" customModule="CareDirection" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="66"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="66" id="5DU-vc-bhi"/>
                                                                                     <constraint firstAttribute="width" constant="66" id="OZa-YG-av7"/>
                                                                                 </constraints>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdU-s3-flL">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="피로회복" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdU-s3-flL">
                                                                                 <rect key="frame" x="0.0" y="75" width="66" height="15"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="66" id="7hw-jj-6Ty"/>
@@ -191,7 +190,6 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzH-Sb-eih">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="89"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <state key="normal" title="Button"/>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -210,14 +208,14 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUq-cF-N4V">
                                                                         <rect key="frame" x="192" y="0.0" width="66" height="91"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="riZ-re-4Me">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="riZ-re-4Me" customClass="CustomImageView" customModule="CareDirection" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="66"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="66" id="1Rf-Oy-uD7"/>
                                                                                     <constraint firstAttribute="height" constant="66" id="rop-jH-Fmc"/>
                                                                                 </constraints>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFr-jp-xrq">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="눈건강" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFr-jp-xrq">
                                                                                 <rect key="frame" x="0.0" y="75" width="66" height="15"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="15" id="ecC-Th-1fP"/>
@@ -230,7 +228,6 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgq-hd-gcc">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="89"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <state key="normal" title="Button"/>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -254,14 +251,14 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ut-EQ-M85">
                                                                         <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PmT-Zl-iYE">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="improvement" translatesAutoresizingMaskIntoConstraints="NO" id="PmT-Zl-iYE" customClass="CustomImageView" customModule="CareDirection" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="66"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="66" id="Vm1-fk-J8a"/>
                                                                                     <constraint firstAttribute="width" constant="66" id="W2V-DB-kMl"/>
                                                                                 </constraints>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="피로회복" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yf-im-syA">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="혈행개선" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yf-im-syA">
                                                                                 <rect key="frame" x="0.0" y="75" width="66" height="15"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="15" id="GW8-Ja-tac"/>
@@ -274,7 +271,6 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCc-dq-6h9">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="89"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <state key="normal" title="Button"/>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -293,14 +289,14 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjX-gw-bGM">
                                                                         <rect key="frame" x="96" y="0.0" width="66" height="91"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cap-M4-u2J">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="levelOfImmunity" translatesAutoresizingMaskIntoConstraints="NO" id="cap-M4-u2J" customClass="CustomImageView" customModule="CareDirection" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="66"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="66" id="84B-iI-1xu"/>
                                                                                     <constraint firstAttribute="width" constant="66" id="rnp-Oa-8dw"/>
                                                                                 </constraints>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZE-DQ-3ex">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="면역력항산화" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZE-DQ-3ex">
                                                                                 <rect key="frame" x="0.0" y="75" width="66" height="15"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="15" id="HCu-ZQ-gxK"/>
@@ -313,7 +309,6 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBT-Xp-adT">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="89"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <state key="normal" title="Button"/>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -332,14 +327,14 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdY-Ep-GD0">
                                                                         <rect key="frame" x="192" y="0.0" width="66" height="91"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qLf-3j-bCt">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digest" translatesAutoresizingMaskIntoConstraints="NO" id="qLf-3j-bCt" customClass="CustomImageView" customModule="CareDirection" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="66"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="66" id="6il-3r-qH7"/>
                                                                                     <constraint firstAttribute="width" constant="66" id="C4a-q3-otX"/>
                                                                                 </constraints>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROS-Hz-OBm">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="소화기능" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROS-Hz-OBm">
                                                                                 <rect key="frame" x="0.0" y="75" width="66" height="15"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="66" id="Kmy-2C-7Sa"/>
@@ -352,7 +347,6 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gl-pF-JS2">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="89"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <state key="normal" title="Button"/>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -376,14 +370,14 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaX-cL-eRc">
                                                                         <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bM7-FI-JhK">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brain" translatesAutoresizingMaskIntoConstraints="NO" id="bM7-FI-JhK" customClass="CustomImageView" customModule="CareDirection" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="66"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="66" id="5jr-sX-YND"/>
                                                                                     <constraint firstAttribute="width" constant="66" id="AtM-w4-DI6"/>
                                                                                 </constraints>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="눈건강" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0C-PK-b8E">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두뇌활동" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0C-PK-b8E">
                                                                                 <rect key="frame" x="0.0" y="75" width="66" height="15"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="66" id="HQW-sW-bta"/>
@@ -396,7 +390,6 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZM-NG-cjj">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="89"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <state key="normal" title="Button"/>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -415,14 +408,14 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4c-x9-oOh">
                                                                         <rect key="frame" x="96" y="0.0" width="66" height="91"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QXA-bf-UTn">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="QXA-bf-UTn" customClass="CustomImageView" customModule="CareDirection" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="66"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="66" id="0aA-sS-Ybb"/>
                                                                                     <constraint firstAttribute="height" constant="66" id="gUz-HS-GUs"/>
                                                                                 </constraints>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niV-ZO-GM2">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="운동보조" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niV-ZO-GM2">
                                                                                 <rect key="frame" x="0.0" y="75" width="66" height="15"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="15" id="UNM-Qm-wb0"/>
@@ -435,7 +428,6 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Z5-D4-hmg">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="90"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <state key="normal" title="Button"/>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -454,14 +446,14 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sX1-H1-K2L">
                                                                         <rect key="frame" x="192" y="0.0" width="66" height="91"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8hE-2y-2AS">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bone" translatesAutoresizingMaskIntoConstraints="NO" id="8hE-2y-2AS" customClass="CustomImageView" customModule="CareDirection" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="66"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="66" id="IS6-JT-EBH"/>
                                                                                     <constraint firstAttribute="height" constant="66" id="cNf-b4-XwC"/>
                                                                                 </constraints>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQk-4e-NtK">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뼈" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQk-4e-NtK">
                                                                                 <rect key="frame" x="0.0" y="75" width="66" height="15"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="15" id="4Hn-9W-1wL"/>
@@ -474,7 +466,6 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3M-qk-Gp6">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="90"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <state key="normal" title="Button"/>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -690,4 +681,15 @@
             <point key="canvasLocation" x="24.800000000000001" y="-105.69715142428787"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bone" width="66" height="66"/>
+        <image name="brain" width="66" height="66"/>
+        <image name="digest" width="66" height="66"/>
+        <image name="eye" width="66" height="66"/>
+        <image name="fatigueRecovery" width="66" height="66"/>
+        <image name="health" width="66" height="66"/>
+        <image name="improvement" width="66" height="66"/>
+        <image name="levelOfImmunity" width="66" height="66"/>
+        <image name="liver" width="66" height="66"/>
+    </resources>
 </document>

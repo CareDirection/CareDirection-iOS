@@ -68,7 +68,7 @@
                                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-dI-Czw">
                                                                 <rect key="frame" x="51" y="0.0" width="324" height="204"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFi-XT-5hd" customClass="ChartView" customModule="CareDirection" customModuleProvider="target">
+                                                                    <view contentMode="bottomLeft" translatesAutoresizingMaskIntoConstraints="NO" id="XFi-XT-5hd" customClass="ChartView" customModule="CareDirection" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="324" height="204"/>
                                                                     </view>
                                                                 </subviews>
@@ -403,7 +403,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEb-nN-Vuv">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="933"/>
+                                                <rect key="frame" x="411" y="0.0" width="375" height="933"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="0.68999999999999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>

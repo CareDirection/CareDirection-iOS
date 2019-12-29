@@ -647,14 +647,36 @@
                     <view key="view" contentMode="scaleToFill" id="0K7-8i-7HR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAW-qS-Uk1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="h9x-EC-XFX" kind="embed" id="b5p-ot-FmL"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xAW-qS-Uk1" firstAttribute="trailing" secondItem="wan-cw-Pq7" secondAttribute="trailing" id="PDb-t2-ZOa"/>
+                            <constraint firstAttribute="bottom" secondItem="xAW-qS-Uk1" secondAttribute="bottom" id="SHD-DK-Pc0"/>
+                            <constraint firstItem="xAW-qS-Uk1" firstAttribute="top" secondItem="wan-cw-Pq7" secondAttribute="top" id="k2J-GV-loH"/>
+                            <constraint firstItem="xAW-qS-Uk1" firstAttribute="leading" secondItem="wan-cw-Pq7" secondAttribute="leading" id="mHk-f8-ZiS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wan-cw-Pq7"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="제품" image="productIcUnselected" id="BAr-dY-T2D"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6y9-lc-8EW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="1052"/>
+            <point key="canvasLocation" x="1181.5999999999999" y="1051.1244377811095"/>
+        </scene>
+        <!--Product-->
+        <scene sceneID="AOE-ya-kwO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Product" id="h9x-EC-XFX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pKA-be-Frj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2042" y="1050"/>
         </scene>
         <!--성분학습-->
         <scene sceneID="yRF-jj-n6M">

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zUG-cF-sQN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zUG-cF-sQN">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--ProductVC-->
         <scene sceneID="wDp-2p-ME9">
             <objects>
-                <viewController id="zUG-cF-sQN" customClass="ProductVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Product" id="zUG-cF-sQN" customClass="ProductVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9AU-cP-Jin">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnDropdown" translatesAutoresizingMaskIntoConstraints="NO" id="gnc-Nk-ghG">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic" translatesAutoresizingMaskIntoConstraints="NO" id="gnc-Nk-ghG">
                                                 <rect key="frame" x="10" y="19" width="9" height="5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="9" id="ZQh-iu-VHk"/>
@@ -1137,7 +1137,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btnDropdown" width="9" height="5"/>
         <image name="homeIcSelected" width="28" height="28"/>
         <image name="ic" width="9" height="5"/>
         <image name="icBack" width="28" height="28"/>

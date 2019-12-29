@@ -69,6 +69,8 @@
 		F4DC234923B7875700A72919 /* StandardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC234823B7875700A72919 /* StandardDetailVC.swift */; };
 		F4DC234B23B789F500A72919 /* FunctionDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DC234A23B789F500A72919 /* FunctionDetail.storyboard */; };
 		F4DC234D23B7923E00A72919 /* FunctionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC234C23B7923E00A72919 /* FunctionDetailVC.swift */; };
+		F4DC234F23B7BD4200A72919 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC234E23B7BD4200A72919 /* CustomImageView.swift */; };
+		F4DC235123B8509200A72919 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC235023B8509200A72919 /* CALayer+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +140,8 @@
 		F4DC234823B7875700A72919 /* StandardDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardDetailVC.swift; sourceTree = "<group>"; };
 		F4DC234A23B789F500A72919 /* FunctionDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FunctionDetail.storyboard; sourceTree = "<group>"; };
 		F4DC234C23B7923E00A72919 /* FunctionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionDetailVC.swift; sourceTree = "<group>"; };
+		F4DC234E23B7BD4200A72919 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		F4DC235023B8509200A72919 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,8 @@
 				F492FB6423B216FE00FE5D11 /* UIColor+Extensions.swift */,
 				F492FB6623B217E600FE5D11 /* UIImageView+Extensions.swift */,
 				F464829F23B4DF6A00F63712 /* SelfSizedTableView.swift */,
+				F4DC234E23B7BD4200A72919 /* CustomImageView.swift */,
+				F4DC235023B8509200A72919 /* CALayer+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -468,6 +474,8 @@
 				7FCCEAC623B2BCFE00F832B8 /* SurveyDiseaseVC.swift in Sources */,
 				F4DC234123B73CE800A72919 /* IngredientDetailVC.swift in Sources */,
 				F464828E23B3F8B100F63712 /* Product.swift in Sources */,
+				F4DC235123B8509200A72919 /* CALayer+Extensions.swift in Sources */,
+				F4DC234F23B7BD4200A72919 /* CustomImageView.swift in Sources */,
 				F464829C23B4BE8000F63712 /* UserCell.swift in Sources */,
 				F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */,
 				7FC773B023B354B400449239 /* SurveyLifeStyleEntryVC.swift in Sources */,

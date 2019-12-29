@@ -7,28 +7,55 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Article DetailVC-->
         <scene sceneID="f4Q-5A-WgH">
             <objects>
-                <viewController id="Ras-R2-aeI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleDetailVC" modalPresentationStyle="fullScreen" id="Ras-R2-aeI" customClass="ArticleDetailVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jF1-mP-cqG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ET9-eq-2SI">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ET9-eq-2SI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKq-DX-uda">
+                                        <rect key="frame" x="11" y="31" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="jK9-ry-M2V"/>
+                                            <constraint firstAttribute="height" constant="28" id="wlE-V9-7Nn"/>
+                                        </constraints>
+                                        <state key="normal" image="icBack"/>
+                                        <connections>
+                                            <action selector="backButtonClick:" destination="Ras-R2-aeI" eventType="touchUpInside" id="Wzp-Bb-Evi"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아티클" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aT-KM-4RC">
+                                        <rect key="frame" x="165" y="35" width="45" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="QM8-GE-myM"/>
+                                            <constraint firstAttribute="width" constant="45" id="foa-B3-L21"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ET9-eq-2SI" secondAttribute="height" multiplier="125:22" id="QQs-T1-4NV"/>
+                                    <constraint firstAttribute="bottom" secondItem="qKq-DX-uda" secondAttribute="bottom" constant="7" id="SH2-hG-gEW"/>
+                                    <constraint firstAttribute="bottom" secondItem="7aT-KM-4RC" secondAttribute="bottom" constant="10" id="Yns-vz-OnQ"/>
+                                    <constraint firstItem="7aT-KM-4RC" firstAttribute="top" secondItem="ET9-eq-2SI" secondAttribute="top" constant="35" id="cAP-UB-28n"/>
+                                    <constraint firstAttribute="trailing" secondItem="7aT-KM-4RC" secondAttribute="trailing" constant="165" id="oru-Kh-0Eg"/>
+                                    <constraint firstItem="qKq-DX-uda" firstAttribute="top" secondItem="ET9-eq-2SI" secondAttribute="top" constant="31" id="xHR-cX-lsx"/>
+                                    <constraint firstItem="qKq-DX-uda" firstAttribute="leading" secondItem="ET9-eq-2SI" secondAttribute="leading" constant="11" id="xQ2-cS-og4"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="아티클 뷰임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxT-bT-59d">
-                                <rect key="frame" x="149" y="281" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ET9-eq-2SI" firstAttribute="top" secondItem="ZFp-Lg-DIc" secondAttribute="top" id="fHZ-7n-3b0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZFp-Lg-DIc"/>
                     </view>
                 </viewController>
@@ -37,4 +64,7 @@
             <point key="canvasLocation" x="141.59999999999999" y="69.715142428785612"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icBack" width="28" height="28"/>
+    </resources>
 </document>

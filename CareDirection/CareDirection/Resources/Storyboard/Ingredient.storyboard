@@ -10,7 +10,7 @@
         <!--Ingredient DetailVC-->
         <scene sceneID="bUi-3c-iqr">
             <objects>
-                <viewController id="BLO-qI-HXl" customClass="IngredientDetailVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IngredientDetailVC" modalPresentationStyle="fullScreen" id="BLO-qI-HXl" customClass="IngredientDetailVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3JZ-k5-dKV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nameCell" rowHeight="61" id="KBC-N1-oRA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nameCell" rowHeight="61" id="KBC-N1-oRA" customClass="IngredientNameCell" customModule="CareDirection" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KBC-N1-oRA" id="bi0-Ko-2gQ">
@@ -43,8 +43,11 @@
                                             <constraint firstAttribute="bottom" secondItem="2px-Jw-eGj" secondAttribute="bottom" constant="19" id="ET7-wh-ker"/>
                                             <constraint firstItem="2px-Jw-eGj" firstAttribute="top" secondItem="KBC-N1-oRA" secondAttribute="top" constant="20" id="TrV-RV-j3Q"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="2px-Jw-eGj" id="tTq-Kf-4Nq"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="imageCell" rowHeight="160" id="MqB-D2-cI5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="imageCell" rowHeight="160" id="MqB-D2-cI5" customClass="IngredientImageCell" customModule="CareDirection" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="89" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MqB-D2-cI5" id="XGm-qO-Cb0">
@@ -65,8 +68,11 @@
                                             <constraint firstAttribute="bottom" secondItem="2Tv-Em-UKp" secondAttribute="bottom" id="G4n-SC-fKH"/>
                                             <constraint firstItem="2Tv-Em-UKp" firstAttribute="top" secondItem="MqB-D2-cI5" secondAttribute="top" id="cfl-Kl-6hC"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="ingredientImage" destination="2Tv-Em-UKp" id="fag-Z4-EHJ"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="explainCell" id="o4t-hK-uCh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="explainCell" id="o4t-hK-uCh" customClass="IngredientExplainCell" customModule="CareDirection" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="249" width="375" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o4t-hK-uCh" id="pdl-Bt-MbM">
@@ -89,18 +95,21 @@
                                                 <constraint firstItem="7uK-H2-862" firstAttribute="leading" secondItem="pdl-Bt-MbM" secondAttribute="leading" constant="18" id="sKk-Vo-iyC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="explainLabel" destination="7uK-H2-862" id="Igr-48-Gzp"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P1-Od-oj3">
-                                <rect key="frame" x="72" y="609" width="230" height="40"/>
+                                <rect key="frame" x="122" y="613" width="130" height="34"/>
                                 <color key="backgroundColor" red="0.0" green="0.64705882349999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="230" id="Ecb-vG-X6k"/>
-                                    <constraint firstAttribute="height" constant="40" id="v8i-2x-bXZ"/>
+                                    <constraint firstAttribute="height" constant="34" id="97X-Fb-iTZ"/>
+                                    <constraint firstAttribute="width" constant="130" id="UeS-Nz-eoH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <state key="normal" title="제품 보러가기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -134,11 +143,11 @@
                         <constraints>
                             <constraint firstItem="cFA-8b-zqq" firstAttribute="trailing" secondItem="tvh-fG-2fy" secondAttribute="trailing" id="4Se-9k-8aU"/>
                             <constraint firstItem="tvh-fG-2fy" firstAttribute="top" secondItem="cFA-8b-zqq" secondAttribute="top" id="5v5-eL-2RO"/>
+                            <constraint firstItem="cFA-8b-zqq" firstAttribute="trailing" secondItem="8P1-Od-oj3" secondAttribute="trailing" constant="123" id="8DF-2z-LTr"/>
                             <constraint firstItem="tvh-fG-2fy" firstAttribute="leading" secondItem="cFA-8b-zqq" secondAttribute="leading" id="9EX-IN-zEV"/>
                             <constraint firstItem="nOh-FA-fk9" firstAttribute="leading" secondItem="cFA-8b-zqq" secondAttribute="leading" id="Gzr-Qf-2wI"/>
-                            <constraint firstItem="cFA-8b-zqq" firstAttribute="trailing" secondItem="8P1-Od-oj3" secondAttribute="trailing" constant="73" id="PZh-aQ-1Q3"/>
-                            <constraint firstItem="8P1-Od-oj3" firstAttribute="leading" secondItem="cFA-8b-zqq" secondAttribute="leading" constant="72" id="bl2-MU-FMJ"/>
-                            <constraint firstItem="cFA-8b-zqq" firstAttribute="bottom" secondItem="8P1-Od-oj3" secondAttribute="bottom" constant="18" id="ghJ-ov-gPM"/>
+                            <constraint firstItem="cFA-8b-zqq" firstAttribute="bottom" secondItem="8P1-Od-oj3" secondAttribute="bottom" constant="20" id="OcE-sB-HNE"/>
+                            <constraint firstItem="8P1-Od-oj3" firstAttribute="leading" secondItem="cFA-8b-zqq" secondAttribute="leading" constant="122" id="YBE-Oh-noW"/>
                             <constraint firstItem="nOh-FA-fk9" firstAttribute="top" secondItem="cFA-8b-zqq" secondAttribute="top" constant="64" id="iLE-AA-d5U"/>
                             <constraint firstItem="nOh-FA-fk9" firstAttribute="bottom" secondItem="cFA-8b-zqq" secondAttribute="bottom" id="qO5-KW-SEt"/>
                             <constraint firstItem="nOh-FA-fk9" firstAttribute="trailing" secondItem="cFA-8b-zqq" secondAttribute="trailing" id="x4R-4O-fyn"/>

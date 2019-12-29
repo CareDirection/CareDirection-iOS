@@ -68,22 +68,6 @@ class HomeVC: UIViewController {
         
     }
     
-    // 필수 비타민 & 미네랄 상세보기 button action
-    @IBAction func showDetailButtonClick(_ sender: Any) {
-        
-    }
-    
-    
-    
-    // 기능성 원료 상세보기 button action
-    @IBAction func showFunctionButtonClick(_ sender: Any) {
-        
-    }
-    
-    // 복용관리 -> 스케쥴표 보기 button action
-    @IBAction func showScheduleButtonClick(_ sender: Any) {
-        
-    }
     
     // 유저 변경 drop down button
     
@@ -112,6 +96,7 @@ class HomeVC: UIViewController {
         }
     }
     
+    // 필수 비타민 & 미네랄 상세보기 button action
     @IBAction func showStandardDetail(_ sender: Any) {
         
         let standardStoryboard = UIStoryboard.init(name: "StandardDetail", bundle: nil)
@@ -122,12 +107,23 @@ class HomeVC: UIViewController {
         
     }
     
+    // 기능성 원료 상세보기 button action
     @IBAction func showFunctionalDetail(_ sender: Any) {
         let functionStoryboard = UIStoryboard.init(name: "FunctionDetail", bundle: nil)
         guard let dvc = functionStoryboard.instantiateViewController(withIdentifier: "functionDetail") as? FunctionDetailVC else {
           return
         }
         present(dvc, animated: true)
+    }
+    
+    // 복용관리 -> 스케쥴표 보기 button action
+    @IBAction func showScheduleButtonClick(_ sender: Any) {
+        let recordStoryboard = UIStoryboard.init(name: "TakingProductRegist", bundle: nil)
+        guard let dvc = recordStoryboard.instantiateViewController(withIdentifier: "takingProduct") as? TakingProductRegistVC else {
+          return
+        }
+        present(dvc, animated: true)
+        
     }
     
     

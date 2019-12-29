@@ -51,6 +51,7 @@ class TakingProductRegistVC: UIViewController {
 
     // back button action
     @IBAction func backButtonClick(_ sender: Any) {
+        self.dismiss(animated: true)
     }
     
     // date pick button click action

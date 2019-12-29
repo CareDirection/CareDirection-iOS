@@ -19,7 +19,9 @@ class IngredientDetailVC: UIViewController {
         super.viewDidLoad()
         
         // 제품 보러각기 버튼 customize
-        goToProductButton.makeRounded(cornerRadius: 21)
+        goToProductButton.makeRounded(cornerRadius: 17)
+        goToProductButton.backgroundColor = UIColor.seafoamBlue
+        goToProductButton.setBorder(borderColor: UIColor.tealBlue, borderWidth: 2)
         
         // 셀 사이즈 동적으로 조절해주기
         ingredientTableView.rowHeight = UITableView.automaticDimension
@@ -35,18 +37,6 @@ class IngredientDetailVC: UIViewController {
 
 }
 
-/*
-extension IngredientDetailVC : UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cell
-    }
-    
-}
- */
 
 extension IngredientDetailVC : UITableViewDelegate {
     

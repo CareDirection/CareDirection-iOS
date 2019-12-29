@@ -11,7 +11,7 @@
         <!--Taking Product RegistVC-->
         <scene sceneID="8jR-vO-ZmH">
             <objects>
-                <viewController id="Lty-k7-LUg" customClass="TakingProductRegistVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="takingProduct" modalPresentationStyle="fullScreen" id="Lty-k7-LUg" customClass="TakingProductRegistVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qcX-2U-gCb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

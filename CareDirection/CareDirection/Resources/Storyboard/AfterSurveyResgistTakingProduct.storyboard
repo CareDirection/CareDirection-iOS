@@ -11,7 +11,7 @@
         <!--After Survey Resgist Taking ProductVC-->
         <scene sceneID="d2a-qR-XEK">
             <objects>
-                <viewController storyboardIdentifier="AfterSurveyResgistTakingProductVC" id="9yr-fU-qLR" customClass="AfterSurveyResgistTakingProductVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AfterSurveyResgistTakingProduct" id="9yr-fU-qLR" customClass="AfterSurveyResgistTakingProductVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qpK-nq-w5Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,7 +165,7 @@
                                                             <outlet property="productPurchaseCountryLbl" destination="KhH-X2-Mhc" id="xiQ-tE-WhX"/>
                                                         </connections>
                                                     </collectionViewCell>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="NewProductResgistCell" id="Tri-0A-qyf">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="NewProductResgistCell" id="Tri-0A-qyf" customClass="NewProductResgistCell" customModule="CareDirection" customModuleProvider="target">
                                                         <rect key="frame" x="6" y="137" width="363" height="146"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="48y-rB-Xug">
@@ -209,6 +209,9 @@
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="363" height="146"/>
+                                                        <connections>
+                                                            <outlet property="registBackGround" destination="Ud1-YG-5bn" id="uiL-PL-uA0"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>

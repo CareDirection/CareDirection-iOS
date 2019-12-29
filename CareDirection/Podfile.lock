@@ -1,20 +1,28 @@
 PODS:
   - Alamofire (4.8.2)
+  - Hero (1.4.0)
   - Kingfisher (4.10.1)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
+  - Hero
   - Kingfisher (~> 4.10.1)
+  - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Hero
     - Kingfisher
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 264c3636a9b8bcef1c1d81730e1c62c30b16b267
+PODFILE CHECKSUM: 7367f048d72ff40cbb30fb66dfb173ae39e7b7eb
 
 COCOAPODS: 1.7.3

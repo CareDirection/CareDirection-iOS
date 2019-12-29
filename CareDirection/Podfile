@@ -8,4 +8,6 @@ target 'CareDirection' do
   # Pods for CareDirection
   pod 'Alamofire', '~> 4.8.2'
   pod 'Kingfisher', '~> 4.10.1'
+  pod 'Hero'
+  pod 'XLPagerTabStrip', '~> 9.0'
 end

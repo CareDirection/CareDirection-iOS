@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
-  - Hero (1.4.0)
+  - Hero (1.5.0)
   - Kingfisher (4.10.1)
   - XLPagerTabStrip (9.0.0)
 
@@ -19,7 +19,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 

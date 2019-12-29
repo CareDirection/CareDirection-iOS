@@ -17,6 +17,9 @@ class ProductDetailVC: UIViewController {
     
     @IBOutlet var productCompanyNameLbl: UILabel!
     @IBOutlet var productNameLbl: UILabel!
+    
+    @IBOutlet var productStandardPillCountTxtField: UITextField!
+    
     @IBOutlet var productPriceLbl: UILabel!
     
     @IBOutlet var productPricePerDayLbl: UILabel!
@@ -49,15 +52,27 @@ class ProductDetailVC: UIViewController {
     
     @IBOutlet var goToLowerPriceInfoBtn: UIButton!
     
+    @IBOutlet var productFirstCategoryView: UIView!
+    @IBOutlet var productSecondCategory: UIView!
+    @IBOutlet var productThirdCategory: UIView!
+    
+    
+    @IBOutlet var productFunctionView: UIView!
+    @IBOutlet var productComponentGraphView: UIView!
+    
     var productFunctionCVExtension = ProductFunctionCVExtension()
     var productComponentInfoTVExtension = ProductComponentInfoTVExtension()
     var productNoticeTVExtension = ProductNoticeTVExtension()
     var naverLowestPriceInfoCVExtension = NaverLowestPriceInfoCVExtension()
     
+    var entryPoint: Int! = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
         initVar()
+        
+        //var pillCountStandardList: [String] = [""]
         // Do any additional setup after loading the view.
     }
     func initVar(){
@@ -89,6 +104,13 @@ class ProductDetailVC: UIViewController {
                                   radius: 4)
         self.goToLowerPriceInfoBtn.makeRounded(cornerRadius: 17)
         self.goToLowerPriceInfoBtn.setBorder(borderColor: UIColor.tealBlue, borderWidth: 2)
+        
+        self.productFirstCategoryView.makeRounded(cornerRadius: 12)
+        self.productFirstCategoryView.dropShadow(color: UIColor.init(red: 0, green: 0, blue: 0, alpha: 1), offSet: CGSize(width: 0, height: 1), opacity: 0.16, radius: 4)
+        self.productSecondCategory.makeRounded(cornerRadius: 12)
+        self.productSecondCategory.dropShadow(color: UIColor.init(red: 0, green: 0, blue: 0, alpha: 1), offSet: CGSize(width: 0, height: 1), opacity: 0.16, radius: 4)
+        self.productThirdCategory.makeRounded(cornerRadius: 12)
+        self.productThirdCategory.dropShadow(color: UIColor.init(red: 0, green: 0, blue: 0, alpha: 1), offSet: CGSize(width: 0, height: 1), opacity: 0.16, radius: 4)
         
     }
     
@@ -188,9 +210,7 @@ class NaverLowestPriceInfoCVExtension : UIViewController ,UICollectionViewDelega
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellHeight = (collectionView.bounds.size.height - 10) / 3
-        let cellWidth = (collectionView.bounds.size.width)
-        
+
         return CGSize(width: CGFloat(339), height: CGFloat(97))
     }
 }

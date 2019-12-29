@@ -7,133 +7,131 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		000FB9EDA233684DCE3C0D776F682440 /* Array+HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81EFD5C4CBF0E459EAB998F85E2CE4 /* Array+HeroModifier.swift */; };
-		0703CE26B7245672B91E0B78E1281E44 /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49DDFEC01FEBD0424A333443B46CFF /* HeroTransition+UIViewControllerTransitioningDelegate.swift */; };
-		0A3AA2E0FDAF8A8858240069811996EA /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C826D28812FE6CAB80C58853085F6C /* Lexer.swift */; };
-		0AE252718DB97E22262C12079DD7AA8A /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C87604C1F04274D25C3F335DC1FAF /* SwipeDirection.swift */; };
-		0B5D501CB65E956676001866EF248ED3 /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960C46E339AACB8431090A9125D0CC9 /* ButtonBarViewCell.swift */; };
-		0C5E11DE24DAA737704B355F5F2F3426 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87082589BD8919B6CF0657FB3937E875 /* ParameterEncoding.swift */; };
-		0C8C91A946F029E0110E06480F600A47 /* HeroTransition+CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B593CA8CBD923AF46E7F2E91688F7C8 /* HeroTransition+CustomTransition.swift */; };
-		0DC716D6A630FAC820D9EA7E6F36EDF4 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF828465421F148CF5DCB13E3ACD77 /* Placeholder.swift */; };
-		0E2025F3049EB290C9C701EB7697FD83 /* HeroTransition+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CAD72E752236362236D352215C8866 /* HeroTransition+Animate.swift */; };
-		132E0F619E4338E5D1B27E4C72076B3F /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48D738044BD4D90C01D3703BB263C1 /* Notifications.swift */; };
-		143BC48EA7B427B9F43FBF38C1209904 /* HeroViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419E1CBF3D26C433D5E9AA4680A079E /* HeroViewControllerDelegate.swift */; };
-		17949EA5A648628698D3045C32125D9A /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E30838E52E7DAC68005E0A7E5C1BA8 /* FormatIndicatedCacheSerializer.swift */; };
-		1945CD5D63A1C164AEAAA9A33E85571E /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83357ABC351C21B7BB68CBB470D5D563 /* Alamofire-dummy.m */; };
-		1986B50C74F1697EA43F68335C93CEB3 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062E555613BBEF76013EBAFF181ED7F /* MultipartFormData.swift */; };
+
+		041CA92C0D46D81F87C1B18020FE9D92 /* CALayer+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CB28D1A35A806861F40B6E66FD34 /* CALayer+Hero.swift */; };
+		06B0C6AE124E92EC5809C2A7030F2060 /* MatchPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DF2FAA6BE271CBD104D60151C871E5 /* MatchPreprocessor.swift */; };
+		06C88826E89A352EACFE13784F08B7F6 /* HeroTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827EF718DB0D29559EE2B0D687CB857 /* HeroTransition.swift */; };
+		0C5E11DE24DAA737704B355F5F2F3426 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFE66EBFCDEB6F24028BD9D8C95DEEB /* ParameterEncoding.swift */; };
+		0D6BFBEBAF1D18452007F08B6DB37010 /* HeroViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AFD09F43BB4FA47393ED7A13F37369 /* HeroViewControllerDelegate.swift */; };
+		0DC716D6A630FAC820D9EA7E6F36EDF4 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B5930394456DF7289AD03AA93BC337 /* Placeholder.swift */; };
+		0FE5A90BC0B6621E2EA004264E3DB35E /* BasePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C26153B8C9E4668A930E157E242577 /* BasePreprocessor.swift */; };
+		11F8AE060A4566C9D9135514A5C68914 /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C262B5490B902A4A3BEFDFA753C6E3E /* HeroTransition+UIViewControllerTransitioningDelegate.swift */; };
+		132E0F619E4338E5D1B27E4C72076B3F /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBB5C46270F296FE3E06268C570FF2 /* Notifications.swift */; };
+		17949EA5A648628698D3045C32125D9A /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F42412101F020AAC8C52E50767E34 /* FormatIndicatedCacheSerializer.swift */; };
+		1945CD5D63A1C164AEAAA9A33E85571E /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6505ECF07A2EAC7D6DDAC7C7E32C0161 /* Alamofire-dummy.m */; };
+		1986B50C74F1697EA43F68335C93CEB3 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EEDF32BCD4B356E1306B6C9BC0AFEE /* MultipartFormData.swift */; };
 		1B7E7B16CDEC321A263291419E7CE00B /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78BA4BB1A553AB4136F879792D99C87D /* XLPagerTabStrip.bundle */; };
-		1CE44042F73BA78CD14C0B12D60A446E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15D4C263A7EC0167E288847F5498B51 /* UIKit.framework */; };
-		1D182C2DB0E3A2FC683C635DA33254CD /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913EAF932E9061B0CC9BBDE493BBDBC6 /* UIButton+Kingfisher.swift */; };
-		211EB0470934631079F0BA331FAE0FEE /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F36C987F7279DA4F8465F46C361A9 /* PagerTabStripError.swift */; };
-		218FC76735C2CD3E84F920CE33EDD6FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECFE128E7177558BECAD17CF346163E /* Foundation.framework */; };
-		27B427F4F2C7B3472B55F06404188D82 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173511D34B8F1B6C22207FAD776FD62C /* ImagePrefetcher.swift */; };
-		28ED22D50E807703BDE53652BDB3BDA0 /* Hero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EC8F71E0CA9AAB3796AB4CACC712B2C /* Hero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28FDC9276EEB4D7EF81271D302CD1D60 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E541524357D0BAF725794200709D91 /* Box.swift */; };
-		2C61B040BA6A9A7AE66C4D9BA26D5520 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E88E0223D965E344545EDEE16F1EC8 /* SessionDelegate.swift */; };
-		2DABB7F30476F072B6A15D510614C93E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15D4C263A7EC0167E288847F5498B51 /* UIKit.framework */; };
-		2F24C371BA4C2962F44ACC8E17667583 /* HeroCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0C9212CFC383F19127A2A19095BFCE /* HeroCompatible.swift */; };
-		32B9BAE28C80A3DFB64E216522F231EA /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08A5BBE4977DE79C5F5A72EB94254D /* SegmentedPagerTabStripViewController.swift */; };
-		33E4D49372B55E745B36382B64130122 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5C9D2A9789400ECB53026BE45F889 /* AnimatedImageView.swift */; };
-		3571F958A3907B3A806E62D50C2550D4 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86483BC520B20AD27769E98DBA50FB9 /* NetworkReachabilityManager.swift */; };
-		37C289CF48713DAB98845988FF35632C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECFE128E7177558BECAD17CF346163E /* Foundation.framework */; };
-		38297E6B86106DEF51F853B19A64FEFD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114F508E0034C9FFCB1FA5C1E9750FF7 /* QuartzCore.framework */; };
-		38406719BDA0D1C99B94A33EB1BF2AA1 /* HeroTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092DBE4C310BFA88509347EB11A8217 /* HeroTransition.swift */; };
-		39FC1A51FF31905080FDA44316A2E3FA /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B80EF177133DD4FCBD5A2A989FD0AFD /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4015497700167E2F7A78FB0FA8728D83 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97AA60053984380DE4432A6C26A5D1D /* ImageView+Kingfisher.swift */; };
-		40B92FDF71624FC72B5AAF014FF827C5 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217934EF3EF4B34094536A600DBFD05A /* String+MD5.swift */; };
-		443C09C19397A4B5599EA6AFC359678D /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35AB753946BED9C63540581B2F8E14 /* ImageModifier.swift */; };
-		445D61C3F4F1E353873FE474EA856E02 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B8F25507AEDF842298D23628D4D3A90F /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48F054ED0724ED5BCE257BD993F9DCA1 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190E3FE4C348B507BE40A0106CB1CFF /* BarView.swift */; };
-		4C0109B9064995D017EF8BA9471065BD /* HeroPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE08DA033C2A441ABCF02E9E9FB495F /* HeroPlugin.swift */; };
-		4DD18CA1B0628DA289B294D2106D55A3 /* HeroTransition+Interactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A0C0C415A892BDECF727E9D3730442 /* HeroTransition+Interactive.swift */; };
-		53164A2DDB944329FD8720F2F0D45228 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1235CE28FEEE320D48E1C22CED9FAEC0 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		53791F5E5F07400F92CFDFC89A432305 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18136AD02223D5E43951B8EEDC97BF5 /* Validation.swift */; };
-		5548C91B7B13B05D91EE5DAFFB3E8B14 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879168F82372EF1D01C16BD242D1EAC0 /* ImageTransition.swift */; };
-		55B73B58EE9E36E4C860A2135A9796A9 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE992F72E012CE3C8F5C0B80589D38B /* Kingfisher-dummy.m */; };
-		561B43E02C4CC483EEAC28AE2C961D3D /* HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41EFE592A1FA3FFC49F77D4B5B3510 /* HeroStringConvertible.swift */; };
-		565C22E5071430F1DB95C884B2CF9D00 /* HeroViewPropertyViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561B9DB2FEA609BEC0AA557C746E1718 /* HeroViewPropertyViewContext.swift */; };
-		596395B6FA3AB7BE5E2986C1057FFB51 /* CAMediaTimingFunction+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63ED993261469E84240FA3EE68A6C9 /* CAMediaTimingFunction+Hero.swift */; };
-		59A62BE2B9F4EE2DB82C1A5705403F51 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CCA673003FAE7B0084E51E3A78382 /* ImageProcessor.swift */; };
-		5D561331EDDD8446C2C74304EF534F0B /* HeroTransitionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107995FFA31B4E343E1283384366441C /* HeroTransitionState.swift */; };
-		5EABE357108BB0AC56B6C7D0AFCC4532 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B715B4142D432805893A2F461E5A8 /* Indicator.swift */; };
-		611B67BEEBA7FB3983E8D9AC3796A551 /* HeroDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA28FBAF5BCFCDEC88DDA2470330D6A /* HeroDefaultAnimator.swift */; };
-		626CCD3B19CAB7090293FF68A57E610A /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35120B30D0C3B1630990154F0CFAF96E /* KingfisherOptionsInfo.swift */; };
-		63D62B669C1B1D76B8FA2AEE51AF2863 /* HeroTransition+UITabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2755AD68FF6C7CB35BBD3223A5CFC64 /* HeroTransition+UITabBarControllerDelegate.swift */; };
-		64744C911253C3E01461FAD7C935C8D7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37CBE7C7781F78BDC912FE4B6E64A8 /* Result.swift */; };
-		69B419B8DBDE3DC6EA250BA01BEEAC62 /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFF0D150F7D27A34471D487C53F60DC6 /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A332AF6C1B4A44654EEA9A031A751F6 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206541C88A6ADC9AFC08539DD99E15B3 /* ButtonCell.xib */; };
-		7077E7A72EB1E524F2EF25029B712F2F /* MatchPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CF17109F64970D772BD43139C278A /* MatchPreprocessor.swift */; };
-		70ECB3E5FED2F2D4F6DEFE366519C8AE /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD932F7A713FE2CDEA1B6FF2764052B /* Resource.swift */; };
-		76259741C02A8C73A3015C5D2DA496CA /* HeroModifier+HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5B2D8ACBB565E73928D0732BBE5ED /* HeroModifier+HeroStringConvertible.swift */; };
-		7664FD4F59A0C00866CBAE60B0A3AD64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECFE128E7177558BECAD17CF346163E /* Foundation.framework */; };
-		783190536DC8297B50B399D8250F2032 /* HeroTransition+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCB7C143674BD6A76C2ABA2B373BA50 /* HeroTransition+UINavigationControllerDelegate.swift */; };
-		79DBC63187C3124B13B943F658A98D63 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AE30141C92244BB10023E7745C72DF52 /* FXPageControl.m */; };
-		80538854F50E894E283C87058249C10C /* SourcePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0225950B159FB6679ECE60D76CF026 /* SourcePreprocessor.swift */; };
-		8267702DC8728FA8827B0E9F5850D564 /* HeroModifier+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7CD0A402AEBFDCD26B16BBDF629BE /* HeroModifier+Advanced.swift */; };
-		83956E20859CDBBE7BC38ABADE0170FB /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55AFC6009AB17594E8EBF34EA632A6 /* AFError.swift */; };
-		85908A69CE5A0C54998A6D597BDB062F /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A19972343E0D74EE1E125FE35BAE86 /* UIColor+HexString.swift */; };
-		8675FAF0C389A827D865B4231B097350 /* CG+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8079E53491727C5A7669EFBA0943401B /* CG+Hero.swift */; };
-		86F6100A3164708D9449C570776E4A53 /* HeroDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120BAF3CD23FE1F3357033FD327BE8DC /* HeroDebugView.swift */; };
-		8B49CC1BB164F7BDB5CE3FB2E87B2AA4 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA3954A7CD4AA2E778C9A0248869B1 /* TwitterPagerTabStripViewController.swift */; };
+		1D182C2DB0E3A2FC683C635DA33254CD /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ADF80D92D0DAF5DD92FED9BAFA2C2D /* UIButton+Kingfisher.swift */; };
+		1D4A0EA4421D56B62087B001686F3792 /* HeroTransition+UITabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59F63B2371F843F46078D5E767B46F /* HeroTransition+UITabBarControllerDelegate.swift */; };
+		218FC76735C2CD3E84F920CE33EDD6FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02D91DBABE7C0F8FF2C5D109AB13D6C /* Foundation.framework */; };
+		27B427F4F2C7B3472B55F06404188D82 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E3B8DC462B2ACA06855C1074A1B469 /* ImagePrefetcher.swift */; };
+		27D2BB7855E00D79B875CBC6F3DB6D9F /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0B9F87E888FEDCABFB2E44B5DB258B /* Lexer.swift */; };
+		28336F1C947B57D07831C63C31B84A0C /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72C06DF7C917CF88A1FA865732E9E1 /* IndicatorInfo.swift */; };
+		28FDC9276EEB4D7EF81271D302CD1D60 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D90C4DA567BE7D01F659414B161EF0 /* Box.swift */; };
+		2B39B33ECADFF6B44583C4DBA8854A9C /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB47E119708BE1B08F73CB5037A329 /* ButtonBarViewCell.swift */; };
+		2BC8DF4EADD024A30A84555CB575CAC6 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6538B7C33657A4BD1A8D92CB6D04F7D /* SwipeDirection.swift */; };
+		2C61B040BA6A9A7AE66C4D9BA26D5520 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AB01154C849BED1E194BBCDBE19DA /* SessionDelegate.swift */; };
+		2CBBF6F1C1E540A30DC5DB1A53D3E8D9 /* Array+HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5EA8A567F523D134488B702E89802 /* Array+HeroModifier.swift */; };
+		2DABB7F30476F072B6A15D510614C93E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C170C806A093272DC0EC534B48CB1783 /* UIKit.framework */; };
+		2E8D7A67F82F92D81D014F2248C09597 /* HeroProgressRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38FC19F1488C86B7CE30297ECF44359 /* HeroProgressRunner.swift */; };
+		311557DC2943E068608D1B6A7B663232 /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D7CF8E00F993EE235433F46411917 /* SegmentedPagerTabStripViewController.swift */; };
+		33E4D49372B55E745B36382B64130122 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D880A5B887F826812FC8A9521301BC /* AnimatedImageView.swift */; };
+		3571F958A3907B3A806E62D50C2550D4 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A12F61D5547658943E31C00078F408 /* NetworkReachabilityManager.swift */; };
+		36461766F1FBCA4074DBF606F39F62F4 /* UIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AF5B290CCD5D2A6DEC3B77AC91B68 /* UIView+Hero.swift */; };
+		399F2A0161278488DC1E5ADD297DE3B7 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7038AD31E4AFA6512CC8ED58744638 /* BaseButtonBarPagerTabStripViewController.swift */; };
+		39FC1A51FF31905080FDA44316A2E3FA /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 78471FE7C958A2E50527EA10FE61F28C /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F1E6AE0B8A22678DB406AE072F213FC /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E8064E4DF7DF8D83DFEEF249AA6735 /* PagerTabStripViewController.swift */; };
+		4015497700167E2F7A78FB0FA8728D83 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B96B4ACBE666FA00D3C0B6DDFA467 /* ImageView+Kingfisher.swift */; };
+		40B92FDF71624FC72B5AAF014FF827C5 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E75DA35C80DFA282C7376627F1A7AC /* String+MD5.swift */; };
+		443C09C19397A4B5599EA6AFC359678D /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FF415544F7DCAB44127E1DD430D8AE /* ImageModifier.swift */; };
+		445D61C3F4F1E353873FE474EA856E02 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E19F7D179A8A162893C6ED7086B65535 /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4763B2EC203665F41F33D93CF55EC1F1 /* HeroTransition+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F5D373BBB6110DEAC98DFCF649918 /* HeroTransition+Animate.swift */; };
+		4C8CA3AC7D7E3484EA8B78C20FA345CA /* HeroModifier+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224666E0A9CDCB99148A408C07AB0F8 /* HeroModifier+Advanced.swift */; };
+		4F86F33F807A003D18DEDBCA01210037 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C855AF8D148E61448BDB456258FB2DC8 /* BarView.swift */; };
+		52EBA869576A1B7FF128DB43C230EEE8 /* CascadePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1A1D4A6EBFD70F67B702AA0D5D6401 /* CascadePreprocessor.swift */; };
+		53164A2DDB944329FD8720F2F0D45228 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F7F83DC6D44617A7FD04A8816A1ACAC /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53791F5E5F07400F92CFDFC89A432305 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C11AECDD6354C02FA9EB68420243B44 /* Validation.swift */; };
+		539247331D4D80E4E552FA040A59C197 /* HeroDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD486E5AD1496C4BF930A2D8A4AEF7 /* HeroDebugView.swift */; };
+		5548C91B7B13B05D91EE5DAFFB3E8B14 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E51110647CD4CB90744B0132DAB5E /* ImageTransition.swift */; };
+		55704DD60E8BEE2188893CABB1AADE17 /* HeroContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FED4DCF5599336A6B75EC7EBEE2101 /* HeroContext.swift */; };
+		55B73B58EE9E36E4C860A2135A9796A9 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C72D78513590E03B816079BAA98B4F85 /* Kingfisher-dummy.m */; };
+		59A62BE2B9F4EE2DB82C1A5705403F51 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61759E7FC6BB7885F511695D6F290D73 /* ImageProcessor.swift */; };
+		59BA6FD61F0A9B68CD58C371DA1F1D60 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB57AE9A9773F9209559FF061C2E439 /* BarPagerTabStripViewController.swift */; };
+		5DDC3018F680E30345A04B35009712E7 /* CG+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620DFD6C5280FE2D23C1D5FEC9FD7BEC /* CG+Hero.swift */; };
+		5DEDE15AAB513151B185392D0209F4BC /* HeroDebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC12758F706F94E27401212E3C46DC /* HeroDebugPlugin.swift */; };
+		5EABE357108BB0AC56B6C7D0AFCC4532 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4689B733206835CC70FCC881C16D2D1 /* Indicator.swift */; };
+		608632DA7CE64A8D37ACF3B8B11BD48D /* HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C88DCACA7D2D9D7626A054E06D7E3F /* HeroModifier.swift */; };
+		626CCD3B19CAB7090293FF68A57E610A /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788C55FE466D0BEDCC0ED78B74393041 /* KingfisherOptionsInfo.swift */; };
+		64744C911253C3E01461FAD7C935C8D7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852FC04F4779A7B6E71929368B38DFE /* Result.swift */; };
+		65E7526915C6C92F9DC44F140A3F0E60 /* HeroTargetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C916051464B1CF6BCC52B1EBE0CBF7E /* HeroTargetState.swift */; };
+		679E1C2EA93185E89E46AC2D7DF8BBB3 /* CAMediaTimingFunction+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2037B963D902F5B870DF697F91591E4B /* CAMediaTimingFunction+Hero.swift */; };
+		69B419B8DBDE3DC6EA250BA01BEEAC62 /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1554A72641CA567248EE480CC48B0774 /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A332AF6C1B4A44654EEA9A031A751F6 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5935FD02B73715E135EE8911D497168 /* ButtonCell.xib */; };
+		70ECB3E5FED2F2D4F6DEFE366519C8AE /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74F0004CCC9D59DFB7314E01C482937 /* Resource.swift */; };
+		72177310AEDF6C437F20DF4615CB21DB /* ConditionalPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC35C0649D7CA912CD06A37865E7D30 /* ConditionalPreprocessor.swift */; };
+		7664FD4F59A0C00866CBAE60B0A3AD64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02D91DBABE7C0F8FF2C5D109AB13D6C /* Foundation.framework */; };
+		775542D5BE6B24392EF7FCA2CE7C5E97 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74D575530762F94C509FFDF7BC8551E /* TwitterPagerTabStripViewController.swift */; };
+		83956E20859CDBBE7BC38ABADE0170FB /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDEE920E8EBC96EB959560EC56967D /* AFError.swift */; };
+		85D6216A7732A66EB560593B3A226820 /* HeroPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1901146B26510E04D6ABEDBF44CFB1A /* HeroPlugin.swift */; };
+		86311C5BAE9AD426446199988F3567AF /* HeroCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E00859B0935D62CEA8AA49B85CD894 /* HeroCompatible.swift */; };
+		8AB1E598B721098E1EB51F45D7D86629 /* HeroCoreAnimationViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE08C4EFD0D18393A2F9C6E3A1D79974 /* HeroCoreAnimationViewContext.swift */; };
 		8C9BC01207BFCC73AB7B1B9710F24968 /* Pods-CareDirection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF906F782A99475B82474E4DB1E4AFA /* Pods-CareDirection-dummy.m */; };
-		931BBB8230A25161D5C37528A8F9FECF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2E3AB407A2E22FEC5131B4E3777603 /* SessionManager.swift */; };
-		933FDA5970AA525D6CB92BFEBA2BAB4A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821896F13736401DEAA48DA60A805BF /* Timeline.swift */; };
-		9684309B19EA945F06219FFCFDB3DEAE /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC862B6B2FEB8EF55CDDB27E04B795F4 /* BaseButtonBarPagerTabStripViewController.swift */; };
-		971DE19A2425C011DEA7F234EF9DFB3D /* BasePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8265D5CEF25B447A20013F4B9C52DE0F /* BasePreprocessor.swift */; };
-		981E678C694BD6CB6E47750023C41356 /* CascadePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71995A727EE2C3F43DFC5F981682865 /* CascadePreprocessor.swift */; };
-		98A929C8E9012AB167672714FFD2113C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF85B28B5E42CD4EF5F161BCCC41C81 /* Request.swift */; };
-		9BF3A86AFAFDA9B4C5150324F3DFD0D3 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E82B405D4FFFD705827707357B22909 /* Nodes.swift */; };
-		A2DB311E6BA5064E56EC9DF2B7C1D39C /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C169248EB0799FD2E873C41E6985CB /* ButtonBarPagerTabStripViewController.swift */; };
-		A317E632C48B5D4A15D0CBD1E5499430 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F433B23B5FFA1052423FF67C03668B /* ImageCache.swift */; };
-		A4420637EE415057C5BA22ABE5A984F9 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF3C18FCEFBF7085DEF6C592E09882A /* Image.swift */; };
-		A5C6C6AF307753F62CB842B879E50CB2 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B2321D121825A5151DB9531835479E /* Kingfisher.swift */; };
-		A7EA1BA19DDD7C4C829D4E8BCB133B5D /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73AA284E94F4BA23E1EBAD946793B9B /* SwiftSupport.swift */; };
-		AB333ACA619804B14FDACD4892AD0F33 /* DispatchQueue+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675C2B63130DAFDBF2100BFFEFC6F33 /* DispatchQueue+Hero.swift */; };
-		AB81A7C4CA1E83A8FA4E9430D88A7DFE /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA02394FA84880D797097538C6E57566 /* XLPagerTabStrip-dummy.m */; };
-		AB896E86184C7E4C1B132A6FD48C945F /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E5DBB99262BF706B61DC4B29CF4866 /* ThreadHelper.swift */; };
-		ABD0719C83EB34C533393B6826E69BC9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E3C7C59DD50ED3C3863ECF03EBB3B0 /* CFNetwork.framework */; };
-		AEDEEFE01BDC994BB676D0C6C4EA0B4F /* HeroAnimatorViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D0BE07FC4D10EB1020ECDED991B30 /* HeroAnimatorViewContext.swift */; };
-		AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946857DAB953BFFC439D1CE640B60231 /* TaskDelegate.swift */; };
-		B4A5070619398ABCE3153716A8B1FD39 /* DefaultAnimationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A099DCA661795172B8873FCFE92A1D8 /* DefaultAnimationPreprocessor.swift */; };
-		B6AE25C51BED9621BBA67FE397452160 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D916853B733905F262E14807D458D /* Parser.swift */; };
-		B761609304C53DD165E21D6979C187FA /* HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0704E148A209DF10C0B0539C45F47 /* HeroModifier.swift */; };
-		B7F559ABF7622040866557F0C6F422C3 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EAAEF4618A10402538B416CB4AE35F /* RequestModifier.swift */; };
-		BAA6B8A757D1C7D80877064966A6F57D /* HeroContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D20E132646B370FA084A17CF57C33 /* HeroContext.swift */; };
-		BE63C2C8EC7B15BE0848D01ED7125E86 /* Hero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 265D307C8B491DA3AC26F3F059339415 /* Hero-dummy.m */; };
-		BEE6B677416CA71C981D1D3F60B18C96 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2A66BE020334F33B92C8856E4C2EC2 /* Alamofire.swift */; };
-		C044961E56994DE71D794C83855427B5 /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7015A48AFB9EAD114586DAD684E09A4E /* PagerTabStripBehaviour.swift */; };
-		C08A09B0CEBC18AD963AAFB1778A9848 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A647A459068C78B63257EAD7CB69980A /* KingfisherManager.swift */; };
-		C142FC952066AE940F359BF8FFBE52FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECFE128E7177558BECAD17CF346163E /* Foundation.framework */; };
-		C404ABC8391D8C5678272EA2B7149664 /* HeroProgressRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775E2EBC174FE20E3E4252F1E392FDC /* HeroProgressRunner.swift */; };
-		C6EEAC88D46661939CEC80B9C757D646 /* HeroCoreAnimationViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A56BC04C75D7695B840B90E6E6C2B /* HeroCoreAnimationViewContext.swift */; };
-		C79D4F0D0C79942AAD2B4F16D0766095 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E812CD1C683EDA60E6B8450B5DEC650 /* CacheSerializer.swift */; };
-		CD92E3C8B2B53B5545D1B0394881A1EB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DBF8AFF0CF91C5CC3791A4FEB03B6D /* ImageDownloader.swift */; };
-		D0F527FECD9CDE6E33868A911863F3A2 /* HeroTransition+Complete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6737947D7DD848B4C22FE44DB933BF81 /* HeroTransition+Complete.swift */; };
-		D3D8C379C6E4FB487E5ABD6800AD7B7E /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E77F1222DB7F6EC073AFF1D989AD737 /* DispatchQueue+Alamofire.swift */; };
+		90B637ED180D169AF9776CEC5ABC4FE8 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9B66FAFB46E8FF30831715AE19B929 /* SwiftSupport.swift */; };
+		911CC04F55219F3CB8EE70FA8F7347E7 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD68F9488D82A13BBC7FBFC1D50B6C1C /* ButtonBarView.swift */; };
+		931BBB8230A25161D5C37528A8F9FECF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984BED639E6E04FC45B45CB8EB856C1A /* SessionManager.swift */; };
+		933FDA5970AA525D6CB92BFEBA2BAB4A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FCDF9C60C945C9D232663FE4F171E /* Timeline.swift */; };
+		94C24F4688FC7D72E2EB70186B376B26 /* HeroTransition+Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C005DF60480B9C30DB96733BC145FC6 /* HeroTransition+Start.swift */; };
+		98A929C8E9012AB167672714FFD2113C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68298F3FC2E309BB5025561AF5BA7A01 /* Request.swift */; };
+		9A446D59771619CADF996E3FB77001EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02D91DBABE7C0F8FF2C5D109AB13D6C /* Foundation.framework */; };
+		9A7AB4248E478CDA2C60C0DD5F97B66E /* HeroTransition+CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58DACEED994745DDC1928D88008E57 /* HeroTransition+CustomTransition.swift */; };
+		9AB91EA6A797C9DC7D59ECA44B4E0174 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A999CC4AE781860D8D798466D948047 /* Regex.swift */; };
+		9B6A092AE6604A4763E6D0EEAD3C3D9B /* HeroTransitionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9708271B64F1D95B1CB941040E01DB7B /* HeroTransitionState.swift */; };
+		9E9A48A0F105255850019FF9D639F904 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D1BC8E3CEAF81A84C5D893F5C60FC /* IgnoreSubviewModifiersPreprocessor.swift */; };
+		A26276F206FFA15CF0A57BE54526140C /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 642DA9D17E97E753B9C077D496119BD8 /* XLPagerTabStrip-dummy.m */; };
+		A317E632C48B5D4A15D0CBD1E5499430 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C11991B46527390151E6980AD19811 /* ImageCache.swift */; };
+		A4420637EE415057C5BA22ABE5A984F9 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A436A808964BD1AE76694AB5A448849 /* Image.swift */; };
+		A5843C82FF9ACE79DDBC357FE61C08CC /* Hero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4713041CCE23AE67012DA95D955536CE /* Hero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5C6C6AF307753F62CB842B879E50CB2 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC42D70946C8B6F71DC25D454D03A31 /* Kingfisher.swift */; };
+		A5E29FFF6ECF9FF58C0A9B572D603FD4 /* SourcePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED23DDDE1369995C57F37904A6BF66E /* SourcePreprocessor.swift */; };
+		A6A2559E024B45B600CC3CA211FE5B3A /* DispatchQueue+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25561B2BD202E693780AFF59BA3CD7E2 /* DispatchQueue+Hero.swift */; };
+		A7AEEE825346429BB80914A7D2365A51 /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98212598A89E34622E6B4EC59BF7BF4A /* PagerTabStripBehaviour.swift */; };
+		AA25FDDA3FE1E75463E2067B761761E7 /* UIViewController+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C167C07D89D284142C684F892841958 /* UIViewController+Hero.swift */; };
+		AB896E86184C7E4C1B132A6FD48C945F /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285AF9DD2583260E814723EF363D126 /* ThreadHelper.swift */; };
+		ABD0719C83EB34C533393B6826E69BC9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A68AA6D7B1BD2BCB6DE025DF3F3378 /* CFNetwork.framework */; };
+		AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90DE4BD919485A196B74C54E74A1F1 /* TaskDelegate.swift */; };
+		B7F559ABF7622040866557F0C6F422C3 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8CCC71301EF1D1E2E2096D4172557D /* RequestModifier.swift */; };
+		BBB562E939DF58537B4EE216C7813FF7 /* UIKit+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AEAEA9F81BA568A7B4D157FBD665C /* UIKit+Hero.swift */; };
+		BEE6B677416CA71C981D1D3F60B18C96 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E388A293033F401BBD74542F9B322542 /* Alamofire.swift */; };
+		C08A09B0CEBC18AD963AAFB1778A9848 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F4418BCE7A7871B0B6ABA34D80C424 /* KingfisherManager.swift */; };
+		C142FC952066AE940F359BF8FFBE52FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02D91DBABE7C0F8FF2C5D109AB13D6C /* Foundation.framework */; };
+		C3AB21A4DC75127283411720780552E8 /* HeroDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8A4BCCBD811D3090474985604F24A /* HeroDefaultAnimator.swift */; };
+		C4646B7D6A6176129F77BD6B565BFE36 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C936E015316BF2641D6CBDA5FFDB97 /* Nodes.swift */; };
+		C4DFF2EA6A6AD7648BA02AB0EDB0915A /* HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771D4EA896C35EC562BEDDD376E5886 /* HeroStringConvertible.swift */; };
+		C79D4F0D0C79942AAD2B4F16D0766095 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE8D066E9CE6047D73C1F2F0D64E72 /* CacheSerializer.swift */; };
+		CC776C8B70A6644A8A23B66CE308E096 /* HeroTransition+Interactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F5E87F271C05E6440192E03C8BD64C /* HeroTransition+Interactive.swift */; };
+		CCAF138A54D9CCBE7EE681AB3A2FEE17 /* Hero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E33E2A6EBEA89F20EC1416B799B29C /* Hero-dummy.m */; };
+		CD92E3C8B2B53B5545D1B0394881A1EB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EF8E1633B558AAB8B092BABA7F3D6 /* ImageDownloader.swift */; };
+		D3C970377C27DBB458631F4B28F6904E /* DefaultAnimationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837B42408D9D52E474E36BE3D356829 /* DefaultAnimationPreprocessor.swift */; };
+		D3D8C379C6E4FB487E5ABD6800AD7B7E /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02DA83B6128452E4255A8637CB5A64D /* DispatchQueue+Alamofire.swift */; };
 		D54F5F06BE91D809A7D6459A35FFC362 /* Pods-CareDirection-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA9F7819F3FC13CB86221C6B87BC0559 /* Pods-CareDirection-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5B6C3D9C30E853925EDFD6F6B2F735A /* UIViewController+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4933295295346A88AA8C7F4E960D4 /* UIViewController+Hero.swift */; };
-		D65C254F5ABF2CB5ECEE50FE8F8E1A80 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECA05B4ED517F44EB7B8630A7DF9083 /* Response.swift */; };
-		D99F7D4FA69590F4F4DE4234BC19616A /* UIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAEEC420A029411FDA78AAF6F0F5A9 /* UIView+Hero.swift */; };
-		DB289656E21B490DA80311AD52DBA5C0 /* HeroTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6636A9E37DD9097FBE5A3BFF07F689 /* HeroTypes.swift */; };
-		DC2F67DD3163291EB40DC85B0D8BFD12 /* HeroTransition+Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89793060B6AA8EDB700E06498EC134C1 /* HeroTransition+Start.swift */; };
-		DCEB1D1D97936446FFCC775B87820D76 /* CALayer+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE24816639296D4B1E48ACAD66ACC5C7 /* CALayer+Hero.swift */; };
-		DD6F354D687662E88A8E9B75ADF0EE95 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180BE16EEFF8A0A0D9DD63CFF28ED024 /* CoreMedia.framework */; };
-		E05D3E5962B58A2AE76850E534A24C7B /* UIKit+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A02F8C257B4295CA3246C3788CDB63 /* UIKit+Hero.swift */; };
-		E14591ACB8E8B67FA53C24B992997EB6 /* ConditionalPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E678DD82ED5D5F5DC59339DF4208161 /* ConditionalPreprocessor.swift */; };
-		E259639E8D936042ECD20840FBBD4EC8 /* HeroTargetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A6F1F25251A656E275DEEE4F17235 /* HeroTargetState.swift */; };
-		E3747EC31FCCA97D75A81FC700CF7E24 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9774EF35409EC538D25549F13E4ACC98 /* ResponseSerialization.swift */; };
-		E65E75D9FF3AD6FD21154DE84D1AE4FA /* IgnoreSubviewModifiersPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86E8EED716DF40DCF85CD8B34D752B3 /* IgnoreSubviewModifiersPreprocessor.swift */; };
-		E857E8E3BF4A819960F4312F8DD09456 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F009F2340A7792EF523453C250538F /* BarPagerTabStripViewController.swift */; };
-		ED6E38E31CD87896D70C36688C28E531 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3893E53753930813619D3F09E8F4DE65 /* ButtonBarView.swift */; };
-		F0641A2C3F54DF6B4687B019DAA045C8 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C0E20E13A82FEFEE329F79D22AAD3C /* PagerTabStripViewController.swift */; };
-		F13F2AA7F2E6D95A181CAB99B900D531 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9C4375D398AD067073791203970DC /* ServerTrustPolicy.swift */; };
-		F4DD189E36C289688DD2187E0A38D96F /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1C6A0272574C6B1BD708EFBD5F2476 /* Regex.swift */; };
-		F67D13F1DF0DD6F7271E3B94CCA8AC22 /* HeroDebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305341D3CB66C0C25AF0E10ACB8CBF31 /* HeroDebugPlugin.swift */; };
-		F7B74645E07C39771156A1FA413B98D4 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D06366712463FC89CB0AAB333B350EB7 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F7E1A8BE69700A04A787230C3302EFD1 /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEBFE4FA73571D53310605EB4A5BA85 /* IndicatorInfo.swift */; };
-		F9BC0BCD165A3FCA8636CE51007A28A2 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27036734FBDBCCA25A80A3C7D323C2 /* Filter.swift */; };
-		FB7C01AB26481D05ABFF2C7F60D7D67C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECFE128E7177558BECAD17CF346163E /* Foundation.framework */; };
-		FCD1BDD7A5206F43EE5EA0F116BFD7BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E398FD55B2B05D4A0154CA3D8503A97 /* CoreGraphics.framework */; };
+		D65C254F5ABF2CB5ECEE50FE8F8E1A80 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF391B6628B2CDC43B7A4FE7EBC8A11 /* Response.swift */; };
+		D91F76CB9193007B6FC71FF6F511B0F8 /* HeroTransition+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570BAF10FE6FCDFC486983F6FDD9DDD /* HeroTransition+UINavigationControllerDelegate.swift */; };
+		D9739FB131C5C02BA12A4E88F628EE12 /* HeroModifier+HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139474476EBBE0206BAAC96770A3ED4 /* HeroModifier+HeroStringConvertible.swift */; };
+		DE80B9AF667DBF5CADB551C10380A9A8 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162A7773637C9D4800936CE7AE24BA6E /* Parser.swift */; };
+		DE8E776E8C471D1A399FC69AFDBA36DC /* HeroViewPropertyViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D44A871CA688F576843DA6860457E /* HeroViewPropertyViewContext.swift */; };
+		E3747EC31FCCA97D75A81FC700CF7E24 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8139EE203745C87F1401A65B1C2032AF /* ResponseSerialization.swift */; };
+		E4F1B141B0DD7084DA4002CA4EF6A589 /* HeroAnimatorViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF422A1425E60A96CC7FA051E47E2B10 /* HeroAnimatorViewContext.swift */; };
+		E554C1894F7994C45693A532CC18769A /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC656C3E79307D8DEDFBFF6CDB5DD19 /* ButtonBarPagerTabStripViewController.swift */; };
+		F13F2AA7F2E6D95A181CAB99B900D531 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ACD107734B4E2DFB817B8335FF6825 /* ServerTrustPolicy.swift */; };
+		F2E3366710556B8D518FF6F12259CFA5 /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFC44B93B98819AAFCF3DCB840FE2 /* PagerTabStripError.swift */; };
+		F37A71B06EEFF6D96FA6CEC616734061 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C170C806A093272DC0EC534B48CB1783 /* UIKit.framework */; };
+		F7B74645E07C39771156A1FA413B98D4 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9906080E01E509C84ADE6A189CBA81D /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F805832DAAFB6DFA063DCE467BC59B9F /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D56E71CC38E3D6B43414B3C69B09B89A /* FXPageControl.m */; };
+		F9BC0BCD165A3FCA8636CE51007A28A2 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0A1C41923356EDED4826660C71FA2 /* Filter.swift */; };
+		FB7C01AB26481D05ABFF2C7F60D7D67C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02D91DBABE7C0F8FF2C5D109AB13D6C /* Foundation.framework */; };
+		FD4BBEFE1DE51AEBB6E45C878A16A778 /* HeroTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475446FA84F09FE24C6E00B4148F8F9 /* HeroTypes.swift */; };
+		FE2F2C0C6E8AE25776E5668D725AC6DF /* HeroTransition+Complete.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6371C0940B997DBE59FDE00FB1E73F6 /* HeroTransition+Complete.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -766,7 +764,7 @@
 			buildConfigurationList = 88D866DA052EF93195E917061DB86D9A /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */;
 			buildPhases = (
 				2E74127AF027B11FF09F7F50BB4B9622 /* Headers */,
-				16B20A825375FF61FF4A4ECA6D562BCF /* Sources */,
+				BCDC6490FBBA170437C0B29649B4ED6F /* Sources */,
 				AF7861E3E33A6BA2B9F973559B8C53D5 /* Frameworks */,
 				47847C1AE9C5FA9092141B090DA283A9 /* Resources */,
 			);
@@ -848,6 +846,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = B57536F66770B47237C16A881844F4FE /* Products */;
@@ -912,28 +911,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		16B20A825375FF61FF4A4ECA6D562BCF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E857E8E3BF4A819960F4312F8DD09456 /* BarPagerTabStripViewController.swift in Sources */,
-				48F054ED0724ED5BCE257BD993F9DCA1 /* BarView.swift in Sources */,
-				9684309B19EA945F06219FFCFDB3DEAE /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
-				A2DB311E6BA5064E56EC9DF2B7C1D39C /* ButtonBarPagerTabStripViewController.swift in Sources */,
-				ED6E38E31CD87896D70C36688C28E531 /* ButtonBarView.swift in Sources */,
-				0B5D501CB65E956676001866EF248ED3 /* ButtonBarViewCell.swift in Sources */,
-				79DBC63187C3124B13B943F658A98D63 /* FXPageControl.m in Sources */,
-				F7E1A8BE69700A04A787230C3302EFD1 /* IndicatorInfo.swift in Sources */,
-				C044961E56994DE71D794C83855427B5 /* PagerTabStripBehaviour.swift in Sources */,
-				211EB0470934631079F0BA331FAE0FEE /* PagerTabStripError.swift in Sources */,
-				F0641A2C3F54DF6B4687B019DAA045C8 /* PagerTabStripViewController.swift in Sources */,
-				32B9BAE28C80A3DFB64E216522F231EA /* SegmentedPagerTabStripViewController.swift in Sources */,
-				0AE252718DB97E22262C12079DD7AA8A /* SwipeDirection.swift in Sources */,
-				8B49CC1BB164F7BDB5CE3FB2E87B2AA4 /* TwitterPagerTabStripViewController.swift in Sources */,
-				AB81A7C4CA1E83A8FA4E9430D88A7DFE /* XLPagerTabStrip-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2DDFD9AC10F181CD7130BDF5F9E0502B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -990,7 +967,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F3468E0B453FDC78874FB3004AE6603 /* Sources */ = {
+
+		BCDC6490FBBA170437C0B29649B4ED6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59BA6FD61F0A9B68CD58C371DA1F1D60 /* BarPagerTabStripViewController.swift in Sources */,
+				4F86F33F807A003D18DEDBCA01210037 /* BarView.swift in Sources */,
+				399F2A0161278488DC1E5ADD297DE3B7 /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
+				E554C1894F7994C45693A532CC18769A /* ButtonBarPagerTabStripViewController.swift in Sources */,
+				911CC04F55219F3CB8EE70FA8F7347E7 /* ButtonBarView.swift in Sources */,
+				2B39B33ECADFF6B44583C4DBA8854A9C /* ButtonBarViewCell.swift in Sources */,
+				F805832DAAFB6DFA063DCE467BC59B9F /* FXPageControl.m in Sources */,
+				28336F1C947B57D07831C63C31B84A0C /* IndicatorInfo.swift in Sources */,
+				A7AEEE825346429BB80914A7D2365A51 /* PagerTabStripBehaviour.swift in Sources */,
+				F2E3366710556B8D518FF6F12259CFA5 /* PagerTabStripError.swift in Sources */,
+				3F1E6AE0B8A22678DB406AE072F213FC /* PagerTabStripViewController.swift in Sources */,
+				311557DC2943E068608D1B6A7B663232 /* SegmentedPagerTabStripViewController.swift in Sources */,
+				2BC8DF4EADD024A30A84555CB575CAC6 /* SwipeDirection.swift in Sources */,
+				775542D5BE6B24392EF7FCA2CE7C5E97 /* TwitterPagerTabStripViewController.swift in Sources */,
+				A26276F206FFA15CF0A57BE54526140C /* XLPagerTabStrip-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA7C94D9A64CCF4A9C5F97EB6B80B90E /* Sources */ = {
+
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1133,12 +1134,13 @@
 			};
 			name = Release;
 		};
-		4B5B76EE47B47DB955C976D64DB4F656 /* Debug */ = {
+		58C6AEA56689CFE0595D13BE333D7BC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 83917CAA9A48567B9B4DD181DA13812B /* XLPagerTabStrip.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XLPagerTabStrip";
+				IBSC_MODULE = XLPagerTabStrip;
 				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				PRODUCT_NAME = XLPagerTabStrip;
@@ -1396,19 +1398,41 @@
 			};
 			name = Debug;
 		};
-		B2128FE478FDC25E55CE320A5751309A /* Release */ = {
+
+		A3DE85BC28312BCFCA03109E1C9E4EB4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83917CAA9A48567B9B4DD181DA13812B /* XLPagerTabStrip.xcconfig */;
+			baseConfigurationReference = BFBE80E1F3A45DE4030E00D7ABFCA088 /* Hero.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XLPagerTabStrip";
-				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				PRODUCT_NAME = XLPagerTabStrip;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Hero/Hero-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hero/Hero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
+				PRODUCT_MODULE_NAME = Hero;
+				PRODUCT_NAME = Hero;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+
 			};
 			name = Release;
 		};
@@ -1518,6 +1542,59 @@
 			};
 			name = Debug;
 		};
+		C6377BC51733CC942ACC24AC37EB8EF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFBE80E1F3A45DE4030E00D7ABFCA088 /* Hero.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Hero/Hero-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hero/Hero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
+				PRODUCT_MODULE_NAME = Hero;
+				PRODUCT_NAME = Hero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D1C3A9887FA027696EA4F68AB3247B46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5CDD0741553A9A97CEF5DA16DF0C5CF /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XLPagerTabStrip";
+				IBSC_MODULE = XLPagerTabStrip;
+				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+
 		D43951F6AFB26750906F6BC3783C430A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 83917CAA9A48567B9B4DD181DA13812B /* XLPagerTabStrip.xcconfig */;
@@ -1620,8 +1697,8 @@
 		0DC3A1F894722359353AC05A476C7644 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B5B76EE47B47DB955C976D64DB4F656 /* Debug */,
-				B2128FE478FDC25E55CE320A5751309A /* Release */,
+				58C6AEA56689CFE0595D13BE333D7BC7 /* Debug */,
+				D1C3A9887FA027696EA4F68AB3247B46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

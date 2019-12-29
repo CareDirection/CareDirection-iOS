@@ -10,7 +10,7 @@
         <!--Survey Life Style Fouth PointVC-->
         <scene sceneID="1x0-N3-bqs">
             <objects>
-                <viewController id="OYV-Sh-B3v" customClass="SurveyLifeStyleFouthPointVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyLifeStyleFouthPointVC" id="OYV-Sh-B3v" customClass="SurveyLifeStyleFouthPointVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eUw-gw-K3K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,6 +54,9 @@
                                 <state key="disabled">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextBtnSelected:" destination="OYV-Sh-B3v" eventType="touchUpInside" id="rrq-PJ-AbY"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RlM-sC-1sH">
                                 <rect key="frame" x="141.5" y="536" width="92" height="8"/>

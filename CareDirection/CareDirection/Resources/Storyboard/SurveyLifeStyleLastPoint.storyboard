@@ -10,7 +10,7 @@
         <!--Survey Life Style Last PointVC-->
         <scene sceneID="f7k-Gd-6bR">
             <objects>
-                <viewController storyboardIdentifier="SurveyLifeStyleLastPointVC" id="8Jh-qj-ytz" customClass="SurveyLifeStyleLastPointVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyLifeStyleLastPoint" id="8Jh-qj-ytz" customClass="SurveyLifeStyleLastPointVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pnr-Jz-Fj1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

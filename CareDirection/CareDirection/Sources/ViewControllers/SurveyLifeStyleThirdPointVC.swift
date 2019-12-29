@@ -60,8 +60,8 @@ class SurveyLifeStyleThirdPointVC: UIViewController {
     }
     
     @IBAction func selectedNextBtn(_ sender: Any) {
-        let surveyLastPoint = UIStoryboard.init(name: "SurveyLifeStyleLastPoint", bundle: nil)
-        let dvc = surveyLastPoint.instantiateViewController(withIdentifier: "SurveyLifeStyleLastPointVC") as! SurveyLifeStyleLastPointVC
+        let surveyLifeStyleFouthPoint = UIStoryboard.init(name: "SurveyLifeStyleFouthPoint", bundle: nil)
+        let dvc = surveyLifeStyleFouthPoint.instantiateViewController(withIdentifier: "SurveyLifeStyleFouthPointVC") as! SurveyLifeStyleFouthPointVC
         
         dvc.modalPresentationStyle = .fullScreen
         self.present(dvc, animated: true)

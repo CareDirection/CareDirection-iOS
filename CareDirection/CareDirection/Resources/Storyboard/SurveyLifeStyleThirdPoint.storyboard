@@ -111,7 +111,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="I2Q-IZ-waL">
-                                <rect key="frame" x="155.5" y="533" width="64" height="8"/>
+                                <rect key="frame" x="141.5" y="533" width="92" height="8"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorUnselected" translatesAutoresizingMaskIntoConstraints="NO" id="885-nC-RSV">
                                         <rect key="frame" x="0.0" y="0.0" width="8" height="8"/>
@@ -135,6 +135,13 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="8" id="cq1-NN-bxq"/>
                                             <constraint firstAttribute="height" constant="8" id="gE2-e4-fIR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorUnselected" translatesAutoresizingMaskIntoConstraints="NO" id="NZR-m6-v2g">
+                                        <rect key="frame" x="84" y="0.0" width="8" height="8"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="8" id="ANE-0V-pNW"/>
+                                            <constraint firstAttribute="height" constant="8" id="knL-Yq-Ems"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>

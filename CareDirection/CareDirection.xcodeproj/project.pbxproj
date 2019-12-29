@@ -25,6 +25,8 @@
 		7F571A5E23B7E22D00D892B2 /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F571A5D23B7E22D00D892B2 /* ProductVC.swift */; };
 		7F58ABFA23B6196B009126B9 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F58ABF923B6196B009126B9 /* ProductDetail.storyboard */; };
 		7F58AC1C23B74B37009126B9 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F58AC1B23B74B37009126B9 /* ProductDetailVC.swift */; };
+		7F5BE25023B8D64B00D2A70F /* SurveyLifeStyleFouthPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5BE24F23B8D64B00D2A70F /* SurveyLifeStyleFouthPoint.storyboard */; };
+		7F5BE25223B8D93900D2A70F /* SurveyLifeStyleFouthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5BE25123B8D93900D2A70F /* SurveyLifeStyleFouthPointVC.swift */; };
 		7FC773A623B31CFD00449239 /* SurveySymptom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */; };
 		7FC773A823B32E3E00449239 /* SurveySymptomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */; };
 		7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */; };
@@ -110,6 +112,8 @@
 		7F571A5D23B7E22D00D892B2 /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
 		7F58ABF923B6196B009126B9 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		7F58AC1B23B74B37009126B9 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		7F5BE24F23B8D64B00D2A70F /* SurveyLifeStyleFouthPoint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveyLifeStyleFouthPoint.storyboard; sourceTree = "<group>"; };
+		7F5BE25123B8D93900D2A70F /* SurveyLifeStyleFouthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyLifeStyleFouthPointVC.swift; sourceTree = "<group>"; };
 		7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveySymptom.storyboard; sourceTree = "<group>"; };
 		7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySymptomCell.swift; sourceTree = "<group>"; };
 		7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySymptomVC.swift; sourceTree = "<group>"; };
@@ -289,9 +293,7 @@
 				F4DC234023B73CE800A72919 /* IngredientDetailVC.swift */,
 				F4DC234823B7875700A72919 /* StandardDetailVC.swift */,
 				F4DC234C23B7923E00A72919 /* FunctionDetailVC.swift */,
-
 				7F571A5D23B7E22D00D892B2 /* ProductVC.swift */,
-
 				F44C3EB023B87D5B004F829A /* IngredientNameCell.swift */,
 				F44C3EB223B87D6B004F829A /* IngredientImageCell.swift */,
 				F44C3EB423B87D7F004F829A /* IngredientExplainCell.swift */,
@@ -300,7 +302,7 @@
 				F44C3EC023B8A709004F829A /* IngredientStudyCell.swift */,
 				F44C3EC423B8A87B004F829A /* ArticleCell.swift */,
 				F44C3EC623B8BD9A004F829A /* ArticleDetailVC.swift */,
-
+				7F5BE25123B8D93900D2A70F /* SurveyLifeStyleFouthPointVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -352,6 +354,7 @@
 				7FC773B123B3554C00449239 /* SurveyLifeStyleFirstPoint.storyboard */,
 				7FC773B523B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard */,
 				7F537CD523B3810000115A2B /* SurveyLifeStyleThirdPoint.storyboard */,
+				7F5BE24F23B8D64B00D2A70F /* SurveyLifeStyleFouthPoint.storyboard */,
 				7F537CD923B38EAB00115A2B /* SurveyLifeStyleLastPoint.storyboard */,
 				F492FB8423B35B3F00FE5D11 /* Home.storyboard */,
 				F464827F23B3673400F63712 /* Signup.storyboard */,
@@ -451,6 +454,7 @@
 				F492FB4D23B215B200FE5D11 /* Main.storyboard in Resources */,
 				7FC773AC23B349E100449239 /* SurveyLifeStyleEntry.storyboard in Resources */,
 				F4DC234723B77A2700A72919 /* StandardDetail.storyboard in Resources */,
+				7F5BE25023B8D64B00D2A70F /* SurveyLifeStyleFouthPoint.storyboard in Resources */,
 				7FC773B223B3554C00449239 /* SurveyLifeStyleFirstPoint.storyboard in Resources */,
 				7F58ABFA23B6196B009126B9 /* ProductDetail.storyboard in Resources */,
 				7FC773B623B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard in Resources */,
@@ -506,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5BE25223B8D93900D2A70F /* SurveyLifeStyleFouthPointVC.swift in Sources */,
 				F44C3EB723B87FE1004F829A /* SymptomVC.swift in Sources */,
 				7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */,
 				F464828C23B3F64B00F63712 /* ProductCell.swift in Sources */,

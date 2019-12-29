@@ -27,7 +27,7 @@ class TakingProductRegistVC: UIViewController {
         
         // date pick button customize
         datePickButton.makeRounded(cornerRadius: 8)
-        
+
         datePickButton.dropShadow(color: UIColor.darkGray, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 4)
         
         setTakingProduct()
@@ -35,6 +35,7 @@ class TakingProductRegistVC: UIViewController {
         datePickerView.addTarget(self, action: #selector(changed), for: .valueChanged)
         
         datePickerTotalView.isHidden = true
+
     }
     
     @objc func changed() {

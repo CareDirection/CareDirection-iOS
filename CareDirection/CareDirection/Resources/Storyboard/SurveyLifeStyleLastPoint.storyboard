@@ -10,7 +10,7 @@
         <!--Survey Life Style Last PointVC-->
         <scene sceneID="f7k-Gd-6bR">
             <objects>
-                <viewController storyboardIdentifier="SurveyLifeStyleLastPointVC" id="8Jh-qj-ytz" customClass="SurveyLifeStyleLastPointVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyLifeStyleLastPoint" id="8Jh-qj-ytz" customClass="SurveyLifeStyleLastPointVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pnr-Jz-Fj1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,6 +52,9 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" red="0.074509803921568626" green="0.6470588235294118" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectNextBtn:" destination="8Jh-qj-ytz" eventType="touchUpInside" id="zTe-Dn-3WO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

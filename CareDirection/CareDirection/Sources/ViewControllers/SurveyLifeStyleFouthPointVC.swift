@@ -26,5 +26,13 @@ class SurveyLifeStyleFouthPointVC: UIViewController {
         nextBtn.isEnabled = true
     }
     
-
+    @IBAction func nextBtnSelected(_ sender: Any) {
+        let surveyLastPoint = UIStoryboard.init(name: "SurveyLifeStyleLastPoint", bundle: nil)
+        let dvc = surveyLastPoint.instantiateViewController(withIdentifier: "SurveyLifeStyleLastPoint") as! SurveyLifeStyleLastPointVC
+        
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true)
+    
+    }
+    
 }

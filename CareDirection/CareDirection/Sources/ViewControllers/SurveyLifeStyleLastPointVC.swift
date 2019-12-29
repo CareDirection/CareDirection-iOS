@@ -18,6 +18,13 @@ class SurveyLifeStyleLastPointVC: UIViewController {
     }
     
 
-
+    @IBAction func selectNextBtn(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "AfterSurveyResgistTakingProduct", bundle: nil)
+        let dvc = storyboard.instantiateViewController(identifier: "AfterSurveyResgistTakingProduct") as! AfterSurveyResgistTakingProductVC
+        
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true)
+    }
+    
 
 }

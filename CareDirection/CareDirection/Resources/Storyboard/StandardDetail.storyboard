@@ -56,6 +56,10 @@
                                 <rect key="frame" x="0.0" y="318" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lineRed1" translatesAutoresizingMaskIntoConstraints="NO" id="6b9-3W-rHW">
+                                        <rect key="frame" x="18" y="21" width="37" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상한 섭취량" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPf-Qh-yP9">
                                         <rect key="frame" x="57" y="15" width="51" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -63,6 +67,10 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lineBlue1" translatesAutoresizingMaskIntoConstraints="NO" id="kO5-y9-ywc">
+                                        <rect key="frame" x="118" y="21" width="37" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="권장 섭취량" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFx-EY-wpK">
                                         <rect key="frame" x="157" y="15" width="51" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,14 +78,6 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lineRed1" translatesAutoresizingMaskIntoConstraints="NO" id="6b9-3W-rHW">
-                                        <rect key="frame" x="18" y="21" width="37" height="2"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lineBlue1" translatesAutoresizingMaskIntoConstraints="NO" id="kO5-y9-ywc">
-                                        <rect key="frame" x="118" y="21" width="37" height="2"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -99,14 +99,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="339" height="222"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비타민A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YB7-zm-Fk4">
-                                                    <rect key="frame" x="0.0" y="5" width="59" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ef-ga-wXE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ef-ga-wXE" userLabel="비타민 A와 흡연은 상성이 좋지 않아요!  흡연자가 비타민 A를 지속적으로 복용했을 시  폐암 발생률이 28%까지 증가했다는 연구결과도  있답니다.   물론 비타민을 줄이는 것보다는 금연을 하는 것이  우리 몸에는 더 좋겠죠?">
                                                     <rect key="frame" x="99" y="64" width="240" height="158"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="Cwp-r2-KeS"/>
@@ -123,7 +116,17 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5qe-Ff-jkx">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비타민A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YB7-zm-Fk4">
+                                                    <rect key="frame" x="0.0" y="5" width="59" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="59" id="5pP-jV-XQZ"/>
+                                                        <constraint firstAttribute="height" constant="22" id="eGZ-Bv-7Pk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5qe-Ff-jkx">
                                                     <rect key="frame" x="0.0" y="30" width="211" height="19"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상한 섭취량 조정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJI-Nh-lAm">
@@ -150,7 +153,6 @@
                                                             <rect key="frame" x="139" y="0.0" width="25" height="19"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="PVC-eO-Kwn"/>
-                                                                <constraint firstAttribute="height" constant="25" id="WFg-e4-eKe"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000ug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIe-kx-aR3">
@@ -164,13 +166,54 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="211" id="aQI-Jr-tQb"/>
+                                                    </constraints>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dtH-zJ-GP0">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtH-zJ-GP0">
                                                     <rect key="frame" x="25" y="64" width="40" height="125"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.97254901959999995" green="0.76078431369999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="Coy-Ax-1jC"/>
+                                                        <constraint firstAttribute="height" constant="125" id="DeP-2R-VDD"/>
+                                                    </constraints>
                                                 </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="RTM-m7-9Z8">
+                                                    <rect key="frame" x="10" y="77" width="71" height="85"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lineRed2" translatesAutoresizingMaskIntoConstraints="NO" id="kYL-AW-Iz1">
+                                                            <rect key="frame" x="0.0" y="0.0" width="71" height="2"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="71" id="euH-Eb-JGm"/>
+                                                                <constraint firstAttribute="height" constant="2" id="xak-xc-q2d"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lineBlue2" translatesAutoresizingMaskIntoConstraints="NO" id="b0j-xq-pQs">
+                                                            <rect key="frame" x="0.0" y="83" width="71" height="2"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="71" id="eni-rA-kPf"/>
+                                                                <constraint firstAttribute="height" constant="2" id="gJm-o4-9KC"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5qe-Ff-jkx" firstAttribute="leading" secondItem="eqn-iF-oT8" secondAttribute="leading" id="01g-SL-pxo"/>
+                                                <constraint firstItem="0ef-ga-wXE" firstAttribute="leading" secondItem="dtH-zJ-GP0" secondAttribute="trailing" constant="34" id="4Se-sm-Ttw"/>
+                                                <constraint firstItem="0ef-ga-wXE" firstAttribute="top" secondItem="5qe-Ff-jkx" secondAttribute="bottom" constant="15" id="8If-5c-Gca"/>
+                                                <constraint firstAttribute="bottom" secondItem="dtH-zJ-GP0" secondAttribute="bottom" constant="33" id="HQ5-Z8-3DX"/>
+                                                <constraint firstAttribute="trailing" secondItem="5qe-Ff-jkx" secondAttribute="trailing" constant="128" id="IVP-wI-BqM"/>
+                                                <constraint firstItem="dtH-zJ-GP0" firstAttribute="leading" secondItem="eqn-iF-oT8" secondAttribute="leading" constant="25" id="IwP-JB-WhN"/>
+                                                <constraint firstItem="RTM-m7-9Z8" firstAttribute="top" secondItem="5qe-Ff-jkx" secondAttribute="bottom" constant="28" id="Mnx-Ei-cOy"/>
+                                                <constraint firstItem="5qe-Ff-jkx" firstAttribute="top" secondItem="YB7-zm-Fk4" secondAttribute="bottom" constant="3" id="Nng-9p-flK"/>
+                                                <constraint firstItem="RTM-m7-9Z8" firstAttribute="leading" secondItem="eqn-iF-oT8" secondAttribute="leading" constant="10" id="OUw-KA-CrW"/>
+                                                <constraint firstItem="YB7-zm-Fk4" firstAttribute="top" secondItem="eqn-iF-oT8" secondAttribute="top" constant="5" id="Whh-er-ptv"/>
+                                                <constraint firstAttribute="trailing" secondItem="YB7-zm-Fk4" secondAttribute="trailing" constant="280" id="caH-It-t8a"/>
+                                                <constraint firstAttribute="bottom" secondItem="RTM-m7-9Z8" secondAttribute="bottom" constant="60" id="i3g-po-4ch"/>
+                                                <constraint firstItem="YB7-zm-Fk4" firstAttribute="leading" secondItem="eqn-iF-oT8" secondAttribute="leading" id="unC-5w-Rsx"/>
+                                                <constraint firstItem="0ef-ga-wXE" firstAttribute="leading" secondItem="RTM-m7-9Z8" secondAttribute="trailing" constant="18" id="wg2-IL-sjj"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="339" height="222"/>
                                     </collectionViewCell>
@@ -190,6 +233,8 @@
         <image name="icBack" width="28" height="28"/>
         <image name="imgArrow" width="25" height="25"/>
         <image name="lineBlue1" width="36.5" height="1.5"/>
+        <image name="lineBlue2" width="70.5" height="1.5"/>
         <image name="lineRed1" width="37" height="2"/>
+        <image name="lineRed2" width="70.5" height="1.5"/>
     </resources>
 </document>

@@ -33,6 +33,8 @@
 		7F626B7423B934C2005A4D36 /* ProductSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F626B7323B934C2005A4D36 /* ProductSearch.storyboard */; };
 		7F626B7623B941E7005A4D36 /* ProductSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626B7523B941E7005A4D36 /* ProductSearchVC.swift */; };
 		7F626B7823B94E39005A4D36 /* NewProductResgistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */; };
+		7F626B7A23BA332F005A4D36 /* TakingProductInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F626B7923BA332F005A4D36 /* TakingProductInfo.storyboard */; };
+		7F626B7C23BA3C3F005A4D36 /* TakingProductInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626B7B23BA3C3F005A4D36 /* TakingProductInfoVC.swift */; };
 		7FC773A623B31CFD00449239 /* SurveySymptom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */; };
 		7FC773A823B32E3E00449239 /* SurveySymptomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */; };
 		7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */; };
@@ -129,6 +131,8 @@
 		7F626B7323B934C2005A4D36 /* ProductSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductSearch.storyboard; sourceTree = "<group>"; };
 		7F626B7523B941E7005A4D36 /* ProductSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchVC.swift; sourceTree = "<group>"; };
 		7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductResgistCell.swift; sourceTree = "<group>"; };
+		7F626B7923BA332F005A4D36 /* TakingProductInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TakingProductInfo.storyboard; sourceTree = "<group>"; };
+		7F626B7B23BA3C3F005A4D36 /* TakingProductInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingProductInfoVC.swift; sourceTree = "<group>"; };
 		7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveySymptom.storyboard; sourceTree = "<group>"; };
 		7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySymptomCell.swift; sourceTree = "<group>"; };
 		7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySymptomVC.swift; sourceTree = "<group>"; };
@@ -326,7 +330,7 @@
 				7F5BE25723B903E400D2A70F /* TakingProductCVCell.swift */,
 				7F626B7523B941E7005A4D36 /* ProductSearchVC.swift */,
 				7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */,
-
+				7F626B7B23BA3C3F005A4D36 /* TakingProductInfoVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -396,6 +400,7 @@
 				F4DC234A23B789F500A72919 /* FunctionDetail.storyboard */,
 				7F5BE25323B8F31100D2A70F /* AfterSurveyResgistTakingProduct.storyboard */,
 				7F626B7323B934C2005A4D36 /* ProductSearch.storyboard */,
+				7F626B7923BA332F005A4D36 /* TakingProductInfo.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -482,6 +487,7 @@
 				F4DC232F23B57AE500A72919 /* TakingProductRegist.storyboard in Resources */,
 				F4DC232B23B5548600A72919 /* SurveyFin.storyboard in Resources */,
 				F492FB4D23B215B200FE5D11 /* Main.storyboard in Resources */,
+				7F626B7A23BA332F005A4D36 /* TakingProductInfo.storyboard in Resources */,
 				7FC773AC23B349E100449239 /* SurveyLifeStyleEntry.storyboard in Resources */,
 				F4DC234723B77A2700A72919 /* StandardDetail.storyboard in Resources */,
 				7F5BE25023B8D64B00D2A70F /* SurveyLifeStyleFouthPoint.storyboard in Resources */,
@@ -583,6 +589,7 @@
 				7F626B7623B941E7005A4D36 /* ProductSearchVC.swift in Sources */,
 				F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */,
 				7FC773B023B354B400449239 /* SurveyLifeStyleEntryVC.swift in Sources */,
+				7F626B7C23BA3C3F005A4D36 /* TakingProductInfoVC.swift in Sources */,
 				F4DC233323B628C600A72919 /* TakingProduct.swift in Sources */,
 				F492FB6323B216C900FE5D11 /* UIViewController+Extensions.swift in Sources */,
 				F4DC234923B7875700A72919 /* StandardDetailVC.swift in Sources */,

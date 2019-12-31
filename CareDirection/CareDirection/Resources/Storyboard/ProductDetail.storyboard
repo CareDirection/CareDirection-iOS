@@ -11,7 +11,7 @@
         <!--Product DetailVC-->
         <scene sceneID="tL8-T4-S6J">
             <objects>
-                <viewController id="LmY-Id-duP" customClass="ProductDetailVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetail" id="LmY-Id-duP" customClass="ProductDetailVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UAG-Xn-jeo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -833,6 +833,9 @@
                                                             <constraint firstAttribute="width" constant="28" id="a9f-Sf-JME"/>
                                                         </constraints>
                                                         <state key="normal" image="icBack"/>
+                                                        <connections>
+                                                            <action selector="selectedBackBtn:" destination="LmY-Id-duP" eventType="touchUpInside" id="nmB-vC-1Cn"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ju-Br-yb8">
                                                         <rect key="frame" x="0.0" y="65" width="375" height="1"/>

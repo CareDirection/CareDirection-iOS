@@ -25,7 +25,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrd-v7-gRQ">
-                                        <rect key="frame" x="11" y="31" width="28" height="28"/>
+                                        <rect key="frame" x="11" y="3" width="56" height="56"/>
                                         <state key="normal" image="icBack"/>
                                         <connections>
                                             <action selector="selectedBackBtn:" destination="auw-P9-57f" eventType="touchUpInside" id="kHk-yg-T0T"/>

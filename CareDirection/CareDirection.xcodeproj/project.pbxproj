@@ -35,6 +35,11 @@
 		7F626B7823B94E39005A4D36 /* NewProductResgistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */; };
 		7F626B7A23BA332F005A4D36 /* TakingProductInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F626B7923BA332F005A4D36 /* TakingProductInfo.storyboard */; };
 		7F626B7C23BA3C3F005A4D36 /* TakingProductInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626B7B23BA3C3F005A4D36 /* TakingProductInfoVC.swift */; };
+		7F626BC023BA649B005A4D36 /* TopTapBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626BBF23BA649B005A4D36 /* TopTapBarVC.swift */; };
+		7F626BC223BA6548005A4D36 /* TopTabBarResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626BC123BA6548005A4D36 /* TopTabBarResultVC.swift */; };
+		7F626BC423BA844E005A4D36 /* BestProductTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626BC323BA844E005A4D36 /* BestProductTVCell.swift */; };
+		7F90F49423BA958E008D874F /* TopTabBarCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F90F49323BA958E008D874F /* TopTabBarCVCell.swift */; };
+		7F90F49623BB4F5B008D874F /* FilterPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F90F49523BB4F5B008D874F /* FilterPopUpVC.swift */; };
 		7FC773A623B31CFD00449239 /* SurveySymptom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */; };
 		7FC773A823B32E3E00449239 /* SurveySymptomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */; };
 		7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */; };
@@ -133,6 +138,11 @@
 		7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductResgistCell.swift; sourceTree = "<group>"; };
 		7F626B7923BA332F005A4D36 /* TakingProductInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TakingProductInfo.storyboard; sourceTree = "<group>"; };
 		7F626B7B23BA3C3F005A4D36 /* TakingProductInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingProductInfoVC.swift; sourceTree = "<group>"; };
+		7F626BBF23BA649B005A4D36 /* TopTapBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTapBarVC.swift; sourceTree = "<group>"; };
+		7F626BC123BA6548005A4D36 /* TopTabBarResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBarResultVC.swift; sourceTree = "<group>"; };
+		7F626BC323BA844E005A4D36 /* BestProductTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestProductTVCell.swift; sourceTree = "<group>"; };
+		7F90F49323BA958E008D874F /* TopTabBarCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBarCVCell.swift; sourceTree = "<group>"; };
+		7F90F49523BB4F5B008D874F /* FilterPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPopUpVC.swift; sourceTree = "<group>"; };
 		7FC773A523B31CFD00449239 /* SurveySymptom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveySymptom.storyboard; sourceTree = "<group>"; };
 		7FC773A723B32E3E00449239 /* SurveySymptomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySymptomCell.swift; sourceTree = "<group>"; };
 		7FC773A923B32E6E00449239 /* SurveySymptomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySymptomVC.swift; sourceTree = "<group>"; };
@@ -331,6 +341,11 @@
 				7F626B7523B941E7005A4D36 /* ProductSearchVC.swift */,
 				7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */,
 				7F626B7B23BA3C3F005A4D36 /* TakingProductInfoVC.swift */,
+				7F626BBF23BA649B005A4D36 /* TopTapBarVC.swift */,
+				7F626BC123BA6548005A4D36 /* TopTabBarResultVC.swift */,
+				7F626BC323BA844E005A4D36 /* BestProductTVCell.swift */,
+				7F90F49323BA958E008D874F /* TopTabBarCVCell.swift */,
+				7F90F49523BB4F5B008D874F /* FilterPopUpVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -581,12 +596,14 @@
 				F4DC234123B73CE800A72919 /* IngredientDetailVC.swift in Sources */,
 				F4DFE47D23B8F9AC00711C26 /* ChartView.swift in Sources */,
 				F464828E23B3F8B100F63712 /* Product.swift in Sources */,
+				7F90F49423BA958E008D874F /* TopTabBarCVCell.swift in Sources */,
 				F4DC235123B8509200A72919 /* CALayer+Extensions.swift in Sources */,
 				F4DC234F23B7BD4200A72919 /* CustomImageView.swift in Sources */,
 				F44C3EB123B87D5B004F829A /* IngredientNameCell.swift in Sources */,
 				F464829C23B4BE8000F63712 /* UserCell.swift in Sources */,
 				F44C3EB323B87D6B004F829A /* IngredientImageCell.swift in Sources */,
 				7F626B7623B941E7005A4D36 /* ProductSearchVC.swift in Sources */,
+				7F626BC223BA6548005A4D36 /* TopTabBarResultVC.swift in Sources */,
 				F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */,
 				7FC773B023B354B400449239 /* SurveyLifeStyleEntryVC.swift in Sources */,
 				7F626B7C23BA3C3F005A4D36 /* TakingProductInfoVC.swift in Sources */,
@@ -596,6 +613,9 @@
 				F44C3EBF23B8A552004F829A /* Article.swift in Sources */,
 				7F537CE523B4AC5400115A2B /* ComponentProductCell.swift in Sources */,
 				F44C3EB523B87D7F004F829A /* IngredientExplainCell.swift in Sources */,
+				7F626BC423BA844E005A4D36 /* BestProductTVCell.swift in Sources */,
+				7F90F49623BB4F5B008D874F /* FilterPopUpVC.swift in Sources */,
+				7F626BC023BA649B005A4D36 /* TopTapBarVC.swift in Sources */,
 				7FC773B423B3673600449239 /* SurveyLifeStyleFirstPointVC.swift in Sources */,
 				F464828A23B3F41F00F63712 /* HomeVC.swift in Sources */,
 				F44C3EC723B8BD9A004F829A /* ArticleDetailVC.swift in Sources */,

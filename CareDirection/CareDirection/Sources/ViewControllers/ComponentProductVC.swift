@@ -12,6 +12,7 @@ class ComponentProductVC: UIViewController {
     
     @IBOutlet var infoView: UIView!
     @IBOutlet var infoViewTopConstraint: NSLayoutConstraint!
+    
     @IBOutlet var infoViewFirstInfo: UILabel!
     
     @IBOutlet var productTableView: UITableView!
@@ -21,6 +22,8 @@ class ComponentProductVC: UIViewController {
     @IBOutlet var guideLayout: UIView!
     var infoViewDefaultContstraint: CGFloat!
     var resultDataList:[DummyProduct]?
+    
+    
     var selectedCellIndex: Int?
     
     @IBOutlet var tableViewBottomConstraint: NSLayoutConstraint!
@@ -71,10 +74,21 @@ class ComponentProductVC: UIViewController {
     @IBAction func hide(_ sender: Any) {
         self.guideLayout.isHidden = true
     }
+    @IBAction func selectedBackBtn(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
 }
 
 extension ComponentProductVC: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard.init(name: "ProductDetail", bundle: nil)
+        
+        let dvc = storyBoard.instantiateViewController(withIdentifier: "ProductDetail") as! ProductDetailVC
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true, completion: nil)
+        
+    }
     
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         print("Scroll animation end")
@@ -126,11 +140,8 @@ extension ComponentProductVC: UITableViewDelegate{
         
         UIView.animate(withDuration: 0.25, animations: {
             self.infoView.transform = CGAffineTransform(translationX: 0, y: -84)
-            
             let move = CGAffineTransform(translationX: 0, y: -84)
-//            let scale = CGAffineTransform(scaleX: 1, y: 1.2)
-//            let scale =
-//            let combine = move.concatenating(scale)
+
             self.productTableView.transform = move
         })
     }

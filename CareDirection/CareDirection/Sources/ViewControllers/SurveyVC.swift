@@ -20,8 +20,8 @@ class SurveyVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        nextButton.makeRounded(cornerRadius: 24.5)
+        
+        setLayout()
         
         // for keyboard animation
         initGestureRecognizer()
@@ -31,8 +31,16 @@ class SurveyVC: UIViewController {
 
     }
     
+    func setLayout() {
+        nextButton.isEnabled = false
+        nextButton.backgroundColor = UIColor.white40
+        nextText.textColor = UIColor.white40
+        nextButton.makeRounded(cornerRadius: 24.5)
+    }
+    
     // textField 입력 시 버튼 색상 변경
     @IBAction func nameTextFieldAction(_ sender: UITextField) {
+        nextButton.isEnabled = true
         nextButton.layer.backgroundColor = UIColor.white.cgColor
         nextText.textColor = UIColor.topaz
     }

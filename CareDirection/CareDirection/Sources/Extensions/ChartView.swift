@@ -101,10 +101,10 @@ class ChartView: MacawView {
         let five = Chart(showNumber: "오메가3", viewCount: 66)
         let six = Chart(showNumber: "철분", viewCount: 70)
         let seven = Chart(showNumber: "비타민C", viewCount: 80)
-        let eight = Chart(showNumber: "비타민C", viewCount: 100)
-        let nine = Chart(showNumber: "비타민C", viewCount: 160)
-        let ten = Chart(showNumber: "비타민C", viewCount: 180)
-        let eleven = Chart(showNumber: "비타민C", viewCount: 200)
+        let eight = Chart(showNumber: "비타민C", viewCount: 80)
+        let nine = Chart(showNumber: "비타민C", viewCount: 80)
+        let ten = Chart(showNumber: "비타민C", viewCount: 80)
+        let eleven = Chart(showNumber: "비타민C", viewCount: 180)
 
         return [one, two, three, four, five, six, seven, eight, nine, ten, eleven]
     }

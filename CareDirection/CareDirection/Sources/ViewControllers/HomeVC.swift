@@ -12,6 +12,11 @@ class HomeVC: UIViewController {
     
     // 제품 나타내는 collection view
     @IBOutlet weak var productCollectionView: UICollectionView!
+    // 기능성 원료 나타내는 collection view
+    @IBOutlet weak var functionalCollectionView: UICollectionView!
+    
+    @IBOutlet weak var functionalCollectionView2: UICollectionView!
+    
     
     // 문제의 스크롤뷰..ㅎ
     @IBOutlet weak var scrollView: UIScrollView!
@@ -42,8 +47,11 @@ class HomeVC: UIViewController {
     // 받아올 데이터 리스트들.
     //1. 유저 리스트
     //2. 등록한 제품들 리스트
+    //3. 기능성 원료
     var userList : [User] = []
     var productList : [Product] = []
+    var functionalIngredientList : [FunctionalIngredient] = []
+    var functionalIngredientList2 : [FunctionalIngredient] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +60,12 @@ class HomeVC: UIViewController {
         setUserData()
         // 제품 리스트 더미 데이터 생성
         setProductData()
+        setIngredient()
         
         // navigation bar 사용자 추가 isHidden 설정해주기!
         userTableView.isHidden = true
         blurView.isHidden = true
-        navigationBar.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
+        
         
         // 전체적인 뷰 블록 나누기 효과
         ingredientView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
@@ -114,6 +123,16 @@ class HomeVC: UIViewController {
             
         }
     }
+    
+    @IBAction func settingButtonClick(_ sender: Any) {
+        let standardStoryboard = UIStoryboard.init(name: "Setting", bundle: nil)
+        
+        guard let dvc = standardStoryboard.instantiateViewController(withIdentifier: "Setting") as? SettingVC else {
+          return
+        }
+        present(dvc, animated: true)
+    }
+    
     
     // 필수 비타민 & 미네랄 상세보기 button action
     @IBAction func showStandardDetail(_ sender: Any) {
@@ -182,20 +201,9 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // drop down button 의 타이틀 바꿔주기
-        if indexPath.row != userList.count-2 {
-            dropDownButton.setTitle(userList[indexPath.row].userName, for: .normal)
-            animate(toggle: false)
-        }
-        
-        if indexPath.row != userList.count - 1 {
-            dropDownButton.setTitle(userList[indexPath.row].userName, for: .normal)
-            animate(toggle: false)
-            print("아님!")
-        }
-        
         if indexPath.row == userList.count - 2 {
-            //animate(toggle: false)
-            print("뒤에서 두번째 눌림")
+            dropDownButton.setTitle(dropDownButton.titleLabel?.text, for: .normal)
+            animate(toggle: false)
             let alert = UIAlertController(title: "추가하시겠습니까?", message: "새로운 데이터 추가를 위해\n설문 조사부터 다시 시작합니다.", preferredStyle: UIAlertController.Style.alert)
             let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
             let cancel = UIAlertAction(title: "취소", style: .destructive, handler: nil)
@@ -205,24 +213,27 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
             
+        } else {
+            dropDownButton.setTitle(userList[indexPath.row].userName, for: .normal)
+            animate(toggle: false)
         }
-        
-        if indexPath.row == userList.count - 1 {
-            //animate(toggle: false)
-            
-            print("뒤에서 첫번째 눌림")
-        }
-        
     }
 }
 
 // 복용하고 있는 제품들 collection view datasource
 extension HomeVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == self.productCollectionView {
         return productList.count
+        } else if collectionView == self.functionalCollectionView{
+            return functionalIngredientList.count
+        } else {
+            return functionalIngredientList2.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == self.productCollectionView {
         let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! ProductCell
         
         let product = productList[indexPath.row]
@@ -232,14 +243,32 @@ extension HomeVC : UICollectionViewDataSource {
         cell.productCheckImage.image = product.checkImage
         
         return cell
+    } else {
+            let cell = functionalCollectionView.dequeueReusableCell(withReuseIdentifier: "ingredientCell", for: indexPath) as! FunctionalIngredientCell
+            
+            let ingredient = functionalIngredientList[indexPath.row]
+            
+            cell.imageView.image = ingredient.ingredientImage
+            cell.label.text = ingredient.ingredientName
+            
+            return cell
     }
     
-    
+    }
 }
 
 // collection view delegate
 extension HomeVC : UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let recordStoryboard = UIStoryboard.init(name: "TakingProductPopUp", bundle: nil)
+        
+        guard let dvc = recordStoryboard.instantiateViewController(withIdentifier: "TakingProductPopUp") as? TakingProductPopUpVC else {
+            return
+        }
+        
+        present(dvc, animated: true)
+    }
 }
 
 // 제품리스트 더미 데이터 세팅
@@ -249,10 +278,11 @@ extension HomeVC {
     func setUserData() {
         let user1 = User(name: "박진오")
         let user2 = User(name: "엄마")
+        let user3 = User(name: "안재은")
         let setting = User(name: "+ 사용자 추가하기")
         let info = User(name: "사랑하는 가족의 데이터를 추가하고,\n케어 파트너와 함께 해보세요!")
         
-        userList = [user1, user2] + [setting] + [info]
+        userList = [user1, user2, user3] + [setting] + [info]
     }
     // 제품 collection view에 넣을 데이터 세팅
     func setProductData() {
@@ -263,6 +293,16 @@ extension HomeVC {
         let product5 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")
         
         productList = [product1, product2, product3, product4, product5]
+    }
+    
+    func setIngredient() {
+        let ingredient1 = FunctionalIngredient(image: "liver60", name: "간건강")
+        let ingredient2 = FunctionalIngredient(image: "liver60", name: "면역력")
+        let ingredient3 = FunctionalIngredient(image: "liver60", name: "피로회복")
+        
+        functionalIngredientList = [ingredient1, ingredient2, ingredient3]
+        
+        functionalIngredientList2 = [ingredient1, ingredient2]
     }
     
 }

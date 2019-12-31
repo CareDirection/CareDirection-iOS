@@ -7,8 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 struct Chart {
     var showNumber : String
     var viewCount : Double
+}
+
+struct SingleChart {
+    var standardTitle : String
+    var stnadard1 : String
+    var standard2 : String
+    var standard3 : String
+    var standardChart : CGFloat
+    var standardDetail : String
 }

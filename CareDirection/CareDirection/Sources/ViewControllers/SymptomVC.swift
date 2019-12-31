@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
 class SymptomVC: UIViewController {
 
     
     @IBOutlet weak var navigationBar: UIView!
     @IBOutlet weak var goToProductButton: UIButton!
+    
+    @IBOutlet weak var tabBarCollectionView: UICollectionView!
+    @IBOutlet weak var symptomTableView: UITableView!
+    
+    var categoryList : [Symptom] = []
+    var symptomList : Symptom?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +32,99 @@ class SymptomVC: UIViewController {
         
         // navigation bar drop shadow
         navigationBar.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
+        
+        // 셀 사이즈 동적으로 조절해주기
+        symptomTableView.rowHeight = UITableView.automaticDimension
+        symptomTableView.estimatedRowHeight = 600
+        
+        
+    }
+
+    @IBAction func backButtonClick(_ sender: Any) {
+        
+        self.dismiss(animated: true)
+        
+    }
+    
+
+}
+
+extension SymptomVC : UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //return (categoryList?.categoryLabel.count)!
+        
+        print(categoryList.count)
+        return categoryList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = tabBarCollectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! SymptomCategoryCell
+    
+        let category = categoryList[indexPath.row]
+        
+        cell.categoryName.text = category.categoryLabel
+
+        if indexPath.row == 0 {
+            cell.categoryName.textColor = .tealBlue
+            
+        }
+        
+        
+        return cell
     }
     
     
+}
 
+extension SymptomVC : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let cell = tabBarCollectionView.cellForItem(at: indexPath) as? SymptomCategoryCell else {return}
+        
+        
+        cell.categoryName.textColor = UIColor.tealBlue
+        cell.categoryLine.backgroundColor = UIColor.tealBlue
+        
+        print("clicked")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard let cell = tabBarCollectionView.cellForItem(at: indexPath) as? SymptomCategoryCell else {return}
+        cell.categoryName.textColor = .lightGray
+        cell.categoryLine.backgroundColor = .clear
+        
+        
+        print("deselected!")
+    }
+}
+
+extension SymptomVC : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            let imageCell = symptomTableView.dequeueReusableCell(withIdentifier: "imageCell") as! SymptomImageCell
+            
+            imageCell.symptomImage.image = categoryList[indexPath.row].symptomImage
+            
+            
+            return imageCell
+        } else {
+            let detailCell = symptomTableView.dequeueReusableCell(withIdentifier: "explainCell") as! SymptomDetailCell
+            
+            detailCell.symptomDetail.text = categoryList[indexPath.row].symptomDetail
+            
+            return detailCell
+        }
+    }
+    
+    
+}
+
+extension SymptomVC : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }

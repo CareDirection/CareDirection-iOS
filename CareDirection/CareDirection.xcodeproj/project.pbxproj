@@ -43,6 +43,12 @@
 		7FC773B623B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC773B523B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard */; };
 		7FCCEAC623B2BCFE00F832B8 /* SurveyDiseaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */; };
 		7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */; };
+		F41F391523BA4D0200F4BD89 /* ArticleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F391423BA4D0200F4BD89 /* ArticleTitleCell.swift */; };
+		F41F391723BA4D1500F4BD89 /* ArticleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F391623BA4D1500F4BD89 /* ArticleImageCell.swift */; };
+		F41F391B23BA4D4000F4BD89 /* ArticleSecondContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F391A23BA4D4000F4BD89 /* ArticleSecondContentCell.swift */; };
+		F41F391D23BA4D6000F4BD89 /* ArticleFirstContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F391C23BA4D6000F4BD89 /* ArticleFirstContentCell.swift */; };
+		F41F392123BA530000F4BD89 /* TakingProductPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41F392023BA530000F4BD89 /* TakingProductPopUp.storyboard */; };
+		F41F392323BA532700F4BD89 /* TakingProductPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F392223BA532700F4BD89 /* TakingProductPopUpVC.swift */; };
 		F44C3EB123B87D5B004F829A /* IngredientNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44C3EB023B87D5B004F829A /* IngredientNameCell.swift */; };
 		F44C3EB323B87D6B004F829A /* IngredientImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44C3EB223B87D6B004F829A /* IngredientImageCell.swift */; };
 		F44C3EB523B87D7F004F829A /* IngredientExplainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44C3EB423B87D7F004F829A /* IngredientExplainCell.swift */; };
@@ -61,6 +67,11 @@
 		F464829A23B4BE3200F63712 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464829923B4BE3100F63712 /* User.swift */; };
 		F464829C23B4BE8000F63712 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464829B23B4BE8000F63712 /* UserCell.swift */; };
 		F46482A023B4DF6A00F63712 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464829F23B4DF6A00F63712 /* SelfSizedTableView.swift */; };
+		F47860BB23BAF110003D11D1 /* SymptomCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860BA23BAF110003D11D1 /* SymptomCategoryCell.swift */; };
+		F47860BD23BAF231003D11D1 /* Symptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860BC23BAF231003D11D1 /* Symptom.swift */; };
+		F47860BF23BAF3CB003D11D1 /* SymptomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860BE23BAF3CB003D11D1 /* SymptomCell.swift */; };
+		F47860C123BAF790003D11D1 /* SymptomImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860C023BAF790003D11D1 /* SymptomImageCell.swift */; };
+		F47860C323BAF7A3003D11D1 /* SymptomDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860C223BAF7A3003D11D1 /* SymptomDetailCell.swift */; };
 		F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4523B215B200FE5D11 /* AppDelegate.swift */; };
 		F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4723B215B200FE5D11 /* SceneDelegate.swift */; };
 		F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4923B215B200FE5D11 /* ViewController.swift */; };
@@ -98,6 +109,13 @@
 		F4DFE47B23B8F01600711C26 /* HomeTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFE47A23B8F01600711C26 /* HomeTestVC.swift */; };
 		F4DFE47D23B8F9AC00711C26 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFE47C23B8F9AC00711C26 /* ChartView.swift */; };
 		F4DFE47F23B8FA1600711C26 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFE47E23B8FA1600711C26 /* Chart.swift */; };
+		F4DFE48123B9562A00711C26 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DFE48023B9562A00711C26 /* Setting.storyboard */; };
+		F4DFE48323B95E6C00711C26 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFE48223B95E6B00711C26 /* SettingVC.swift */; };
+		F4DFE48523B961AC00711C26 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DFE48423B961AC00711C26 /* Edit.storyboard */; };
+		F4DFE48723B9660B00711C26 /* EditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFE48623B9660B00711C26 /* EditVC.swift */; };
+		F4DFE48923B9DB6600711C26 /* FunctionalIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFE48823B9DB6600711C26 /* FunctionalIngredient.swift */; };
+		F4DFE48D23B9DBFB00711C26 /* FunctionalIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFE48C23B9DBFB00711C26 /* FunctionalIngredientCell.swift */; };
+		F4DFE49123B9FC4B00711C26 /* StandardDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFE49023B9FC4B00711C26 /* StandardDetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +157,12 @@
 		7FC773B523B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SurveyLifeStyleSecondPoint.storyboard; sourceTree = "<group>"; };
 		7FCCEAC523B2BCFE00F832B8 /* SurveyDiseaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDiseaseVC.swift; sourceTree = "<group>"; };
 		7FCCEAC723B2C65400F832B8 /* SurveyDiseaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDiseaseCell.swift; sourceTree = "<group>"; };
+		F41F391423BA4D0200F4BD89 /* ArticleTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTitleCell.swift; sourceTree = "<group>"; };
+		F41F391623BA4D1500F4BD89 /* ArticleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageCell.swift; sourceTree = "<group>"; };
+		F41F391A23BA4D4000F4BD89 /* ArticleSecondContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSecondContentCell.swift; sourceTree = "<group>"; };
+		F41F391C23BA4D6000F4BD89 /* ArticleFirstContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFirstContentCell.swift; sourceTree = "<group>"; };
+		F41F392023BA530000F4BD89 /* TakingProductPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TakingProductPopUp.storyboard; sourceTree = "<group>"; };
+		F41F392223BA532700F4BD89 /* TakingProductPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingProductPopUpVC.swift; sourceTree = "<group>"; };
 		F44C3EB023B87D5B004F829A /* IngredientNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientNameCell.swift; sourceTree = "<group>"; };
 		F44C3EB223B87D6B004F829A /* IngredientImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientImageCell.swift; sourceTree = "<group>"; };
 		F44C3EB423B87D7F004F829A /* IngredientExplainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientExplainCell.swift; sourceTree = "<group>"; };
@@ -157,6 +181,11 @@
 		F464829923B4BE3100F63712 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F464829B23B4BE8000F63712 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		F464829F23B4DF6A00F63712 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
+		F47860BA23BAF110003D11D1 /* SymptomCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomCategoryCell.swift; sourceTree = "<group>"; };
+		F47860BC23BAF231003D11D1 /* Symptom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symptom.swift; sourceTree = "<group>"; };
+		F47860BE23BAF3CB003D11D1 /* SymptomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomCell.swift; sourceTree = "<group>"; };
+		F47860C023BAF790003D11D1 /* SymptomImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomImageCell.swift; sourceTree = "<group>"; };
+		F47860C223BAF7A3003D11D1 /* SymptomDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomDetailCell.swift; sourceTree = "<group>"; };
 		F492FB4223B215B200FE5D11 /* CareDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492FB4523B215B200FE5D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F492FB4723B215B200FE5D11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +225,13 @@
 		F4DFE47A23B8F01600711C26 /* HomeTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTestVC.swift; sourceTree = "<group>"; };
 		F4DFE47C23B8F9AC00711C26 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		F4DFE47E23B8FA1600711C26 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		F4DFE48023B9562A00711C26 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		F4DFE48223B95E6B00711C26 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		F4DFE48423B961AC00711C26 /* Edit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
+		F4DFE48623B9660B00711C26 /* EditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVC.swift; sourceTree = "<group>"; };
+		F4DFE48823B9DB6600711C26 /* FunctionalIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalIngredient.swift; sourceTree = "<group>"; };
+		F4DFE48C23B9DBFB00711C26 /* FunctionalIngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalIngredientCell.swift; sourceTree = "<group>"; };
+		F4DFE49023B9FC4B00711C26 /* StandardDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardDetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,7 +362,19 @@
 				7F5BE25723B903E400D2A70F /* TakingProductCVCell.swift */,
 				7F626B7523B941E7005A4D36 /* ProductSearchVC.swift */,
 				7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */,
-
+				F4DFE48223B95E6B00711C26 /* SettingVC.swift */,
+				F4DFE48623B9660B00711C26 /* EditVC.swift */,
+				F4DFE48C23B9DBFB00711C26 /* FunctionalIngredientCell.swift */,
+				F4DFE49023B9FC4B00711C26 /* StandardDetailCell.swift */,
+				F41F391423BA4D0200F4BD89 /* ArticleTitleCell.swift */,
+				F41F391623BA4D1500F4BD89 /* ArticleImageCell.swift */,
+				F41F391A23BA4D4000F4BD89 /* ArticleSecondContentCell.swift */,
+				F41F391C23BA4D6000F4BD89 /* ArticleFirstContentCell.swift */,
+				F41F392223BA532700F4BD89 /* TakingProductPopUpVC.swift */,
+				F47860BA23BAF110003D11D1 /* SymptomCategoryCell.swift */,
+				F47860BE23BAF3CB003D11D1 /* SymptomCell.swift */,
+				F47860C023BAF790003D11D1 /* SymptomImageCell.swift */,
+				F47860C223BAF7A3003D11D1 /* SymptomDetailCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -355,6 +403,8 @@
 				F44C3EBE23B8A552004F829A /* Article.swift */,
 				F44C3EC223B8A81A004F829A /* Ingredient.swift */,
 				F4DFE47E23B8FA1600711C26 /* Chart.swift */,
+				F4DFE48823B9DB6600711C26 /* FunctionalIngredient.swift */,
+				F47860BC23BAF231003D11D1 /* Symptom.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -396,6 +446,9 @@
 				F4DC234A23B789F500A72919 /* FunctionDetail.storyboard */,
 				7F5BE25323B8F31100D2A70F /* AfterSurveyResgistTakingProduct.storyboard */,
 				7F626B7323B934C2005A4D36 /* ProductSearch.storyboard */,
+				F4DFE48023B9562A00711C26 /* Setting.storyboard */,
+				F4DFE48423B961AC00711C26 /* Edit.storyboard */,
+				F41F392023BA530000F4BD89 /* TakingProductPopUp.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -476,16 +529,19 @@
 				F492FB6D23B2412900FE5D11 /* Survey.storyboard in Resources */,
 				7F537CD623B3810000115A2B /* SurveyLifeStyleThirdPoint.storyboard in Resources */,
 				F492FB7123B2469C00FE5D11 /* SurveyDisease.storyboard in Resources */,
+				F4DFE48523B961AC00711C26 /* Edit.storyboard in Resources */,
 				7F537CE123B48C7700115A2B /* Product.storyboard in Resources */,
 				F4DC233923B6F5A000A72919 /* IngredientStudy.storyboard in Resources */,
 				F464828023B3673400F63712 /* Signup.storyboard in Resources */,
 				F4DC232F23B57AE500A72919 /* TakingProductRegist.storyboard in Resources */,
 				F4DC232B23B5548600A72919 /* SurveyFin.storyboard in Resources */,
+				F41F392123BA530000F4BD89 /* TakingProductPopUp.storyboard in Resources */,
 				F492FB4D23B215B200FE5D11 /* Main.storyboard in Resources */,
 				7FC773AC23B349E100449239 /* SurveyLifeStyleEntry.storyboard in Resources */,
 				F4DC234723B77A2700A72919 /* StandardDetail.storyboard in Resources */,
 				7F5BE25023B8D64B00D2A70F /* SurveyLifeStyleFouthPoint.storyboard in Resources */,
 				7FC773B223B3554C00449239 /* SurveyLifeStyleFirstPoint.storyboard in Resources */,
+				F4DFE48123B9562A00711C26 /* Setting.storyboard in Resources */,
 				7F58ABFA23B6196B009126B9 /* ProductDetail.storyboard in Resources */,
 				7FC773B623B3748D00449239 /* SurveyLifeStyleSecondPoint.storyboard in Resources */,
 			);
@@ -541,27 +597,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F5BE25223B8D93900D2A70F /* SurveyLifeStyleFouthPointVC.swift in Sources */,
+				F4DFE48323B95E6C00711C26 /* SettingVC.swift in Sources */,
 				F44C3EB723B87FE1004F829A /* SymptomVC.swift in Sources */,
 				7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */,
 				7F5BE25623B901FD00D2A70F /* AfterSurveyResgistTakingProductVC.swift in Sources */,
 				F464828C23B3F64B00F63712 /* ProductCell.swift in Sources */,
+				F4DFE48723B9660B00711C26 /* EditVC.swift in Sources */,
 				F4DFE47F23B8FA1600711C26 /* Chart.swift in Sources */,
+				F47860BF23BAF3CB003D11D1 /* SymptomCell.swift in Sources */,
+				F47860C323BAF7A3003D11D1 /* SymptomDetailCell.swift in Sources */,
+				F47860C123BAF790003D11D1 /* SymptomImageCell.swift in Sources */,
 				7F033C8623B239DE00ABD866 /* SurveyInfoVC.swift in Sources */,
 				F4DFE47B23B8F01600711C26 /* HomeTestVC.swift in Sources */,
 				F4DC234D23B7923E00A72919 /* FunctionDetailVC.swift in Sources */,
+				F41F391523BA4D0200F4BD89 /* ArticleTitleCell.swift in Sources */,
+				F4DFE48D23B9DBFB00711C26 /* FunctionalIngredientCell.swift in Sources */,
 				F492FB6F23B2449F00FE5D11 /* SurveyVC.swift in Sources */,
 				F44C3EC123B8A709004F829A /* IngredientStudyCell.swift in Sources */,
 				F4DC233123B60C5C00A72919 /* TakingProductRegistVC.swift in Sources */,
 				F4DC233523B62AF300A72919 /* TakingProductRegistCell.swift in Sources */,
+				F41F392323BA532700F4BD89 /* TakingProductPopUpVC.swift in Sources */,
+				F41F391D23BA4D6000F4BD89 /* ArticleFirstContentCell.swift in Sources */,
 				7F626B7823B94E39005A4D36 /* NewProductResgistCell.swift in Sources */,
 				7F571A5823B7776300D892B2 /* ProductComponentInfoTVCell.swift in Sources */,
 				F492FB8323B340D000FE5D11 /* LoginVC.swift in Sources */,
 				7F571A5623B767B900D892B2 /* ProductFunctionCVCell.swift in Sources */,
+				F47860BD23BAF231003D11D1 /* Symptom.swift in Sources */,
 				7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */,
 				7F571A5C23B783B800D892B2 /* NaverLowestPriceInfoCVCell.swift in Sources */,
 				F44C3EBD23B89F40004F829A /* IngredientStudyVC.swift in Sources */,
+				F4DFE49123B9FC4B00711C26 /* StandardDetailCell.swift in Sources */,
 				7F5BE25823B903E400D2A70F /* TakingProductCVCell.swift in Sources */,
 				F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */,
+				F41F391723BA4D1500F4BD89 /* ArticleImageCell.swift in Sources */,
 				F46482A023B4DF6A00F63712 /* SelfSizedTableView.swift in Sources */,
 				F464828223B36B8500F63712 /* SignupVC.swift in Sources */,
 				F492FB6723B217E600FE5D11 /* UIImageView+Extensions.swift in Sources */,
@@ -582,13 +650,16 @@
 				F44C3EB323B87D6B004F829A /* IngredientImageCell.swift in Sources */,
 				7F626B7623B941E7005A4D36 /* ProductSearchVC.swift in Sources */,
 				F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */,
+				F47860BB23BAF110003D11D1 /* SymptomCategoryCell.swift in Sources */,
 				7FC773B023B354B400449239 /* SurveyLifeStyleEntryVC.swift in Sources */,
 				F4DC233323B628C600A72919 /* TakingProduct.swift in Sources */,
 				F492FB6323B216C900FE5D11 /* UIViewController+Extensions.swift in Sources */,
 				F4DC234923B7875700A72919 /* StandardDetailVC.swift in Sources */,
+				F41F391B23BA4D4000F4BD89 /* ArticleSecondContentCell.swift in Sources */,
 				F44C3EBF23B8A552004F829A /* Article.swift in Sources */,
 				7F537CE523B4AC5400115A2B /* ComponentProductCell.swift in Sources */,
 				F44C3EB523B87D7F004F829A /* IngredientExplainCell.swift in Sources */,
+				F4DFE48923B9DB6600711C26 /* FunctionalIngredient.swift in Sources */,
 				7FC773B423B3673600449239 /* SurveyLifeStyleFirstPointVC.swift in Sources */,
 				F464828A23B3F41F00F63712 /* HomeVC.swift in Sources */,
 				F44C3EC723B8BD9A004F829A /* ArticleDetailVC.swift in Sources */,

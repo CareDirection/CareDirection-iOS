@@ -113,6 +113,9 @@ class ProductDetailVC: UIViewController {
         self.productThirdCategory.dropShadow(color: UIColor.init(red: 0, green: 0, blue: 0, alpha: 1), offSet: CGSize(width: 0, height: 1), opacity: 0.16, radius: 4)
         
     }
+    @IBAction func selectedBackBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
 

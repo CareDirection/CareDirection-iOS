@@ -73,7 +73,7 @@ extension ProductSearchVC: UITextFieldDelegate {
 extension ProductSearchVC: UITableViewDelegate{
     
 }
-
+//
 //extension ProductSearchVC: UITableViewDataSource{
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        <#code#>
@@ -82,6 +82,10 @@ extension ProductSearchVC: UITableViewDelegate{
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        <#code#>
 //    }
+//}
 //
-//
+//struct SearchResultTVData {
+//    let img: String?
+//    let company: String?
+//    let
 //}

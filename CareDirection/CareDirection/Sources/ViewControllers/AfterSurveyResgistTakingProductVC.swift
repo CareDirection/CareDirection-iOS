@@ -40,8 +40,8 @@ class AfterSurveyResgistTakingProductVC: UIViewController {
     }
     
     @IBAction func selectedCompeteBtn(_ sender: Any) {
-        let storyBoard = UIStoryboard.init(name: "Home", bundle: nil)
-        let dvc = storyBoard.instantiateViewController(identifier: "Home")
+        let storyBoard = UIStoryboard.init(name: "SurveyFin", bundle: nil)
+        let dvc = storyBoard.instantiateViewController(identifier: "SurveyFin")
         self.present(dvc, animated: true)
     }
     @IBAction func dissmiss(_ sender: Any) {

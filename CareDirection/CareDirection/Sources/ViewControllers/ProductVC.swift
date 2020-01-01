@@ -31,18 +31,31 @@ class ProductVC: UIViewController {
     
     var selectedTapIndex: Int = 0
     var viewType: ViewType = .defaultView
+    
     var resultCountViewHeight: CGFloat?
+    let pickerList: [String] = ["제품", "성분"]
+    var selectedCategory: String = "제품"
     var tabList: [String] = ["a", "b", "c", "d"]
     var productList: [String] = ["0", "1"]
     var resultCountViewDefaultConstraint: CGFloat?
     
+    
+    // MARK - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setLayout()
         setInitVar()
+        initGestureRecognizer()
         setDynamicLayout()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        registerForKeyboardNotifications()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        unregisterForKeyboardNotifications()
     }
     
     func setLayout(){
@@ -62,6 +75,9 @@ class ProductVC: UIViewController {
         
         topProductTV.delegate = self
         topProductTV.dataSource = self
+        
+        createPicker()
+        createToolBar()
         
         self.resultCountViewDefaultConstraint = self.resultCountViewTopConstraint.constant
         self.resultCountView.isHidden = true
@@ -90,9 +106,33 @@ class ProductVC: UIViewController {
         topTabCV.reloadData()
         topProductTV.reloadData()
     }
+    func createPicker(){
+           let categoryPicker = UIPickerView()
+           categoryPicker.delegate = self
+           categoryPicker.dataSource = self
+           
+           searchFiterTxtView.inputView = categoryPicker
+       }
+       func createToolBar(){
+           let toolBar = UIToolbar()
+           toolBar.sizeToFit()
+           
+           let doneBtn = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(SurveyInfoVC.dismissKeyboard))
+           let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+           toolBar.setItems([flexibleSpace,doneBtn], animated: false)
+           
+           toolBar.isUserInteractionEnabled = true
+           
+           searchFiterTxtView.inputAccessoryView = toolBar
+       }
+       
+       @objc func dismissKeyboard(){
+           view.endEditing(true)
+       }
     
     @IBAction func selectedSearchBtn(_ sender: Any) {
         self.viewType = .searchView
+        productList = []
         setDynamicLayout()
         
     }
@@ -110,6 +150,24 @@ class ProductVC: UIViewController {
     
 }
 
+extension ProductVC: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerList.count
+    }
+}
+extension ProductVC: UIPickerViewDelegate{
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerList[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedCategory = pickerList[row]
+        searchFiterTxtView.text = selectedCategory
+    }
+}
 extension ProductVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedTapIndex = indexPath.row
@@ -159,7 +217,17 @@ extension ProductVC: UITableViewDelegate{
 }
 extension ProductVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productList.count
+        switch viewType {
+        case .defaultView:
+            return productList.count
+        case .searchView:
+            if productList.count == 0 {
+                return 1
+            }else{
+                return productList.count
+            }
+
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -174,14 +242,74 @@ extension ProductVC: UITableViewDataSource{
             }
             return cell
         case .searchView:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BestProductTVCell") as! BestProductTVCell
-            cell.nameLbl.text = productList[indexPath.row]
-            cell.rankImg.isHidden = true
-            return cell
+            if productList.count != 0{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "BestProductTVCell") as! BestProductTVCell
+                cell.nameLbl.text = productList[indexPath.row]
+                cell.rankImg.isHidden = true
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "NoResultCell")
+
+                return cell!
+            }
+            
         }
 
      }
 }
+
+extension ProductVC : UIGestureRecognizerDelegate {
+    
+    func initGestureRecognizer() {
+        let textFieldTap = UITapGestureRecognizer(target: self, action: #selector(handleTapTextField(_:)))
+        textFieldTap.delegate = self
+        // for table view & collection view tab recognize while hiding keybord by tapping other view
+        textFieldTap.cancelsTouchesInView = false
+        view.addGestureRecognizer(textFieldTap)
+    }
+    
+    // 다른 위치 탭했을 때 키보드 없어지는 코드
+    @objc func handleTapTextField(_ sender: UITapGestureRecognizer) {
+        self.searchTxtView.resignFirstResponder()
+    }
+    
+    
+    func gestureRecognizer(_ gestrueRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if (touch.view?.isDescendant(of: searchTxtView))! {
+
+            return false
+        }
+        return true
+    }
+    
+    // keyboard가 보여질 때 어떤 동작을 수행
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        
+        
+        self.view.layoutIfNeeded()
+    }
+    
+    // keyboard가 사라질 때 어떤 동작을 수행
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        
+        
+        self.view.layoutIfNeeded()
+    }
+    
+    
+    // observer
+    func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    
+    func unregisterForKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+}
+
 
 enum ViewType {
     case defaultView

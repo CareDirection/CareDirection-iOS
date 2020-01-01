@@ -50,11 +50,41 @@ class SignupVC: UIViewController {
     
     // 뒤로가기 버튼 액션 : 추후 dismiss 로
     @IBAction func backButtonClicked(_ sender: Any) {
-        
+        self.dismiss(animated: true)
     }
     
     // 중복확인 버튼 액션
     @IBAction func repeatCheckButtonClicked(_ sender: Any) {
+        
+        guard let id = self.emailTextField.text else {return}
+        
+        AuthService.shared.idDoubleCheck(id){
+            data in
+            switch data {
+                
+            case .success :
+                
+                print("사용가능한 id")
+                self.simpleAlert(title: "사용 가능한 아이디", message: "사용 가능한 ID 입니다.")
+                
+            case .requestErr(_):
+                self.simpleAlert(title: "회원가입 실패", message: "실패 메세지요!")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "회원가입 실패", message: "네트워크 상태를 확인해주세요.")
+                
+            case .dbErr:
+                print(".dbErr")
+                
+            }
+        }
+        
     }
     
     @IBAction func pwCheckAction(_ sender: UITextField) {
@@ -92,6 +122,9 @@ class SignupVC: UIViewController {
                 
             case .networkFail:
                 self.simpleAlert(title: "회원가입 실패", message: "네트워크 상태를 확인해주세요.")
+                
+            case .dbErr:
+                print(".dbErr")
                 
             }
         }

@@ -35,6 +35,8 @@ class EditVC: UIViewController {
     
         // 수정된 정보 서버에 보내주기!
         self.dismiss(animated: true)
+        
+        
     }
         
 }

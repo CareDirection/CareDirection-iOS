@@ -240,6 +240,7 @@ extension HomeVC : UICollectionViewDataSource {
         
         cell.productName.text = product.productName
         cell.productImage.image = product.productImage
+            //cell.productImage.imageFromUrl(product.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
         cell.productCheckImage.image = product.checkImage
         
         return cell

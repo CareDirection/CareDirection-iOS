@@ -14,5 +14,5 @@ struct APIConstants {
     // 회원가입, 로그인 통신
     static let SignUpURL = BaseURL + "/users/signup"
     static let LoginURL = BaseURL + "/users/signin"
-   
+    static let idCheckURL = BaseURL + "/users/id"
 }

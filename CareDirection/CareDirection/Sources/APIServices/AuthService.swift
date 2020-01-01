@@ -112,25 +112,121 @@ func signup(_ id: String, _ pw: String, completion: @escaping (NetworkResult<Any
                     if let status = response.response?.statusCode {
                             
                             switch status {
-                            case 200:
+                            case 201:
                                 do {
                                     let decoder = JSONDecoder()
                                     print(value)
-                                    let result = try decoder.decode(ResponseString.self, from: value)
+                                    let result = try decoder.decode(ResponseString2.self, from: value)
                                     
                                     print("success")
-                                    completion(.success(result.data))
+                                    
+                                    completion(.success(result))
                                 }
                                 catch {
+                                    print("pathErr")
                                     completion(.pathErr)
                                     
                                 }
                                 
                             case 400:
+                                print("400 pathERr")
                                 completion(.pathErr)
+                                
+                            case 403:
+                                print("잘못된 패스워드 형식")
                             case 500:
+                                print("500 pathERr")
+                                completion(.serverErr)
+                            case 600:
+                                print("600 pathErr")
+                                completion(.dbErr)
+                            default:
+                                print("default")
+                                break
+                            }// switch
+                        }// iflet
+                    }
+                    break
+                
+            // 통신 실패 - 네트워크 연결
+            case .failure(let err):
+                print(err.localizedDescription)
+                completion(.networkFail)
+                // .networkFail이라는 반환 값이 넘어감
+                break
+            }
+        }
+    }
+
+
+func idDoubleCheck(_ id: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+    
+    let header: HTTPHeaders = [
+        "Content-Type" : "application/json"
+    ]
+    
+    let body: Parameters = [
+        "user_id" : id
+    ]
+    
+    Alamofire.request(APIConstants.idCheckURL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
+        .responseData { response in
+            // parameter 위치
+            switch response.result {
+                
+            // 통신 성공 - 네트워크 연결
+            case .success:
+                if let value = response.result.value {
+                    
+                    // 서버가 보내는 http Header에 담긴 status code
+                    // Rest API에서 통신을 성공했던 실패했던 네트워크 통신이 성공했기 때문에 발생
+                    // 서버가 예측한 질문에 대해 응답이 왔다면 200 status code
+                    // 이제부터 서버 개발자가 분기할 코드에 대해 작성함 ex) 택배와 택배기사
+                    if let status = response.response?.statusCode {
+                            
+                            switch status {
+                            case 200:
+                                do {
+                                    let decoder = JSONDecoder()
+                                    print(value)
+                                    let result = try decoder.decode(ResponseString2.self, from: value)
+                                    
+                                    print("success")
+                                    
+                                    completion(.success(result))
+                                }
+                                catch {
+                                    print("pathErr")
+                                    completion(.pathErr)
+                                    
+                                }
+                                
+                            case 201:
+                                //print("400 pathERr")
+                                do {
+                                    let decoder = JSONDecoder()
+                                    print(value)
+                                    let result = try decoder.decode(ResponseString2.self, from: value)
+                                    
+                                    print("success 201")
+                                    
+                                    completion(.success(result))
+                                }
+                                catch {
+                                    print("pathErr")
+                                    completion(.pathErr)
+                                    
+                                }
+                                
+                            case 600:
+                                print("600 pathErr")
+                                completion(.dbErr)
+                                
+                            case 500:
+                                print("600 pathErr")
                                 completion(.serverErr)
                             default:
+                                print("default")
                                 break
                             }// switch
                         }// iflet

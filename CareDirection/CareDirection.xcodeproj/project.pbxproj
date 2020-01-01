@@ -84,6 +84,7 @@
 		F47860C923BB6FF7003D11D1 /* ResponseDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860C823BB6FF7003D11D1 /* ResponseDefault.swift */; };
 		F47860CB23BB7063003D11D1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860CA23BB7063003D11D1 /* AuthService.swift */; };
 		F47860CD23BB715F003D11D1 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860CC23BB715F003D11D1 /* NetworkResult.swift */; };
+		F47860CF23BC95E9003D11D1 /* ResponseString2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860CE23BC95E9003D11D1 /* ResponseString2.swift */; };
 		F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4523B215B200FE5D11 /* AppDelegate.swift */; };
 		F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4723B215B200FE5D11 /* SceneDelegate.swift */; };
 		F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4923B215B200FE5D11 /* ViewController.swift */; };
@@ -210,6 +211,7 @@
 		F47860C823BB6FF7003D11D1 /* ResponseDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDefault.swift; sourceTree = "<group>"; };
 		F47860CA23BB7063003D11D1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F47860CC23BB715F003D11D1 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		F47860CE23BC95E9003D11D1 /* ResponseString2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString2.swift; sourceTree = "<group>"; };
 		F492FB4223B215B200FE5D11 /* CareDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492FB4523B215B200FE5D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F492FB4723B215B200FE5D11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 				F47860BC23BAF231003D11D1 /* Symptom.swift */,
 				F47860C623BB6F78003D11D1 /* ResponseString.swift */,
 				F47860C823BB6FF7003D11D1 /* ResponseDefault.swift */,
+				F47860CE23BC95E9003D11D1 /* ResponseString2.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */,
 				F47860BB23BAF110003D11D1 /* SymptomCategoryCell.swift in Sources */,
 				7FC773B023B354B400449239 /* SurveyLifeStyleEntryVC.swift in Sources */,
+				F47860CF23BC95E9003D11D1 /* ResponseString2.swift in Sources */,
 				7F626B7C23BA3C3F005A4D36 /* TakingProductInfoVC.swift in Sources */,
 				F4DC233323B628C600A72919 /* TakingProduct.swift in Sources */,
 				F492FB6323B216C900FE5D11 /* UIViewController+Extensions.swift in Sources */,

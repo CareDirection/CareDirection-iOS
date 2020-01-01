@@ -83,6 +83,9 @@ class LoginVC: UIViewController {
                 
             case .networkFail:
                 print("네트워크 오류")
+                
+            case .dbErr:
+                print("디비 에러")
             }
         }
     }

@@ -9,7 +9,7 @@
 import UIKit
 
 class SignupVC: UIViewController {
-
+    
     @IBOutlet weak var navigationBar: UIView!
     
     @IBOutlet weak var emailView: UIView!
@@ -53,7 +53,7 @@ class SignupVC: UIViewController {
         
     }
     
-   // 중복확인 버튼 액션
+    // 중복확인 버튼 액션
     @IBAction func repeatCheckButtonClicked(_ sender: Any) {
     }
     
@@ -66,6 +66,35 @@ class SignupVC: UIViewController {
     // 가입하기 누르고 설문조사로 넘어감
     @IBAction func signUpButtonClicked(_ sender: Any) {
         
+        
+        guard let id = self.emailTextField.text else {return}
+        guard let pw = self.pwTextField.text else {return}
+        guard let pwCheck = self.pwCheckTextField.text else {return}
+        
+        //if pw == pwCheck {
+        
+        AuthService.shared.signup(id, pw) {
+            data in
+            switch data {
+                
+            case .success :
+                print("회원가입 성공!")
+                self.dismiss(animated: true, completion: nil)
+                
+            case .requestErr(_):
+                self.simpleAlert(title: "회원가입 실패", message: "실패 메세지요!")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "회원가입 실패", message: "네트워크 상태를 확인해주세요.")
+                
+            }
+        }
+        //}
     }
-    
 }

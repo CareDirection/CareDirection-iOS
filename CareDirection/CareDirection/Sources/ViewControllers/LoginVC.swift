@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
+    
     @IBOutlet weak var idTextField: UITextField!
     
     @IBOutlet weak var pwTextField: UITextField!
@@ -28,10 +28,10 @@ class LoginVC: UIViewController {
         
         //id, pw textfield customize
         idTextField.attributedPlaceholder = NSAttributedString(string: "아이디",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.veryLightPink])
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.veryLightPink])
         idView.makeRounded(cornerRadius: 23.5)
         pwTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.veryLightPink])
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.veryLightPink])
         pwView.makeRounded(cornerRadius: 23.5)
         
         //login button customize
@@ -47,9 +47,58 @@ class LoginVC: UIViewController {
     //login button clicked
     @IBAction func loginButtonClicked(_ sender: Any) {
         
-    }
-    //signup button clicked
-    @IBAction func signUpButtonClicked(_ sender: Any) {
+        guard let id = idTextField.text else {return}
+        guard let pw = pwTextField.text else {return}
         
+        AuthService.shared.login(id, pw) {
+            data in
+            
+            switch data {
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let data):
+                
+                // DataClass 에서 받은 유저 정보 반환
+                let user_data = data as! DataClass
+                
+                // 사용자의 토큰
+                let token = user_data.token
+                UserDefaults.standard.set(token, forKey: "token")
+                
+                let survey = UIStoryboard.init(name: "Survey", bundle: nil)
+                
+                guard let dvc = survey.instantiateViewController(withIdentifier: "SurveyVC") as? SurveyVC else {
+                  return
+                }
+                
+                self.present(dvc, animated: true)
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "로그인 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                print("네트워크 오류")
+            }
+        }
     }
+
+
+//signup button clicked
+@IBAction func signUpButtonClicked(_ sender: Any) {
+    
+    let storyboardSignup = UIStoryboard.init(name: "Signup", bundle: nil)
+    
+    guard let dvc = storyboardSignup.instantiateViewController(withIdentifier: "SignupVC") as? SignupVC else {
+        return
+    }
+    
+    present(dvc, animated: true)
+    
+}
+
 }

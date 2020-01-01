@@ -10,7 +10,7 @@
         <!--SignupVC-->
         <scene sceneID="5fl-xE-ccW">
             <objects>
-                <viewController id="QwN-14-6ss" customClass="SignupVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupVC" modalPresentationStyle="fullScreen" id="QwN-14-6ss" customClass="SignupVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5U1-5C-984">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,6 +145,7 @@
                         <outlet property="emailTextField" destination="ZcJ-tC-ZD2" id="ahk-Ha-tF7"/>
                         <outlet property="emailView" destination="Lbl-b9-ycF" id="udL-SU-lkF"/>
                         <outlet property="navigationBar" destination="tFg-OL-rPS" id="wxp-p6-W0v"/>
+                        <outlet property="pwCheckTextField" destination="R84-Xt-unl" id="R3H-RQ-GlJ"/>
                         <outlet property="pwCheckView" destination="YPu-Ww-IOL" id="1bZ-Ff-PVS"/>
                         <outlet property="pwTextField" destination="XI8-Lg-ySS" id="P10-5G-zJB"/>
                         <outlet property="pwView" destination="xRT-Wo-SmL" id="Ldd-vb-msB"/>

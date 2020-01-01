@@ -16,7 +16,8 @@ class FunctionDetailVC: UIViewController {
     
     @IBOutlet weak var functionalCollectionView2: UICollectionView!
     
-    @IBOutlet weak var allFunctionView: UIView!
+    @IBOutlet weak var caringFunctionView: UIView!
+    
     
     
     var functionalIngredientList : [FunctionalIngredient] = []
@@ -27,7 +28,8 @@ class FunctionDetailVC: UIViewController {
         navigationBar.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
         setIngredient()
         
-        allFunctionView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 0), opacity: 0.4, radius: 4)
+        caringFunctionView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.2, radius: 4)
+        
         
     }
     

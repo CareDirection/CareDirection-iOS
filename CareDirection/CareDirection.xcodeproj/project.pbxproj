@@ -79,6 +79,11 @@
 		F47860BF23BAF3CB003D11D1 /* SymptomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860BE23BAF3CB003D11D1 /* SymptomCell.swift */; };
 		F47860C123BAF790003D11D1 /* SymptomImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860C023BAF790003D11D1 /* SymptomImageCell.swift */; };
 		F47860C323BAF7A3003D11D1 /* SymptomDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860C223BAF7A3003D11D1 /* SymptomDetailCell.swift */; };
+		F47860C523BB6DA2003D11D1 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860C423BB6DA2003D11D1 /* APIConstants.swift */; };
+		F47860C723BB6F78003D11D1 /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860C623BB6F78003D11D1 /* ResponseString.swift */; };
+		F47860C923BB6FF7003D11D1 /* ResponseDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860C823BB6FF7003D11D1 /* ResponseDefault.swift */; };
+		F47860CB23BB7063003D11D1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860CA23BB7063003D11D1 /* AuthService.swift */; };
+		F47860CD23BB715F003D11D1 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860CC23BB715F003D11D1 /* NetworkResult.swift */; };
 		F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4523B215B200FE5D11 /* AppDelegate.swift */; };
 		F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4723B215B200FE5D11 /* SceneDelegate.swift */; };
 		F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4923B215B200FE5D11 /* ViewController.swift */; };
@@ -200,6 +205,11 @@
 		F47860BE23BAF3CB003D11D1 /* SymptomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomCell.swift; sourceTree = "<group>"; };
 		F47860C023BAF790003D11D1 /* SymptomImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomImageCell.swift; sourceTree = "<group>"; };
 		F47860C223BAF7A3003D11D1 /* SymptomDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomDetailCell.swift; sourceTree = "<group>"; };
+		F47860C423BB6DA2003D11D1 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		F47860C623BB6F78003D11D1 /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
+		F47860C823BB6FF7003D11D1 /* ResponseDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDefault.swift; sourceTree = "<group>"; };
+		F47860CA23BB7063003D11D1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F47860CC23BB715F003D11D1 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		F492FB4223B215B200FE5D11 /* CareDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492FB4523B215B200FE5D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F492FB4723B215B200FE5D11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -376,7 +386,6 @@
 				7F5BE25723B903E400D2A70F /* TakingProductCVCell.swift */,
 				7F626B7523B941E7005A4D36 /* ProductSearchVC.swift */,
 				7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */,
-
 				F4DFE48223B95E6B00711C26 /* SettingVC.swift */,
 				F4DFE48623B9660B00711C26 /* EditVC.swift */,
 				F4DFE48C23B9DBFB00711C26 /* FunctionalIngredientCell.swift */,
@@ -390,7 +399,6 @@
 				F47860BE23BAF3CB003D11D1 /* SymptomCell.swift */,
 				F47860C023BAF790003D11D1 /* SymptomImageCell.swift */,
 				F47860C223BAF7A3003D11D1 /* SymptomDetailCell.swift */,
-
 				7F626B7B23BA3C3F005A4D36 /* TakingProductInfoVC.swift */,
 				7F626BBF23BA649B005A4D36 /* TopTapBarVC.swift */,
 				7F626BC123BA6548005A4D36 /* TopTabBarResultVC.swift */,
@@ -427,6 +435,8 @@
 				F4DFE47E23B8FA1600711C26 /* Chart.swift */,
 				F4DFE48823B9DB6600711C26 /* FunctionalIngredient.swift */,
 				F47860BC23BAF231003D11D1 /* Symptom.swift */,
+				F47860C623BB6F78003D11D1 /* ResponseString.swift */,
+				F47860C823BB6FF7003D11D1 /* ResponseDefault.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -434,6 +444,9 @@
 		F492FB5E23B2160500FE5D11 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				F47860C423BB6DA2003D11D1 /* APIConstants.swift */,
+				F47860CA23BB7063003D11D1 /* AuthService.swift */,
+				F47860CC23BB715F003D11D1 /* NetworkResult.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -471,9 +484,7 @@
 				F4DFE48023B9562A00711C26 /* Setting.storyboard */,
 				F4DFE48423B961AC00711C26 /* Edit.storyboard */,
 				F41F392023BA530000F4BD89 /* TakingProductPopUp.storyboard */,
-
 				7F626B7923BA332F005A4D36 /* TakingProductInfo.storyboard */,
-
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -630,6 +641,7 @@
 				F464828C23B3F64B00F63712 /* ProductCell.swift in Sources */,
 				F4DFE48723B9660B00711C26 /* EditVC.swift in Sources */,
 				F4DFE47F23B8FA1600711C26 /* Chart.swift in Sources */,
+				F47860C523BB6DA2003D11D1 /* APIConstants.swift in Sources */,
 				F47860BF23BAF3CB003D11D1 /* SymptomCell.swift in Sources */,
 				F47860C323BAF7A3003D11D1 /* SymptomDetailCell.swift in Sources */,
 				F47860C123BAF790003D11D1 /* SymptomImageCell.swift in Sources */,
@@ -639,6 +651,7 @@
 				F41F391523BA4D0200F4BD89 /* ArticleTitleCell.swift in Sources */,
 				F4DFE48D23B9DBFB00711C26 /* FunctionalIngredientCell.swift in Sources */,
 				F492FB6F23B2449F00FE5D11 /* SurveyVC.swift in Sources */,
+				F47860C723BB6F78003D11D1 /* ResponseString.swift in Sources */,
 				F44C3EC123B8A709004F829A /* IngredientStudyCell.swift in Sources */,
 				F4DC233123B60C5C00A72919 /* TakingProductRegistVC.swift in Sources */,
 				F4DC233523B62AF300A72919 /* TakingProductRegistCell.swift in Sources */,
@@ -664,6 +677,7 @@
 				F492FB6523B216FE00FE5D11 /* UIColor+Extensions.swift in Sources */,
 				7F537CD423B37C8000115A2B /* SurveyLifeStyleSecondPointVC.swift in Sources */,
 				7FCCEAC623B2BCFE00F832B8 /* SurveyDiseaseVC.swift in Sources */,
+				F47860C923BB6FF7003D11D1 /* ResponseDefault.swift in Sources */,
 				F44C3EC323B8A81A004F829A /* Ingredient.swift in Sources */,
 				7F571A5A23B77F7700D892B2 /* ProductNoticeTVCell.swift in Sources */,
 				F4DC234123B73CE800A72919 /* IngredientDetailVC.swift in Sources */,
@@ -688,18 +702,17 @@
 				F44C3EBF23B8A552004F829A /* Article.swift in Sources */,
 				7F537CE523B4AC5400115A2B /* ComponentProductCell.swift in Sources */,
 				F44C3EB523B87D7F004F829A /* IngredientExplainCell.swift in Sources */,
-
+				F47860CB23BB7063003D11D1 /* AuthService.swift in Sources */,
 				F4DFE48923B9DB6600711C26 /* FunctionalIngredient.swift in Sources */,
-
 				7F626BC423BA844E005A4D36 /* BestProductTVCell.swift in Sources */,
 				7F90F49623BB4F5B008D874F /* FilterPopUpVC.swift in Sources */,
 				7F626BC023BA649B005A4D36 /* TopTapBarVC.swift in Sources */,
-
 				7FC773B423B3673600449239 /* SurveyLifeStyleFirstPointVC.swift in Sources */,
 				F464828A23B3F41F00F63712 /* HomeVC.swift in Sources */,
 				F44C3EC723B8BD9A004F829A /* ArticleDetailVC.swift in Sources */,
 				7F58AC1C23B74B37009126B9 /* ProductDetailVC.swift in Sources */,
 				7FC773A823B32E3E00449239 /* SurveySymptomCell.swift in Sources */,
+				F47860CD23BB715F003D11D1 /* NetworkResult.swift in Sources */,
 				7F537CDD23B390EC00115A2B /* SurveyLifeStyleLastPointVC.swift in Sources */,
 				F464829A23B4BE3200F63712 /* User.swift in Sources */,
 				7F571A5E23B7E22D00D892B2 /* ProductVC.swift in Sources */,

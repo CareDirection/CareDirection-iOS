@@ -467,12 +467,12 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-3E-2Ls">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="953"/>
+                                                <rect key="frame" x="436" y="0.0" width="375" height="953"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="0.68999999999999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Oui-FV-PBb">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Oui-FV-PBb">
+                                                <rect key="frame" x="436" y="0.0" width="375" height="208"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8p9-cv-p2H">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>

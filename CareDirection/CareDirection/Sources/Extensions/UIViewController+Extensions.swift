@@ -91,4 +91,15 @@ extension UIViewController {
         return value_
     }//func gfno
     
+    
+    // Change Int-vlaue to price-format
+//    func makeIntValueToPriceFormat(price: Int) -> String{
+//        var result = ""
+//        let quotient = Int(price / 1000)
+//        let rest = price % 1000
+//
+//
+//        return "\(quotient),\(rest)"
+//    }
+    
 }

@@ -19,6 +19,7 @@ class ProductDetailVC: UIViewController {
     @IBOutlet var productNameLbl: UILabel!
     
     @IBOutlet var productStandardPillCountTxtField: UITextField!
+    @IBOutlet var productStandardPillCountView: UIView!
     
     @IBOutlet var productPriceLbl: UILabel!
     
@@ -66,6 +67,8 @@ class ProductDetailVC: UIViewController {
     var naverLowestPriceInfoCVExtension = NaverLowestPriceInfoCVExtension()
     
     var entryPoint: Int! = 0
+    let pickerList: [Int] = [30, 90, 180]
+    var selectedPillCount:Int = 90
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,11 +115,61 @@ class ProductDetailVC: UIViewController {
         self.productThirdCategory.makeRounded(cornerRadius: 12)
         self.productThirdCategory.dropShadow(color: UIColor.init(red: 0, green: 0, blue: 0, alpha: 1), offSet: CGSize(width: 0, height: 1), opacity: 0.16, radius: 4)
         
+        productStandardPillCountView.makeRounded(cornerRadius: 6)
+        
+        createPicker()
+        createToolBar()
+        
     }
+
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    
+    func createPicker(){
+        let countPickerView = UIPickerView()
+        countPickerView.delegate = self
+        countPickerView.dataSource = self
+        
+        productStandardPillCountTxtField.inputView = countPickerView
+    }
+    func createToolBar(){
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let doneBtn = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(SurveyInfoVC.dismissKeyboard))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        toolBar.setItems([flexibleSpace,doneBtn], animated: false)
+        
+        toolBar.isUserInteractionEnabled = true
+        
+        productStandardPillCountTxtField.inputAccessoryView = toolBar
+    }
+    
     @IBAction func selectedBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension ProductDetailVC: UIPickerViewDelegate{
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "\(pickerList[row])정"
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedPillCount = pickerList[row]
+        productStandardPillCountTxtField.text = "\(selectedPillCount)정"
+    }
+    
+}
+extension ProductDetailVC: UIPickerViewDataSource{
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerList.count
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
 }
 
 // MARK: - ProductFunctionCVExtension
@@ -193,11 +246,19 @@ class ProductNoticeTVExtension: UIViewController, UITableViewDataSource, UITable
 }
 
 class NaverLowestPriceInfoCVExtension : UIViewController ,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
     var data: [NaverLowestPriceInfo] = [
         NaverLowestPriceInfo.init(place: "쿠팡", price: "16,920", pricePerDay: "188"),
         NaverLowestPriceInfo.init(place: "쿠팡", price: "16,920", pricePerDay: "188"),
         NaverLowestPriceInfo.init(place: "쿠팡", price: "16,920", pricePerDay: "188"),
     ]
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let url = URL(string: "http://zeddios.tistory.com"), UIApplication.shared.canOpenURL(url) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -208,7 +269,6 @@ class NaverLowestPriceInfoCVExtension : UIViewController ,UICollectionViewDelega
         
         cell.purchasePlaceLbl.text = data[indexPath.row].place
         cell.priceLbl.text = data[indexPath.row].price
-        cell.pricePerDayLbl.text = data[indexPath.row].pricePerDay
         
         return cell
     }

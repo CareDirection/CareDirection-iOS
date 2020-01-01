@@ -14,6 +14,14 @@ class ComponentProductVC: UIViewController {
     @IBOutlet var infoViewTopConstraint: NSLayoutConstraint!
     
     @IBOutlet var infoViewFirstInfo: UILabel!
+    @IBOutlet var infoViewFirstCategory: UILabel!
+    
+    @IBOutlet var infoViewSecondInfo: UILabel!
+    @IBOutlet var infoViewSecondCategory: UILabel!
+    
+    @IBOutlet var infoViewThirdInfo: UILabel!
+    @IBOutlet var infoViewThirdCategory: UILabel!
+    
     
     @IBOutlet var productTableView: UITableView!
     @IBOutlet var guideView: UIView!
@@ -76,6 +84,34 @@ class ComponentProductVC: UIViewController {
     }
     @IBAction func selectedBackBtn(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+    @IBAction func selectedFilterBtn(_ sender: Any) {
+        let dvc = self.storyboard?.instantiateViewController(identifier: "FilterPopUpVC")
+        dvc?.modalPresentationStyle = .overFullScreen
+        dvc?.modalTransitionStyle = .crossDissolve
+        self.present(dvc!, animated: true, completion: nil)
+    }
+    @IBAction func selectedSearchBtn(_ sender: Any) {
+        let dvc = self.storyboard?.instantiateViewController(identifier: "ComponentInSearchVC") as! ComponentInSearchVC
+        dvc.modalPresentationStyle = .fullScreen
+        
+        self.present(dvc, animated: true, completion: nil)
+    }
+    @IBAction func selectedComponentCategoryInfo(_ sender: UIButton){
+        let dvc = self.storyboard?.instantiateViewController(identifier: "ComponentCategoryPopUpVC") as! ComponentCategoryPopUpVC
+        switch sender.tag {
+        case 0:
+            dvc.categoryName = self.infoViewFirstCategory.text
+        case 1:
+            dvc.categoryName = self.infoViewSecondCategory.text
+        case 2:
+            dvc.categoryName = self.infoViewThirdCategory.text
+        default:
+            break
+        }
+        dvc.modalPresentationStyle = .overFullScreen
+        dvc.modalTransitionStyle = .crossDissolve
+        self.present(dvc, animated: true, completion: nil)
     }
     
 }
@@ -145,6 +181,7 @@ extension ComponentProductVC: UITableViewDelegate{
             self.productTableView.transform = move
         })
     }
+    
 }
 
 extension ComponentProductVC: UITableViewDataSource{

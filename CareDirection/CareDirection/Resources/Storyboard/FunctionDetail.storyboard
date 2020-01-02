@@ -716,6 +716,10 @@
                         <viewLayoutGuide key="safeArea" id="Zj1-ds-fqY"/>
                     </view>
                     <size key="freeformSize" width="375" height="707"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Home"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="allFunctionView" destination="Jnn-2W-4Bc" id="8TH-Xu-JUk"/>
                         <outlet property="caringFunctionView" destination="u7R-jE-8UZ" id="k1x-UT-l2L"/>
@@ -726,7 +730,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1j-Gu-CH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119.2" y="51.724137931034484"/>
+            <point key="canvasLocation" x="60" y="47"/>
         </scene>
     </scenes>
     <resources>

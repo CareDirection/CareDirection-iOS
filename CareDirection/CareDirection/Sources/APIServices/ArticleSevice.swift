@@ -79,7 +79,7 @@ struct ArticleService {
         ]
         
         let paramaters : Parameters = [
-            "article_idx" : 2
+            "article_idx" : articleIdx
         ]
         
         Alamofire.request(URL, method: .get, parameters: paramaters, encoding: URLEncoding.queryString, headers: header)
@@ -98,16 +98,18 @@ struct ArticleService {
                                     let decoder = JSONDecoder()
                                     
                                     let result = try decoder.decode(ResponseArticle.self, from: value)
-                                    completion(.success(result.data!))
+                                    completion(.success(result))
                                     
                                 } catch {
+                                    print("article path Err")
                                     completion(.pathErr)
                                 }
                             case 400, 401:
                                 completion(.pathErr)
+                                print("article pathe Err")
                             case 600:
                                 completion(.serverErr)
-                                
+                                print("server err")
                             default:
                                 break
                             }

@@ -159,6 +159,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wgB-Jc-Owa"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Home"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="navigationBar" destination="B0h-ox-sEc" id="Lhx-eB-n6A"/>
                         <outlet property="profileImageView" destination="woI-sw-R0P" id="KTd-sB-lDf"/>

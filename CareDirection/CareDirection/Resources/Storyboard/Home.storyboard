@@ -643,6 +643,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="homeIcUnselected" id="a9J-7f-vLp"/>
                     <size key="freeformSize" width="375" height="953"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Home"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="blurView" destination="D4g-3E-2Ls" id="VAi-fp-gGU"/>
                         <outlet property="chartView" destination="XFi-XT-5hd" id="T5P-zT-CHP"/>

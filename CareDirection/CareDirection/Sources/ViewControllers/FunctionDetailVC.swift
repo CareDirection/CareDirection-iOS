@@ -31,6 +31,7 @@ class FunctionDetailVC: UIViewController {
         //navigationBar.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
         setIngredient()
         
+        setSymptom()
         
         navigationBar.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
         
@@ -225,5 +226,15 @@ extension FunctionDetailVC {
         functionalIngredientList = [ingredient1, ingredient2, ingredient3]
         
         functionalIngredientList2 = [ingredient1, ingredient2]
+    }
+    
+    func setSymptom() {
+        let symptom1 = Symptom(category: "마카", image: "", detail: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고,\n온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이\n영양제를 잘못 먹으면\n제 효과를 보지 못하거나\n독이 될 수도 있다는데요.")
+        
+        let symptom2 = Symptom(category: "종합비타민", image: "", detail: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고,\n온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이\n영양제를 잘못 먹으면\n제 효과를 보지 못하거나\n독이 될 수도 있다는데요.")
+        
+        let symptom3 = Symptom(category: "마카", image: "", detail: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고,\n온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이\n영양제를 잘못 먹으면\n제 효과를 보지 못하거나\n독이 될 수도 있다는데요.")
+        
+        symptomList = [symptom1, symptom2, symptom3]
     }
 }

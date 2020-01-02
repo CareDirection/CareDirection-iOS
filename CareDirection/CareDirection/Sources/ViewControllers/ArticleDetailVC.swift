@@ -88,9 +88,9 @@ extension ArticleDetailVC : UITableViewDataSource {
                 let articleImgCell = articleTableView.dequeueReusableCell(withIdentifier: "articleImgCell") as! ArticleImageCell
                 //articleImgCell.articleDetaillImage.image = articleList?.articleDetailImage
                 
-                let mainArticle = articleList[indexPath.row]
+                //let mainArticle = articleList[indexPath.row]
                 
-                articleImgCell.articleDetaillImage.imageFromUrl(mainArticle.image_key, defaultImgPath: "")
+                articleImgCell.articleDetaillImage.imageFromUrl("https://care-direction.s3.ap-northeast-2.amazonaws.com/product/resize/resized-bvSVoq6HZ.1577643187140.JPG", defaultImgPath: "")
                 
                 return articleImgCell
                 
@@ -100,7 +100,7 @@ extension ArticleDetailVC : UITableViewDataSource {
                 
                 //let mainArticle = articleList[indexPath.row]
                 
-                //articleTitleCell.articleTitleLabel.text = mainArticle.article_title
+                articleTitleCell.articleTitleLabel.text = "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지"
                 
                 return articleTitleCell
                 
@@ -108,7 +108,7 @@ extension ArticleDetailVC : UITableViewDataSource {
                 let articleFirstContent = articleTableView.dequeueReusableCell(withIdentifier: "articleFirstContent") as! ArticleFirstContentCell
                 //let mainArticle = articleList[indexPath.row]
                 
-                //articleFirstContent.articleFirstContentLabel.text = mainArticle.article_content
+                articleFirstContent.articleFirstContentLabel.text = "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지"
                 
                 return articleFirstContent
                 

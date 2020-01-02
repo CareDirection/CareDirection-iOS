@@ -79,8 +79,6 @@ extension SymptomVC : UICollectionViewDataSource {
             cell.categoryLine.isHidden = false
         }
         
-        
-        
         return cell
     }
     
@@ -133,8 +131,6 @@ extension SymptomVC : UITableViewDataSource {
             return detailCell
         }
     }
-    
-    
 }
 
 extension SymptomVC : UITableViewDelegate {
@@ -142,3 +138,4 @@ extension SymptomVC : UITableViewDelegate {
         return UITableView.automaticDimension
     }
 }
+

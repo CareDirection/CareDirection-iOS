@@ -302,6 +302,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p1Z-fb-6Yd"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Home"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="navigationBar" destination="LpK-bh-0eg" id="Xf5-4e-Ybl"/>
                         <outlet property="standardCollectionView" destination="0gp-Qa-O4p" id="qRA-XK-Xd8"/>

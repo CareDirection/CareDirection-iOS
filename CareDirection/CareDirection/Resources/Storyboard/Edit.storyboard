@@ -127,6 +127,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ct1-NT-kW5"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Home"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="finishButton" destination="9Hb-mF-0zG" id="dki-Vm-WUo"/>
                         <outlet property="idEditTextField" destination="omZ-cb-0NG" id="MvM-hE-ofE"/>

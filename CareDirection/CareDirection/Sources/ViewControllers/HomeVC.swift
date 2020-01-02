@@ -109,6 +109,12 @@ class HomeVC: UIViewController {
         noRegistView.makeRounded(cornerRadius: 18)
         noRegistView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
         
+        if productList.count == 0 {
+            noRegistView.isHidden = false
+            productCollectionView.isHidden = true
+        }
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -362,7 +368,7 @@ extension HomeVC {
         let product4 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
         let product5 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")
         
-        productList = [product1, product2, product3, product4, product5]
+        productList = []
     }
     
     func setIngredient() {

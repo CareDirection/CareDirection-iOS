@@ -36,10 +36,13 @@ struct NutrientService {
                                 
                             case 200:
                                 do {
+                                    print("do")
                                     let decoder = JSONDecoder()
-                                    let result = try decoder.decode(ResponseNutrient.self, from: value) 
-                                    completion(.success(result.data!))
-                                
+                                    print("do")
+                                    let result = try decoder.decode(ResponseNutrient.self, from: value)
+                                    print("do")
+                                    completion(.success(result))
+                                    print("completion fail")
                                 } catch {
                                     print("path err")
                                     completion(.pathErr)

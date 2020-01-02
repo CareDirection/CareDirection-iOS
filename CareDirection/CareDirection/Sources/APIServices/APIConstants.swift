@@ -33,7 +33,7 @@ struct APIConstants {
     static let GetNutrientFunctionURL = BaseURL + "/nutrient/function"
     
     // 홈 - 상세
-    static let GetMyNutrientDetailURL = BaseURL + "/nutrients/graph/detail"
+    static let GetMyNutrientDetailURL = BaseURL + "/graph/detailed"
     static let GetEfficacyListURL = BaseURL + "/efficacy/list"
     
     // 복용관리

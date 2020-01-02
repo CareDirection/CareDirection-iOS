@@ -28,3 +28,10 @@ struct MainChart: Codable {
     let nutrient_name : String
     let nutrient_percent : Int
 }
+
+struct ChartDetail : Codable {
+    let nutrient_name: String
+    let my_change_value_description: String
+    let my_current_value_percent: Int
+    let description: String
+}

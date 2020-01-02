@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 struct Efficacy : Codable {
-    let efficacyIdx: Int
-    let efficacyName: String
+    let efficacy_idx: Int
+    let efficacy_name: String
 }
 
 struct EfficacyList : Codable {
-    let nutrientIdx: Int
-    let nutrientName, nutrientEfficacyComment, imageLocation: String
+    let nutrient_idx: Int
+    let nutrient_name, nutrient_efficacy_comment, image_location: String
 }

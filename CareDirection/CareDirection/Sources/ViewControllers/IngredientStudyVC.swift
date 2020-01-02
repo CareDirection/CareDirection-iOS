@@ -31,7 +31,7 @@ class IngredientStudyVC: UIViewController {
     // 아티클 리스트
     var articleList : [Article] = []
     
-    var symptomList : [Symptom] = []
+    var symptomList : [Efficacy] = []
     
     
     
@@ -62,9 +62,7 @@ class IngredientStudyVC: UIViewController {
           return
         }
         
-        dvc.categoryList = symptomList
-        print("성분학습 뷰:")
-        print(symptomList)
+        
         
         present(dvc, animated: true)
     }
@@ -76,7 +74,7 @@ class IngredientStudyVC: UIViewController {
           return
         }
         
-        dvc.categoryList = symptomList
+       
         
         present(dvc, animated: true)
     }
@@ -88,8 +86,7 @@ class IngredientStudyVC: UIViewController {
           return
         }
         
-        //dvc.symptomList = symptomList[2]
-         dvc.categoryList = symptomList
+        
         present(dvc, animated: true)
     }
     
@@ -100,8 +97,7 @@ class IngredientStudyVC: UIViewController {
           return
         }
         
-        //dvc.symptomList = symptomList[3]
-         dvc.categoryList = symptomList
+        
         present(dvc, animated: true)
     }
     
@@ -112,8 +108,7 @@ class IngredientStudyVC: UIViewController {
           return
         }
         
-        //dvc.symptomList = symptomList[4]
-        dvc.categoryList = symptomList
+        
         present(dvc, animated: true)
     }
     
@@ -124,8 +119,7 @@ class IngredientStudyVC: UIViewController {
           return
         }
         
-        //dvc.symptomList = symptomList[5]
-        dvc.categoryList = symptomList
+        
         present(dvc, animated: true)
     }
     
@@ -136,8 +130,7 @@ class IngredientStudyVC: UIViewController {
           return
         }
         
-        //dvc.symptomList = symptomList[6]
-        dvc.categoryList = symptomList
+        
         present(dvc, animated: true)
     }
     
@@ -148,8 +141,7 @@ class IngredientStudyVC: UIViewController {
           return
         }
         
-        //dvc.symptomList = symptomList[7]
-         dvc.categoryList = symptomList
+       
         present(dvc, animated: true)
     }
     
@@ -159,9 +151,7 @@ class IngredientStudyVC: UIViewController {
         guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
           return
         }
-        
-        //dvc.symptomList = symptomList[8]
-        dvc.categoryList = symptomList
+      
         present(dvc, animated: true)
     }
 }
@@ -264,7 +254,7 @@ extension IngredientStudyVC {
                 
                 self.articleList = res as! [Article]
                 self.articleCollectionView.reloadData()
-                
+                print("Article Success")
             case .requestErr(let message):
                 print("request Err")
             case .pathErr:
@@ -282,12 +272,40 @@ extension IngredientStudyVC {
     }
     
     func setSymptom() {
-        let symptom1 = Symptom(category: "마카", image: "", detail: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고,\n온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이\n영양제를 잘못 먹으면\n제 효과를 보지 못하거나\n독이 될 수도 있다는데요.")
+//        let symptom1 = Symptom(category: "마카", image: "", detail: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고,\n온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이\n영양제를 잘못 먹으면\n제 효과를 보지 못하거나\n독이 될 수도 있다는데요.")
+//
+//        let symptom2 = Symptom(category: "종합비타민", image: "", detail: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고,\n온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이\n영양제를 잘못 먹으면\n제 효과를 보지 못하거나\n독이 될 수도 있다는데요.")
+//
+//        let symptom3 = Symptom(category: "마카", image: "", detail: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고,\n온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이\n영양제를 잘못 먹으면\n제 효과를 보지 못하거나\n독이 될 수도 있다는데요.")
+//
+//        symptomList = [symptom1, symptom2, symptom3]
+        EfficacyService.shared.efficacyList() {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                
+                self.symptomList = res as! [Efficacy]
+                //self.reloadData()
+                print("Efficacy Success")
+            case .requestErr(let message):
+                print("request Err")
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                print("network Err")
+            case .dbErr:
+                print("db err")
+            }
+        }
         
-        let symptom2 = Symptom(category: "종합비타민", image: "", detail: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고,\n온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이\n영양제를 잘못 먹으면\n제 효과를 보지 못하거나\n독이 될 수도 있다는데요.")
-        
-        let symptom3 = Symptom(category: "마카", image: "", detail: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고,\n온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이\n영양제를 잘못 먹으면\n제 효과를 보지 못하거나\n독이 될 수도 있다는데요.")
-        
-        symptomList = [symptom1, symptom2, symptom3]
     }
 }

@@ -14,7 +14,7 @@ class StandardDetailVC: UIViewController {
     
     @IBOutlet weak var standardCollectionView: UICollectionView!
     
-    var standardList : [SingleChart] = []
+    var standardList : [ChartDetail] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,7 @@ class StandardDetailVC: UIViewController {
     
 
 }
+
 extension StandardDetailVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return standardList.count
@@ -46,17 +47,19 @@ extension StandardDetailVC : UICollectionViewDataSource {
         
         let standard = standardList[indexPath.row]
         
-        
-        cell.standardTitle.text = standard.standardTitle
-        cell.standard1.text = standard.stnadard1
-        //cell.standard2.text = standard.standard2
-        //cell.standard3.text = standard.standard3
-        cell.standardDetail.text = standard.standardDetail
-        cell.standardChart.frame.size.height = standard.standardChart
+//        cell.standardTitle.text = standard.standardTitle
+//        cell.standard1.text = standard.stnadard1
+//        cell.standardDetail.text = standard.standardDetail
+//        cell.standardChart.frame.size.height = standard.standardChart
     
+        cell.standardTitle.text = standard.nutrient_name
+        cell.standard1.text = standard.my_change_value_description
+        cell.standardDetail.text = standard.my_change_value_description
+        
         cell.standardChart.makeRounded(cornerRadius: 4)
         cell.standardChart.backgroundColor = UIColor.paleSalmon
         cell.standardChart.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
+        
         print(cell.standardChart.frame.size.height)
         
         return cell
@@ -67,10 +70,38 @@ extension StandardDetailVC : UICollectionViewDataSource {
 
 extension StandardDetailVC {
     func setData() {
+        ChartService.shared.showDetailChart() {
+            [weak self]
+            data in
+            print("chart detail")
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            case .success(let res):
+                self.standardList = res as! [ChartDetail]
+                self.standardCollectionView.reloadData()
+            case .requestErr(let message):
+                self.simpleAlert(title: "메인 공연 조회 실패", message: "\(message)")
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print(".serverErr")
+            case .networkFail:
+                self.simpleAlert(title: "메인 공연 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            case .dbErr:
+                print("db error")
+            
+            }
+        }
+        
+        /*
         let s1 = SingleChart(standardTitle: "비타민A", stnadard1: "상한 섭취량 조정", standard2: "3000", standard3: "3000", standardChart: 100, standardDetail: "비타민 A와 흡연은 상성이 좋지 않아요!\n흡연자가 비타민 A를 지속적으로 복용했을 시 폐암 발생률이 28%까지 증가했다는 연구결과도 있답니다.\n 물론 비타민을 줄이는 것보다는 금연을 하는 것이 우리 몸에는 더 좋겠죠?")
         let s2 = SingleChart(standardTitle: "오메가3", stnadard1: "상한 섭취량 조정", standard2: "3000", standard3: "3000", standardChart: 10, standardDetail: "비타민 A와 흡연은 상성이 좋지 않아요! 흡연자가 비타민 A를 지속적으로 복용했을 시 폐암 발생률이 28%까지 증가했다는 연구결과도 있답니다. 물론 비타민을 줄이는 것보다는 금연을 하는 것이 우리 몸에는 더 좋겠죠?")
         let s3 = SingleChart(standardTitle: "아미노산", stnadard1: "섭취량 최소화\n섭취량", standard2: "3000", standard3: "3000", standardChart: 80, standardDetail: "비타민 A와 흡연은 상성이 좋지 않아요!\n\n흡연자가 비타민 A를 지속적으로 복용했을 시 폐암 발생률이 28%까지 증가했다는 연구결과도 있답니다.\n물론 비타민을 줄이는 것보다는\n금연을 하는 것이 우리 몸에는 더 좋겠죠?")
         
         standardList = [s1, s2, s3]
+ */
     }
 }

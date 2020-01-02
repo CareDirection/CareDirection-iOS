@@ -66,9 +66,15 @@ class ProductDetailVC: UIViewController {
     var productNoticeTVExtension = ProductNoticeTVExtension()
     var naverLowestPriceInfoCVExtension = NaverLowestPriceInfoCVExtension()
     
+    var productIdx: Int?
     var entryPoint: Int! = 0
+    var detailData: [Detail] = []
+    var priceInfoList: [CountPrice] = []
+    var productInfo: CommonData!
+    
     let pickerList: [Int] = [30, 90, 180]
     var selectedPillCount:Int = 90
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +85,80 @@ class ProductDetailVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     func initVar(){
-        self.productFunctionCVExtension.data = ["심장 혈액순환", "심장 혈액순환", "심장 혈액순환", "심장 혈액순환"]
+        
+        
+        ProductTapService.shared.getProductDetail(idx: productIdx!) { data in
+            switch data {
+            case .success(let data):
+                let result = data as! [Detail]
+                self.detailData = result
+                self.priceInfoList.append(self.detailData[0].countPrice!)
+                self.priceInfoList.append(self.detailData[1].countPrice!)
+                
+                self.productInfo = self.detailData[2].commonData!
+                
+                self.productComponentInfoTVExtension.componentInfo = self.productInfo.productDetailName.split(separator: "\n").map(String.init)
+                self.productComponentInfoTVExtension.componentName = self.productInfo.productDetailValue.split(separator: "\n").map(String.init)
+                
+                self.productNoticeTVExtension.data = self.productInfo.productCautions.split(separator: "\n").map(String.init)
+                
+                self.productComponentInfoTV.reloadData()
+                self.productNoticeTV.reloadData()
+                
+            case .requestErr(let msg):
+                print(msg)
+            case .serverErr:
+                print("server err")
+
+            case .pathErr:
+                break
+            case .networkFail:
+                break
+            case .dbErr:
+                break
+            }
+        }
+        
+        ProductTapService.shared.productDetailEfficacy(idx: productIdx!){ data in
+            switch data {
+            case .success(let data):
+                let result = data as! [EfficacyName]
+                self.productFunctionCVExtension.data = result
+                self.productFunctionCV.reloadData()
+                
+            case .requestErr(let msg):
+                print(msg)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            case .dbErr:
+                print("dbErr")
+            }
+            
+        }
+        
+        ProductTapService.shared.lowerPriceData(idx: productIdx!, quantity: 30){ data in
+            switch data {
+                case .success(let data):
+                    let result = data as! [PriceInfo]
+                    self.naverLowestPriceInfoCVExtension.data = result
+                    self.naverLowestPriceInfoCV.reloadData()
+                case .requestErr(let msg):
+                    print(msg)
+                case .pathErr:
+                    print("pathErr")
+                case .serverErr:
+                    print("serverErr")
+                case .networkFail:
+                    print("networkFail")
+                case .dbErr:
+                    print("dbErr")
+            }
+        }
+
         self.productFunctionCV.delegate = productFunctionCVExtension
         self.productFunctionCV.dataSource = productFunctionCVExtension
         
@@ -92,8 +171,6 @@ class ProductDetailVC: UIViewController {
         
         self.naverLowestPriceInfoCV.delegate = naverLowestPriceInfoCVExtension
         self.naverLowestPriceInfoCV.dataSource = naverLowestPriceInfoCVExtension
-        
-        
     }
     
     func setLayout(){
@@ -119,6 +196,29 @@ class ProductDetailVC: UIViewController {
         
         createPicker()
         createToolBar()
+    }
+    
+    func setCommunicationData(){
+        self.componentNameLbl.text = productInfo.mainNutrientName
+        self.productImg.imageFromUrl(productInfo.imageKey, defaultImgPath: "imgLogo")
+        self.productCompanyNameLbl.text = productInfo.productCompanyName
+        self.productNameLbl.text = productInfo.productName
+        self.productStandardPillCountTxtField.text = "\(self.priceInfoList[0].productQuantityCount)"
+        self.productPriceLbl.text = "\(self.priceInfoList[0].productQuantityPrice)"
+        self.productPricePerDayLbl.text = "\(self.priceInfoList[0].productQuantityPrice / 30)"
+        
+        self.productFirstCategoryLbl.text = self.productInfo.productStandard1
+        self.productSecondCategoryLbl.text = self.productInfo.productStandard2
+        self.productThirdCategoryLbl.text = self.productInfo.productStandard3
+        
+        self.productFirstCategoryInfoLbl.text = self.productInfo.productStandard1Value
+        self.productSecondCategoryInfoLbl.text = self.productInfo.productStandard2Value
+        self.productThirdCategoryInfoLbl.text = self.productInfo.productStandard3Value
+        
+        self.productFeatureLbl.text = self.productInfo.productFeaturesName
+        self.productHowToTakeLbl.text = self.productInfo.productFeaturesName
+        self.productAdditiveLbl.text = self.productInfo.productAdditives
+        
         
     }
 
@@ -175,15 +275,15 @@ extension ProductDetailVC: UIPickerViewDataSource{
 // MARK: - ProductFunctionCVExtension
 class ProductFunctionCVExtension : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
-    var data = ["a", "b", "c", "d"]
+    var data: [EfficacyName]?
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductFunctionCVCell", for: indexPath) as! ProductFunctionCVCell
-
-        cell.functionNameLbl.text = data[indexPath.row]
+        cell.functionNameLbl.text = data![indexPath.row].efficacyName
         
         return cell
     }
@@ -199,31 +299,20 @@ class ProductFunctionCVExtension : UIViewController, UICollectionViewDelegate, U
 
 class ProductComponentInfoTVExtension : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var data:[ProductComponentInfo] = [
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-        ProductComponentInfo.init(category: "열량", info: "13kcal"),
-    ]
+    var componentName: [String]?
+    var componentInfo: [String]?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return componentName!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductComponentInfoTVCell") as! ProductComponentInfoTVCell
-        
-        cell.categoryLbl.text = data[indexPath.row].category
-        cell.infoLbl.text = data[indexPath.row].info
+        if componentName![indexPath.row][componentName![indexPath.row].startIndex] == "-"{
+            cell.backgroundColor = UIColor.init(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+        }
+        cell.categoryLbl.text = componentName![indexPath.row]
+        cell.infoLbl.text = componentInfo![indexPath.row]
         
         
         return cell
@@ -232,14 +321,14 @@ class ProductComponentInfoTVExtension : UIViewController, UITableViewDelegate, U
 }
 
 class ProductNoticeTVExtension: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var data: [String] = ["- 절대 권장량을 초과하여 섭취하지 마십시오.", "- 절대 권장량을 초과하여 섭취하지 마십시오."]
+    var data: [String]?
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return data?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductNoticeTVCell") as! ProductNoticeTVCell
-        cell.noticeLbl.text = data[indexPath.row]
+        cell.noticeLbl.text = data![indexPath.row]
         
         return cell
     }
@@ -247,15 +336,11 @@ class ProductNoticeTVExtension: UIViewController, UITableViewDataSource, UITable
 
 class NaverLowestPriceInfoCVExtension : UIViewController ,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
-    var data: [NaverLowestPriceInfo] = [
-        NaverLowestPriceInfo.init(place: "쿠팡", price: "16,920", pricePerDay: "188"),
-        NaverLowestPriceInfo.init(place: "쿠팡", price: "16,920", pricePerDay: "188"),
-        NaverLowestPriceInfo.init(place: "쿠팡", price: "16,920", pricePerDay: "188"),
-    ]
+    var data: [PriceInfo]?
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        guard let url = URL(string: "http://zeddios.tistory.com"), UIApplication.shared.canOpenURL(url) else { return }
+        guard let url = URL(string: data![indexPath.row].link), UIApplication.shared.canOpenURL(url) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
 
     }
@@ -266,9 +351,9 @@ class NaverLowestPriceInfoCVExtension : UIViewController ,UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NaverLowestPriceInfoCVCell", for: indexPath) as! NaverLowestPriceInfoCVCell
-        
-        cell.purchasePlaceLbl.text = data[indexPath.row].place
-        cell.priceLbl.text = data[indexPath.row].price
+        cell.productImg.imageFromUrl(data![indexPath.row].image, defaultImgPath: "imgLogo")
+        cell.purchasePlaceLbl.text = data![indexPath.row].lprice
+        cell.purchasePlaceLbl.text = data![indexPath.row].mallName
         
         return cell
     }

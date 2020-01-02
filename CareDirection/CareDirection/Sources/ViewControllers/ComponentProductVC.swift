@@ -10,6 +10,7 @@ import UIKit
 
 class ComponentProductVC: UIViewController {
     
+    @IBOutlet var componentNameLbl: UILabel!
     @IBOutlet var infoView: UIView!
     @IBOutlet var infoViewTopConstraint: NSLayoutConstraint!
     
@@ -42,8 +43,7 @@ class ComponentProductVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.productTableView.delegate = self
-        self.productTableView.dataSource = self
+       
         tableViewInitTopConstraint = tableViewTopConstraint.constant
         
         setCommunicationData()
@@ -53,10 +53,8 @@ class ComponentProductVC: UIViewController {
     }
     
     func setLayout(){
-//        self.guideView.layer.cornerRadius = 25
-//        self.guideView.clipsToBounds = true
-//        self.guideView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        
+
+        self.componentNameLbl.text = self.componentName
         self.infoView.layer.cornerRadius = 25
         self.infoView.clipsToBounds = true
         self.infoView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
@@ -77,6 +75,9 @@ class ComponentProductVC: UIViewController {
                 let result = data as! SearchResult
                 self.topData = result.topData
                 self.searchList = result.searchList
+                self.productTableView.delegate = self
+                self.productTableView.dataSource = self
+                self.productTableView.reloadData()
             case .requestErr(_):
                 print("no result")
             case .pathErr:
@@ -106,6 +107,7 @@ class ComponentProductVC: UIViewController {
         let dvc = self.storyboard?.instantiateViewController(identifier: "ComponentInSearchVC") as! ComponentInSearchVC
         dvc.modalPresentationStyle = .fullScreen
         
+        
         self.present(dvc, animated: true, completion: nil)
     }
     @IBAction func selectedComponentCategoryInfo(_ sender: UIButton){
@@ -133,6 +135,7 @@ extension ComponentProductVC: UITableViewDelegate{
         
         let dvc = storyBoard.instantiateViewController(withIdentifier: "ProductDetail") as! ProductDetailVC
         dvc.modalPresentationStyle = .fullScreen
+        dvc.productIdx = searchList[indexPath.row].productIdx
         self.present(dvc, animated: true, completion: nil)
         
     }

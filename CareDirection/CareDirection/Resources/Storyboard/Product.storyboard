@@ -1244,6 +1244,7 @@
                         <viewLayoutGuide key="safeArea" id="y0h-iJ-JmU"/>
                     </view>
                     <connections>
+                        <outlet property="componentNameLbl" destination="Ekb-Qf-ac1" id="2aj-uL-LVa"/>
                         <outlet property="infoView" destination="gdy-ix-Esr" id="P86-Mc-ULL"/>
                         <outlet property="infoViewFirstCategory" destination="1Eu-Ro-lRi" id="TtY-jN-mtP"/>
                         <outlet property="infoViewFirstInfo" destination="yAg-fE-81Y" id="i0H-GN-lrH"/>

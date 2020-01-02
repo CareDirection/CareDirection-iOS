@@ -26,6 +26,7 @@ class ComponentInSearchVC: UIViewController {
     var selectedSearchCategory: String  = "제품"
     
     var searchResultData: [String] = ["1", "2"]
+    var productList: [SearchList]?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,8 +61,7 @@ class ComponentInSearchVC: UIViewController {
         searchCountLbl.text = "\(searchResultData.count)"
     }
     func setInitVar(){
-        searchResultTV.delegate = self
-        searchResultTV.dataSource = self
+        
 
     }
     
@@ -96,6 +96,25 @@ class ComponentInSearchVC: UIViewController {
     @IBAction func selectedSearchBtn(_ sender: Any) {
         searchCountView.isHidden = false
         searchResultTV.isHidden = false
+        
+        ProductTapService.shared.searchProduct(keyword: self.searchTxtField.text ?? " ") { data in
+            switch data {
+            case .success(let data):
+                self.productList = data as! [SearchList]
+                self.searchCountLbl.text = "\(self.productList?.count ?? 0)"
+                self.searchResultTV.delegate = self
+                self.searchResultTV.dataSource = self
+                self.searchResultTV.reloadData()
+
+
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("server err")
+            default:
+                break
+            }
+        }
     }
     
 
@@ -129,16 +148,16 @@ extension ComponentInSearchVC: UITableViewDelegate{
 
 extension ComponentInSearchVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searchResultData.count == 0 {
+        if productList?.count == 0 {
             return 1
         }
         else {
-            return searchResultData.count
+            return productList!.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if searchResultData.count == 0{
+        if productList?.count == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "NoResultCell")
             
             return cell!
@@ -146,7 +165,14 @@ extension ComponentInSearchVC: UITableViewDataSource{
             
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ComponentInSearchResultTVCell") as! ComponentInSearchResultTVCell
-            cell.name.text = searchResultData[indexPath.row]
+            cell.name.text = productList![indexPath.row].productName
+            cell.img.imageFromUrl(productList![indexPath.row].imageKey, defaultImgPath: "imgLogo")
+            cell.companName.text = productList![indexPath.row].productCompanyName
+            cell.price.text = "\(productList![indexPath.row].productQuantityPrice)"
+            if productList![indexPath.row].productIsImport == 0 {
+                cell.country.isHidden = true
+            }
+            cell.pricePerDay.text = "\(productList![indexPath.row].productQuantityPrice / 30)"
             
             return cell
         }

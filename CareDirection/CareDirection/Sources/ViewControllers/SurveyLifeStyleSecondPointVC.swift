@@ -14,12 +14,13 @@ class SurveyLifeStyleSecondPointVC: UIViewController {
     
     var isSelectVegetableTimes: Bool = false
     var selectedIndex: Int?
+    let answerList:[String] = ["4시간 이상", "1시간 ~ 4시간", "1시간 이하"]
+    var lifeCylcleBody: [String] = []
     
     //answer Button
     @IBOutlet var answerBtn0: UIButton!
     @IBOutlet var answerBtn1: UIButton!
     @IBOutlet var answerBtn2: UIButton!
-    @IBOutlet var answerBtn3: UIButton!
     
     @IBOutlet var nextBtn: UIButton!
     
@@ -52,22 +53,19 @@ class SurveyLifeStyleSecondPointVC: UIViewController {
                 answerBtn0.isSelected = true
                 answerBtn1.isSelected = false
                 answerBtn2.isSelected = false
-                answerBtn3.isSelected = false
             case 1:
                 answerBtn0.isSelected = false
                 answerBtn1.isSelected = true
                 answerBtn2.isSelected = false
-                answerBtn3.isSelected = false
+
             case 2:
                 answerBtn0.isSelected = false
                 answerBtn1.isSelected = false
                 answerBtn2.isSelected = true
-                answerBtn3.isSelected = false
             case 3:
                 answerBtn0.isSelected = false
                 answerBtn1.isSelected = false
                 answerBtn2.isSelected = false
-                answerBtn3.isSelected = true
             default:
                 break
             }
@@ -75,6 +73,10 @@ class SurveyLifeStyleSecondPointVC: UIViewController {
             nextBtn.backgroundColor = UIColor.white
             nextBtn.setTitleColor(UIColor.topaz, for: .normal)
         }
+    }
+    
+    func resultToString(){
+        self.lifeCylcleBody.append(answerList[selectedIndex!])
     }
     
     @IBAction func selectedAnswer(_ sender: UIButton) {
@@ -86,8 +88,10 @@ class SurveyLifeStyleSecondPointVC: UIViewController {
     @IBAction func selectedNextBtn(_ sender: Any) {
         let surveyLifeStyleThirdPointSB = UIStoryboard.init(name: "SurveyLifeStyleThirdPoint", bundle: nil)
         let dvc = surveyLifeStyleThirdPointSB.instantiateViewController(withIdentifier: "SurveyLifeStyleThirdPointVC") as! SurveyLifeStyleThirdPointVC
+        resultToString()
         
         dvc.name = self.name
+        dvc.lifeCylcleBody = self.lifeCylcleBody
         dvc.modalPresentationStyle = .fullScreen
         self.present(dvc, animated: true)
     }

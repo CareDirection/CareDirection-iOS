@@ -29,8 +29,7 @@ class SurveyLifeStyleFirstPointVC: UIViewController {
     @IBOutlet var drinkYesAnswerBtn: UIButton!
     @IBOutlet var drinkNoAnswerBtn: UIButton!
     
-    
-    
+    var lifeCylcleBody: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +83,20 @@ class SurveyLifeStyleFirstPointVC: UIViewController {
         }
         
     }
+    
+    func resultToString(){
+        if isSmoking == true{
+            lifeCylcleBody.append("네")
+        }else{
+            lifeCylcleBody.append("아니오")
+        }
+        
+        if isDrink == true{
+            lifeCylcleBody.append("네")
+        }else{
+            lifeCylcleBody.append("아니오")
+        }
+    }
     @IBAction func selectedYesSmoking(_ sender: UIButton) {
         let button = sender
         switch button.tag {
@@ -104,10 +117,12 @@ class SurveyLifeStyleFirstPointVC: UIViewController {
     @IBAction func selectedNextBtn(_ sender: Any) {
         let surveyLifeStyleSecondPoint = UIStoryboard.init(name: "SurveyLifeStyleSecondPoint", bundle: nil)
         let dvc = surveyLifeStyleSecondPoint.instantiateViewController(withIdentifier: "SurveyLifeStyleSecondPointVC") as! SurveyLifeStyleSecondPointVC
+        resultToString()
         
         
         dvc.modalPresentationStyle = .fullScreen
         dvc.name = self.userName
+        dvc.lifeCylcleBody = self.lifeCylcleBody
         self.present(dvc, animated: true)
         
     }

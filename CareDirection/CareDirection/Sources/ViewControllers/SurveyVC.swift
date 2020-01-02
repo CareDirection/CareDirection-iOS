@@ -56,8 +56,8 @@ class SurveyVC: UIViewController {
         dvc.modalPresentationStyle = .fullScreen
 
         self.present(dvc, animated: true)
-        
     }
+    
     // 키보드 제어하는 메소드
     override func viewWillAppear(_ animated: Bool) {
         registerForKeyboardNotifications()

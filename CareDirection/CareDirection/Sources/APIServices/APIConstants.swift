@@ -38,7 +38,7 @@ struct APIConstants {
     
     // 복용관리
     static let SearchDoseProductURL = BaseURL + "/search/dose/product" // 복용제품 추가시 상품 검색
-    static let SearchDoseURL = BaseURL + "/search/dose" // 현재 복용중인 제품 목록
+    static let ProductDoseURL = BaseURL + "/product/dose" // 현재 복용중인 제품 목록
     static let ProductBaseURL = BaseURL + "/product" // 제품 Base URL
     
     // 상품

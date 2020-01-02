@@ -12,11 +12,13 @@ class SurveyDiseaseVC: UIViewController {
     
     var name: String = "박진오"
     var selectedIndexList:[Int] = []
-    var diseaseList:[String] = ["질병0", "질병1", "질병2", "질병3", "질병4", "질병5", "없음"]
+    var diseaseList:[String] = ["고혈압", "골다공증", "당뇨", "불면증", "빈혈", "생리통", "없음"]
     
     @IBOutlet var userNameLbl: UILabel!
     @IBOutlet var surveyDiseaseCollectionView: UICollectionView!
     @IBOutlet var nextBtn: UIButton!
+    
+    var lifeCylcleBody: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,7 @@ class SurveyDiseaseVC: UIViewController {
         nextBtn.backgroundColor = UIColor.white40
         nextBtn.setTitle("다음", for: .disabled)
         nextBtn.setTitleColor(UIColor.white40, for: .disabled)
+        userNameLbl.text = "\(self.name)님께서"
     }
     
     func addSelectList(selectIndex: Int){
@@ -50,12 +53,32 @@ class SurveyDiseaseVC: UIViewController {
         }
         surveyDiseaseCollectionView.reloadData()
     }
+    // 질병 데이터 스트링으로 묶어주는 함수
+    func makeDiseaseString() -> String{
+        selectedIndexList.sort()
+        var value: String = ""
+        
+        for index in 0..<selectedIndexList.count {
+            if index == 0 {
+                value += "\(diseaseList[selectedIndexList[index]])"
+            }
+            else{
+                value += ",\(diseaseList[selectedIndexList[index]])"
+            }
+            
+        }
+        return value
+    }
+    
     @IBAction func selectedNextBtn(_ sender: Any) {
         let surveySymptomSB = UIStoryboard.init(name: "SurveySymptom", bundle: nil)
         let dvc = surveySymptomSB.instantiateViewController(withIdentifier: "SurveySymptomVC") as! SurveySymptomVC
         dvc.modalPresentationStyle = .fullScreen
+        
         dvc.name = self.name
         
+        self.lifeCylcleBody.append(makeDiseaseString())
+        dvc.lifeCylcleBody = self.lifeCylcleBody
         self.present(dvc, animated: true)
         
     }

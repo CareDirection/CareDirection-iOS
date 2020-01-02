@@ -41,29 +41,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="을 얼마나 하시나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoF-Q3-1OB">
-                                <rect key="frame" x="105" y="191" width="197.5" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="를 섭취하시나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoF-Q3-1OB">
+                                <rect key="frame" x="132" y="191" width="170.5" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="야외활동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8As-OG-svK">
-                                <rect key="frame" x="18" y="191" width="86.5" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="녹황색 채소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8As-OG-svK">
+                                <rect key="frame" x="18" y="191" width="113.5" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" red="0.92156862750000001" green="0.94117647059999998" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하루에 햇빛을 받으며" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgO-Qb-acu">
-                                <rect key="frame" x="18" y="149" width="205.5" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일주일에 몇 회 이상" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgO-Qb-acu">
+                                <rect key="frame" x="18" y="149" width="189" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtS-fY-deF">
-                                <rect key="frame" x="44" y="265" width="125" height="24"/>
+                                <rect key="frame" x="44" y="265" width="102" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="   네시간 이상" image="icUnselected">
+                                <state key="normal" title="   7회 이상" image="icUnselected">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <state key="selected" image="icSelected"/>
@@ -72,10 +72,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOd-Nc-bB2">
-                                <rect key="frame" x="44" y="309" width="146" height="24"/>
+                                <rect key="frame" x="44" y="309" width="114" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="   1시간 ~ 4시간" image="icUnselected">
+                                <state key="normal" title="   5회 ~ 6회" image="icUnselected">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <state key="selected" image="icSelected"/>
@@ -84,10 +84,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3v-uD-zeM">
-                                <rect key="frame" x="44" y="353" width="117" height="24"/>
+                                <rect key="frame" x="44" y="353" width="115" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="   1시간 이하" image="icUnselected">
+                                <state key="normal" title="   3회 ~ 4회" image="icUnselected">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <state key="selected" image="icSelected"/>
@@ -146,6 +146,18 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4K-kf-g0x">
+                                <rect key="frame" x="44" y="397" width="102" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="   2회 이하" image="icUnselected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" image="icSelected"/>
+                                <connections>
+                                    <action selector="selectAnswer:" destination="YV1-PP-5PV" eventType="touchUpInside" id="6Bl-7R-ivs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -157,11 +169,13 @@
                             <constraint firstItem="wgO-Qb-acu" firstAttribute="leading" secondItem="fIT-2q-GSI" secondAttribute="leading" id="77v-mw-6n3"/>
                             <constraint firstItem="fOd-Nc-bB2" firstAttribute="top" secondItem="VtS-fY-deF" secondAttribute="bottom" constant="20" id="78M-Wg-dIF"/>
                             <constraint firstItem="VtS-fY-deF" firstAttribute="leading" secondItem="lCZ-KB-P0k" secondAttribute="leading" constant="44" id="7m4-5a-ptT"/>
+                            <constraint firstItem="j4K-kf-g0x" firstAttribute="leading" secondItem="P3v-uD-zeM" secondAttribute="leading" id="9Gq-nI-ff4"/>
                             <constraint firstItem="8As-OG-svK" firstAttribute="leading" secondItem="wgO-Qb-acu" secondAttribute="leading" id="EYf-88-9ZA"/>
                             <constraint firstItem="8As-OG-svK" firstAttribute="top" secondItem="wgO-Qb-acu" secondAttribute="bottom" constant="12" id="FvK-mm-kDU"/>
                             <constraint firstItem="lCZ-KB-P0k" firstAttribute="bottom" secondItem="d97-XZ-SZc" secondAttribute="bottom" constant="18" id="HU8-Yn-ud8"/>
                             <constraint firstItem="UoF-Q3-1OB" firstAttribute="top" secondItem="8As-OG-svK" secondAttribute="top" id="HjS-YE-0o7"/>
-                            <constraint firstItem="I2Q-IZ-waL" firstAttribute="top" secondItem="P3v-uD-zeM" secondAttribute="bottom" constant="156" id="IYU-gT-rVF"/>
+                            <constraint firstItem="I2Q-IZ-waL" firstAttribute="top" secondItem="j4K-kf-g0x" secondAttribute="bottom" constant="112" id="IYU-gT-rVF"/>
+                            <constraint firstItem="j4K-kf-g0x" firstAttribute="top" secondItem="P3v-uD-zeM" secondAttribute="bottom" constant="20" id="J4I-NL-XRy"/>
                             <constraint firstItem="PRm-Lk-J8H" firstAttribute="trailing" secondItem="qEQ-E7-apN" secondAttribute="trailing" constant="-2" id="LLg-Ho-S8d"/>
                             <constraint firstItem="d97-XZ-SZc" firstAttribute="centerX" secondItem="9dA-va-lId" secondAttribute="centerX" id="Rpl-Zj-2Ni"/>
                             <constraint firstItem="qEQ-E7-apN" firstAttribute="top" secondItem="lCZ-KB-P0k" secondAttribute="top" constant="44" id="YT5-TP-uvy"/>
@@ -182,6 +196,7 @@
                         <outlet property="answerBtn0" destination="VtS-fY-deF" id="LFC-QA-46X"/>
                         <outlet property="answerBtn1" destination="fOd-Nc-bB2" id="loR-WT-WVY"/>
                         <outlet property="answerBtn2" destination="P3v-uD-zeM" id="r0r-Ne-VeJ"/>
+                        <outlet property="answerBtn3" destination="j4K-kf-g0x" id="eBT-fn-f29"/>
                         <outlet property="nameLbl" destination="fIT-2q-GSI" id="Jhq-wE-UQM"/>
                         <outlet property="nextBtn" destination="d97-XZ-SZc" id="zgL-OD-iCM"/>
                     </connections>

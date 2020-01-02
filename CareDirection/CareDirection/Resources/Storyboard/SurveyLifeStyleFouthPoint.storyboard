@@ -18,6 +18,48 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="rfJ-Yc-7BO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKc-Bu-7N6">
+                                <rect key="frame" x="45" y="309" width="136" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="   주 2회 ~ 3회" image="icUnselected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" image="icSelected"/>
+                                <connections>
+                                    <action selector="selectedAnswer:" destination="OYV-Sh-B3v" eventType="touchUpInside" id="AUL-SO-A7B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에 얼마나 하시나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-E3-DzR">
+                                <rect key="frame" x="83" y="191" width="197.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="땀이 날 정도의 운동을" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIZ-us-c98">
+                                <rect key="frame" x="18" y="149" width="211" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일주일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVG-yA-YAx">
+                                <rect key="frame" x="18" y="191" width="65" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="0.92156862745098034" green="0.94117647058823528" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adf-h8-r9J">
+                                <rect key="frame" x="45" y="265" width="124" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="   주 4회 이상" image="icUnselected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" image="icSelected"/>
+                                <connections>
+                                    <action selector="selectedAnswer:" destination="OYV-Sh-B3v" eventType="touchUpInside" id="nAc-nR-YNf"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="라이프 스타일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctS-es-vq8">
                                 <rect key="frame" x="248.5" y="44" width="108.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
@@ -35,13 +77,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마지막 질문" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnN-Wz-aek">
-                                <rect key="frame" x="18" y="107" width="113.5" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박진오님은" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnN-Wz-aek">
+                                <rect key="frame" x="18" y="107" width="339" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJq-vQ-TKB">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJq-vQ-TKB">
                                 <rect key="frame" x="116.5" y="600" width="142" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -59,7 +101,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RlM-sC-1sH">
-                                <rect key="frame" x="141.5" y="536" width="92" height="8"/>
+                                <rect key="frame" x="141.5" y="533" width="92" height="8"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicatorUnselected" translatesAutoresizingMaskIntoConstraints="NO" id="aEv-iO-jSb">
                                         <rect key="frame" x="0.0" y="0.0" width="8" height="8"/>
@@ -94,27 +136,55 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDR-Ml-1xm">
+                                <rect key="frame" x="45" y="353" width="121" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="   주 1회 이하" image="icUnselected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" image="icSelected"/>
+                                <connections>
+                                    <action selector="selectedAnswer:" destination="OYV-Sh-B3v" eventType="touchUpInside" id="jnc-Bc-lsW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6jJ-4U-s5Y" firstAttribute="trailing" secondItem="ctS-es-vq8" secondAttribute="trailing" constant="-2" id="04p-os-Zg6"/>
+                            <constraint firstItem="rKc-Bu-7N6" firstAttribute="leading" secondItem="adf-h8-r9J" secondAttribute="leading" id="0V6-fI-hjh"/>
                             <constraint firstItem="RlM-sC-1sH" firstAttribute="centerX" secondItem="LJq-vQ-TKB" secondAttribute="centerX" id="3ea-zN-pJT"/>
                             <constraint firstItem="LJq-vQ-TKB" firstAttribute="centerX" secondItem="eUw-gw-K3K" secondAttribute="centerX" id="4Dn-xG-d3f"/>
+                            <constraint firstItem="RlM-sC-1sH" firstAttribute="top" secondItem="RDR-Ml-1xm" secondAttribute="bottom" constant="156" id="5Lm-Dt-mQU"/>
                             <constraint firstItem="rfJ-Yc-7BO" firstAttribute="leading" secondItem="cHd-95-GbC" secondAttribute="leading" id="6cm-dj-dkg"/>
                             <constraint firstItem="ctS-es-vq8" firstAttribute="top" secondItem="cHd-95-GbC" secondAttribute="top" constant="44" id="9gY-Ue-LtH"/>
+                            <constraint firstItem="yVG-yA-YAx" firstAttribute="leading" secondItem="YIZ-us-c98" secondAttribute="leading" id="BC6-GT-o1e"/>
+                            <constraint firstItem="YIZ-us-c98" firstAttribute="leading" secondItem="VnN-Wz-aek" secondAttribute="leading" id="I0g-pN-Awg"/>
                             <constraint firstItem="cHd-95-GbC" firstAttribute="bottom" secondItem="LJq-vQ-TKB" secondAttribute="bottom" constant="18" id="KPi-tf-zf7"/>
-                            <constraint firstItem="LJq-vQ-TKB" firstAttribute="top" secondItem="RlM-sC-1sH" secondAttribute="bottom" constant="56" id="VnZ-1j-EhP"/>
+                            <constraint firstItem="adf-h8-r9J" firstAttribute="top" secondItem="yVG-yA-YAx" secondAttribute="bottom" constant="44" id="UXm-BP-sXC"/>
+                            <constraint firstItem="yVG-yA-YAx" firstAttribute="top" secondItem="YIZ-us-c98" secondAttribute="bottom" constant="12" id="WL2-bJ-r2n"/>
                             <constraint firstItem="cHd-95-GbC" firstAttribute="trailing" secondItem="ctS-es-vq8" secondAttribute="trailing" constant="18" id="YJQ-SV-CEh"/>
+                            <constraint firstItem="hy1-E3-DzR" firstAttribute="top" secondItem="yVG-yA-YAx" secondAttribute="top" id="aOC-Ac-M0Y"/>
                             <constraint firstItem="VnN-Wz-aek" firstAttribute="leading" secondItem="cHd-95-GbC" secondAttribute="leading" constant="18" id="bOW-FI-nv1"/>
+                            <constraint firstItem="RDR-Ml-1xm" firstAttribute="top" secondItem="rKc-Bu-7N6" secondAttribute="bottom" constant="20" id="cP9-J4-DK2"/>
+                            <constraint firstItem="hy1-E3-DzR" firstAttribute="leading" secondItem="yVG-yA-YAx" secondAttribute="trailing" id="fpj-s8-fJP"/>
                             <constraint firstItem="cHd-95-GbC" firstAttribute="trailing" secondItem="rfJ-Yc-7BO" secondAttribute="trailing" id="hiJ-dI-U9B"/>
+                            <constraint firstItem="RDR-Ml-1xm" firstAttribute="leading" secondItem="rKc-Bu-7N6" secondAttribute="leading" id="iUj-1k-uag"/>
                             <constraint firstItem="VnN-Wz-aek" firstAttribute="top" secondItem="cHd-95-GbC" secondAttribute="top" constant="107" id="kAu-rw-KhY"/>
+                            <constraint firstItem="rfJ-Yc-7BO" firstAttribute="leading" secondItem="adf-h8-r9J" secondAttribute="trailing" constant="-169" id="laW-lX-ydR"/>
                             <constraint firstItem="6jJ-4U-s5Y" firstAttribute="top" secondItem="ctS-es-vq8" secondAttribute="bottom" constant="3" id="qcd-ne-8Ks"/>
+                            <constraint firstItem="cHd-95-GbC" firstAttribute="trailing" secondItem="VnN-Wz-aek" secondAttribute="trailing" constant="18" id="rWk-e8-gO6"/>
                             <constraint firstItem="rfJ-Yc-7BO" firstAttribute="top" secondItem="eUw-gw-K3K" secondAttribute="top" id="rvb-4f-btk"/>
+                            <constraint firstItem="rKc-Bu-7N6" firstAttribute="top" secondItem="adf-h8-r9J" secondAttribute="bottom" constant="20" id="sBH-YW-dB1"/>
                             <constraint firstItem="cHd-95-GbC" firstAttribute="bottom" secondItem="rfJ-Yc-7BO" secondAttribute="bottom" id="ywn-60-RSB"/>
+                            <constraint firstItem="YIZ-us-c98" firstAttribute="top" secondItem="VnN-Wz-aek" secondAttribute="bottom" constant="12" id="yz3-5E-JeM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cHd-95-GbC"/>
                     </view>
                     <connections>
+                        <outlet property="answerOneBtn" destination="adf-h8-r9J" id="nTc-oM-Z2K"/>
+                        <outlet property="answerThreeBtn" destination="RDR-Ml-1xm" id="QHD-Lg-TOh"/>
+                        <outlet property="answerTwoBtn" destination="rKc-Bu-7N6" id="4wu-8K-FQf"/>
                         <outlet property="nextBtn" destination="LJq-vQ-TKB" id="f3t-q5-dQ6"/>
                     </connections>
                 </viewController>
@@ -125,6 +195,8 @@
     </scenes>
     <resources>
         <image name="bg" width="375" height="667"/>
+        <image name="icSelected" width="20" height="20"/>
+        <image name="icUnselected" width="20" height="20"/>
         <image name="indicatorSelected" width="8" height="8"/>
         <image name="indicatorUnselected" width="8" height="8"/>
     </resources>

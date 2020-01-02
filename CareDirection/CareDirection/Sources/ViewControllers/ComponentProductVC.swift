@@ -28,10 +28,14 @@ class ComponentProductVC: UIViewController {
     @IBOutlet var tableViewTopConstraint: NSLayoutConstraint!
     var tableViewInitTopConstraint: CGFloat!
     @IBOutlet var guideLayout: UIView!
+    
     var infoViewDefaultContstraint: CGFloat!
-    var resultDataList:[DummyProduct]?
+
     
-    
+    var componentName: String?
+    var topData: TopData!
+    var standardData: [StandardData]!
+    var searchList: [SearchList]!
     var selectedCellIndex: Int?
     
     @IBOutlet var tableViewBottomConstraint: NSLayoutConstraint!
@@ -42,7 +46,7 @@ class ComponentProductVC: UIViewController {
         self.productTableView.dataSource = self
         tableViewInitTopConstraint = tableViewTopConstraint.constant
         
-        setData()
+        setCommunicationData()
         setLayout()
         self.infoViewDefaultContstraint = self.infoViewTopConstraint.constant
         // Do any additional setup after loading the view.
@@ -60,24 +64,31 @@ class ComponentProductVC: UIViewController {
                                  offSet: CGSize(width: 0, height: 1),
                                  opacity: 0.16,
                                  radius: 4)
-        
     }
     
     
-    func setData(){
-        resultDataList = [
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준"),
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준"),
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준"),
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준"),
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준"),
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준"),
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준"),
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준"),
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준"),
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준"),
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준"),
-            DummyProduct.init(productImg: "settingIc", companyName: "Vita Naturals Inc", countryName: "해외직구", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800", pricePerOnePill: 750, standardOfPrice: "30정 기준")]
+    
+    
+    func setCommunicationData(){
+        ProductTapService.shared.searchComponent(keyword: componentName ?? ""){
+            data in
+            switch data {
+            case .success(let data):
+                let result = data as! SearchResult
+                self.topData = result.topData
+                self.searchList = result.searchList
+            case .requestErr(_):
+                print("no result")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            case .dbErr:
+                print("dberr")
+            }
+        }
     }
     @IBAction func hide(_ sender: Any) {
         self.guideLayout.isHidden = true
@@ -186,17 +197,17 @@ extension ComponentProductVC: UITableViewDelegate{
 
 extension ComponentProductVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resultDataList?.count ?? 1
+        return searchList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ComponentProductCell") as! ComponentProductCell
         
         
-        if let result = resultDataList{
+        if let result = searchList{
             cell.index = indexPath.row
             cell.delegate = self
-            cell.productImg.image = UIImage.init(named: result[indexPath.row].productImg)
+            cell.productImg.imageFromUrl(searchList[indexPath.row].imageKey, defaultImgPath: "imgLogo")
             cell.isSelectedLbl.isHidden = true
             cell.selectInfoBtn.setImage(UIImage.init(named: "btnBarometerunFilter"), for: .normal)
             cell.selectInfoBtn.setImage(UIImage.init(named: "btnBarometerFilter"), for: .selected)
@@ -209,14 +220,13 @@ extension ComponentProductVC: UITableViewDataSource{
                 }
             }
             
-            cell.companyNameLbl.text = result[indexPath.row].companyName
-            cell.countryNameLbl.text = result[indexPath.row].countryName
+            cell.companyNameLbl.text = result[indexPath.row].productCompanyName
+            if result[indexPath.row].productIsImport == 0{
+                cell.countryNameLbl.isHidden = true
+            }
             cell.productNameLbl.text = result[indexPath.row].productName
-            cell.priceLbl.text =  result[indexPath.row].price
-            cell.pricePerOnePillLbl.text = "1일 \(result[indexPath.row].pricePerOnePill ?? 0)원"
-            cell.standardOfPrice.text = result[indexPath.row].standardOfPrice
-
-            
+            cell.priceLbl.text =  "\(result[indexPath.row].productQuantityPrice)"
+            cell.pricePerOnePillLbl.text = "1일 \(result[indexPath.row].productQuantityPrice / 30)원"
         }
         
         return cell
@@ -227,17 +237,27 @@ extension ComponentProductVC: ComponentProductCellDelegate{
     func selectedInfoBtn(index: Int) {
         print(index)
         self.selectedCellIndex = index
-        self.infoViewFirstInfo.text = "\(index)"
-        self.productTableView.reloadData()
-    }
-}
+        
+        ProductTapService.shared.getProductComponentStandard(idx: searchList[index].productIdx){ data in
+            switch data {
+            case .success(let data):
+                self.standardData = data as! [StandardData]
+                self.infoViewFirstInfo.text = self.standardData[0].standardValue
+                self.infoViewSecondInfo.text = self.standardData[1].standardValue
+                self.infoViewThirdInfo.text = self.standardData[2].standardValue
+            case .requestErr(let msg):
+                print(msg)
+            case .pathErr:
+                print("pathERR")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("Network Fail")
+            case .dbErr:
+                print("db err")
+            }
+        }
 
-struct DummyProduct{
-    var productImg: String!
-    var companyName: String!
-    var countryName: String!
-    var productName: String!
-    var price: String!
-    var pricePerOnePill: Int!
-    var standardOfPrice: String!
+    self.productTableView.reloadData()
+    }
 }

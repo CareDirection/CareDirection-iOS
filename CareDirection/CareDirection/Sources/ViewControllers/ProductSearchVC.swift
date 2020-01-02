@@ -59,6 +59,8 @@ extension ProductSearchVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("textFieldShouldReturn \((textField.text) ?? "Empty")") // Process of closing the Keyboard when the line feed button is pressed.
+        
+        
         textField.resignFirstResponder()
         
         self.searchResultView.isHidden = false

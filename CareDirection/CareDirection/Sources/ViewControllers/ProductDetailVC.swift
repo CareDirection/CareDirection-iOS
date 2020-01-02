@@ -44,10 +44,12 @@ class ProductDetailVC: UIViewController {
     
     @IBOutlet var productComponentInfoTV: UITableView!
     
+    @IBOutlet var productComponentHeightConstraint: NSLayoutConstraint!
     @IBOutlet var productAdditiveLbl: UILabel!
     
 
     @IBOutlet var productNoticeTV: UITableView!
+    @IBOutlet var productNoticeHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet var naverLowestPriceInfoCV: UICollectionView!
     
@@ -78,44 +80,62 @@ class ProductDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLayout()
         initVar()
+        setLayout()
+        
         
         //var pillCountStandardList: [String] = [""]
         // Do any additional setup after loading the view.
     }
     func initVar(){
         
-        
+        //
         ProductTapService.shared.getProductDetail(idx: productIdx!) { data in
             switch data {
             case .success(let data):
                 let result = data as! [Detail]
                 self.detailData = result
+                print("asd")
+                //print(self.detailData)
+
                 self.priceInfoList.append(self.detailData[0].countPrice!)
-                self.priceInfoList.append(self.detailData[1].countPrice!)
+                //self.priceInfoList.append(self.detailData[1].countPrice!)
                 
-                self.productInfo = self.detailData[2].commonData!
+                self.productInfo = self.detailData[self.detailData.endIndex - 1].commonData!
+                
+                print(self.productInfo)
                 
                 self.productComponentInfoTVExtension.componentInfo = self.productInfo.productDetailName.split(separator: "\n").map(String.init)
+                self.productComponentHeightConstraint.constant = CGFloat((self.productComponentInfoTVExtension.componentInfo?.count ?? 1) * 30)
+                
                 self.productComponentInfoTVExtension.componentName = self.productInfo.productDetailValue.split(separator: "\n").map(String.init)
+                self.productComponentInfoTV.delegate = self.productComponentInfoTVExtension
+                self.productComponentInfoTV.dataSource = self.productComponentInfoTVExtension
                 
                 self.productNoticeTVExtension.data = self.productInfo.productCautions.split(separator: "\n").map(String.init)
                 
+                self.productNoticeHeightConstraint.constant = CGFloat(25 * (self.productNoticeTVExtension.data?.count ?? 1))
+                self.productNoticeTV.delegate = self.productNoticeTVExtension
+                self.productNoticeTV.dataSource = self.productNoticeTVExtension
+                
+                self.setLayout()
+                self.setCommunicationData()
                 self.productComponentInfoTV.reloadData()
                 self.productNoticeTV.reloadData()
                 
             case .requestErr(let msg):
                 print(msg)
+                print("asdasd")
             case .serverErr:
-                print("server err")
+                print("getProductDetailserver err")
 
             case .pathErr:
-                break
+                print("getProductDetailpath err")
+
             case .networkFail:
-                break
+                print("getProductDetailnetworkfail err")
             case .dbErr:
-                break
+                print("getProductDetaildberr err")
             }
         }
         
@@ -124,18 +144,19 @@ class ProductDetailVC: UIViewController {
             case .success(let data):
                 let result = data as! [EfficacyName]
                 self.productFunctionCVExtension.data = result
-                self.productFunctionCV.reloadData()
+                self.productFunctionCV.delegate = self.productFunctionCVExtension
+                self.productFunctionCV.dataSource = self.productFunctionCVExtension
                 
             case .requestErr(let msg):
                 print(msg)
             case .pathErr:
-                print("pathErr")
+                print("productDetailEfficacypathErr")
             case .serverErr:
-                print("serverErr")
+                print("productDetailEfficacyserverErr")
             case .networkFail:
-                print("networkFail")
+                print("productDetailEfficacynetworkFail")
             case .dbErr:
-                print("dbErr")
+                print("productDetailEfficacydbErr")
             }
             
         }
@@ -145,32 +166,21 @@ class ProductDetailVC: UIViewController {
                 case .success(let data):
                     let result = data as! [PriceInfo]
                     self.naverLowestPriceInfoCVExtension.data = result
+                    self.naverLowestPriceInfoCV.delegate = self.naverLowestPriceInfoCVExtension
+                    self.naverLowestPriceInfoCV.dataSource = self.naverLowestPriceInfoCVExtension
                     self.naverLowestPriceInfoCV.reloadData()
                 case .requestErr(let msg):
                     print(msg)
                 case .pathErr:
-                    print("pathErr")
+                    print("lowerPriceDatapathErr")
                 case .serverErr:
-                    print("serverErr")
+                    print("lowerPriceDataserverErr")
                 case .networkFail:
-                    print("networkFail")
+                    print("lowerPriceDatanetworkFail")
                 case .dbErr:
                     print("dbErr")
             }
         }
-
-        self.productFunctionCV.delegate = productFunctionCVExtension
-        self.productFunctionCV.dataSource = productFunctionCVExtension
-        
-        
-        self.productComponentInfoTV.delegate = productComponentInfoTVExtension
-        self.productComponentInfoTV.dataSource = productComponentInfoTVExtension
-        
-        self.productNoticeTV.delegate = productNoticeTVExtension
-        self.productNoticeTV.dataSource = productNoticeTVExtension
-        
-        self.naverLowestPriceInfoCV.delegate = naverLowestPriceInfoCVExtension
-        self.naverLowestPriceInfoCV.dataSource = naverLowestPriceInfoCVExtension
     }
     
     func setLayout(){
@@ -352,7 +362,7 @@ class NaverLowestPriceInfoCVExtension : UIViewController ,UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NaverLowestPriceInfoCVCell", for: indexPath) as! NaverLowestPriceInfoCVCell
         cell.productImg.imageFromUrl(data![indexPath.row].image, defaultImgPath: "imgLogo")
-        cell.purchasePlaceLbl.text = data![indexPath.row].lprice
+        cell.purchasePlaceLbl.text = "\(data![indexPath.row].lprice)"
         cell.purchasePlaceLbl.text = data![indexPath.row].mallName
         
         return cell

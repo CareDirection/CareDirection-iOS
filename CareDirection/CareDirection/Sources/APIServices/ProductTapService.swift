@@ -225,12 +225,17 @@ struct ProductTapService {
     
     func getProductDetail(idx: Int, completion: @escaping (NetworkResult<Any>) -> Void){
         let URL = APIConstants.ProductBaseURL + "/\(idx)/info"
+        
         let header: HTTPHeaders = [
             "Content-Type" : "application/json",
             "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
         ]
+         let parameters: Parameters = [
+                   "product_idx": idx,
+               ]
         
-        Alamofire.request(URL, method: .get, encoding: JSONEncoding.default, headers: header).responseData { response in
+        Alamofire.request(URL, method: .get,parameters: parameters ,encoding: URLEncoding.default, headers: header).responseData { response in
+            
             // parameter 위치
             switch response.result {
                 
@@ -244,10 +249,9 @@ struct ProductTapService {
                         case 200:
                             do {
                                 let decoder = JSONDecoder()
-                                print(value)
-                                let result = try decoder.decode(ProductLowerPrice.self, from: value)
                                 
-                                //print("success")
+                                let result = try decoder.decode(ProductDetail.self, from: value)
+                                
                                 completion(.success(result.data))
                             }
                             catch {
@@ -267,6 +271,7 @@ struct ProductTapService {
                 
             // 통신 실패 - 네트워크 연결
             case .failure(let err):
+                print("detail network fail")
                 print(err.localizedDescription)
                 completion(.networkFail)
                 // .networkFail이라는 반환 값이 넘어감
@@ -276,7 +281,8 @@ struct ProductTapService {
     }
     
     func productDetailEfficacy(idx: Int, completion: @escaping (NetworkResult<Any>) -> Void){
-        let URL = APIConstants.ProductBaseURL + "/\(idx)/efficacy"
+        let URL = APIConstants.ProductBaseURL + "/\(6)/efficacy"
+
         
         let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
         
@@ -284,7 +290,7 @@ struct ProductTapService {
             "token" : token
         ]
         
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseData(){
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: header).responseData(){
             response in
             
             switch response.result {
@@ -296,13 +302,14 @@ struct ProductTapService {
                         switch status {
                         case 200:
                             do {
-                                let decoder = JSONDecoder()
+
                                 print(value)
+                                let decoder = JSONDecoder()
                                 let result = try decoder.decode(ProductEfficacy.self, from: value)
-                                
                                 completion(.success(result.data))
                             }
                             catch {
+                                print("productDetailEfficacy decode error")
                                 completion(.pathErr)
                                 print(error.localizedDescription)
                             }
@@ -327,19 +334,9 @@ struct ProductTapService {
         }
     }
     func lowerPriceData(idx: Int, quantity: Int, completion: @escaping(NetworkResult<Any>) -> Void){
-        let URL = APIConstants.ProductBaseURL + "/\(idx)/lowprice"
+        let URL = APIConstants.ProductBaseURL + "/\(6)/lowprice"
         
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
-        
-        let header: HTTPHeaders = [
-            "token" : token
-        ]
-        
-        let body : Parameters = [
-            "product_quantity": quantity
-        ]
-        
-        Alamofire.request(URL, method: .get, parameters: body, encoding: JSONEncoding.default, headers: header).responseData() { response in
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseData() { response in
             switch response.result {
             case .success:
                 if let value = response.result.value {
@@ -347,11 +344,11 @@ struct ProductTapService {
                     if let status = response.response?.statusCode {
                         
                         switch status {
-                        case 200:
+                        case 201:
                             do {
                                 let decoder = JSONDecoder()
-                                print(value)
-                                let result = try decoder.decode(ProductEfficacy.self, from: value)
+  
+                                let result = try decoder.decode(ProductLowerPrice.self, from: value)
                                 
                                 completion(.success(result.data))
                             }
@@ -386,8 +383,11 @@ struct ProductTapService {
         let header: HTTPHeaders = [
             "Content-Type" : "application/json"
         ]
+        let parameters: Parameters = [
+                  "product_idx": idx,
+              ]
         
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseData() { response in
+        Alamofire.request(URL, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: header).responseData() { response in
             switch response.result {
             case .success:
                 if let value = response.result.value {

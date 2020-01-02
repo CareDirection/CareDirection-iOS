@@ -707,9 +707,8 @@
                                                                                 <constraint firstAttribute="width" constant="28" id="avy-qv-xuw"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="쿠팡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKa-Oe-CDD">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿠팡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKa-Oe-CDD">
                                                                             <rect key="frame" x="103" y="11" width="30" height="21"/>
-                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <color key="textColor" red="0.16862745098039217" green="0.1764705882352941" blue="0.1803921568627451" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -724,11 +723,13 @@
                                                                         <constraint firstItem="cRu-cD-yqK" firstAttribute="leading" secondItem="Vuo-EF-2Z4" secondAttribute="leading" constant="15" id="ScW-HH-OEf"/>
                                                                         <constraint firstItem="P4U-e5-2Ft" firstAttribute="leading" secondItem="cRu-cD-yqK" secondAttribute="trailing" id="WY4-2g-uwG"/>
                                                                         <constraint firstItem="14p-tC-3dO" firstAttribute="leading" secondItem="9fR-hp-3uO" secondAttribute="trailing" id="YpK-AG-Gpc"/>
+                                                                        <constraint firstItem="hKa-Oe-CDD" firstAttribute="leading" secondItem="cRu-cD-yqK" secondAttribute="trailing" constant="13" id="g0Y-SD-EBT"/>
                                                                         <constraint firstItem="9fR-hp-3uO" firstAttribute="bottom" secondItem="cRu-cD-yqK" secondAttribute="bottom" id="q80-8d-cqB"/>
                                                                         <constraint firstItem="P4U-e5-2Ft" firstAttribute="centerY" secondItem="cRu-cD-yqK" secondAttribute="centerY" id="qjH-o6-99Q"/>
                                                                         <constraint firstAttribute="trailing" secondItem="qWh-zG-4cy" secondAttribute="trailing" constant="21" id="sT3-ud-bPO"/>
                                                                         <constraint firstItem="cRu-cD-yqK" firstAttribute="top" secondItem="Vuo-EF-2Z4" secondAttribute="top" constant="11" id="uKc-Pn-ldW"/>
                                                                         <constraint firstAttribute="bottom" secondItem="qWh-zG-4cy" secondAttribute="bottom" constant="11" id="wHU-SB-WQA"/>
+                                                                        <constraint firstItem="hKa-Oe-CDD" firstAttribute="top" secondItem="cRu-cD-yqK" secondAttribute="top" id="wos-Ke-Aj9"/>
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
                                                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -909,6 +910,7 @@
                         <outlet property="productAdditiveLbl" destination="ugc-ji-op2" id="kpJ-6u-uyv"/>
                         <outlet property="productCompanyNameLbl" destination="Ynt-sG-pQc" id="KQS-fq-Jer"/>
                         <outlet property="productComponentGraphView" destination="mum-Kx-bHX" id="z1S-Fy-5Gm"/>
+                        <outlet property="productComponentHeightConstraint" destination="eWP-iZ-0b2" id="roh-3U-VCx"/>
                         <outlet property="productComponentInfoTV" destination="0Jn-kU-U9w" id="7d0-m6-Yxu"/>
                         <outlet property="productFeatureLbl" destination="uI5-ke-29v" id="CqI-8P-8I4"/>
                         <outlet property="productFirstCategoryInfoLbl" destination="AZj-vH-3AE" id="Dk3-YC-Qbd"/>
@@ -920,6 +922,7 @@
                         <outlet property="productImg" destination="YQi-FN-UwZ" id="tGK-hY-VQD"/>
                         <outlet property="productImgInView" destination="DRz-ho-Xan" id="fYX-XZ-fap"/>
                         <outlet property="productNameLbl" destination="p0q-tc-gsX" id="Dyt-Eb-xOJ"/>
+                        <outlet property="productNoticeHeightConstraint" destination="uYd-ub-fQ5" id="yXm-aA-CmA"/>
                         <outlet property="productNoticeTV" destination="ujO-Ys-cYS" id="HbN-BK-4Py"/>
                         <outlet property="productPriceLbl" destination="fh7-SW-Ee2" id="kYP-Xy-Ly9"/>
                         <outlet property="productPricePerDayLbl" destination="HVY-VF-X8Z" id="ZOe-TD-w3q"/>

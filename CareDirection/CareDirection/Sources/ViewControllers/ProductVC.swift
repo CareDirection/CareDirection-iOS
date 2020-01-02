@@ -135,6 +135,7 @@ class ProductVC: UIViewController {
                 switch data {
                 case .success(let data):
                     self.productList = data as! [SearchList]
+                    self.resultViewCountLbl.text = "\(self.productList.count)"
                     self.topProductTV.reloadData()
                     print(self.productList)
 
@@ -291,6 +292,7 @@ extension ProductVC: UITableViewDelegate{
         let storyBoard = UIStoryboard.init(name: "ProductDetail", bundle: nil)
         let dvc = storyBoard.instantiateViewController(identifier: "ProductDetail") as! ProductDetailVC
         dvc.productIdx = self.productList[indexPath.row].productIdx
+
         dvc.modalPresentationStyle = .fullScreen
         self.present(dvc, animated: true, completion: nil)
     }

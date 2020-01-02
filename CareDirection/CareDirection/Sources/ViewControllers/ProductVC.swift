@@ -179,8 +179,40 @@ class ProductVC: UIViewController {
     
     @IBAction func selectedSearchBtn(_ sender: Any) {
         self.viewType = .searchView
+        guard let searchText = self.searchFiterTxtView.text else{ return }
+        
+        let nonSpacingTxt = searchText.trimmingCharacters(in: .whitespaces)
+        self.searchFiterTxtView.text = nonSpacingTxt
+        
         productList = []
-        setDynamicLayout()
+        if searchFiterTxtView.text == "제품"{
+            setDynamicLayout()
+        }
+        else {
+            ProductTapService.shared.searchComponent(keyword: nonSpacingTxt){ data in
+                switch data {
+                case .success(_):
+                    let dvc = self.storyboard?.instantiateViewController(identifier: "ComponentProductVC") as! ComponentProductVC
+                    dvc.modalPresentationStyle = .fullScreen
+                    dvc.componentName = nonSpacingTxt
+                    self.present(dvc, animated: true)
+                case .requestErr(_):
+                    self.searchTxtView.text = ""
+                    self.setDynamicLayout()
+                case .pathErr:
+                    print("pathErr")
+                case .serverErr:
+                    print("serverErr")
+                case .networkFail:
+                    print("networkFail")
+                case .dbErr:
+                    print("dbErr")
+                }
+                
+            }
+        }
+        
+        
         
     }
     
@@ -192,6 +224,7 @@ class ProductVC: UIViewController {
     @IBAction func selectedMoreProductViewBtn(_ sender: Any) {
         let dvc = self.storyboard?.instantiateViewController(identifier: "ComponentProductVC") as! ComponentProductVC
         dvc.modalPresentationStyle = .fullScreen
+        dvc.componentName = self.tabList[self.selectedTapIndex].tabName
         self.present(dvc, animated: true)
     }
     
@@ -257,7 +290,7 @@ extension ProductVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard.init(name: "ProductDetail", bundle: nil)
         let dvc = storyBoard.instantiateViewController(identifier: "ProductDetail") as! ProductDetailVC
-        
+        dvc.productIdx = self.productList[indexPath.row].productIdx
         dvc.modalPresentationStyle = .fullScreen
         self.present(dvc, animated: true, completion: nil)
     }

@@ -20,7 +20,7 @@ class StandardDetailVC: UIViewController {
         super.viewDidLoad()
 
         
-        ChartView.playAnimations()
+//        ChartView.playAnimations()
         
         //set single standard data
         setData()

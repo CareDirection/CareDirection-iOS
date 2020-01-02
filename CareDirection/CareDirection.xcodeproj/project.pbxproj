@@ -34,6 +34,10 @@
 		7F5DD45023BD57790002DCAC /* ProductTapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD44F23BD57780002DCAC /* ProductTapService.swift */; };
 		7F5DD45223BD590B0002DCAC /* ProductTapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD45123BD590B0002DCAC /* ProductTapModel.swift */; };
 		7F5DD45423BD66220002DCAC /* ProductSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD45323BD66220002DCAC /* ProductSearchModel.swift */; };
+		7F5DD45623BD84300002DCAC /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD45523BD84300002DCAC /* ProductDetail.swift */; };
+		7F5DD45823BE09970002DCAC /* ProductEfficacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD45723BE09970002DCAC /* ProductEfficacy.swift */; };
+		7F5DD45A23BE0ED80002DCAC /* ProductLowerPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD45923BE0ED80002DCAC /* ProductLowerPrice.swift */; };
+		7F5DD45C23BE2C930002DCAC /* ProductStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD45B23BE2C930002DCAC /* ProductStandard.swift */; };
 		7F626B7423B934C2005A4D36 /* ProductSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F626B7323B934C2005A4D36 /* ProductSearch.storyboard */; };
 		7F626B7623B941E7005A4D36 /* ProductSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626B7523B941E7005A4D36 /* ProductSearchVC.swift */; };
 		7F626B7823B94E39005A4D36 /* NewProductResgistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */; };
@@ -179,6 +183,10 @@
 		7F5DD44F23BD57780002DCAC /* ProductTapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTapService.swift; sourceTree = "<group>"; };
 		7F5DD45123BD590B0002DCAC /* ProductTapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTapModel.swift; sourceTree = "<group>"; };
 		7F5DD45323BD66220002DCAC /* ProductSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchModel.swift; sourceTree = "<group>"; };
+		7F5DD45523BD84300002DCAC /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
+		7F5DD45723BE09970002DCAC /* ProductEfficacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEfficacy.swift; sourceTree = "<group>"; };
+		7F5DD45923BE0ED80002DCAC /* ProductLowerPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLowerPrice.swift; sourceTree = "<group>"; };
+		7F5DD45B23BE2C930002DCAC /* ProductStandard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductStandard.swift; sourceTree = "<group>"; };
 		7F626B7323B934C2005A4D36 /* ProductSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductSearch.storyboard; sourceTree = "<group>"; };
 		7F626B7523B941E7005A4D36 /* ProductSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchVC.swift; sourceTree = "<group>"; };
 		7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductResgistCell.swift; sourceTree = "<group>"; };
@@ -484,8 +492,15 @@
 				F47860DA23BD4266003D11D1 /* Efficacy.swift */,
 				7F5DD45123BD590B0002DCAC /* ProductTapModel.swift */,
 				7F5DD45323BD66220002DCAC /* ProductSearchModel.swift */,
+
 				F47860E023BD88DE003D11D1 /* ResponseNutrient.swift */,
 				F47860E623BDFEB8003D11D1 /* ResponseArticle.swift */,
+
+				7F5DD45523BD84300002DCAC /* ProductDetail.swift */,
+				7F5DD45723BE09970002DCAC /* ProductEfficacy.swift */,
+				7F5DD45923BE0ED80002DCAC /* ProductLowerPrice.swift */,
+				7F5DD45B23BE2C930002DCAC /* ProductStandard.swift */,
+
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -501,9 +516,11 @@
 				7F90F49F23BCB4AB008D874F /* SurveyService.swift */,
 				7F5DD44D23BD42080002DCAC /* TakingProudctService.swift */,
 				7F5DD44F23BD57780002DCAC /* ProductTapService.swift */,
+
 				F47860DE23BD8446003D11D1 /* FunctionService.swift */,
 				F47860E223BD8B91003D11D1 /* ArticleSevice.swift */,
 				F47860E423BD9E06003D11D1 /* NutrientService.swift */,
+
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -709,6 +726,7 @@
 				F47860C123BAF790003D11D1 /* SymptomImageCell.swift in Sources */,
 				7F033C8623B239DE00ABD866 /* SurveyInfoVC.swift in Sources */,
 				7F5DD44E23BD42080002DCAC /* TakingProudctService.swift in Sources */,
+				7F5DD45623BD84300002DCAC /* ProductDetail.swift in Sources */,
 				F4DFE47B23B8F01600711C26 /* HomeTestVC.swift in Sources */,
 				F4DC234D23B7923E00A72919 /* FunctionDetailVC.swift in Sources */,
 				F47860DF23BD8446003D11D1 /* FunctionService.swift in Sources */,
@@ -716,8 +734,10 @@
 				F4DFE48D23B9DBFB00711C26 /* FunctionalIngredientCell.swift in Sources */,
 				F492FB6F23B2449F00FE5D11 /* SurveyVC.swift in Sources */,
 				F47860C723BB6F78003D11D1 /* ResponseString.swift in Sources */,
+				7F5DD45C23BE2C930002DCAC /* ProductStandard.swift in Sources */,
 				F44C3EC123B8A709004F829A /* IngredientStudyCell.swift in Sources */,
 				F4DC233123B60C5C00A72919 /* TakingProductRegistVC.swift in Sources */,
+				7F5DD45A23BE0ED80002DCAC /* ProductLowerPrice.swift in Sources */,
 				F4DC233523B62AF300A72919 /* TakingProductRegistCell.swift in Sources */,
 				F41F392323BA532700F4BD89 /* TakingProductPopUpVC.swift in Sources */,
 				7F90F49823BB75D5008D874F /* ComponentInSearchVC.swift in Sources */,
@@ -727,6 +747,7 @@
 				F492FB8323B340D000FE5D11 /* LoginVC.swift in Sources */,
 				7F571A5623B767B900D892B2 /* ProductFunctionCVCell.swift in Sources */,
 				F47860BD23BAF231003D11D1 /* Symptom.swift in Sources */,
+				7F5DD45823BE09970002DCAC /* ProductEfficacy.swift in Sources */,
 				7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */,
 				7F571A5C23B783B800D892B2 /* NaverLowestPriceInfoCVCell.swift in Sources */,
 				F47860D523BCD904003D11D1 /* FunctionalIngeredientCell2.swift in Sources */,

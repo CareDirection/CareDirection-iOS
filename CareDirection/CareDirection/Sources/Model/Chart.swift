@@ -22,3 +22,9 @@ struct SingleChart {
     var standardChart : CGFloat
     var standardDetail : String
 }
+
+
+struct MainChart: Codable {
+    let nutrient_name : String
+    let nutrient_percent : Int
+}

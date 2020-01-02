@@ -425,6 +425,7 @@
                         <outlet property="datePickButton" destination="yEG-Nh-GNu" id="WBh-Qv-J65"/>
                         <outlet property="datePickerTotalView" destination="s2l-Fw-nS2" id="YFU-dA-hTs"/>
                         <outlet property="datePickerView" destination="ReG-4n-st5" id="l3e-eO-5Ky"/>
+                        <outlet property="navigationBar" destination="TnA-qf-5ZP" id="Nww-Xa-mKp"/>
                         <outlet property="takingProductCollectionView" destination="eG9-sX-FsT" id="CZd-Tl-bPu"/>
                     </connections>
                 </viewController>

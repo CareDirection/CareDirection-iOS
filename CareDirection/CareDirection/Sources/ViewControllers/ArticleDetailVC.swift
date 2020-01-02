@@ -11,6 +11,7 @@ import UIKit
 class ArticleDetailVC: UIViewController {
     
     @IBOutlet weak var articleTableView: UITableView!
+    @IBOutlet weak var navigationBarView: UIView!
     
     var articleList : Article?
     
@@ -19,6 +20,8 @@ class ArticleDetailVC: UIViewController {
         // 셀 사이즈 동적으로 조절해주기
         articleTableView.rowHeight = UITableView.automaticDimension
         articleTableView.estimatedRowHeight = 600
+        
+        navigationBarView.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
     }
     
     

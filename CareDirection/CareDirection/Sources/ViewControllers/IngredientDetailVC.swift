@@ -31,7 +31,7 @@ class IngredientDetailVC: UIViewController {
         ingredientTableView.estimatedRowHeight = 600
         
         // navigation bar customize
-        navigationBar.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.2, radius: 4)
+        navigationBar.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
 
     }
    

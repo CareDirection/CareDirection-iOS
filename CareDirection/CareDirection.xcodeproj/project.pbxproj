@@ -88,6 +88,11 @@
 		F47860CB23BB7063003D11D1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860CA23BB7063003D11D1 /* AuthService.swift */; };
 		F47860CD23BB715F003D11D1 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860CC23BB715F003D11D1 /* NetworkResult.swift */; };
 		F47860CF23BC95E9003D11D1 /* ResponseString2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860CE23BC95E9003D11D1 /* ResponseString2.swift */; };
+		F47860D523BCD904003D11D1 /* FunctionalIngeredientCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860D423BCD904003D11D1 /* FunctionalIngeredientCell2.swift */; };
+		F47860D723BCF5E3003D11D1 /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860D623BCF5E3003D11D1 /* ResponseArray.swift */; };
+		F47860D923BCF6C5003D11D1 /* ChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860D823BCF6C5003D11D1 /* ChartService.swift */; };
+		F47860DB23BD4266003D11D1 /* Efficacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860DA23BD4266003D11D1 /* Efficacy.swift */; };
+		F47860DD23BD4312003D11D1 /* EfficacyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47860DC23BD4312003D11D1 /* EfficacyService.swift */; };
 		F492FB4623B215B200FE5D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4523B215B200FE5D11 /* AppDelegate.swift */; };
 		F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4723B215B200FE5D11 /* SceneDelegate.swift */; };
 		F492FB4A23B215B200FE5D11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492FB4923B215B200FE5D11 /* ViewController.swift */; };
@@ -218,6 +223,11 @@
 		F47860CA23BB7063003D11D1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F47860CC23BB715F003D11D1 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		F47860CE23BC95E9003D11D1 /* ResponseString2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString2.swift; sourceTree = "<group>"; };
+		F47860D423BCD904003D11D1 /* FunctionalIngeredientCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalIngeredientCell2.swift; sourceTree = "<group>"; };
+		F47860D623BCF5E3003D11D1 /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
+		F47860D823BCF6C5003D11D1 /* ChartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartService.swift; sourceTree = "<group>"; };
+		F47860DA23BD4266003D11D1 /* Efficacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Efficacy.swift; sourceTree = "<group>"; };
+		F47860DC23BD4312003D11D1 /* EfficacyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EfficacyService.swift; sourceTree = "<group>"; };
 		F492FB4223B215B200FE5D11 /* CareDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492FB4523B215B200FE5D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F492FB4723B215B200FE5D11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -416,6 +426,7 @@
 				7F90F49723BB75D5008D874F /* ComponentInSearchVC.swift */,
 				7F90F49923BB77D9008D874F /* ComponentInSearchResultTVCell.swift */,
 				7F90F49B23BBE260008D874F /* ComponentCategoryPopUpVC.swift */,
+				F47860D423BCD904003D11D1 /* FunctionalIngeredientCell2.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -449,6 +460,8 @@
 				F47860C623BB6F78003D11D1 /* ResponseString.swift */,
 				F47860C823BB6FF7003D11D1 /* ResponseDefault.swift */,
 				F47860CE23BC95E9003D11D1 /* ResponseString2.swift */,
+				F47860D623BCF5E3003D11D1 /* ResponseArray.swift */,
+				F47860DA23BD4266003D11D1 /* Efficacy.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -459,6 +472,8 @@
 				F47860C423BB6DA2003D11D1 /* APIConstants.swift */,
 				F47860CA23BB7063003D11D1 /* AuthService.swift */,
 				F47860CC23BB715F003D11D1 /* NetworkResult.swift */,
+				F47860D823BCF6C5003D11D1 /* ChartService.swift */,
+				F47860DC23BD4312003D11D1 /* EfficacyService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -648,6 +663,8 @@
 				7F5BE25223B8D93900D2A70F /* SurveyLifeStyleFouthPointVC.swift in Sources */,
 				F4DFE48323B95E6C00711C26 /* SettingVC.swift in Sources */,
 				F44C3EB723B87FE1004F829A /* SymptomVC.swift in Sources */,
+				F47860DD23BD4312003D11D1 /* EfficacyService.swift in Sources */,
+				F47860DB23BD4266003D11D1 /* Efficacy.swift in Sources */,
 				7FC773AA23B32E6E00449239 /* SurveySymptomVC.swift in Sources */,
 				7F5BE25623B901FD00D2A70F /* AfterSurveyResgistTakingProductVC.swift in Sources */,
 				F464828C23B3F64B00F63712 /* ProductCell.swift in Sources */,
@@ -677,6 +694,7 @@
 				F47860BD23BAF231003D11D1 /* Symptom.swift in Sources */,
 				7FCCEAC823B2C65400F832B8 /* SurveyDiseaseCell.swift in Sources */,
 				7F571A5C23B783B800D892B2 /* NaverLowestPriceInfoCVCell.swift in Sources */,
+				F47860D523BCD904003D11D1 /* FunctionalIngeredientCell2.swift in Sources */,
 				F44C3EBD23B89F40004F829A /* IngredientStudyVC.swift in Sources */,
 				F4DFE49123B9FC4B00711C26 /* StandardDetailCell.swift in Sources */,
 				7F5BE25823B903E400D2A70F /* TakingProductCVCell.swift in Sources */,
@@ -714,15 +732,16 @@
 				F492FB6323B216C900FE5D11 /* UIViewController+Extensions.swift in Sources */,
 				F4DC234923B7875700A72919 /* StandardDetailVC.swift in Sources */,
 				F41F391B23BA4D4000F4BD89 /* ArticleSecondContentCell.swift in Sources */,
+				F47860D923BCF6C5003D11D1 /* ChartService.swift in Sources */,
 				F44C3EBF23B8A552004F829A /* Article.swift in Sources */,
 				7F537CE523B4AC5400115A2B /* ComponentProductCell.swift in Sources */,
 				F44C3EB523B87D7F004F829A /* IngredientExplainCell.swift in Sources */,
 				F47860CB23BB7063003D11D1 /* AuthService.swift in Sources */,
-
 				F4DFE48923B9DB6600711C26 /* FunctionalIngredient.swift in Sources */,
 				7F626BC423BA844E005A4D36 /* BestProductTVCell.swift in Sources */,
 				7F90F49623BB4F5B008D874F /* FilterPopUpVC.swift in Sources */,
 				7F626BC023BA649B005A4D36 /* TopTapBarVC.swift in Sources */,
+				F47860D723BCF5E3003D11D1 /* ResponseArray.swift in Sources */,
 				7FC773B423B3673600449239 /* SurveyLifeStyleFirstPointVC.swift in Sources */,
 				F464828A23B3F41F00F63712 /* HomeVC.swift in Sources */,
 				F44C3EC723B8BD9A004F829A /* ArticleDetailVC.swift in Sources */,

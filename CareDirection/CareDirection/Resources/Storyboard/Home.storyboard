@@ -229,14 +229,25 @@
                                                                                         <constraint firstAttribute="height" constant="2" id="nUt-R1-DGJ"/>
                                                                                     </constraints>
                                                                                 </view>
+                                                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ub6-22-f39">
+                                                                                    <rect key="frame" x="68" y="25" width="10" height="10"/>
+                                                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="10" id="Dcx-QQ-HAd"/>
+                                                                                        <constraint firstAttribute="width" constant="10" id="fUR-Wn-5yk"/>
+                                                                                    </constraints>
+                                                                                </view>
                                                                             </subviews>
                                                                             <constraints>
                                                                                 <constraint firstItem="oNq-45-j0K" firstAttribute="top" secondItem="kQZ-Pz-LDr" secondAttribute="top" constant="29" id="2ZP-PW-fpb"/>
                                                                                 <constraint firstItem="oNq-45-j0K" firstAttribute="leading" secondItem="SLA-0D-jbq" secondAttribute="trailing" id="5H7-a4-wPX"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="I28-UO-duu" secondAttribute="trailing" constant="12" id="88C-7g-clS"/>
                                                                                 <constraint firstItem="SLA-0D-jbq" firstAttribute="top" secondItem="kQZ-Pz-LDr" secondAttribute="top" id="SJm-9t-C44"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="ub6-22-f39" secondAttribute="bottom" constant="50" id="UhF-C9-myN"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="ub6-22-f39" secondAttribute="trailing" id="X2F-ri-q9G"/>
                                                                                 <constraint firstItem="SLA-0D-jbq" firstAttribute="leading" secondItem="kQZ-Pz-LDr" secondAttribute="leading" id="aak-eu-Gyk"/>
                                                                                 <constraint firstAttribute="bottom" secondItem="I28-UO-duu" secondAttribute="bottom" constant="2" id="dRG-hc-btf"/>
+                                                                                <constraint firstItem="ub6-22-f39" firstAttribute="top" secondItem="kQZ-Pz-LDr" secondAttribute="top" constant="25" id="ebo-Rg-ogn"/>
                                                                                 <constraint firstItem="I28-UO-duu" firstAttribute="top" secondItem="oNq-45-j0K" secondAttribute="bottom" constant="37" id="gdC-rR-LPc"/>
                                                                                 <constraint firstItem="I28-UO-duu" firstAttribute="leading" secondItem="kQZ-Pz-LDr" secondAttribute="leading" id="iew-sg-1jP"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="oNq-45-j0K" secondAttribute="trailing" id="kfa-8X-L2k"/>
@@ -245,6 +256,7 @@
                                                                         </collectionViewCellContentView>
                                                                         <size key="customSize" width="78" height="85"/>
                                                                         <connections>
+                                                                            <outlet property="endCircleView" destination="ub6-22-f39" id="ycZ-yH-Vse"/>
                                                                             <outlet property="imageView" destination="SLA-0D-jbq" id="9cD-Fx-QhP"/>
                                                                             <outlet property="label" destination="I28-UO-duu" id="uyb-Iy-H1z"/>
                                                                         </connections>
@@ -265,7 +277,7 @@
                                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
-                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="g14-Up-boU" customClass="FunctionalIngredientCell" customModule="CareDirection" customModuleProvider="target">
+                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ingredientCell2" id="g14-Up-boU" customClass="FunctionalIngeredientCell2" customModule="CareDirection" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.5" width="78" height="85"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iFV-Bs-lwB">
@@ -281,7 +293,8 @@
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="심장 혈액순환" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N06-hq-ZoV">
                                                                                     <rect key="frame" x="0.0" y="68" width="66" height="15"/>
                                                                                     <constraints>
-                                                                                        <constraint firstAttribute="width" secondItem="N06-hq-ZoV" secondAttribute="height" multiplier="22:5" id="k1m-3S-yXO"/>
+                                                                                        <constraint firstAttribute="width" constant="66" id="lFd-QR-8ai"/>
+                                                                                        <constraint firstAttribute="height" constant="15" id="z3a-ax-9on"/>
                                                                                     </constraints>
                                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="12"/>
                                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,6 +308,14 @@
                                                                                         <constraint firstAttribute="height" constant="2" id="V38-Nx-cRx"/>
                                                                                     </constraints>
                                                                                 </view>
+                                                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Fv-j9-1uF">
+                                                                                    <rect key="frame" x="68" y="25" width="10" height="10"/>
+                                                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="10" id="xBd-7d-cGx"/>
+                                                                                        <constraint firstAttribute="height" constant="10" id="xdV-1o-m6t"/>
+                                                                                    </constraints>
+                                                                                </view>
                                                                             </subviews>
                                                                             <constraints>
                                                                                 <constraint firstItem="N06-hq-ZoV" firstAttribute="top" secondItem="IqW-a5-3iX" secondAttribute="bottom" constant="8" id="00v-Pv-FML"/>
@@ -305,14 +326,18 @@
                                                                                 <constraint firstItem="IqW-a5-3iX" firstAttribute="top" secondItem="iFV-Bs-lwB" secondAttribute="top" id="LaJ-RV-Wl4"/>
                                                                                 <constraint firstItem="IqW-a5-3iX" firstAttribute="leading" secondItem="iFV-Bs-lwB" secondAttribute="leading" id="Ljt-Lb-DEv"/>
                                                                                 <constraint firstItem="N06-hq-ZoV" firstAttribute="top" secondItem="lqb-Zn-bnU" secondAttribute="bottom" constant="37" id="VFV-aT-gUR"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="9Fv-j9-1uF" secondAttribute="trailing" id="W4e-Wr-zST"/>
+                                                                                <constraint firstItem="9Fv-j9-1uF" firstAttribute="top" secondItem="iFV-Bs-lwB" secondAttribute="top" constant="25" id="fFd-JL-7Dg"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="9Fv-j9-1uF" secondAttribute="bottom" constant="50" id="g7i-dF-alR"/>
                                                                                 <constraint firstItem="N06-hq-ZoV" firstAttribute="leading" secondItem="iFV-Bs-lwB" secondAttribute="leading" id="lEC-Zc-sUo"/>
-                                                                                <constraint firstItem="lqb-Zn-bnU" firstAttribute="leading" secondItem="IqW-a5-3iX" secondAttribute="leading" id="t3f-h6-ck6"/>
+                                                                                <constraint firstItem="lqb-Zn-bnU" firstAttribute="leading" secondItem="IqW-a5-3iX" secondAttribute="trailing" id="lOE-7k-XZi"/>
                                                                             </constraints>
                                                                         </collectionViewCellContentView>
                                                                         <size key="customSize" width="78" height="85"/>
                                                                         <connections>
-                                                                            <outlet property="imageView" destination="IqW-a5-3iX" id="LYo-Hz-hOS"/>
-                                                                            <outlet property="label" destination="N06-hq-ZoV" id="Q8T-Ov-dzI"/>
+                                                                            <outlet property="endCircleView" destination="9Fv-j9-1uF" id="Oe9-L2-kBF"/>
+                                                                            <outlet property="imageView" destination="IqW-a5-3iX" id="9TH-7O-fZR"/>
+                                                                            <outlet property="label" destination="N06-hq-ZoV" id="ud8-XY-Oui"/>
                                                                         </connections>
                                                                     </collectionViewCell>
                                                                 </cells>

@@ -31,7 +31,7 @@ class SymptomVC: UIViewController {
         goToProductButton.setBorder(borderColor: UIColor.tealBlue, borderWidth: 2)
         
         // navigation bar drop shadow
-        navigationBar.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
+        navigationBar.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
         
         // 셀 사이즈 동적으로 조절해주기
         symptomTableView.rowHeight = UITableView.automaticDimension
@@ -66,6 +66,7 @@ extension SymptomVC : UICollectionViewDataSource {
 
         if indexPath.row == 0 {
             cell.categoryName.textColor = .tealBlue
+            cell.categoryLine.backgroundColor = .tealBlue
             
         }
         
@@ -90,6 +91,7 @@ extension SymptomVC : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         guard let cell = tabBarCollectionView.cellForItem(at: indexPath) as? SymptomCategoryCell else {return}
+        
         cell.categoryName.textColor = .lightGray
         cell.categoryLine.backgroundColor = .clear
         

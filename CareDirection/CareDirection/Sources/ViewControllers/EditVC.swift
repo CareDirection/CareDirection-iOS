@@ -14,6 +14,8 @@ class EditVC: UIViewController {
     
     @IBOutlet weak var idEditTextField: UIView!
     
+    @IBOutlet weak var navigationBar: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,8 @@ class EditVC: UIViewController {
         
         idEditTextField.makeRounded(cornerRadius: 6)
         idEditTextField.setBorder(borderColor: UIColor.veryLightPink, borderWidth: 1)
+        
+        navigationBar.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
         
     }
     

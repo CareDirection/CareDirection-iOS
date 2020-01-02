@@ -130,6 +130,7 @@
                     <connections>
                         <outlet property="finishButton" destination="9Hb-mF-0zG" id="dki-Vm-WUo"/>
                         <outlet property="idEditTextField" destination="omZ-cb-0NG" id="MvM-hE-ofE"/>
+                        <outlet property="navigationBar" destination="NWg-Ae-cH3" id="6Wc-jB-4RP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BH0-iV-F7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

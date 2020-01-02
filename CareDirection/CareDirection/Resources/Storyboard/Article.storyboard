@@ -198,6 +198,7 @@
                     </view>
                     <connections>
                         <outlet property="articleTableView" destination="fjw-Mv-YgC" id="RYH-1y-ve1"/>
+                        <outlet property="navigationBarView" destination="ET9-eq-2SI" id="m2F-Q9-PN0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKX-Px-0eo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

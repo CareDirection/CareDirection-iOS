@@ -18,7 +18,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="jjc-te-ExS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="MxR-EK-ogL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoImg" translatesAutoresizingMaskIntoConstraints="NO" id="MxR-EK-ogL">
                                 <rect key="frame" x="112.5" y="78" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="cYd-Oa-ltM"/>
@@ -48,7 +48,6 @@
                                     <constraint firstAttribute="height" constant="47" id="WMG-Dg-7ax"/>
                                     <constraint firstAttribute="width" constant="290" id="y1z-Mc-FFb"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -128,6 +127,6 @@
     </scenes>
     <resources>
         <image name="bg" width="375" height="667"/>
-        <image name="logo" width="150" height="150"/>
+        <image name="logoImg" width="150" height="150"/>
     </resources>
 </document>

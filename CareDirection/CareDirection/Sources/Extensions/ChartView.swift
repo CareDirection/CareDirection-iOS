@@ -8,19 +8,27 @@
 
 import Foundation
 import Macaw
+import UIKit
+
 
 class ChartView: MacawView {
-    static let lastFiveShows = createDummyData()
+    //static let lastFiveShows = createDummyData()
+    
+    static var ChartList : [MainChart] = []
     static let maxValue = 100
     static let maxValueLineHeight = 100
     static let lineWidth: Double = 550
     
+    static var chartList : [Chart] = []
+    
     static let dataDivisor = Double(maxValue/maxValueLineHeight)
-    static let adjustData: [Double] = lastFiveShows.map({$0.viewCount / dataDivisor})
+    //static let adjustData: [Double] = ChartList.map({$0.viewCount / dataDivisor})
     static var animations : [Animation] = []
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(node: ChartView.createChart(), coder: aDecoder)
+        
         backgroundColor = .clear
     }
 
@@ -34,7 +42,7 @@ class ChartView: MacawView {
     private static func addYAxisItems() -> [Node] {
         
         let maxLines = 2
-        let lineInterval = Int(maxValue/maxLines)
+        //let lineInterval = Int(maxValue/maxLines)
         let yAxisHeight: Double = 100
         let lineSpacing: Double = 30
         
@@ -60,9 +68,15 @@ class ChartView: MacawView {
         let chartBaseY: Double = 200
         var newNodes: [Node] = []
         
-        for i in 1...adjustData.count {
+        //print(adjustData.count)
+        
+        createDummyData()
+        
+        print(ChartList.count)
+        
+        for i in 1...ChartList.count {
             let x = (Double(i) * 50)
-            let valueText = Text(text: lastFiveShows[i - 1].showNumber, align: .max, baseline: .mid, place: .move(dx: x, dy: chartBaseY + 15))
+            let valueText = Text(text: ChartList[i - 1].nutrient_name, align: .max, baseline: .mid, place: .move(dx: x, dy: chartBaseY + 15))
             valueText.fill = Color.black
             
             newNodes.append(valueText)
@@ -73,15 +87,17 @@ class ChartView: MacawView {
         return newNodes
     }
     
-    static let palette = [0xffabab,0xffabab,0xb5e0e4, 0xcdcdcd, 0xcdcdcd, 0xffabab, 0xffabab,  0xffabab, 0xffabab, 0xffabab, 0xffabab].map { val in Color(val: val)}
+    static let palette = [0xffabab,0xffabab,0xb5e0e4, 0xb5e0e4, 0xb5e0e4,  0xb5e0e4, 0xb5e0e4, 0xb5e0e4, 0xb5e0e4,0xb5e0e4,0xffabab].map { val in Color(val: val)}
     
     private static func createBar() -> Group {
         
-        let items = adjustData.map { _ in Group() }
+        createDummyData()
+        
+        let items = ChartList.map { _ in Group() }
         
         animations = items.enumerated().map { (i: Int, item: Group) in
             item.contentsVar.animation(delay: Double(i) * 0.1) { t in
-                let height = adjustData[i] * t
+                let height = Double(ChartList[i].nutrient_percent) * t
                 let rect = RoundRect(rect:Rect(x: Double(i) * 50 + 25, y: 200 - height, w: 30, h: height), rx: 5, ry: 0)
                 let fill = LinearGradient(degree: 90, from: palette[i], to: palette[i].with(a: 1))
                 return [rect.fill(with: fill)]
@@ -93,8 +109,21 @@ class ChartView: MacawView {
     static func playAnimations() {
         animations.combine().play()
     }
-    private static func createDummyData() -> [Chart] {
-        let one = Chart(showNumber: "비타민C", viewCount: 12)
+    
+    static func createDummyData() {
+        /*
+        let one = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let two = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let three = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let four = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let five = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let six = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let seven = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let eight = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let nine = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let ten = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let eleven = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        /*let one = Chart(showNumber: "비타민C", viewCount: 12)
         let two = Chart(showNumber: "비타민D", viewCount: 20)
         let three = Chart(showNumber: "비타민A", viewCount: 40)
         let four = Chart(showNumber: "아미노산", viewCount: 60)
@@ -104,8 +133,31 @@ class ChartView: MacawView {
         let eight = Chart(showNumber: "비타민C", viewCount: 80)
         let nine = Chart(showNumber: "비타민C", viewCount: 80)
         let ten = Chart(showNumber: "비타민C", viewCount: 80)
-        let eleven = Chart(showNumber: "비타민C", viewCount: 180)
+        let eleven = Chart(showNumber: "비타민C", viewCount: 160)*/
 
-        return [one, two, three, four, five, six, seven, eight, nine, ten, eleven]
+        ChartList = [one, two, three, four, five, six, seven, eight, nine, ten, eleven]
+        */
+        print("here")
+        ChartService.shared.showMainChart() { data in
+            print(data)
+            switch data {
+            case .success(let res):
+                print("success")
+                self.ChartList = res as! [MainChart]
+            case .requestErr(let message):
+                //self.simpleAlert(title: "차트 정보 받아오기 실패", message: "\(message)")
+                print("\(message)")
+            case .pathErr:
+                 print(".pathErr")
+            case .serverErr:
+                print(".serverErr")
+            case .networkFail:
+                print("네트워크 오류")
+            case .dbErr:
+                print("db 오류")
+            }
+            
+        }
     }
 }
+

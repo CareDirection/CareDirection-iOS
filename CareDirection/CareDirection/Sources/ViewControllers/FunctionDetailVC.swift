@@ -18,6 +18,7 @@ class FunctionDetailVC: UIViewController {
     
     @IBOutlet weak var caringFunctionView: UIView!
     
+    @IBOutlet weak var allFunctionView: UIView!
     
     
     var functionalIngredientList : [FunctionalIngredient] = []
@@ -25,11 +26,11 @@ class FunctionDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
+        //navigationBar.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
         setIngredient()
         
-        caringFunctionView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.2, radius: 4)
         
+        navigationBar.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
         
     }
     
@@ -52,14 +53,38 @@ extension FunctionDetailVC : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        if collectionView == self.functionalCollectionView {
+        
             let cell = functionalCollectionView.dequeueReusableCell(withReuseIdentifier: "ingredientCell", for: indexPath) as! FunctionalIngredientCell
             
             let ingredient = functionalIngredientList[indexPath.row]
             
+        
             cell.imageView.image = ingredient.ingredientImage
             cell.label.text = ingredient.ingredientName
-            
+        
+        if indexPath.row == functionalIngredientList.count - 1 {
+            cell.endCircleView.isHidden = false
+        }
+        
+        
             return cell
+        } else {
+            let cell = functionalCollectionView2.dequeueReusableCell(withReuseIdentifier: "ingredientCell2", for: indexPath) as! FunctionalIngeredientCell2
+                
+                let ingredient = functionalIngredientList2[indexPath.row]
+                
+            
+                cell.imageView.image = ingredient.ingredientImage
+                cell.label.text = ingredient.ingredientName
+            
+            if indexPath.row == functionalIngredientList2.count - 1 {
+                cell.endCircleView.isHidden = false
+            }
+            
+            
+                return cell
+        }
     
     }
 }

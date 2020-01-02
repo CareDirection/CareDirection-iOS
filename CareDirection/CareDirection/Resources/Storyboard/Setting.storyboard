@@ -160,6 +160,7 @@
                         <viewLayoutGuide key="safeArea" id="wgB-Jc-Owa"/>
                     </view>
                     <connections>
+                        <outlet property="navigationBar" destination="B0h-ox-sEc" id="Lhx-eB-n6A"/>
                         <outlet property="profileImageView" destination="woI-sw-R0P" id="KTd-sB-lDf"/>
                     </connections>
                 </viewController>

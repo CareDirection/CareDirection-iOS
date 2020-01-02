@@ -1,19 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "lutain.png",
-      "idiom" : "universal",
-      "scale" : "1x"
+      "filename" : "vitamin.png",
+      "scale" : "1x",
+      "idiom" : "universal"
     },
     {
       "idiom" : "universal",
-      "filename" : "lutain@2x.png",
+      "filename" : "vitamin@2x.png",
       "scale" : "2x"
     },
     {
+      "filename" : "vitamin@3x.png",
       "scale" : "3x",
-      "idiom" : "universal",
-      "filename" : "lutain@3x.png"
+      "idiom" : "universal"
     }
   ],
   "info" : {

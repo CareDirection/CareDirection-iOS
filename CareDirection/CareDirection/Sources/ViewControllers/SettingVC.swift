@@ -12,10 +12,14 @@ class SettingVC: UIViewController {
 
     @IBOutlet weak var profileImageView: UIView!
     
+    @IBOutlet weak var navigationBar: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         profileImageView.makeRounded(cornerRadius: 59.5)
+        
+        navigationBar.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
 
     }
 

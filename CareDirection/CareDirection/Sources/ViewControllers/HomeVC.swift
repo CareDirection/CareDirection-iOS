@@ -48,10 +48,13 @@ class HomeVC: UIViewController {
     //1. 유저 리스트
     //2. 등록한 제품들 리스트
     //3. 기능성 원료
+    //4. 차트 리스트
     var userList : [User] = []
     var productList : [Product] = []
     var functionalIngredientList : [FunctionalIngredient] = []
     var functionalIngredientList2 : [FunctionalIngredient] = []
+    var chartList : [Chart] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,14 +69,21 @@ class HomeVC: UIViewController {
         userTableView.isHidden = true
         blurView.isHidden = true
         
-        
         // 전체적인 뷰 블록 나누기 효과
         ingredientView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
         functionView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
         takingView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
         
+//        setGraph()
+//        print(chartList)
+//        print(ChartView.ChartList)
+//        ChartView.ChartList = chartList
+//        print(ChartView.ChartList)
         // 차트 뷰 나타내기
         ChartView.playAnimations()
+        //ChartView.createDummyData() = setGraph()
+        
+        //chartView.chartlise
         // table view customize
         userTableView.clipsToBounds = true
         userTableView.layer.cornerRadius = 20
@@ -95,6 +105,21 @@ class HomeVC: UIViewController {
         // 복용하는 제품이 없을 시 나타내는 뷰
         noRegistView.makeRounded(cornerRadius: 18)
         noRegistView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
+        
+        //setGraph()
+        //chartView.chartList = chartList
+        
+        //setGraph()
+        //ChartView.ChartList = chartList
+        //print(chartList)
+        
+        //print("Home view : ")
+        //print(chartList)
+        //print("=====")
+        //print(ChartView.ChartList)
+        //ChartView.ChartList = chartList
+       
+        
         
     }
     
@@ -240,11 +265,10 @@ extension HomeVC : UICollectionViewDataSource {
         
         cell.productName.text = product.productName
         cell.productImage.image = product.productImage
-            //cell.productImage.imageFromUrl(product.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
         cell.productCheckImage.image = product.checkImage
         
         return cell
-    } else {
+        } else if collectionView ==  self.functionalCollectionView {
             let cell = functionalCollectionView.dequeueReusableCell(withReuseIdentifier: "ingredientCell", for: indexPath) as! FunctionalIngredientCell
             
             let ingredient = functionalIngredientList[indexPath.row]
@@ -252,8 +276,27 @@ extension HomeVC : UICollectionViewDataSource {
             cell.imageView.image = ingredient.ingredientImage
             cell.label.text = ingredient.ingredientName
             
+            if indexPath.row == functionalIngredientList.count - 1 {
+                cell.endCircleView.isHidden = false
+            }
+            
+            
             return cell
-    }
+        } else {
+            let cell = functionalCollectionView2.dequeueReusableCell(withReuseIdentifier: "ingredientCell2", for: indexPath) as! FunctionalIngeredientCell2
+            
+            let ingredient = functionalIngredientList2[indexPath.row]
+            
+            cell.imageView.image = ingredient.ingredientImage
+            cell.label.text = ingredient.ingredientName
+            
+            if indexPath.row == functionalIngredientList2.count - 1 {
+                cell.endCircleView.isHidden = false
+            }
+            
+            
+            return cell
+        }
     
     }
 }
@@ -305,5 +348,22 @@ extension HomeVC {
         
         functionalIngredientList2 = [ingredient1, ingredient2]
     }
+    
+    /*
+    func setGraph() {
+        let one = Chart(showNumber: "야 말 듣니?", viewCount: 12)
+        let two = Chart(showNumber: "비타민D", viewCount: 20)
+        let three = Chart(showNumber: "비타민A", viewCount: 40)
+        let four = Chart(showNumber: "아미노산", viewCount: 60)
+        let five = Chart(showNumber: "오메가3", viewCount: 66)
+        let six = Chart(showNumber: "철분", viewCount: 70)
+        let seven = Chart(showNumber: "비타민C", viewCount: 80)
+        let eight = Chart(showNumber: "비타민C", viewCount: 80)
+        let nine = Chart(showNumber: "비타민C", viewCount: 80)
+        let ten = Chart(showNumber: "비타민C", viewCount: 80)
+        let eleven = Chart(showNumber: "비타민C", viewCount: 160)
+
+        chartList = [one, two, three, four, five, six, seven, eight, nine, ten, eleven]
+    }*/
     
 }

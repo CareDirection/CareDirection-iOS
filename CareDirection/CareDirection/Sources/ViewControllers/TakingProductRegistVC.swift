@@ -20,6 +20,8 @@ class TakingProductRegistVC: UIViewController {
     
     @IBOutlet weak var datePickerTotalView: UIView!
     
+    @IBOutlet weak var navigationBar: UIView!
+    
     var takingProductList: [TakingProduct] = []
     
     override func viewDidLoad() {
@@ -35,6 +37,8 @@ class TakingProductRegistVC: UIViewController {
         datePickerView.addTarget(self, action: #selector(changed), for: .valueChanged)
         
         datePickerTotalView.isHidden = true
+        
+        navigationBar.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
 
     }
     

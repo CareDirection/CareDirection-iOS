@@ -39,7 +39,8 @@ class IngredientStudyVC: UIViewController {
         super.viewDidLoad()
         
         // 전체적인 view block들 customize
-        navigationBar.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 1)
+        navigationBar.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
+        
         ingredientDetailView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 1)
         symptomView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 1)
         articleView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 1)
@@ -75,7 +76,7 @@ class IngredientStudyVC: UIViewController {
           return
         }
         
-        //dvc.symptomList = symptomList[1]
+        dvc.categoryList = symptomList
         
         present(dvc, animated: true)
     }
@@ -88,7 +89,7 @@ class IngredientStudyVC: UIViewController {
         }
         
         //dvc.symptomList = symptomList[2]
-        
+         dvc.categoryList = symptomList
         present(dvc, animated: true)
     }
     
@@ -100,7 +101,7 @@ class IngredientStudyVC: UIViewController {
         }
         
         //dvc.symptomList = symptomList[3]
-        
+         dvc.categoryList = symptomList
         present(dvc, animated: true)
     }
     
@@ -112,7 +113,7 @@ class IngredientStudyVC: UIViewController {
         }
         
         //dvc.symptomList = symptomList[4]
-        
+        dvc.categoryList = symptomList
         present(dvc, animated: true)
     }
     
@@ -124,7 +125,7 @@ class IngredientStudyVC: UIViewController {
         }
         
         //dvc.symptomList = symptomList[5]
-        
+        dvc.categoryList = symptomList
         present(dvc, animated: true)
     }
     
@@ -136,7 +137,7 @@ class IngredientStudyVC: UIViewController {
         }
         
         //dvc.symptomList = symptomList[6]
-        
+        dvc.categoryList = symptomList
         present(dvc, animated: true)
     }
     
@@ -148,7 +149,7 @@ class IngredientStudyVC: UIViewController {
         }
         
         //dvc.symptomList = symptomList[7]
-        
+         dvc.categoryList = symptomList
         present(dvc, animated: true)
     }
     
@@ -160,7 +161,7 @@ class IngredientStudyVC: UIViewController {
         }
         
         //dvc.symptomList = symptomList[8]
-        
+        dvc.categoryList = symptomList
         present(dvc, animated: true)
     }
 }

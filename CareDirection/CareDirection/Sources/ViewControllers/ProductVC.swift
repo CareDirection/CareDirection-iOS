@@ -35,8 +35,8 @@ class ProductVC: UIViewController {
     var resultCountViewHeight: CGFloat?
     let pickerList: [String] = ["제품", "성분"]
     var selectedCategory: String = "제품"
-    var tabList: [String] = ["a", "b", "c", "d"]
-    var productList: [String] = ["0", "1"]
+    var tabList: [TapData] = []
+    var productList: [SearchList] = []
     var resultCountViewDefaultConstraint: CGFloat?
     
     
@@ -93,12 +93,59 @@ class ProductVC: UIViewController {
             moreProductViewBtn.isHidden = false
             self.topProductTVTopConstraint.constant = -(resultCountViewHeight!)
             backBtn.isHidden = true
+            
+            ProductTapService.shared.getTopTapList(){ data in
+                switch data{
+                case .success(let data):
+                    self.tabList = data as! [TapData]
+                    self.topTabCV.reloadData()
+                    //self.tabList[self.selectedTapIndex].tabName
+                    ProductTapService.shared.getProductTop2List(component: self.tabList[self.selectedTapIndex].tabName) { data in
+                        switch data {
+                        case .success(let data):
+                            self.productList = data as! [SearchList]
+                            self.topProductTV.reloadData()
+                            print(self.productList)
+
+                        case .pathErr:
+                            print("pathErr")
+                        case .serverErr:
+                            print("server err")
+                        default:
+                            break
+                        }
+                    }
+                case .pathErr:
+                    print("path err")
+                case .serverErr:
+                    print("server err")
+                default:
+                    break
+                }
+            }
+            
         case .searchView:
             resultCountView.isHidden = false
             resultCountViewTopConstraint.constant = 0
             moreProductViewBtn.isHidden = true
             self.topProductTVTopConstraint.constant = 0
             backBtn.isHidden = false
+            
+            ProductTapService.shared.searchProduct(keyword: searchTxtView.text ?? " ") { data in
+                switch data {
+                case .success(let data):
+                    self.productList = data as! [SearchList]
+                    self.topProductTV.reloadData()
+                    print(self.productList)
+
+                case .pathErr:
+                    print("pathErr")
+                case .serverErr:
+                    print("server err")
+                default:
+                    break
+                }
+            }
         }
         
         resultViewCountLbl.text = "\(productList.count)"
@@ -182,7 +229,8 @@ extension ProductVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopTabBarCVCell", for: indexPath) as! TopTabBarCVCell
-        cell.tabNameLbl.text = tabList[indexPath.row]
+        cell.tabNameLbl.text = tabList[indexPath.row].tabName
+        
         if indexPath.row == selectedTapIndex{
             cell.tabHighlightLbl.isHidden = false
             cell.tabNameLbl.textColor = UIColor.tealBlue
@@ -234,7 +282,17 @@ extension ProductVC: UITableViewDataSource{
         switch viewType {
         case .defaultView:
             let cell = tableView.dequeueReusableCell(withIdentifier: "BestProductTVCell") as! BestProductTVCell
-            cell.nameLbl.text = productList[indexPath.row]
+            cell.nameLbl.text = productList[indexPath.row].productName
+            cell.companyNameLbl.text = productList[indexPath.row].productCompanyName
+            cell.priceLbl.text = "\(productList[indexPath.row].productQuantityPrice)"
+            cell.img.imageFromUrl(productList[indexPath.row].imageKey, defaultImgPath: "logo")
+            if productList[indexPath.row].productIsImport == 1 {
+                cell.purchaseCountryLbl.isHidden = false
+            }
+            else {
+                cell.purchaseCountryLbl.isHidden = true
+            }
+            
             if indexPath.row == 0 {
                 cell.rankImg.image = UIImage.init(named: "imgNumber1")
             }else{
@@ -244,7 +302,7 @@ extension ProductVC: UITableViewDataSource{
         case .searchView:
             if productList.count != 0{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "BestProductTVCell") as! BestProductTVCell
-                cell.nameLbl.text = productList[indexPath.row]
+                cell.nameLbl.text = productList[indexPath.row].productName
                 cell.rankImg.isHidden = true
                 return cell
             }else{

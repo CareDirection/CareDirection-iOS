@@ -119,15 +119,36 @@ class SurveyInfoVC: UIViewController {
         userSexIndex = 1
         checkSexGroupBtn(selectSexIndex: userSexIndex)
     }
+    
     @IBAction func selectedNextBtn(_ sender: Any) {
-        let surveyDiseaseSB = UIStoryboard.init(name: "SurveyDisease", bundle: nil)
         
-        let dvc = surveyDiseaseSB.instantiateViewController(withIdentifier: "SurveyDiseaseVC") as! SurveyDiseaseVC
         
-        dvc.modalPresentationStyle = .fullScreen
-        dvc.name = self.userName!
-        self.present(dvc, animated: true)
-        
+        SurveyService.shared.personalInfo(name: userName!, gender: userSexIndex, birth: selectedYear!){ data in
+            print("----------------------------")
+            switch data {
+            case .success(let msg):
+                print(msg)
+                let surveyDiseaseSB = UIStoryboard.init(name: "SurveyDisease", bundle: nil)
+                
+                let dvc = surveyDiseaseSB.instantiateViewController(withIdentifier: "SurveyDiseaseVC") as! SurveyDiseaseVC
+                
+                dvc.modalPresentationStyle = .fullScreen
+                dvc.name = self.userName!
+                
+                self.present(dvc, animated: true)
+                
+            case .requestErr(let msg):
+                print(msg)
+            case .pathErr:
+                print("path err")
+            case .serverErr:
+                break
+            case .networkFail:
+                break
+            case .dbErr:
+                break
+            }
+        }
     }
 }
 

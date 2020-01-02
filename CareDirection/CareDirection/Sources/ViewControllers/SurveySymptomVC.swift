@@ -15,7 +15,8 @@ class SurveySymptomVC: UIViewController {
     @IBOutlet var nextBtn: UIButton!
     
     var selectedIndexList: [Int] = []
-    var symptomList:[String] = ["증상A", "증상A", "증상A", "증상A", "증상A", "증상A", "증상A", "증상A", "증상A", "없음"]
+    var symptomList:[String] = ["간건강", "눈건강", "두뇌활동", "면역력", "뼈", "소화기능", "운동보조", "피로회복", "혈행개선", "없음"]
+    var lifeCylcleBody: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +38,30 @@ class SurveySymptomVC: UIViewController {
         
     }
     
+    func makeSymptomString() -> String{
+           selectedIndexList.sort()
+           var value: String = ""
+           
+           for index in 0..<selectedIndexList.count {
+               if index == 0 {
+                   value += "\(symptomList[selectedIndexList[index]])"
+               }
+               else{
+                   value += ",\(symptomList[selectedIndexList[index]])"
+               }
+               
+           }
+           return value
+       }
+    
     @IBAction func selectedNextBtn(_ sender: Any) {
         let surveyLifeStyleEntry = UIStoryboard.init(name: "SurveyLifeStyleEntry", bundle: nil)
         let dvc = surveyLifeStyleEntry.instantiateViewController(withIdentifier: "SurveyLifeStyleEntryVC") as! SurveyLifeStyleEntryVC
         
         dvc.name = self.name
+        lifeCylcleBody.append(self.makeSymptomString())
+        dvc.lifeCylcleBody = self.lifeCylcleBody
+        
         dvc.modalPresentationStyle = .fullScreen
         self.present(dvc, animated: true)
     }

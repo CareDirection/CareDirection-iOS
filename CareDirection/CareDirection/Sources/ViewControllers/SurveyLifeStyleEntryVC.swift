@@ -11,6 +11,7 @@ import UIKit
 class SurveyLifeStyleEntryVC: UIViewController {
     @IBOutlet var nextBtn: UIButton!
     var name:String!
+    var lifeCylcleBody: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class SurveyLifeStyleEntryVC: UIViewController {
         
         dvc.modalPresentationStyle = .fullScreen
         dvc.userName = self.name
+        dvc.lifeCylcleBody = self.lifeCylcleBody
         self.present(dvc, animated: true)
     }
 }

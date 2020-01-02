@@ -12,10 +12,13 @@ class HomeVC: UIViewController {
     
     // 제품 나타내는 collection view
     @IBOutlet weak var productCollectionView: UICollectionView!
+    
+    
     // 기능성 원료 나타내는 collection view
     @IBOutlet weak var functionalCollectionView: UICollectionView!
-    
+    @IBOutlet weak var functionalLabel: UILabel!
     @IBOutlet weak var functionalCollectionView2: UICollectionView!
+    @IBOutlet weak var functionalLabel2: UILabel!
     
     
     // 문제의 스크롤뷰..ㅎ
@@ -51,10 +54,11 @@ class HomeVC: UIViewController {
     //4. 차트 리스트
     var userList : [User] = []
     var productList : [Product] = []
-    var functionalIngredientList : [FunctionalIngredient] = []
-    var functionalIngredientList2 : [FunctionalIngredient] = []
-    var chartList : [Chart] = []
+    var functionalIngredientList : [FunctionalEfficacy] = []
+    var functionalIngredientList2 : [FunctionalEfficacy] = []
+    var chartList : [MainChart] = []
     
+    var functionalIngredient : ResponseNutrient!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,11 +78,10 @@ class HomeVC: UIViewController {
         functionView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
         takingView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
         
-//        setGraph()
-//        print(chartList)
-//        print(ChartView.ChartList)
-//        ChartView.ChartList = chartList
-//        print(ChartView.ChartList)
+        setGraph()
+        
+        print(chartList)
+        //setupChartData()
         // 차트 뷰 나타내기
         ChartView.playAnimations()
         //ChartView.createDummyData() = setGraph()
@@ -106,22 +109,40 @@ class HomeVC: UIViewController {
         noRegistView.makeRounded(cornerRadius: 18)
         noRegistView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
         
-        //setGraph()
-        //chartView.chartList = chartList
-        
-        //setGraph()
-        //ChartView.ChartList = chartList
-        //print(chartList)
-        
-        //print("Home view : ")
-        //print(chartList)
-        //print("=====")
-        //print(ChartView.ChartList)
-        //ChartView.ChartList = chartList
-       
-        
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        NutrientService.shared.showNutrient() {
+            [weak self]
+            data in
+            guard let `self` = self else { return }
+            
+            switch data {
+            case .success(let res) :
+                self.functionalIngredient = res as! ResponseNutrient
+                
+                self.functionalLabel.text = self.functionalIngredient.data.nutrient
+                
+                self.functionalIngredientList = self.functionalIngredient.data.efficacy!
+                
+                self.functionalCollectionView.reloadData()
+                
+            case .requestErr(_):
+                print("request err")
+            case .pathErr:
+                print("path err")
+            case .serverErr:
+                print("server err")
+            case .networkFail:
+                print("network fail")
+            case .dbErr:
+                print("db err")
+            }
+            
+        }
+    }
+    
+    
     
     
     // 유저 변경 drop down button
@@ -273,8 +294,13 @@ extension HomeVC : UICollectionViewDataSource {
             
             let ingredient = functionalIngredientList[indexPath.row]
             
-            cell.imageView.image = ingredient.ingredientImage
-            cell.label.text = ingredient.ingredientName
+            
+            //cell.imageView.image = ingredient.
+            //cell.label.text = ingredient.ingredientName
+            
+            cell.label.text = ingredient.efficacy_name
+            print(ingredient.efficacy_name)
+            cell.imageView.image = UIImage(named: ingredient.efficacy_name)
             
             if indexPath.row == functionalIngredientList.count - 1 {
                 cell.endCircleView.isHidden = false
@@ -287,8 +313,8 @@ extension HomeVC : UICollectionViewDataSource {
             
             let ingredient = functionalIngredientList2[indexPath.row]
             
-            cell.imageView.image = ingredient.ingredientImage
-            cell.label.text = ingredient.ingredientName
+            //cell.imageView.image = ingredient.ingredientImage
+            //cell.label.text = ingredient.ingredientName
             
             if indexPath.row == functionalIngredientList2.count - 1 {
                 cell.endCircleView.isHidden = false
@@ -340,17 +366,20 @@ extension HomeVC {
     }
     
     func setIngredient() {
-        let ingredient1 = FunctionalIngredient(image: "liver60", name: "간건강")
-        let ingredient2 = FunctionalIngredient(image: "liver60", name: "면역력")
-        let ingredient3 = FunctionalIngredient(image: "liver60", name: "피로회복")
+//        let ingredient1 = FunctionalIngredient(image: "liver60", name: "간건강")
+//        let ingredient2 = FunctionalIngredient(image: "liver60", name: "면역력")
+//        let ingredient3 = FunctionalIngredient(image: "liver60", name: "피로회복")
+//
+//        functionalIngredientList = [ingredient1, ingredient2, ingredient3]
+//
+//        functionalIngredientList2 = [ingredient1, ingredient2]
         
-        functionalIngredientList = [ingredient1, ingredient2, ingredient3]
         
-        functionalIngredientList2 = [ingredient1, ingredient2]
     }
     
-    /*
+    
     func setGraph() {
+        /*
         let one = Chart(showNumber: "야 말 듣니?", viewCount: 12)
         let two = Chart(showNumber: "비타민D", viewCount: 20)
         let three = Chart(showNumber: "비타민A", viewCount: 40)
@@ -364,6 +393,51 @@ extension HomeVC {
         let eleven = Chart(showNumber: "비타민C", viewCount: 160)
 
         chartList = [one, two, three, four, five, six, seven, eight, nine, ten, eleven]
-    }*/
+        
+        let one = MainChart(nutrient_name: "야", nutrient_percent: 12)
+        let two = MainChart(nutrient_name: "야", nutrient_percent: 12)
+        let three = MainChart(nutrient_name: "야", nutrient_percent: 12)
+        let four = MainChart(nutrient_name: "야", nutrient_percent: 12)
+        let five = MainChart(nutrient_name: "야", nutrient_percent: 12)
+        let six = MainChart(nutrient_name: "야", nutrient_percent: 12)
+        let seven = MainChart(nutrient_name: "야", nutrient_percent: 12)
+        let eight = MainChart(nutrient_name: "야", nutrient_percent: 12)
+        let nine = MainChart(nutrient_name: "야", nutrient_percent: 12)
+        let ten = MainChart(nutrient_name: "야", nutrient_percent: 12)
+        let eleven = MainChart(nutrient_name: "야", nutrient_percent: 12)
+        */
+        
+        
+        
+        ChartService.shared.showMainChart() {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            print(data)
+            switch data {
+                
+            case .success(let res):
+                //self.ChartList = res as! [MainChart]
+                self.chartList = res as! [MainChart]
+                print("success")
+            case .requestErr(let message):
+                //self.simpleAlert(title: "차트 정보 받아오기 실패", message: "\(message)")
+                print("\(message)")
+            case .pathErr:
+                 print(".pathErr")
+            case .serverErr:
+                print(".serverErr")
+            case .networkFail:
+                print("네트워크 오류")
+            case .dbErr:
+                print("db 오류")
+            }
+            
+        }
+        
+        
+    }
     
 }

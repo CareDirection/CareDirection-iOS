@@ -374,6 +374,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="Lty-k7-LUg" id="vPK-Rv-66k"/>
+                                    <outlet property="delegate" destination="Lty-k7-LUg" id="PNt-RU-GDi"/>
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2l-Fw-nS2">

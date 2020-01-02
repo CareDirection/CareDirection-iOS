@@ -84,6 +84,7 @@ extension TakingProductRegistVC : UICollectionViewDataSource {
         
         let product = takingProductList[indexPath.row]
         
+        
         if indexPath.row == takingProductList.count - 1 {
             return addCell
         } else {
@@ -100,8 +101,23 @@ extension TakingProductRegistVC : UICollectionViewDataSource {
             return cell
         }
     }
-    
-    
+}
+
+extension TakingProductRegistVC : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if indexPath.row == takingProductList.count - 1 {
+        
+            print("clicked")
+        let addStoryboard = UIStoryboard.init(name: "ProductSearch", bundle: nil)
+        
+        guard let dvc = addStoryboard.instantiateViewController(withIdentifier: "ProductSearch") as? ProductSearchVC else {
+            return
+        }
+        
+        present(dvc, animated: true)
+        }
+    }
 }
 
 extension TakingProductRegistVC {

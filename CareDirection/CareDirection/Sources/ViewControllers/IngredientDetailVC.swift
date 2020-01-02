@@ -38,6 +38,12 @@ class IngredientDetailVC: UIViewController {
     // 제품 보러가기 버튼 클릭시 최저가 있는 뷰로 이동하는 버튼 액션
     @IBAction func goToProductClick(_ sender: Any) {
         
+        let goProduct = UIStoryboard.init(name: "Product", bundle: nil)
+        
+        guard let dvc = goProduct.instantiateViewController(withIdentifier: "Product") as? ProductVC else {
+          return
+        }
+        present(dvc, animated: true)
     }
     
     // back button action

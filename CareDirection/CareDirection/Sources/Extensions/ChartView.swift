@@ -76,7 +76,7 @@ class ChartView: MacawView {
         
         for i in 1...ChartList.count {
             let x = (Double(i) * 50)
-            let valueText = Text(text: ChartList[i - 1].nutrient_name, align: .max, baseline: .mid, place: .move(dx: x, dy: chartBaseY + 15))
+            let valueText = Text(text: ChartList[i-1].nutrient_name, align: .mid, baseline: .mid, place: .move(dx: x, dy: chartBaseY + 15))
             valueText.fill = Color.black
             
             newNodes.append(valueText)
@@ -87,13 +87,27 @@ class ChartView: MacawView {
         return newNodes
     }
     
-    static let palette = [0xffabab,0xffabab,0xb5e0e4, 0xb5e0e4, 0xb5e0e4,  0xb5e0e4, 0xb5e0e4, 0xb5e0e4, 0xb5e0e4,0xb5e0e4,0xffabab].map { val in Color(val: val)}
+    static var palette = [0xffabab,0xffabab,0xb5e0e4, 0xb5e0e4, 0xb5e0e4,  0xb5e0e4, 0xb5e0e4, 0xb5e0e4, 0xb5e0e4,0xb5e0e4,0xffabab].map { val in Color(val: val)}
+    
     
     private static func createBar() -> Group {
         
-        createDummyData()
+//        createDummyData()
         
         let items = ChartList.map { _ in Group() }
+        
+        var customPalette : Int
+        
+        for i in 0..<11 {
+            if ChartList[i].nutrient_percent <= 30 {
+                //palette[i] = [0xffabab].map {val in Color(val: val)}
+            } else if ChartList[i].nutrient_percent > 100{
+                //palette[i] = 0xffabab
+            } else {
+                //palette[i] = 0xb5e0e4
+            }
+        }
+        
         
         animations = items.enumerated().map { (i: Int, item: Group) in
             item.contentsVar.animation(delay: Double(i) * 0.1) { t in
@@ -111,38 +125,34 @@ class ChartView: MacawView {
     }
     
     static func createDummyData() {
-        /*
-        let one = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
-        let two = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+
+        let one = MainChart(nutrient_name: "비타민A", nutrient_percent: 12)
+        let two = MainChart(nutrient_name: "비타민B2", nutrient_percent: 12)
         let three = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
-        let four = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
-        let five = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
-        let six = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
-        let seven = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
-        let eight = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
-        let nine = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
-        let ten = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let four = MainChart(nutrient_name: "비타민D", nutrient_percent: 12)
+        let five = MainChart(nutrient_name: "비타민E", nutrient_percent: 12)
+        let six = MainChart(nutrient_name: "칼슘", nutrient_percent: 12)
+        let seven = MainChart(nutrient_name: "칼륨", nutrient_percent: 12)
+        let eight = MainChart(nutrient_name: "셀레늄", nutrient_percent: 12)
+        let nine = MainChart(nutrient_name: "철분", nutrient_percent: 12)
+        let ten = MainChart(nutrient_name: "염산", nutrient_percent: 12)
         let eleven = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
-        /*let one = Chart(showNumber: "비타민C", viewCount: 12)
-        let two = Chart(showNumber: "비타민D", viewCount: 20)
-        let three = Chart(showNumber: "비타민A", viewCount: 40)
-        let four = Chart(showNumber: "아미노산", viewCount: 60)
-        let five = Chart(showNumber: "오메가3", viewCount: 66)
-        let six = Chart(showNumber: "철분", viewCount: 70)
-        let seven = Chart(showNumber: "비타민C", viewCount: 80)
-        let eight = Chart(showNumber: "비타민C", viewCount: 80)
-        let nine = Chart(showNumber: "비타민C", viewCount: 80)
-        let ten = Chart(showNumber: "비타민C", viewCount: 80)
-        let eleven = Chart(showNumber: "비타민C", viewCount: 160)*/
 
         ChartList = [one, two, three, four, five, six, seven, eight, nine, ten, eleven]
-        */
-        print("here")
-        ChartService.shared.showMainChart() { data in
+        
+        /* ------- */
+        ChartService.shared.showMainChart() {
+            
+            //[weak self]
+            
+            data in
             print(data)
+            
+            //guard let `self` = self else { return }
+            
             switch data {
             case .success(let res):
-                print("success")
+                print("in chart view connection success")
                 self.ChartList = res as! [MainChart]
             case .requestErr(let message):
                 //self.simpleAlert(title: "차트 정보 받아오기 실패", message: "\(message)")

@@ -10,6 +10,8 @@ import UIKit
 
 class ArticleCell: UICollectionViewCell {
     
+    var articleIdx : Int!
+    
     @IBOutlet weak var articleImage: UIImageView!
     
     @IBOutlet weak var articleTitleLabel: UILabel!

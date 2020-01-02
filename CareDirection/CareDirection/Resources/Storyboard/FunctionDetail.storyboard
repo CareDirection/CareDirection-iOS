@@ -242,6 +242,9 @@
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymw-AU-q0a">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
+                                                                                <connections>
+                                                                                    <action selector="liverButton:" destination="bbL-hR-Mb0" eventType="touchUpInside" id="Xhn-ri-z1B"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -273,6 +276,9 @@
                                                                             </imageView>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHX-7L-PtF">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
+                                                                                <connections>
+                                                                                    <action selector="fatigueButton:" destination="bbL-hR-Mb0" eventType="touchUpInside" id="631-KV-Q5B"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="피로회복" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbX-5k-J2q">
                                                                                 <rect key="frame" x="0.0" y="74" width="66" height="15"/>
@@ -324,6 +330,9 @@
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jr5-tR-Bdh">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
+                                                                                <connections>
+                                                                                    <action selector="eyeButton:" destination="bbL-hR-Mb0" eventType="touchUpInside" id="7Be-hj-RAl"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -370,6 +379,9 @@
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKh-iM-gFr">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
+                                                                                <connections>
+                                                                                    <action selector="bloodButton:" destination="bbL-hR-Mb0" eventType="touchUpInside" id="0eP-DZ-skn"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -411,6 +423,9 @@
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e8-cF-lMu">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
+                                                                                <connections>
+                                                                                    <action selector="immunityButton:" destination="bbL-hR-Mb0" eventType="touchUpInside" id="3On-yl-jjc"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -452,6 +467,9 @@
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inb-Ba-saE">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
+                                                                                <connections>
+                                                                                    <action selector="digestButton:" destination="bbL-hR-Mb0" eventType="touchUpInside" id="I2D-Sy-XDn"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -498,6 +516,9 @@
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oQ-1I-qoO">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
+                                                                                <connections>
+                                                                                    <action selector="brainButton:" destination="bbL-hR-Mb0" eventType="touchUpInside" id="bcm-Hg-Tkx"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -539,6 +560,9 @@
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRn-ke-a74">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
+                                                                                <connections>
+                                                                                    <action selector="muscleButton:" destination="bbL-hR-Mb0" eventType="touchUpInside" id="BEh-DQ-hGX"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -580,6 +604,9 @@
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxf-4T-7rN">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="91"/>
+                                                                                <connections>
+                                                                                    <action selector="boneButton:" destination="bbL-hR-Mb0" eventType="touchUpInside" id="9ig-jh-ydg"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

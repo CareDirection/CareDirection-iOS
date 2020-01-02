@@ -182,10 +182,14 @@ extension IngredientStudyVC : UICollectionViewDataSource {
             
             let article = articleList[indexPath.row]
             
-            cell.articleImage.image = article.articleImage
-            cell.articleTitleLabel.text = article.articleTitle
+            //cell.articleImage.image = article.articleImage
+            //cell.articleTitleLabel.text = article.articleTitle
+            
+            cell.articleImage.imageFromUrl(article.image_key, defaultImgPath: "https://care-direction.s3.ap-northeast-2.amazonaws.com/product/resize/resized-bvSVoq6HZ.1577643187140.JPG")
+            cell.articleTitleLabel.text = article.article_title
             
             return cell
+            
         } else {
             let cell = ingredientCollectionView.dequeueReusableCell(withReuseIdentifier: "ingredientCell", for: indexPath) as! IngredientStudyCell
             
@@ -220,9 +224,10 @@ extension IngredientStudyVC : UICollectionViewDelegate {
                 return
             }
             
-            dvc.articleList = articleList[indexPath.row]
+            dvc.articleIdx = articleList[indexPath.row].article_idx
             
             self.present(dvc, animated: true)
+            
         }
     }
 }
@@ -240,12 +245,39 @@ extension IngredientStudyVC {
     }
     
     func setArticle() {
-        let article1 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "", detailContent: "", detailContentTitle: "", detailContentImage: "", detailContentPara: "")
-        let article2 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "", detailContent: "", detailContentTitle: "", detailContentImage: "", detailContentPara: "")
-        let article3 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "", detailContent: "", detailContentTitle: "", detailContentImage: "", detailContentPara: "")
-        let article4 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "flickrMarcoVerch", detailContent: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고, 온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이 영양제를 잘못 먹으면\n제 효과를 보지 못하거나 독이 될 수도 있다는데요.", detailContentTitle: "감기예방에 좋은 비타민 C", detailContentImage: "flickrMarcoVerch", detailContentPara: "감기약 방부제로 사용되는 벤조산나트륨이 비타민C를\n만나면 인체에 해로운 성분이 발생할 수 있습니다.\n가능성이 작다고는 하지만 따로 먹는 것이 좋겠죠?")
-        
-        articleList = [article1, article2, article3, article4]
+//        let article1 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "", detailContent: "", detailContentTitle: "", detailContentImage: "", detailContentPara: "")
+//        let article2 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "", detailContent: "", detailContentTitle: "", detailContentImage: "", detailContentPara: "")
+//        let article3 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "", detailContent: "", detailContentTitle: "", detailContentImage: "", detailContentPara: "")
+//        let article4 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "flickrMarcoVerch", detailContent: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고, 온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이 영양제를 잘못 먹으면\n제 효과를 보지 못하거나 독이 될 수도 있다는데요.", detailContentTitle: "감기예방에 좋은 비타민 C", detailContentImage: "flickrMarcoVerch", detailContentPara: "감기약 방부제로 사용되는 벤조산나트륨이 비타민C를\n만나면 인체에 해로운 성분이 발생할 수 있습니다.\n가능성이 작다고는 하지만 따로 먹는 것이 좋겠죠?")
+//
+//        articleList = [article1, article2, article3, article4]
+        ArticleService.shared.showArticleMain() {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                
+                self.articleList = res as! [Article]
+                self.articleCollectionView.reloadData()
+                
+            case .requestErr(let message):
+                print("request Err")
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                print("network Err")
+            case .dbErr:
+                print("db err")
+            }
+        }
         
     }
     

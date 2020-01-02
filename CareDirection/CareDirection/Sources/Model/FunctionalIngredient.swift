@@ -12,9 +12,18 @@ import UIKit
 struct FunctionalIngredient {
     var ingredientImage : UIImage?
     var ingredientName : String
-    
+
     init(image : String, name: String) {
         self.ingredientImage = UIImage(named: image)
         self.ingredientName = name
     }
+}
+
+struct FunctionalNutrient : Codable {
+    let nutrient: String
+    let efficacy: [FunctionalEfficacy]?
+}
+
+struct FunctionalEfficacy : Codable {
+    let efficacy_name : String
 }

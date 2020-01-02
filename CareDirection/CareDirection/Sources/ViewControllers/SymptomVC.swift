@@ -46,8 +46,18 @@ class SymptomVC: UIViewController {
         
     }
     
-
+    @IBAction func goToProduct(_ sender: Any) {
+        let product = UIStoryboard.init(name: "Product", bundle: nil)
+        
+        guard let dvc = product.instantiateViewController(withIdentifier: "Product") as? ProductVC else {
+          return
+        }
+        present(dvc, animated: true)
+    }
+    
 }
+
+
 
 extension SymptomVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -66,9 +76,9 @@ extension SymptomVC : UICollectionViewDataSource {
 
         if indexPath.row == 0 {
             cell.categoryName.textColor = .tealBlue
-            cell.categoryLine.backgroundColor = .tealBlue
-            
+            cell.categoryLine.isHidden = false
         }
+        
         
         
         return cell
@@ -86,6 +96,8 @@ extension SymptomVC : UICollectionViewDelegate {
         cell.categoryName.textColor = UIColor.tealBlue
         cell.categoryLine.backgroundColor = UIColor.tealBlue
         
+        cell.categoryLine.isHidden = false
+        
         print("clicked")
     }
     
@@ -94,7 +106,7 @@ extension SymptomVC : UICollectionViewDelegate {
         
         cell.categoryName.textColor = .lightGray
         cell.categoryLine.backgroundColor = .clear
-        
+        cell.categoryLine.isHidden = true
         
         print("deselected!")
     }

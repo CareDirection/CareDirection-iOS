@@ -23,6 +23,8 @@ class FunctionDetailVC: UIViewController {
     
     var functionalIngredientList : [FunctionalIngredient] = []
     var functionalIngredientList2 : [FunctionalIngredient] = []
+    var symptomList : [Symptom] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +40,132 @@ class FunctionDetailVC: UIViewController {
         self.dismiss(animated: true)
     }
     
-
+    @IBAction func liverButton(_ sender: Any) {
+        let symptomStoryboard = UIStoryboard.init(name: "Symptom", bundle: nil)
+        
+        guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
+          return
+        }
+        
+        dvc.categoryList = symptomList
+        print("성분학습 뷰:")
+        print(symptomList)
+        
+        present(dvc, animated: true)
+        
+    }
+    
+    @IBAction func fatigueButton(_ sender: Any) {let symptomStoryboard = UIStoryboard.init(name: "Symptom", bundle: nil)
+        
+        guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
+          return
+        }
+        
+        dvc.categoryList = symptomList
+        print("성분학습 뷰:")
+        print(symptomList)
+        
+        present(dvc, animated: true)
+    }
+    
+    @IBAction func eyeButton(_ sender: Any) {
+        let symptomStoryboard = UIStoryboard.init(name: "Symptom", bundle: nil)
+        
+        guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
+          return
+        }
+        
+        dvc.categoryList = symptomList
+        print("성분학습 뷰:")
+        print(symptomList)
+        
+        present(dvc, animated: true)
+    }
+    
+    @IBAction func bloodButton(_ sender: Any) {
+        let symptomStoryboard = UIStoryboard.init(name: "Symptom", bundle: nil)
+        
+        guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
+          return
+        }
+        
+        dvc.categoryList = symptomList
+        print("성분학습 뷰:")
+        print(symptomList)
+        
+        present(dvc, animated: true)
+    }
+    
+    @IBAction func immunityButton(_ sender: Any) {
+        let symptomStoryboard = UIStoryboard.init(name: "Symptom", bundle: nil)
+        
+        guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
+          return
+        }
+        
+        dvc.categoryList = symptomList
+        print("성분학습 뷰:")
+        print(symptomList)
+        
+        present(dvc, animated: true)
+    }
+    
+    @IBAction func digestButton(_ sender: Any) {
+        let symptomStoryboard = UIStoryboard.init(name: "Symptom", bundle: nil)
+        
+        guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
+          return
+        }
+        
+        dvc.categoryList = symptomList
+        print("성분학습 뷰:")
+        print(symptomList)
+        
+        present(dvc, animated: true)
+    }
+    
+    @IBAction func brainButton(_ sender: Any) {
+        let symptomStoryboard = UIStoryboard.init(name: "Symptom", bundle: nil)
+        
+        guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
+          return
+        }
+        
+        dvc.categoryList = symptomList
+        print("성분학습 뷰:")
+        print(symptomList)
+        
+        present(dvc, animated: true)
+    }
+    
+    @IBAction func muscleButton(_ sender: Any) {
+        let symptomStoryboard = UIStoryboard.init(name: "Symptom", bundle: nil)
+        
+        guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
+          return
+        }
+        
+        dvc.categoryList = symptomList
+        print("성분학습 뷰:")
+        print(symptomList)
+        
+        present(dvc, animated: true)
+    }
+    
+    @IBAction func boneButton(_ sender: Any) {
+        let symptomStoryboard = UIStoryboard.init(name: "Symptom", bundle: nil)
+        
+        guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
+          return
+        }
+        
+        dvc.categoryList = symptomList
+        print("성분학습 뷰:")
+        print(symptomList)
+        
+        present(dvc, animated: true)
+    }
+    
 }
 
 

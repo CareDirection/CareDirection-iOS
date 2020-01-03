@@ -13,16 +13,21 @@ class AfterSurveyResgistTakingProductVC: UIViewController {
     @IBOutlet var completeBtn: UIButton!
     
     @IBOutlet var takingProductCV: UICollectionView!
-
+    
     @IBOutlet var cvTopConstraint: NSLayoutConstraint!
     var defaultheight: CGFloat = 0
     
-    var data: [String] = []
+    //var data: [String] = []
+    var date: String!
+    
+    
+    var data: [TakingProductData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setInitLayout()
         setInitVar()
+        
         
     }
     
@@ -34,9 +39,30 @@ class AfterSurveyResgistTakingProductVC: UIViewController {
     }
     
     func setInitVar(){
-        takingProductCV.delegate = self
-        takingProductCV.dataSource = self
-        
+        let today = Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier:"ko_KR")
+        formatter.dateFormat = "yyyy-MM-dd"
+        let date = formatter.string(from: today)
+        TakingProductService.shared.getCurrentTakingList(date: date) { data in
+            switch data{
+            case .success(let data):
+                self.data = data as! [TakingProductData]
+                self.cvTopConstraint.constant = CGFloat((self.data.count + 1) * 140)
+                self.takingProductCV.delegate = self
+                self.takingProductCV.dataSource = self
+            case .requestErr(_):
+                print("getCurrentTakingList request err")
+            case .pathErr:
+                print("getCurrentTakingList path err")
+            case .serverErr:
+                print("getCurrentTakingList server err")
+            case .networkFail:
+                print("getCurrentTakingList network err")
+            case .dbErr:
+                print("getCurrentTakingList db err")
+            }
+        }
     }
     
     @IBAction func selectedCompeteBtn(_ sender: Any) {
@@ -89,6 +115,22 @@ extension AfterSurveyResgistTakingProductVC: UICollectionViewDataSource{
 
             cell.borderView.makeRounded(cornerRadius: 18)
             cell.borderView.dropShadow(color: UIColor.init(red: 0, green: 0, blue: 0, alpha: 1), offSet: CGSize(width: 0, height: 1), opacity: 0.16, radius: 4)
+            cell.productImg.imageFromUrl(self.data[indexPath.row].imageLocation, defaultImgPath: "imgLogo")
+            cell.productCompayNameLbl.text = data[indexPath.row].productCompanyName
+            cell.restProductCountLbl.text = "\(data[indexPath.row].productRemain)회 남음"
+            if data[indexPath.row].productRemain <= 5 {
+                cell.restProductCountLbl.backgroundColor = UIColor.paleSalmon
+            }
+            cell.productNameLbl.text = data[indexPath.row].productName
+            cell.productPriceLbl.text = "\(data[indexPath.row].productPrice)"
+            cell.productPricePerDayLbl.text = data[indexPath.row].productPricePerUnit
+            if data[indexPath.row].productIsImport {
+                cell.productPurchaseCountryLbl.isHidden = false
+            }
+            else {
+                cell.productPurchaseCountryLbl.isHidden = true
+            }
+        
             
             return cell
         }

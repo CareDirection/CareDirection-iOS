@@ -402,6 +402,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHZ-xJ-cFT">
                                                                 <rect key="frame" x="0.0" y="0.0" width="339" height="118"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <connections>
+                                                                    <action selector="goToRegistButton:" destination="J9C-3r-fs6" eventType="touchUpInside" id="jT4-OE-itc"/>
+                                                                </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icPlus" translatesAutoresizingMaskIntoConstraints="NO" id="dhQ-ob-aI5">
                                                                 <rect key="frame" x="148" y="24" width="44" height="44"/>
@@ -492,7 +495,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-3E-2Ls">
-                                                <rect key="frame" x="436" y="0.0" width="375" height="953"/>
+                                                <rect key="frame" x="396" y="-5" width="375" height="953"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="0.68999999999999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
@@ -654,6 +657,8 @@
                         <outlet property="functionView" destination="z6e-8r-H3T" id="2r1-QS-T91"/>
                         <outlet property="functionalCollectionView" destination="RY1-XA-wy0" id="4uA-Ke-DyN"/>
                         <outlet property="functionalCollectionView2" destination="I2d-xK-1Xh" id="vyD-lP-VaK"/>
+                        <outlet property="functionalLabel" destination="YfM-iX-6r6" id="3NQ-Yc-siF"/>
+                        <outlet property="functionalLabel2" destination="jYX-eb-Hvz" id="J4I-Q8-hRZ"/>
                         <outlet property="ingredientView" destination="LNl-RB-adI" id="ZEv-Ly-pHW"/>
                         <outlet property="navigationBar" destination="8p9-cv-p2H" id="0Np-ID-RdC"/>
                         <outlet property="noRegistView" destination="E4O-cb-RZq" id="bRv-rt-OmO"/>

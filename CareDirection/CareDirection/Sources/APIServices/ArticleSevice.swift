@@ -31,7 +31,6 @@ struct ArticleService {
                 case .success:
                     if let value = response.result.value {
                         if let status = response.response?.statusCode {
-                            
                             switch status {
                             case 200:
                                 do {
@@ -39,13 +38,7 @@ struct ArticleService {
                                     
                                     // Show.swift codable
                                     let result = try decoder.decode(ResponseArray<Article>.self, from: value)
-                                    
-                                    //switch result.success {
-                                    //case true:
-                                        completion(.success(result.data!))
-                                    //case false:
-                                    //    completion(.requestErr(result.message))
-                                    //}
+                                    completion(.success(result.data!))
                                 } catch {
                                     completion(.pathErr)
                                 }
@@ -91,15 +84,15 @@ struct ArticleService {
                 case .success:
                     if let value = response.result.value {
                         if let status = response.response?.statusCode {
-                            
                             switch status {
                             case 200:
                                 do {
                                     let decoder = JSONDecoder()
                                     
                                     let result = try decoder.decode(ResponseArticle.self, from: value)
+                                    print("Article Success")
                                     completion(.success(result))
-                                    
+                                    print(result)
                                 } catch {
                                     print("article path Err")
                                     completion(.pathErr)
@@ -111,6 +104,7 @@ struct ArticleService {
                                 completion(.serverErr)
                                 print("server err")
                             default:
+                                
                                 break
                             }
                         }

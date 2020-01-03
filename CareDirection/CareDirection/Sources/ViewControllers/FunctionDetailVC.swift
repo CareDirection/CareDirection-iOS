@@ -221,7 +221,7 @@ extension FunctionDetailVC {
     func setIngredient() {
         let ingredient1 = FunctionalIngredient(image: "liver60", name: "간건강")
         let ingredient2 = FunctionalIngredient(image: "liver60", name: "면역력")
-        let ingredient3 = FunctionalIngredient(image: "liver60", name: "피로회복")
+        let ingredient3 = FunctionalIngredient(image: "fatigue60", name: "피로회복")
         
         functionalIngredientList = [ingredient1, ingredient2, ingredient3]
         

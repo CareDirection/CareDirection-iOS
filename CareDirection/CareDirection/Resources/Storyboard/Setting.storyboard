@@ -165,7 +165,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박진오" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5k-Fy-uuX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박진오" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5k-Fy-uuX">
                                         <rect key="frame" x="297" y="0.0" width="42" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="Y3A-ir-Vjb"/>
@@ -235,6 +235,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="nameLbl" destination="l5k-Fy-uuX" id="Ffd-nk-vTc"/>
                         <outlet property="navigationBar" destination="B0h-ox-sEc" id="Lhx-eB-n6A"/>
                     </connections>
                 </viewController>

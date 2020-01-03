@@ -10,6 +10,9 @@ import UIKit
 
 class SettingVC: UIViewController {
     
+    
+    @IBOutlet weak var nameLbl: UILabel!
+    
     @IBOutlet weak var navigationBar: UIView!
     
     override func viewDidLoad() {
@@ -17,6 +20,10 @@ class SettingVC: UIViewController {
         
         
         navigationBar.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
+        
+        let user = UserDefaults.standard
+        
+        self.nameLbl.text = user.string(forKey: "user_name")
 
     }
 

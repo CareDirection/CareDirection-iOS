@@ -33,16 +33,6 @@ class IngredientStudyVC: UIViewController {
     
     // 증상 리스트
     var symptomList : [Efficacy] = []
-    // 증상 리스트 더미 테스트
-    var symptomListDummy : [Symptom] = []
-    var symptomListDummy2 : [Symptom] = []
-    var symptomListDummy3 : [Symptom] = []
-    var symptomListDummy4 : [Symptom] = []
-    var symptomListDummy5 : [Symptom] = []
-    var symptomListDummy6 : [Symptom] = []
-    var symptomListDummy7 : [Symptom] = []
-    var symptomListDummy8 : [Symptom] = []
-    var symptomListDummy9 : [Symptom] = []
     
     
     override func viewDidLoad() {
@@ -70,9 +60,6 @@ class IngredientStudyVC: UIViewController {
         guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
           return
         }
-//        print(symptomList)
-//        print(symptomList[0].efficacy_idx)
-//        print(symptomList[0].efficacy_name)
         
         dvc.tabIndex = symptomList[0].efficacy_idx
         

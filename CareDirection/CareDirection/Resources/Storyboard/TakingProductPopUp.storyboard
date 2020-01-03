@@ -129,7 +129,6 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="D3H-ek-oI0"/>
-                                                    <constraint firstAttribute="height" constant="44" id="OVl-EV-KNg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                                 <state key="normal" title="취소">

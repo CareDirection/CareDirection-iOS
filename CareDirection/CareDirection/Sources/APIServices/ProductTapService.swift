@@ -16,7 +16,7 @@ struct ProductTapService {
         let header : HTTPHeaders = [
             
             "Content-Type" : "application/json",
-            "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
+            "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
         ]
         
         Alamofire.request(APIConstants.ProductTapListURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseData { response in
@@ -139,7 +139,7 @@ struct ProductTapService {
                         case 200:
                             do {
                                 let decoder = JSONDecoder()
-                                print(value)
+                                print(response.response)
                                 let result = try decoder.decode(ProductSearch.self, from: value)
                                 
                                 //print("success")
@@ -230,11 +230,9 @@ struct ProductTapService {
             "Content-Type" : "application/json",
             "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
         ]
-         let parameters: Parameters = [
-                   "product_idx": idx,
-               ]
+
         
-        Alamofire.request(URL, method: .get,parameters: parameters ,encoding: URLEncoding.default, headers: header).responseData { response in
+        Alamofire.request(URL, method: .get,parameters: nil ,encoding: JSONEncoding.default, headers: header).responseData { response in
             
             // parameter 위치
             switch response.result {
@@ -281,7 +279,7 @@ struct ProductTapService {
     }
     
     func productDetailEfficacy(idx: Int, completion: @escaping (NetworkResult<Any>) -> Void){
-        let URL = APIConstants.ProductBaseURL + "/\(6)/efficacy"
+        let URL = APIConstants.ProductBaseURL + "/\(idx)/efficacy"
 
         
         let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
@@ -334,7 +332,7 @@ struct ProductTapService {
         }
     }
     func lowerPriceData(idx: Int, quantity: Int, completion: @escaping(NetworkResult<Any>) -> Void){
-        let URL = APIConstants.ProductBaseURL + "/\(6)/lowprice"
+        let URL = APIConstants.ProductBaseURL + "/\(idx)/lowprice"
         
         Alamofire.request(URL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseData() { response in
             switch response.result {

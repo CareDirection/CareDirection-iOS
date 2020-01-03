@@ -130,6 +130,9 @@ extension ProductSearchVC: UITableViewDataSource{
         if !searchResult[indexPath.row].productIsAlreadyManaged{
             cell.isManagedLbl.isHidden = true
         }
+        else{
+            cell.isManagedLbl.isHidden = false
+        }
         
         return cell
         

@@ -135,6 +135,8 @@ class SurveyInfoVC: UIViewController {
                 dvc.modalPresentationStyle = .fullScreen
                 dvc.name = self.userName!
                 
+                UserDefaults.standard.set(self.userName, forKey: "user_name")
+                
                 self.present(dvc, animated: true)
                 
             case .requestErr(let msg):

@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKc-Bu-7N6">
-                                <rect key="frame" x="66" y="309" width="114" height="24"/>
+                                <rect key="frame" x="40" y="309" width="114" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="   2회 ~ 3회" image="icUnselected">
@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adf-h8-r9J">
-                                <rect key="frame" x="66" y="265" width="103" height="24"/>
+                                <rect key="frame" x="40" y="265" width="103" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="   4회 이상" image="icUnselected">
@@ -137,7 +137,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDR-Ml-1xm">
-                                <rect key="frame" x="66" y="353" width="99" height="24"/>
+                                <rect key="frame" x="40" y="353" width="99" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="   1회 이하" image="icUnselected">
@@ -171,7 +171,7 @@
                             <constraint firstItem="cHd-95-GbC" firstAttribute="trailing" secondItem="rfJ-Yc-7BO" secondAttribute="trailing" id="hiJ-dI-U9B"/>
                             <constraint firstItem="RDR-Ml-1xm" firstAttribute="leading" secondItem="rKc-Bu-7N6" secondAttribute="leading" id="iUj-1k-uag"/>
                             <constraint firstItem="VnN-Wz-aek" firstAttribute="top" secondItem="cHd-95-GbC" secondAttribute="top" constant="107" id="kAu-rw-KhY"/>
-                            <constraint firstItem="rfJ-Yc-7BO" firstAttribute="leading" secondItem="adf-h8-r9J" secondAttribute="trailing" constant="-169" id="laW-lX-ydR"/>
+                            <constraint firstItem="rfJ-Yc-7BO" firstAttribute="leading" secondItem="adf-h8-r9J" secondAttribute="trailing" constant="-143" id="laW-lX-ydR"/>
                             <constraint firstItem="6jJ-4U-s5Y" firstAttribute="top" secondItem="ctS-es-vq8" secondAttribute="bottom" constant="3" id="qcd-ne-8Ks"/>
                             <constraint firstItem="cHd-95-GbC" firstAttribute="trailing" secondItem="VnN-Wz-aek" secondAttribute="trailing" constant="18" id="rWk-e8-gO6"/>
                             <constraint firstItem="rfJ-Yc-7BO" firstAttribute="top" secondItem="eUw-gw-K3K" secondAttribute="top" id="rvb-4f-btk"/>

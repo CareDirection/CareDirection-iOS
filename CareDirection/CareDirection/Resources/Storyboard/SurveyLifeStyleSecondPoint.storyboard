@@ -60,7 +60,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZX-yI-JLv">
-                                <rect key="frame" x="26" y="265" width="120" height="24"/>
+                                <rect key="frame" x="40" y="265" width="120" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="   4시간 이상" image="icUnselected">
@@ -72,7 +72,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51z-Te-XdD">
-                                <rect key="frame" x="26" y="309" width="146" height="24"/>
+                                <rect key="frame" x="40" y="309" width="146" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="   1시간 ~ 4시간" image="icUnselected">
@@ -84,7 +84,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGp-ug-oT9">
-                                <rect key="frame" x="26" y="353" width="117" height="24"/>
+                                <rect key="frame" x="40" y="353" width="117" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="   1시간 이하" image="icUnselected">
@@ -170,7 +170,7 @@
                             <constraint firstItem="BPv-1a-JLz" firstAttribute="top" secondItem="2oK-tx-PLo" secondAttribute="top" id="mt1-7F-KC7"/>
                             <constraint firstItem="3ZX-yI-JLv" firstAttribute="top" secondItem="2oK-tx-PLo" secondAttribute="bottom" constant="44" id="pW0-00-W9Q"/>
                             <constraint firstItem="CGp-ug-oT9" firstAttribute="leading" secondItem="51z-Te-XdD" secondAttribute="leading" id="ptx-DA-YIK"/>
-                            <constraint firstItem="3Ks-cY-QCA" firstAttribute="leading" secondItem="3ZX-yI-JLv" secondAttribute="trailing" constant="-146" id="tTI-jo-XTc"/>
+                            <constraint firstItem="3Ks-cY-QCA" firstAttribute="leading" secondItem="3ZX-yI-JLv" secondAttribute="trailing" constant="-160" id="tTI-jo-XTc"/>
                             <constraint firstItem="BPv-1a-JLz" firstAttribute="leading" secondItem="2oK-tx-PLo" secondAttribute="trailing" id="vAY-hs-jia"/>
                             <constraint firstItem="Pj0-Kv-AEt" firstAttribute="centerX" secondItem="Z4U-sq-Gk2" secondAttribute="centerX" id="vIu-fY-Fpk"/>
                             <constraint firstItem="Gbq-BU-pZO" firstAttribute="top" secondItem="beb-hT-WgV" secondAttribute="top" constant="107" id="vQS-24-ODH"/>

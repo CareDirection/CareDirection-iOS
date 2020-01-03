@@ -11,7 +11,7 @@
         <!--홈-->
         <scene sceneID="AOD-0F-cNm">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="J9C-3r-fs6" customClass="HomeVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="J9C-3r-fs6" customClass="HomeVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dpX-0M-XgQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="953"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

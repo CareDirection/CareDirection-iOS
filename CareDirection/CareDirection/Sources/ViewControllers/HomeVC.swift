@@ -69,6 +69,18 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let user = UserDefaults.standard
+        
+        //self.dropDownButton.titleLabel?.text = user.string(forKey: "user_name")
+        
+        print("=============")
+        print(user.string(forKey: "user_name"))
+        
+    dropDownButton.setTitle(user.string(forKey: "user_name"), for: .normal)
+        
+        //pr
+        
+        
         // 유저 리스트 더미 데이터 생성
         setUserData()
         // 기능 성분 가져오기

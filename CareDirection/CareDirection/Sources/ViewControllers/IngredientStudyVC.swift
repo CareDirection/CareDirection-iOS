@@ -172,7 +172,7 @@ class IngredientStudyVC: UIViewController {
         
         print(symptomList[8].efficacy_name)
         dvc.tabIndex = symptomList[8].efficacy_idx
-        //dvc.titleLabel?.text = symptomList[8].efficacy_name
+        dvc.titleLabel?.text = symptomList[8].efficacy_name
         present(dvc, animated: true)
     }
 }

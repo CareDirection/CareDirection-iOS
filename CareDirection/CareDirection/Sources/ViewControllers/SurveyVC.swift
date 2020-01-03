@@ -52,9 +52,12 @@ class SurveyVC: UIViewController {
         guard let dvc = surveyInfoSB.instantiateViewController(withIdentifier: "SurveyInfoVC") as? SurveyInfoVC else {
           return
         }
+        
+        
         dvc.userName = nameTextField.text
         dvc.modalPresentationStyle = .fullScreen
 
+        
         self.present(dvc, animated: true)
     }
     

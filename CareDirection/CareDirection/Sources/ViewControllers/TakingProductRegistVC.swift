@@ -41,6 +41,28 @@ class TakingProductRegistVC: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        TakingProductService.shared.getCurrentTakingList(date: "2020-01-03"){ data in
+            switch data {
+            case .success(let data):
+                self.takingProductList = data as! [TakingProductData]
+                self.takingProductCollectionView.reloadData()
+            case .requestErr(let msg):
+                print("getCurrentTakingList")
+                print(msg)
+            case .pathErr:
+                print("getCurrentTakingList path err")
+            case .serverErr:
+                print("getCurrentTakingList server err")
+            case .networkFail:
+                print("getCurrentTakingList network err")
+            case .dbErr:
+                print("getCurrentTakingList db err")
+            }
+        }
+    }
+    
+        
     @objc func changed() {
         let dateformatter = DateFormatter()
 
@@ -67,25 +89,16 @@ class TakingProductRegistVC: UIViewController {
     
 }
 
-
-
-
 extension TakingProductRegistVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return takingProductList.count
+        return takingProductList.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        
-        
-        
+
         if indexPath.row == takingProductList.count {
             
-            
             let addCell = takingProductCollectionView.dequeueReusableCell(withReuseIdentifier: "addCell", for: indexPath) as! AddTakingProductRegistCell
-            
-            
             
             return addCell
         } else {
@@ -93,7 +106,7 @@ extension TakingProductRegistVC : UICollectionViewDataSource {
             
             let product = takingProductList[indexPath.row]
             cell.productImage.imageFromUrl(product.imageLocation, defaultImgPath: "imgLogo")
-            cell.remainingLabel.text = "\(product.productRemain)남음"
+            cell.remainingLabel.text = "\(product.productRemain)"
             cell.companyLabel.text = product.productCompanyName
             cell.productNameLabel.text = product.productName
             cell.priceLabel.text = product.productPrice
@@ -118,7 +131,7 @@ extension TakingProductRegistVC : UICollectionViewDataSource {
 extension TakingProductRegistVC : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if indexPath.row == takingProductList.count - 1 {
+        if indexPath.row == takingProductList.count {
         
             print("clicked")
         let addStoryboard = UIStoryboard.init(name: "ProductSearch", bundle: nil)
@@ -126,6 +139,8 @@ extension TakingProductRegistVC : UICollectionViewDelegate {
         guard let dvc = addStoryboard.instantiateViewController(withIdentifier: "ProductSearch") as? ProductSearchVC else {
             return
         }
+            dvc.modalPresentationStyle = .fullScreen
+            dvc.entryType = .oldUser
         
         present(dvc, animated: true)
         }

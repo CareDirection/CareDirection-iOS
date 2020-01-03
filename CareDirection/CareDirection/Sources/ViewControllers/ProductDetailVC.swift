@@ -96,7 +96,9 @@ class ProductDetailVC: UIViewController {
             case .success(let data):
                 let result = data as! [Detail]
                 self.detailData = result
-                print("asd")
+                print("------------")
+                print(self.detailData)
+                print("------------")
                 //print(self.detailData)
 
                 self.priceInfoList.append(self.detailData[0].countPrice!)

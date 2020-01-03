@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WnA-XW-Htd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WnA-XW-Htd">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDl-Ba-snb">
-                                <rect key="frame" x="46" y="144.5" width="283.5" height="378"/>
+                                <rect key="frame" x="46" y="140" width="283" height="387"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="향상된 크릴 플러스 오메가-3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lY-DR-G4R">
-                                        <rect key="frame" x="40.5" y="39" width="202.5" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="향상된 크릴 플러스 오메가-3" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lY-DR-G4R">
+                                        <rect key="frame" x="41" y="39" width="201" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Tkb-Qj-I8v"/>
                                         </constraints>
@@ -160,12 +160,12 @@
                                 <constraints>
                                     <constraint firstItem="fpX-kY-6p4" firstAttribute="top" secondItem="zTL-KK-tb6" secondAttribute="bottom" constant="40" id="OiK-OY-UwI"/>
                                     <constraint firstItem="zTL-KK-tb6" firstAttribute="centerX" secondItem="tDl-Ba-snb" secondAttribute="centerX" id="Qwi-hg-RH3"/>
-                                    <constraint firstItem="1lY-DR-G4R" firstAttribute="leading" secondItem="tDl-Ba-snb" secondAttribute="leading" constant="40.5" id="RXF-hJ-q8j"/>
+                                    <constraint firstItem="1lY-DR-G4R" firstAttribute="leading" secondItem="tDl-Ba-snb" secondAttribute="leading" constant="41" id="RXF-hJ-q8j"/>
                                     <constraint firstItem="zTL-KK-tb6" firstAttribute="top" secondItem="Iav-sq-hzj" secondAttribute="bottom" constant="26" id="VPr-m6-5oJ"/>
-                                    <constraint firstItem="Iav-sq-hzj" firstAttribute="top" secondItem="1lY-DR-G4R" secondAttribute="bottom" constant="16" id="XLs-Ls-D8g"/>
+                                    <constraint firstItem="1lY-DR-G4R" firstAttribute="bottom" secondItem="Iav-sq-hzj" secondAttribute="top" constant="-16" id="XLs-Ls-D8g"/>
+                                    <constraint firstAttribute="trailing" secondItem="1lY-DR-G4R" secondAttribute="trailing" constant="41" id="Yvr-lP-Vz6"/>
                                     <constraint firstItem="Iav-sq-hzj" firstAttribute="centerX" secondItem="tDl-Ba-snb" secondAttribute="centerX" id="anE-Fe-8zT"/>
                                     <constraint firstItem="1lY-DR-G4R" firstAttribute="centerX" secondItem="tDl-Ba-snb" secondAttribute="centerX" id="bEd-vz-VfY"/>
-                                    <constraint firstAttribute="width" secondItem="tDl-Ba-snb" secondAttribute="height" multiplier="283:377" id="hib-1a-bla"/>
                                     <constraint firstItem="fpX-kY-6p4" firstAttribute="centerX" secondItem="tDl-Ba-snb" secondAttribute="centerX" id="jha-gK-lcD"/>
                                     <constraint firstItem="1lY-DR-G4R" firstAttribute="top" secondItem="tDl-Ba-snb" secondAttribute="top" constant="39" id="jyQ-PT-wlW"/>
                                     <constraint firstItem="8mM-Wt-Fa9" firstAttribute="top" secondItem="fpX-kY-6p4" secondAttribute="bottom" constant="4.5" id="lkj-fu-SIG"/>
@@ -175,13 +175,23 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="0.30037992294520549" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="uaf-54-riq" firstAttribute="trailing" secondItem="tDl-Ba-snb" secondAttribute="trailing" constant="46" id="cWw-86-4pX"/>
+                            <constraint firstItem="tDl-Ba-snb" firstAttribute="top" secondItem="uaf-54-riq" secondAttribute="top" constant="140" id="nOE-7T-Tby"/>
+                            <constraint firstItem="tDl-Ba-snb" firstAttribute="leading" secondItem="uaf-54-riq" secondAttribute="leading" constant="46" id="oJw-JC-tEy"/>
                             <constraint firstItem="tDl-Ba-snb" firstAttribute="centerY" secondItem="uaf-54-riq" secondAttribute="centerY" id="ofu-Mz-32D"/>
                             <constraint firstItem="tDl-Ba-snb" firstAttribute="centerX" secondItem="uaf-54-riq" secondAttribute="centerX" id="ury-IH-BJO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uaf-54-riq"/>
                     </view>
                     <connections>
+                        <outlet property="cancelBtn" destination="fxo-dX-VIq" id="VZO-sy-DZp"/>
+                        <outlet property="dosedBtn" destination="1fd-QQ-WZB" id="keC-uF-950"/>
                         <outlet property="popUpView" destination="tDl-Ba-snb" id="FVI-u9-rdf"/>
+                        <outlet property="productAlarmLbl" destination="hmh-HA-Eqo" id="fUi-yD-vCZ"/>
+                        <outlet property="productImg" destination="Iav-sq-hzj" id="Ab9-yn-6bB"/>
+                        <outlet property="productNameLbl" destination="1lY-DR-G4R" id="ki4-5m-QbS"/>
+                        <outlet property="productRestCount" destination="cOd-5O-2ZR" id="SZa-Us-HTt"/>
+                        <outlet property="productTakeUsage" destination="0Xs-S2-7or" id="nS9-VP-ql5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wee-Pm-IWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

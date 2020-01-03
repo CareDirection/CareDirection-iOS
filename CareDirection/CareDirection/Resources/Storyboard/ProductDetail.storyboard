@@ -525,10 +525,16 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="젤라틴(생선/캡슐원료)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugc-ji-op2">
-                                                        <rect key="frame" x="18" y="60" width="116" height="16"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <color key="textColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugc-ji-op2">
+                                                        <rect key="frame" x="18" y="60" width="339" height="16"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="젤라틴(생선/캡슐원료)">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" metaFont="system"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6v5-b8-xfC">
@@ -552,6 +558,7 @@
                                                     <constraint firstItem="6v5-b8-xfC" firstAttribute="leading" secondItem="ewD-ef-eje" secondAttribute="leading" id="YxI-e5-q6B"/>
                                                     <constraint firstItem="ugc-ji-op2" firstAttribute="top" secondItem="s4u-zZ-tpz" secondAttribute="bottom" constant="14" id="cCg-iO-gCK"/>
                                                     <constraint firstItem="s4u-zZ-tpz" firstAttribute="top" secondItem="ewD-ef-eje" secondAttribute="top" constant="26" id="r10-zC-dHd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ugc-ji-op2" secondAttribute="trailing" constant="18" id="rgr-8r-0px"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXI-SM-vpl">

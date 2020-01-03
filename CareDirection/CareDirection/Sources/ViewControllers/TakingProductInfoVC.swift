@@ -162,10 +162,11 @@ class TakingProductInfoVC: UIViewController {
             switch data{
             case .success(let msg):
                 print(msg)
-                let storyBoard = UIStoryboard.init(name: "AfterSurveyResgistTakingProduct", bundle: nil)
-                let dvc = storyBoard.instantiateViewController(identifier: "AfterSurveyResgistTakingProduct") as! AfterSurveyResgistTakingProductVC
-                dvc.modalPresentationStyle = .fullScreen
-                self.present(dvc, animated: true)
+//                let storyBoard = UIStoryboard.init(name: "AfterSurveyResgistTakingProduct", bundle: nil)
+//                let dvc = storyBoard.instantiateViewController(identifier: "AfterSurveyResgistTakingProduct") as! AfterSurveyResgistTakingProductVC
+//                dvc.modalPresentationStyle = .fullScreen
+//                self.present(dvc, animated: true)
+                self.dismiss(animated: true)
             case .requestErr(let msg):
                 print(msg)
             case .pathErr:

@@ -10,7 +10,7 @@
         <!--LoginVC-->
         <scene sceneID="eQT-1X-NWe">
             <objects>
-                <viewController id="yHb-rP-eIA" customClass="LoginVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="yHb-rP-eIA" customClass="LoginVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0gN-WL-abv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,6 +122,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qvW-Rf-FTi"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Survey"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="idTextField" destination="4pe-Na-6Y7" id="Ara-t4-yAF"/>
                         <outlet property="idView" destination="F7A-Mw-NFv" id="ZxG-7c-xzM"/>

@@ -57,10 +57,6 @@ class ChartView: MacawView {
             newNodes.append(valueLine)
             newNodes.append(valueText)
         }
-        
-        //let yAxis = Line(x1: 0, y1: 0, x2: 0, y2: yAxisHeight).stroke(fill: Color.black.with(a: 0.25))
-       // newNodes.append(yAxis)
-        
         return newNodes
     }
 
@@ -94,23 +90,17 @@ class ChartView: MacawView {
         
         createDummyData()
         
-        var createPalette : [Int] = []
-        
-//        for i in 0 ..< 11 {
-//            if ChartList[i].nutrient_percent < 100 && ChartList[i].nutrient_percent > 30{
-//                createPalette[i] = 0xb5e0e4
-//            } else {
-//                createPalette[i] = 0xffabab
-//            }
-//        }
-        
-        //palette = createPalette.map {zzz
+        //palette = createPalette.map { val in Color(val: val) }
         
         let items = ChartList.map { _ in Group() }
         
+        print(ChartList)
+        
+        
+        
         animations = items.enumerated().map { (i: Int, item: Group) in
             item.contentsVar.animation(delay: Double(i) * 0.1) { t in
-                let height = Double(ChartList[i].nutrient_percent) * t
+                let height = Double(ChartList[i].nutrient_percent + 10) * t
                 let rect = RoundRect(rect:Rect(x: Double(i) * 50 + 25, y: 200 - height, w: 30, h: height), rx: 5, ry: 0)
                 let fill = LinearGradient(degree: 90, from: palette[i], to: palette[i].with(a: 1))
                 return [rect.fill(with: fill)]
@@ -135,11 +125,10 @@ class ChartView: MacawView {
         let eight = MainChart(nutrient_name: "셀레늄", nutrient_percent: 12)
         let nine = MainChart(nutrient_name: "철분", nutrient_percent: 12)
         let ten = MainChart(nutrient_name: "염산", nutrient_percent: 12)
-        let eleven = MainChart(nutrient_name: "비타민C", nutrient_percent: 12)
+        let eleven = MainChart(nutrient_name: "마그네슘", nutrient_percent: 12)
 
         ChartList = [one, two, three, four, five, six, seven, eight, nine, ten, eleven]
         
-        /* ------- */
         ChartService.shared.showMainChart() {
             
             //[weak self]
@@ -153,6 +142,15 @@ class ChartView: MacawView {
             case .success(let res):
                 print("in chart view connection success")
                 self.ChartList = res as! [MainChart]
+                
+                for i in 0...10 {
+                    if self.ChartList[i].nutrient_percent > 100 || self.ChartList[i].nutrient_percent < 30 {
+                        self.palette[i] = Color(val: 0xffabab)
+                    } else {
+                        self.palette[i] = Color(val: 0xb5e0e4)
+                    }
+                }
+                
             case .requestErr(let message):
                 //self.simpleAlert(title: "차트 정보 받아오기 실패", message: "\(message)")
                 print("\(message)")

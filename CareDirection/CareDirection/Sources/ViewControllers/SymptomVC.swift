@@ -41,11 +41,10 @@ class SymptomVC: UIViewController {
         
         // 셀 사이즈 동적으로 조절해주기
         symptomTableView.rowHeight = UITableView.automaticDimension
-        symptomTableView.estimatedRowHeight = 600
+        //symptomTableView.estimatedRowHeight = 600
         
         
         setSymptomData()
-        
         
     }
     
@@ -94,7 +93,7 @@ extension SymptomVC : UICollectionViewDataSource {
 extension SymptomVC : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        self.tabIndex = indexPath.row
+        //self.tabIndex = indexPath.row
         setSymptomData()
         
         print("clicked")
@@ -112,6 +111,7 @@ extension SymptomVC : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         if indexPath.section == 0 {
             
             let imageCell = symptomTableView.dequeueReusableCell(withIdentifier: "imageCell") as! SymptomImageCell
@@ -152,7 +152,6 @@ extension SymptomVC {
                     
                     self.symptomList = res as! [EfficacyList]
                     self.tabBarCollectionView.reloadData()
-                    
                     self.symptomTableView.reloadData()
                     self.symptomTableView.dataSource = self
                     self.tabBarCollectionView.dataSource = self

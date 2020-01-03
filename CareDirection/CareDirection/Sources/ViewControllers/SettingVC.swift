@@ -36,4 +36,32 @@ class SettingVC: UIViewController {
         present(dvc, animated: true)
     }
     
+    
+    
+    @IBAction func logoutButton(_ sender: Any) {
+        
+        
+        let alert = UIAlertController(title:"로그아웃 하시겠습니까?",message: "",preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "예", style: .default, handler: { action in
+                        
+                        let urlString: String = APIConstants.LoginURL
+                        guard let requestURL = URL(string: urlString) else { return }
+                        var request = URLRequest(url: requestURL)
+                        request.httpMethod = "POST"
+                        let session = URLSession.shared
+                        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+                            guard responseError == nil else { return }
+                        }
+                        task.resume()
+                        
+                        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                        let loginView = storyboard.instantiateViewController(withIdentifier: "login")
+                        self.present(loginView, animated: true, completion: nil)
+                    }))
+                    alert.addAction(UIAlertAction(title: "아니오", style: .cancel, handler: nil))
+                    
+                    UserDefaults.standard.set(nil, forKey: "token")
+                    let token = UserDefaults.standard
+    }
 }

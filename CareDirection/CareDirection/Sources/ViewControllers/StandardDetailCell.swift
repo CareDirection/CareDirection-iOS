@@ -17,6 +17,9 @@ class StandardDetailCell: UICollectionViewCell {
     
     @IBOutlet weak var standardChart: UIView!
     
+    @IBOutlet weak var chartHeight: NSLayoutConstraint!
+    
+    
     @IBOutlet weak var standardDetail: UILabel!
     
 }

@@ -244,6 +244,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wfw-wn-8nN"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Survey"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="emailTextField" destination="ZcJ-tC-ZD2" id="ahk-Ha-tF7"/>
                         <outlet property="emailView" destination="Lbl-b9-ycF" id="udL-SU-lkF"/>

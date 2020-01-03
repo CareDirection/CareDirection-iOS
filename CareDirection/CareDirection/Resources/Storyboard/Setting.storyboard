@@ -199,10 +199,23 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alg-nW-Ono">
+                                <rect key="frame" x="18" y="548" width="70" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Sxg-lC-Ej4"/>
+                                    <constraint firstAttribute="width" constant="70" id="dLX-kz-0xQ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="logoutButton:" destination="xAC-vH-AcW" eventType="touchUpInside" id="qfh-ah-rCI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="wgB-Jc-Owa" firstAttribute="trailing" secondItem="alg-nW-Ono" secondAttribute="trailing" constant="287" id="0y5-DB-uK5"/>
+                            <constraint firstItem="wgB-Jc-Owa" firstAttribute="bottom" secondItem="alg-nW-Ono" secondAttribute="bottom" constant="80" id="EIl-Bu-ffi"/>
                             <constraint firstItem="RXa-Cw-AgN" firstAttribute="top" secondItem="ChE-hS-QSb" secondAttribute="bottom" constant="78" id="F9r-vd-IiW"/>
+                            <constraint firstItem="alg-nW-Ono" firstAttribute="leading" secondItem="wgB-Jc-Owa" secondAttribute="leading" constant="18" id="FNL-O0-UiH"/>
                             <constraint firstItem="Zgg-1i-bjc" firstAttribute="top" secondItem="B0h-ox-sEc" secondAttribute="bottom" constant="46" id="Irp-ae-yGf"/>
                             <constraint firstItem="ChE-hS-QSb" firstAttribute="top" secondItem="Pwm-n0-1qz" secondAttribute="bottom" constant="23" id="Lv0-tN-B8u"/>
                             <constraint firstItem="B0h-ox-sEc" firstAttribute="top" secondItem="wgB-Jc-Owa" secondAttribute="top" id="OCp-aA-XZ7"/>

@@ -223,6 +223,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="339" height="222"/>
                                         <connections>
+                                            <outlet property="chartHeight" destination="DeP-2R-VDD" id="FFp-7r-FyG"/>
                                             <outlet property="standard1" destination="EJI-Nh-lAm" id="aI9-WM-Ydk"/>
                                             <outlet property="standard2" destination="o3j-CW-glA" id="7pz-RK-7Hm"/>
                                             <outlet property="standard3" destination="MIe-kx-aR3" id="rTs-PB-UwJ"/>
@@ -271,13 +272,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lineBlue" translatesAutoresizingMaskIntoConstraints="NO" id="5kB-Qi-Lry">
-                                <rect key="frame" x="63.5" y="236" width="311.5" height="2"/>
+                                <rect key="frame" x="62.5" y="236" width="312.5" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5kB-Qi-Lry" secondAttribute="height" multiplier="156:1" id="DtD-6G-Nu2"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lineRed" translatesAutoresizingMaskIntoConstraints="NO" id="GKT-Go-Z35">
-                                <rect key="frame" x="58.5" y="126" width="312.5" height="2"/>
+                                <rect key="frame" x="59.5" y="126" width="311.5" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GKT-Go-Z35" secondAttribute="height" multiplier="156:1" id="owg-bu-wNq"/>
                                 </constraints>

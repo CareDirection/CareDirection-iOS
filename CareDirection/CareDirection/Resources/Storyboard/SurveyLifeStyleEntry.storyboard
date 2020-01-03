@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgIllustrationLifestyle" translatesAutoresizingMaskIntoConstraints="NO" id="xNW-es-9bP">
-                                <rect key="frame" x="35.5" y="181.5" width="304" height="304"/>
+                                <rect key="frame" x="35.5" y="192.5" width="304" height="304"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="304" id="GYT-ny-NhB"/>
@@ -74,7 +74,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="gkd-PY-DJW" firstAttribute="top" secondItem="fuw-al-FDS" secondAttribute="top" id="9kr-Fb-kGk"/>
-                            <constraint firstItem="xNW-es-9bP" firstAttribute="centerY" secondItem="gkd-PY-DJW" secondAttribute="centerY" id="AlF-Kr-FvF"/>
                             <constraint firstItem="zb0-rL-HrQ" firstAttribute="trailing" secondItem="gkd-PY-DJW" secondAttribute="trailing" id="Bfp-qD-KVM"/>
                             <constraint firstItem="Urn-hU-Cb5" firstAttribute="top" secondItem="Xjy-OH-M29" secondAttribute="bottom" constant="11" id="SSm-7k-k96"/>
                             <constraint firstItem="gkd-PY-DJW" firstAttribute="leading" secondItem="zb0-rL-HrQ" secondAttribute="leading" id="W9d-B6-Bn0"/>
@@ -85,9 +84,14 @@
                             <constraint firstItem="xNW-es-9bP" firstAttribute="centerX" secondItem="gkd-PY-DJW" secondAttribute="centerX" id="uNi-cS-ESL"/>
                             <constraint firstAttribute="bottom" secondItem="gkd-PY-DJW" secondAttribute="bottom" id="v7o-sP-oJ3"/>
                             <constraint firstItem="fzZ-Be-DPP" firstAttribute="centerX" secondItem="fuw-al-FDS" secondAttribute="centerX" id="vWQ-TF-OnS"/>
+                            <constraint firstItem="xNW-es-9bP" firstAttribute="top" secondItem="Urn-hU-Cb5" secondAttribute="bottom" constant="23.5" id="wpO-6R-kQG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zb0-rL-HrQ"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Survey"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="nextBtn" destination="fzZ-Be-DPP" id="dVM-bx-47M"/>
                     </connections>

@@ -36,15 +36,10 @@ struct EfficacyService {
                                 do {
                                     let decoder = JSONDecoder()
                                     
-                                    // Show.swift codable
                                     let result = try decoder.decode(ResponseArray<Efficacy>.self, from: value)
                                     
-                                    //switch result.success {
-                                    //case true:
                                     completion(.success(result.data!))
-                                    //case false:
-                                    //    completion(.requestErr(result.message))
-                                    //}
+                                    
                                 } catch {
                                     completion(.pathErr)
                                 }

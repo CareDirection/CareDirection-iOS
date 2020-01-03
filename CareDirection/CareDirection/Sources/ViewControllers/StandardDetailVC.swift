@@ -55,12 +55,25 @@ extension StandardDetailVC : UICollectionViewDataSource {
         cell.standardTitle.text = standard.nutrient_name
         cell.standard1.text = standard.my_change_value_description
         cell.standardDetail.text = standard.description
+        cell.chartHeight.constant = CGFloat(standard.my_current_value_percent)
+        
+        view.setNeedsLayout()
+        UIView.animate(withDuration: 1.3, delay: 0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        })
         
         cell.standardChart.makeRounded(cornerRadius: 4)
-        cell.standardChart.backgroundColor = UIColor.paleSalmon
+        
+        if standard.my_current_value_percent < 30 || standard.my_current_value_percent > 100{
+        
+            cell.standardChart.backgroundColor = UIColor.paleSalmon
+            
+        } else {
+            cell.standardChart.backgroundColor = UIColor.seafoamBlue
+        }
         cell.standardChart.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
         
-        print(cell.standardChart.frame.size.height)
+        //print(cell.standardChart.frame.size.height)
         
         return cell
     

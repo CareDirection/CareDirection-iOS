@@ -94,7 +94,7 @@ class HomeVC: UIViewController {
         userTableView.clipsToBounds = true
         userTableView.layer.cornerRadius = 20
         userTableView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-        userTableView.maxHeight = 300
+        userTableView.maxHeight = 150
         userTableView.reloadData()
         
         // collection view delegate, dataSource 설정
@@ -274,10 +274,19 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
             let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
             let cancel = UIAlertAction(title: "취소", style: .destructive, handler: nil)
             
+            //
+            let secondAlert = UIAlertController(title : "케디의 출시일을 기다려주세요! :)", message : "출시 후 제공될 서비스입니다.\n감사합니다.", preferredStyle: UIAlertController.Style.alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler : nil)
+
+            secondAlert.addAction(defaultAction)
+            secondAlert.view.tintColor = UIColor.tealBlue
+            
+            
             alert.addAction(cancel)
             alert.view.tintColor = UIColor.tealBlue
             alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
+            present(secondAlert, animated: true, completion: nil)
             
         } else {
             dropDownButton.setTitle(userList[indexPath.row].userName, for: .normal)
@@ -285,13 +294,25 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
             
             
             let alert = UIAlertController(title: "사용자를\n 변환하시겠습니까?", message: "", preferredStyle: UIAlertController.Style.alert)
-            let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+            
+            let secondAlert = UIAlertController(title : "케디의 출시일을 기다려주세요! :)", message : "출시 후 제공될 서비스입니다.\n감사합니다.", preferredStyle: UIAlertController.Style.alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .destructive, handler : nil)
+
+            secondAlert.addAction(defaultAction)
+            secondAlert.view.tintColor = UIColor.tealBlue
+            
+            
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            
             let cancel = UIAlertAction(title: "취소", style: .destructive, handler: nil)
             
             alert.addAction(cancel)
             alert.view.tintColor = UIColor.tealBlue
             alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
+            
+            present(secondAlert, animated: true)
+               
             
         }
     }
@@ -370,9 +391,8 @@ extension HomeVC : UICollectionViewDataSource {
             if indexPath.row == functionalIngredientList.count - 1 {
                 cell.endCircleView.isHidden = false
             }
-            
-            
             return cell
+        
         } else {
             let cell = functionalCollectionView2.dequeueReusableCell(withReuseIdentifier: "ingredientCell2", for: indexPath) as! FunctionalIngeredientCell2
             
@@ -382,8 +402,24 @@ extension HomeVC : UICollectionViewDataSource {
             
             cell.label.text = ingredient.efficacy_name
             
-            if ingredient.efficacy_name == "간건강" {
+            if ingredient.efficacy_name == "면역력ㆍ항산화" {
+                imgName = "levelOfImmunity60"
+            } else if ingredient.efficacy_name == "간건강" {
                 imgName = "liver60"
+            } else if ingredient.efficacy_name == "피로회복" {
+                imgName = "fatigueRecovery60"
+            } else if ingredient.efficacy_name == "눈건강" {
+                imgName = "eye60"
+            } else if ingredient.efficacy_name == "혈행개선" {
+                imgName = "improvement60"
+            } else if ingredient.efficacy_name == "소화기능" {
+                imgName = "digest60"
+            } else if ingredient.efficacy_name == "두뇌활동" {
+                imgName = "brain60"
+            } else if ingredient.efficacy_name == "운동보조" {
+                imgName = "health60"
+            } else if ingredient.efficacy_name == "뼈" {
+                imgName = "bone60"
             }
             
             cell.imageView.image = UIImage(named: imgName)
@@ -391,7 +427,6 @@ extension HomeVC : UICollectionViewDataSource {
             if indexPath.row == functionalIngredientList2.count - 1 {
                 cell.endCircleView.isHidden = false
             }
-            
             
             return cell
         }
@@ -418,20 +453,15 @@ extension HomeVC {
     // 유저 table view 에 넣을 데이터 세팅
     func setUserData() {
         //let user1 = User(name: "박진오")
-        let user2 = User(name: "엄마")
+        //let user2 = User(name: "엄마")
         //let user3 = User(name: "안재은")
         let setting = User(name: "+ 사용자 추가하기")
         let info = User(name: "사랑하는 가족의 데이터를 추가하고,\n케어 파트너와 함께 해보세요!")
         
-        userList = [user2] + [setting] + [info]
+        userList = [setting] + [info]
     }
     // 제품 collection view에 넣을 데이터 세팅
     func setProductData() {
-        /*let product1 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
-         let product2 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
-         let product3 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")
-         let product4 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
-         let product5 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")*/
         productList = []
     }
     
@@ -447,12 +477,29 @@ extension HomeVC {
                 
                 self.functionalIngredient = res as! [FunctionalNutrient]
                 
-                self.functionalLabel.text = self.functionalIngredient[0].nutrient
-                //self.functionalLabel2.text = self.functionalIngredient[1].nutrient
-                self.functionalIngredientList = self.functionalIngredient[0].efficacy!
-                //self.functionalIngredientList2 = self.functionalIngredient[1].efficacy
+                if self.functionalIngredient.count == 0 {
+                    
+                    
+                    
+                } else if self.functionalIngredient.count == 1 {
+                    self.functionalLabel.text = self.functionalIngredient[0].nutrient
+                    self.functionalIngredientList = self.functionalIngredient[0].efficacy!
+                    
+                    self.functionalLabel2.isHidden = true
+                    
+                } else {
+                    self.functionalLabel.text = self.functionalIngredient[0].nutrient
+                    self.functionalIngredientList = self.functionalIngredient[0].efficacy!
+                    self.functionalLabel2.text = self.functionalIngredient[1].nutrient
+                    self.functionalIngredientList2 = self.functionalIngredient[1].efficacy!
+                }
+                
                 self.functionalCollectionView.dataSource = self
                 self.functionalCollectionView.reloadData()
+                
+                self.functionalCollectionView2.dataSource = self
+                self.functionalCollectionView2.reloadData()
+                
                 
             case .requestErr(let msg):
                 print("nutrient : request err")

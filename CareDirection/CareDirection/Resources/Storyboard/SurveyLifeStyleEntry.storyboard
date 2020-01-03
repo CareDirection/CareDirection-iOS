@@ -47,10 +47,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgIllustrationLifestyle" translatesAutoresizingMaskIntoConstraints="NO" id="xNW-es-9bP">
-                                <rect key="frame" x="36" y="196" width="304" height="304"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgIllustrationLifestyle" translatesAutoresizingMaskIntoConstraints="NO" id="xNW-es-9bP">
+                                <rect key="frame" x="35.5" y="181.5" width="304" height="304"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="GYT-ny-NhB"/>
+                                    <constraint firstAttribute="height" constant="304" id="q11-hq-MQk"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzZ-Be-DPP">
                                 <rect key="frame" x="116.5" y="600" width="142" height="49"/>
@@ -71,6 +74,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="gkd-PY-DJW" firstAttribute="top" secondItem="fuw-al-FDS" secondAttribute="top" id="9kr-Fb-kGk"/>
+                            <constraint firstItem="xNW-es-9bP" firstAttribute="centerY" secondItem="gkd-PY-DJW" secondAttribute="centerY" id="AlF-Kr-FvF"/>
                             <constraint firstItem="zb0-rL-HrQ" firstAttribute="trailing" secondItem="gkd-PY-DJW" secondAttribute="trailing" id="Bfp-qD-KVM"/>
                             <constraint firstItem="Urn-hU-Cb5" firstAttribute="top" secondItem="Xjy-OH-M29" secondAttribute="bottom" constant="11" id="SSm-7k-k96"/>
                             <constraint firstItem="gkd-PY-DJW" firstAttribute="leading" secondItem="zb0-rL-HrQ" secondAttribute="leading" id="W9d-B6-Bn0"/>
@@ -78,6 +82,7 @@
                             <constraint firstItem="Xjy-OH-M29" firstAttribute="top" secondItem="zb0-rL-HrQ" secondAttribute="top" constant="107" id="hiF-1f-y1p"/>
                             <constraint firstItem="Urn-hU-Cb5" firstAttribute="centerX" secondItem="fuw-al-FDS" secondAttribute="centerX" id="kpJ-Bu-DUh"/>
                             <constraint firstItem="Xjy-OH-M29" firstAttribute="centerX" secondItem="fuw-al-FDS" secondAttribute="centerX" id="u3n-0U-NVX"/>
+                            <constraint firstItem="xNW-es-9bP" firstAttribute="centerX" secondItem="gkd-PY-DJW" secondAttribute="centerX" id="uNi-cS-ESL"/>
                             <constraint firstAttribute="bottom" secondItem="gkd-PY-DJW" secondAttribute="bottom" id="v7o-sP-oJ3"/>
                             <constraint firstItem="fzZ-Be-DPP" firstAttribute="centerX" secondItem="fuw-al-FDS" secondAttribute="centerX" id="vWQ-TF-OnS"/>
                         </constraints>

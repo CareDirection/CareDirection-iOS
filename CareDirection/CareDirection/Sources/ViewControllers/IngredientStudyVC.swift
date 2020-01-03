@@ -70,9 +70,13 @@ class IngredientStudyVC: UIViewController {
         guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
           return
         }
-        dvc.categoryList = symptomListDummy
-        //dvc.titleLabel.text = "긴건강"
-        
+        print(symptomList)
+        print(symptomList[0].efficacy_idx)
+         print(symptomList[0].efficacy_name)
+        dvc.tabIndex = symptomList[0].efficacy_idx
+        //dvc.titleLabel.text = symptomList[0].efficacy_name
+        print(symptomList)
+        print(symptomList)
         present(dvc, animated: true)
     }
     
@@ -83,8 +87,10 @@ class IngredientStudyVC: UIViewController {
           return
         }
         
-       dvc.categoryList = symptomListDummy
-        //dvc.titleLabel.text = "피로회복"
+        dvc.tabIndex = symptomList[1].efficacy_idx
+        //dvc.titleLabel.text = symptomList[1].efficacy_name
+        print(symptomList)
+        print(symptomList)
        present(dvc, animated: true)
         
     }
@@ -95,9 +101,8 @@ class IngredientStudyVC: UIViewController {
         guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
           return
         }
-        
-        dvc.categoryList = symptomListDummy
-        //dvc.titleLabel.text = "눈건강"
+        dvc.tabIndex = symptomList[2].efficacy_idx
+        //dvc.titleLabel.text = symptomList[2].efficacy_name
         present(dvc, animated: true)
         
     }
@@ -108,9 +113,8 @@ class IngredientStudyVC: UIViewController {
         guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
           return
         }
-        
-        dvc.categoryList = symptomListDummy
-        //dvc.titleLabel.text = "혈행개선"
+        dvc.tabIndex = symptomList[3].efficacy_idx
+        //dvc.titleLabel.text = symptomList[3].efficacy_name
         present(dvc, animated: true)
         
     }
@@ -121,9 +125,8 @@ class IngredientStudyVC: UIViewController {
         guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
           return
         }
-        
-        dvc.categoryList = symptomListDummy
-        //dvc.titleLabel.text = "면역력ㆍ항산화"
+        dvc.tabIndex = symptomList[4].efficacy_idx
+        //dvc.titleLabel.text = symptomList[4].efficacy_name
         present(dvc, animated: true)
         
     }
@@ -134,9 +137,8 @@ class IngredientStudyVC: UIViewController {
         guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
           return
         }
-        
-        dvc.categoryList = symptomListDummy
-        //dvc.titleLabel.text = "소화기능"
+        dvc.tabIndex = symptomList[5].efficacy_idx
+        //dvc.titleLabel.text = symptomList[5].efficacy_name
         present(dvc, animated: true)
     }
     
@@ -146,9 +148,8 @@ class IngredientStudyVC: UIViewController {
         guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
           return
         }
-        
-        dvc.categoryList = symptomListDummy
-        //dvc.titleLabel.text = "두뇌활동"
+        dvc.tabIndex = symptomList[6].efficacy_idx
+        //dvc.titleLabel.text = symptomList[6].efficacy_name
         present(dvc, animated: true)
         
     }
@@ -159,9 +160,8 @@ class IngredientStudyVC: UIViewController {
         guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
           return
         }
-        
-        dvc.categoryList = symptomListDummy
-        //dvc.titleLabel.text = "운동보조"
+        dvc.tabIndex = symptomList[7].efficacy_idx
+        //dvc.titleLabel.text = symptomList[7].efficacy_name
         present(dvc, animated: true)
        
     }
@@ -172,9 +172,8 @@ class IngredientStudyVC: UIViewController {
         guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
           return
         }
-        
-        dvc.categoryList = symptomListDummy9
-        //dvc.titleLabel.text = "뼈"
+        dvc.tabIndex = symptomList[8].efficacy_idx
+        //dvc.titleLabel.text = symptomList[8].efficacy_name
         present(dvc, animated: true)
     }
 }
@@ -226,8 +225,6 @@ extension IngredientStudyVC : UICollectionViewDelegate {
                 return
             }
             
-            //let ingredient = ingredientList[indexPath.row]
-            
             dvc.detailList = ingredientList[indexPath.row]
             
             self.present(dvc, animated: true)
@@ -259,12 +256,6 @@ extension IngredientStudyVC {
     }
     
     func setArticle() {
-//        let article1 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "", detailContent: "", detailContentTitle: "", detailContentImage: "", detailContentPara: "")
-//        let article2 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "", detailContent: "", detailContentTitle: "", detailContentImage: "", detailContentPara: "")
-//        let article3 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "", detailContent: "", detailContentTitle: "", detailContentImage: "", detailContentPara: "")
-//        let article4 = Article(image: "flickrMarcoVerch", title: "함께 먹었다가 ‘독’ 되는 영양제 궁합 8가지", detailImage: "flickrMarcoVerch", detailContent: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고, 온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이 영양제를 잘못 먹으면\n제 효과를 보지 못하거나 독이 될 수도 있다는데요.", detailContentTitle: "감기예방에 좋은 비타민 C", detailContentImage: "flickrMarcoVerch", detailContentPara: "감기약 방부제로 사용되는 벤조산나트륨이 비타민C를\n만나면 인체에 해로운 성분이 발생할 수 있습니다.\n가능성이 작다고는 하지만 따로 먹는 것이 좋겠죠?")
-//
-//        articleList = [article1, article2, article3, article4]
         ArticleService.shared.showArticleMain() {
             [weak self]
             data in
@@ -297,6 +288,7 @@ extension IngredientStudyVC {
     }
     
     func setSymptom() {
+        /*
         let symptom1 = Symptom(category: "마카", image: "", detail: "마카는 페루의 산삼이라고 불리며최근 슈퍼푸드로 떠오르고 있는 식품입니다.미항공우주국 NASA에서 마카를 우주인 식품으로 선정하기도 했다네요!\n\n마카에는 31가지 미네랄과 18가지 필수 아미노산, 칼슘, 칼륨 등 무기질이 풍부하게 함유되어 있습니다. 철분은 더덕의 10배, 아연은 부추의 11배, 칼슘은 마늘의 26배, 아르기닌은 굴의 1.5배까지 들어있다고 합니다. 정말 다양한 성분이 함유된 건강기능식품이죠?\n\n주요 기능으로는 면역력 증진, 성기능 개선, 피로 회복 등이 있습니다. 항암에도 효능이 있다고 해요!\n\n주로 가루를 물에 타먹는 형태로 판매되고 있으며, 꿀과 함께 타먹으면 더맛있다고 하네요!")
 
         let symptom2 = Symptom(category: "종합비타민", image: "", detail: "만성피로에 시달리는 현대인들.\n비타민 C는 기본이고,\n온갖 종류의 영양제와\n함께 살고 있습니다.\n하지만!\n\n음식에도 안 맞는 궁합이 있듯이\n영양제를 잘못 먹으면\n제 효과를 보지 못하거나\n독이 될 수도 있다는데요.")
@@ -316,8 +308,7 @@ extension IngredientStudyVC {
         symptomListDummy7 = [symptom1, symptom2, symptom4]
         symptomListDummy8 = [symptom1, symptom2, symptom3, symptom5]
         symptomListDummy9 = [symptom1, symptom2, symptom3, symptom4, symptom5]
-        
-        
+        */
         
         
         EfficacyService.shared.efficacyList() {

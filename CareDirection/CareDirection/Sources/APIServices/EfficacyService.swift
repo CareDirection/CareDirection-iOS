@@ -41,7 +41,7 @@ struct EfficacyService {
                                     
                                     //switch result.success {
                                     //case true:
-                                        completion(.success(result.data!))
+                                    completion(.success(result.data!))
                                     //case false:
                                     //    completion(.requestErr(result.message))
                                     //}

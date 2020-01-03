@@ -50,11 +50,7 @@ class FunctionDetailVC: UIViewController {
         guard let dvc = symptomStoryboard.instantiateViewController(withIdentifier: "Symptom") as? SymptomVC else {
           return
         }
-        
-        dvc.categoryList = symptomList
-        print("성분학습 뷰:")
-        print(symptomList)
-        
+        dvc.tabIndex = 0
         present(dvc, animated: true)
         
     }
@@ -65,10 +61,7 @@ class FunctionDetailVC: UIViewController {
           return
         }
         
-        dvc.categoryList = symptomList
-        print("성분학습 뷰:")
-        print(symptomList)
-        
+        dvc.tabIndex = 0
         present(dvc, animated: true)
     }
     
@@ -79,9 +72,7 @@ class FunctionDetailVC: UIViewController {
           return
         }
         
-        dvc.categoryList = symptomList
-        print("성분학습 뷰:")
-        print(symptomList)
+        dvc.tabIndex = 0
         
         present(dvc, animated: true)
     }
@@ -93,9 +84,7 @@ class FunctionDetailVC: UIViewController {
           return
         }
         
-        dvc.categoryList = symptomList
-        print("성분학습 뷰:")
-        print(symptomList)
+        dvc.tabIndex = 0
         
         present(dvc, animated: true)
     }
@@ -107,9 +96,7 @@ class FunctionDetailVC: UIViewController {
           return
         }
         
-        dvc.categoryList = symptomList
-        print("성분학습 뷰:")
-        print(symptomList)
+        dvc.tabIndex = 0
         
         present(dvc, animated: true)
     }
@@ -121,9 +108,7 @@ class FunctionDetailVC: UIViewController {
           return
         }
         
-        dvc.categoryList = symptomList
-        print("성분학습 뷰:")
-        print(symptomList)
+        dvc.tabIndex = 0
         
         present(dvc, animated: true)
     }
@@ -135,9 +120,7 @@ class FunctionDetailVC: UIViewController {
           return
         }
         
-        dvc.categoryList = symptomList
-        print("성분학습 뷰:")
-        print(symptomList)
+        dvc.tabIndex = 0
         
         present(dvc, animated: true)
     }
@@ -149,9 +132,7 @@ class FunctionDetailVC: UIViewController {
           return
         }
         
-        dvc.categoryList = symptomList
-        print("성분학습 뷰:")
-        print(symptomList)
+        dvc.tabIndex = 0
         
         present(dvc, animated: true)
     }
@@ -163,9 +144,7 @@ class FunctionDetailVC: UIViewController {
           return
         }
         
-        dvc.categoryList = symptomList
-        print("성분학습 뷰:")
-        print(symptomList)
+        dvc.tabIndex = 0
         
         present(dvc, animated: true)
     }
@@ -195,9 +174,24 @@ extension FunctionDetailVC : UICollectionViewDataSource {
             //cell.imageView.image = ingredient.ingredientImage
             cell.label.text = ingredient.efficacy_name
             
-            if ingredient.efficacy_name == "간건강" {
-                print("간건강 true")
+            if ingredient.efficacy_name == "면역력ㆍ항산화" {
+                imgName = "levelOfImmunity60"
+            } else if ingredient.efficacy_name == "간건강" {
                 imgName = "liver60"
+            } else if ingredient.efficacy_name == "피로회복" {
+                imgName = "fatigueRecovery60"
+            } else if ingredient.efficacy_name == "눈건강" {
+                imgName = "eye60"
+            } else if ingredient.efficacy_name == "혈행개선" {
+                imgName = "improvement60"
+            } else if ingredient.efficacy_name == "소화기능" {
+                imgName = "digest60"
+            } else if ingredient.efficacy_name == "두뇌활동" {
+                imgName = "brain60"
+            } else if ingredient.efficacy_name == "운동보조" {
+                imgName = "health60"
+            } else if ingredient.efficacy_name == "뼈" {
+                imgName = "bone60"
             }
             
             cell.imageView.image = UIImage(named: imgName)
@@ -233,14 +227,6 @@ extension FunctionDetailVC : UICollectionViewDataSource {
 
 extension FunctionDetailVC {
     func setIngredient() {
-        /*let ingredient1 = FunctionalIngredient(image: "liver60", name: "간건강")
-        let ingredient2 = FunctionalIngredient(image: "liver60", name: "면역력")
-        let ingredient3 = FunctionalIngredient(image: "fatigue60", name: "피로회복")
-        
-        functionalIngredientList = [ingredient1, ingredient2, ingredient3]
-        
-        functionalIngredientList2 = [ingredient1, ingredient2]*/
-        
         
         NutrientService.shared.showNutrient() {
             [weak self]

@@ -130,8 +130,12 @@ class ProductVC: UIViewController {
             moreProductViewBtn.isHidden = true
             self.topProductTVTopConstraint.constant = 0
             backBtn.isHidden = false
-            
-            ProductTapService.shared.searchProduct(keyword: searchTxtView.text ?? " ") { data in
+            let nonSpacingTxt = self.searchTxtView.text?.trimmingCharacters(in: .whitespaces)
+            self.searchTxtView.text = nonSpacingTxt
+            print("---------")
+            print(nonSpacingTxt)
+            print("---------")
+            ProductTapService.shared.searchProduct(keyword: nonSpacingTxt ?? " ") { data in
                 switch data {
                 case .success(let data):
                     self.productList = data as! [SearchList]
@@ -186,6 +190,7 @@ class ProductVC: UIViewController {
         self.searchTxtView.text = nonSpacingTxt
         print(nonSpacingTxt)
         productList = []
+        
         if searchFiterTxtView.text == "제품"{
             setDynamicLayout()
         }
@@ -320,7 +325,7 @@ extension ProductVC: UITableViewDataSource{
             cell.nameLbl.text = productList[indexPath.row].productName
             cell.companyNameLbl.text = productList[indexPath.row].productCompanyName
             cell.priceLbl.text = "\(productList[indexPath.row].productQuantityPrice)"
-            cell.img.imageFromUrl(productList[indexPath.row].imageKey, defaultImgPath: "logo")
+            cell.img.imageFromUrl(productList[indexPath.row].imageKey, defaultImgPath: "imgLogo")
             if productList[indexPath.row].productIsImport == 1 {
                 cell.purchaseCountryLbl.isHidden = false
             }
@@ -338,6 +343,16 @@ extension ProductVC: UITableViewDataSource{
             if productList.count != 0{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "BestProductTVCell") as! BestProductTVCell
                 cell.nameLbl.text = productList[indexPath.row].productName
+                cell.companyNameLbl.text = productList[indexPath.row].productCompanyName
+                cell.priceLbl.text = "\(productList[indexPath.row].productQuantityPrice)"
+                cell.img.imageFromUrl(productList[indexPath.row].imageKey, defaultImgPath: "imgLogo")
+                if productList[indexPath.row].productIsImport == 1 {
+                    cell.purchaseCountryLbl.isHidden = false
+                }
+                else {
+                    cell.purchaseCountryLbl.isHidden = true
+                }
+                
                 cell.rankImg.isHidden = true
                 return cell
             }else{

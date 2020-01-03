@@ -445,6 +445,8 @@ extension HomeVC : UICollectionViewDelegate {
         
         dvc.productIdx = takingProductList[indexPath.row].productIdx
         dvc.isDosed = takingProductList[indexPath.row].productIsDosed
+        print(dvc.productIdx)
+        print(dvc.isDosed)
         present(dvc, animated: true)
     }
 }

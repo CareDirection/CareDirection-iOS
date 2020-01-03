@@ -22,7 +22,7 @@ class TakingProductPopUpVC: UIViewController {
     @IBOutlet var dosedBtn: UIButton!
     @IBOutlet var cancelBtn: UIButton!
     
-    var productIdx: Int!
+    var productIdx: Int = 0
     var isDosed: Bool = true
     var productPopUpData: [TakingProductPopUpData] = []
     
@@ -31,6 +31,7 @@ class TakingProductPopUpVC: UIViewController {
         popUpView.makeRounded(cornerRadius: 21)
         
         setData()
+        
         setLayout()
     }
     
@@ -63,14 +64,14 @@ class TakingProductPopUpVC: UIViewController {
     }
     
     func setLayout(){
+        print(isDosed)
         if self.isDosed{
-            self.dosedBtn.titleLabel?.textColor = UIColor.tealBlue
-            self.dosedBtn.titleLabel?.text = "복용"
-            
+            self.dosedBtn.setTitle("복용취소", for: .normal)
+            self.dosedBtn.setTitleColor(UIColor.init(red: 255 / 255, green: 87 / 255, blue: 47 / 255, alpha: 1), for: .normal)
         }
         else{
-            self.dosedBtn.titleLabel?.textColor = UIColor.init(red: 255 / 255, green: 87 / 255, blue: 47 / 255, alpha: 1)
-            self.dosedBtn.titleLabel?.text = "복용취소"
+            self.dosedBtn.setTitle("복용", for: .normal)
+            self.dosedBtn.setTitleColor(UIColor.tealBlue, for: .normal)
         }
     }
 

@@ -166,6 +166,11 @@ struct TakingProductService {
     
     func registTakingProduct(idx: Int, quantity: Int, startDate: String, alarm: String, completion: @escaping(NetworkResult<Any>) -> Void){
         let URL = APIConstants.ProductBaseURL + "/\(idx)/dose"
+        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+        
+        let headr: HTTPHeaders = [
+            "token":token
+        ]
         
         let body:Parameters = [
             "dose_daily_quantity" : quantity,
@@ -173,12 +178,11 @@ struct TakingProductService {
             "dose_alarm" : alarm
         ]
         
-        Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseData(){
+        Alamofire.request(URL, method: .post, parameters: body, encoding: URLEncoding.default, headers: headr).responseData(){
             response in
             switch response.result {
             case .success:
                 if let value = response.result.value {
-                    
                     if let status = response.response?.statusCode {
                         
                         switch status {
@@ -199,6 +203,7 @@ struct TakingProductService {
                             completion(.requestErr("입력값에 Null Value"))
                         case 500:
                             completion(.serverErr)
+                        
                         default:
                             print(status)
                         }// switch

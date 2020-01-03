@@ -887,21 +887,18 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDW-Ag-3BH">
                                         <rect key="frame" x="40" y="20" width="78" height="44.5"/>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="selectedComponentCategoryInfo:" destination="g8h-eK-Lwn" eventType="touchUpInside" id="BfR-HM-HG8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5S2-FD-3dW">
                                         <rect key="frame" x="164" y="20" width="47" height="44.5"/>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="selectedComponentCategoryInfo:" destination="g8h-eK-Lwn" eventType="touchUpInside" id="16f-ZL-nOj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax8-lz-JMT">
                                         <rect key="frame" x="286.5" y="20" width="48.5" height="44.5"/>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="selectedComponentCategoryInfo:" destination="g8h-eK-Lwn" eventType="touchUpInside" id="SDQ-j1-M8I"/>
                                         </connections>

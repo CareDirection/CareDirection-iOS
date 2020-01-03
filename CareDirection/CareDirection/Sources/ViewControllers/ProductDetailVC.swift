@@ -80,6 +80,7 @@ class ProductDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ChartView.playAnimations()
         initVar()
         setLayout()
         
@@ -104,11 +105,11 @@ class ProductDetailVC: UIViewController {
                 self.productInfo = self.detailData[self.detailData.endIndex - 1].commonData!
                 
                 print(self.productInfo)
-                
-                self.productComponentInfoTVExtension.componentInfo = self.productInfo.productDetailName.split(separator: "\n").map(String.init)
+
+                self.productComponentInfoTVExtension.componentName = self.productInfo.productDetailName.split(separator: "\n").map(String.init)
                 self.productComponentHeightConstraint.constant = CGFloat((self.productComponentInfoTVExtension.componentInfo?.count ?? 1) * 30)
                 
-                self.productComponentInfoTVExtension.componentName = self.productInfo.productDetailValue.split(separator: "\n").map(String.init)
+                self.productComponentInfoTVExtension.componentInfo = self.productInfo.productDetailValue.split(separator: "\n").map(String.init)
                 self.productComponentInfoTV.delegate = self.productComponentInfoTVExtension
                 self.productComponentInfoTV.dataSource = self.productComponentInfoTVExtension
                 
@@ -293,7 +294,7 @@ class ProductFunctionCVExtension : UIViewController, UICollectionViewDelegate, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductFunctionCVCell", for: indexPath) as! ProductFunctionCVCell
-        cell.functionNameLbl.text = data![indexPath.row].efficacyName
+        //cell.functionNameLbl.text = data![indexPath.row].efficacyName
         
         return cell
     }
@@ -362,7 +363,7 @@ class NaverLowestPriceInfoCVExtension : UIViewController ,UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NaverLowestPriceInfoCVCell", for: indexPath) as! NaverLowestPriceInfoCVCell
         cell.productImg.imageFromUrl(data![indexPath.row].image, defaultImgPath: "imgLogo")
-        cell.purchasePlaceLbl.text = "\(data![indexPath.row].lprice)"
+        cell.priceLbl.text = "\(data![indexPath.row].lprice)"
         cell.purchasePlaceLbl.text = data![indexPath.row].mallName
         
         return cell

@@ -75,6 +75,14 @@ class ComponentProductVC: UIViewController {
                 let result = data as! SearchResult
                 self.topData = result.topData
                 self.searchList = result.searchList
+                self.infoViewFirstCategory.text = self.topData.productStandard1
+                self.infoViewSecondCategory.text = self.topData.productStandard2
+                self.infoViewThirdCategory.text = self.topData.productStandard3
+                
+                self.infoViewFirstInfo.text = self.topData.productStandard1Value
+                self.infoViewSecondInfo.text = self.topData.productStandard2Value
+                self.infoViewThirdInfo.text = self.topData.productStandard3Value
+                
                 self.productTableView.delegate = self
                 self.productTableView.dataSource = self
                 self.productTableView.reloadData()

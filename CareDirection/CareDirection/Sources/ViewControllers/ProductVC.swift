@@ -180,11 +180,11 @@ class ProductVC: UIViewController {
     
     @IBAction func selectedSearchBtn(_ sender: Any) {
         self.viewType = .searchView
-        guard let searchText = self.searchFiterTxtView.text else{ return }
+        guard let searchText = self.searchTxtView.text else{ return }
         
         let nonSpacingTxt = searchText.trimmingCharacters(in: .whitespaces)
-        self.searchFiterTxtView.text = nonSpacingTxt
-        
+        self.searchTxtView.text = nonSpacingTxt
+        print(nonSpacingTxt)
         productList = []
         if searchFiterTxtView.text == "제품"{
             setDynamicLayout()

@@ -19,7 +19,7 @@ struct NutrientService {
         
         let header: HTTPHeaders = [
             "Content-Type" : "application/json",
-            "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGlsZHVzZXJfaWR4Ijo0fQ.J6rwFP6n8HSmw8YWznkZri5eOpj-sNuzpFKuUY8zlBc"
+            "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
         ]
         
         Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
@@ -33,15 +33,18 @@ struct NutrientService {
                         if let status = response.response?.statusCode {
                             switch status {
                             case 200:
+                                print("nutrient success!")
                                 do {
                                     
                                     let decoder = JSONDecoder()
                                     let result = try decoder.decode(ResponseNutrient.self, from: value)
                                     
-                                    completion(.success(result.data!))
+                                    completion(.success(result.data))
                                     
                                 } catch {
-                                    completion(.pathErr)
+                                    print(error.localizedDescription)
+                                    print("nutrient pathERrr")
+                                    completion(.requestErr("No Data"))
                                 }
                             case 400, 401:
                                 completion(.pathErr)

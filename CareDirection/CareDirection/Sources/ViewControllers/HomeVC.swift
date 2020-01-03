@@ -56,9 +56,13 @@ class HomeVC: UIViewController {
     var userList : [User] = []
     var productList : [Product] = []
     var functionalIngredientList : [FunctionalEfficacy] = []
-    var functionalIngredientList2 : [FunctionalIngredient] = []
+    //var functionalIngredientList2 : [FunctionalIngredient] = []
+    var functionalIngredientList2 : [FunctionalEfficacy] = []
     var chartList : [MainChart] = []
-    var functionalIngredient : ResponseNutrient!
+    //var functionalIngredient : ResponseNutrient!
+    var functionalIngredient : [FunctionalNutrient] = []
+    var ingredientImgList : [Ingredient] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,6 +117,7 @@ class HomeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setIngredient()
+        self.functionalCollectionView.reloadData()
     }
     
     // 유저 변경 drop down button
@@ -144,7 +149,7 @@ class HomeVC: UIViewController {
         let standardStoryboard = UIStoryboard.init(name: "Setting", bundle: nil)
         
         guard let dvc = standardStoryboard.instantiateViewController(withIdentifier: "Setting") as? SettingVC else {
-          return
+            return
         }
         present(dvc, animated: true)
     }
@@ -155,7 +160,7 @@ class HomeVC: UIViewController {
         
         let standardStoryboard = UIStoryboard.init(name: "StandardDetail", bundle: nil)
         guard let dvc = standardStoryboard.instantiateViewController(withIdentifier: "standard") as? StandardDetailVC else {
-          return
+            return
         }
         present(dvc, animated: true)
         
@@ -165,7 +170,7 @@ class HomeVC: UIViewController {
     @IBAction func showFunctionalDetail(_ sender: Any) {
         let functionStoryboard = UIStoryboard.init(name: "FunctionDetail", bundle: nil)
         guard let dvc = functionStoryboard.instantiateViewController(withIdentifier: "functionDetail") as? FunctionDetailVC else {
-          return
+            return
         }
         present(dvc, animated: true)
     }
@@ -174,7 +179,7 @@ class HomeVC: UIViewController {
     @IBAction func showScheduleButtonClick(_ sender: Any) {
         let recordStoryboard = UIStoryboard.init(name: "TakingProductRegist", bundle: nil)
         guard let dvc = recordStoryboard.instantiateViewController(withIdentifier: "takingProduct") as? TakingProductRegistVC else {
-          return
+            return
         }
         present(dvc, animated: true)
     }
@@ -187,9 +192,9 @@ class HomeVC: UIViewController {
         }
         
         present(dvc, animated: true)
-        }
     }
-    
+}
+
 
 // 유저 등록 table view datasource & delegate
 extension HomeVC : UITableViewDataSource, UITableViewDelegate {
@@ -268,33 +273,57 @@ extension HomeVC : UICollectionViewDataSource {
         } else if collectionView == self.functionalCollectionView{
             
             return functionalIngredientList.count
-        
+            
         } else {
-        
+            
             return functionalIngredientList2.count
-        
+            
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.productCollectionView {
-        let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! ProductCell
-        
-        let product = productList[indexPath.row]
-        
-        cell.productName.text = product.productName
-        cell.productImage.image = product.productImage
-        cell.productCheckImage.image = product.checkImage
-        
-        return cell
+            let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! ProductCell
+            
+            let product = productList[indexPath.row]
+            
+            cell.productName.text = product.productName
+            cell.productImage.image = product.productImage
+            cell.productCheckImage.image = product.checkImage
+            
+            return cell
         } else if collectionView ==  self.functionalCollectionView {
             let cell = functionalCollectionView.dequeueReusableCell(withReuseIdentifier: "ingredientCell", for: indexPath) as! FunctionalIngredientCell
             
             let ingredient = functionalIngredientList[indexPath.row]
             
             cell.label.text = ingredient.efficacy_name
+            
             print(ingredient.efficacy_name)
-            cell.imageView.image = UIImage(named: ingredient.efficacy_name)
+            
+            var imgName = ""
+            
+            if ingredient.efficacy_name == "면역력ㆍ항산화" {
+                imgName = "levelOfImmunity60"
+            } else if ingredient.efficacy_name == "간건강" {
+                imgName = "liver60"
+            } else if ingredient.efficacy_name == "피로회복" {
+                imgName = "fatigueRecovery60"
+            } else if ingredient.efficacy_name == "눈건강" {
+                imgName = "eye60"
+            } else if ingredient.efficacy_name == "혈행개선" {
+                imgName = "improvement60"
+            } else if ingredient.efficacy_name == "소화기능" {
+                imgName = "digest60"
+            } else if ingredient.efficacy_name == "두뇌활동" {
+                imgName = "brain60"
+            } else if ingredient.efficacy_name == "운동보조" {
+                imgName = "health60"
+            } else if ingredient.efficacy_name == "뼈" {
+                imgName = "bone60"
+            }
+            
+            cell.imageView.image = UIImage(named: imgName)
             
             if indexPath.row == functionalIngredientList.count - 1 {
                 cell.endCircleView.isHidden = false
@@ -307,8 +336,15 @@ extension HomeVC : UICollectionViewDataSource {
             
             let ingredient = functionalIngredientList2[indexPath.row]
             
-            cell.imageView.image = ingredient.ingredientImage
-            cell.label.text = ingredient.ingredientName
+            var imgName = ""
+            
+            cell.label.text = ingredient.efficacy_name
+            
+            if ingredient.efficacy_name == "간건강" {
+                imgName = "liver60"
+            }
+            
+            cell.imageView.image = UIImage(named: imgName)
             
             if indexPath.row == functionalIngredientList2.count - 1 {
                 cell.endCircleView.isHidden = false
@@ -317,7 +353,7 @@ extension HomeVC : UICollectionViewDataSource {
             
             return cell
         }
-    
+        
     }
 }
 
@@ -350,20 +386,14 @@ extension HomeVC {
     // 제품 collection view에 넣을 데이터 세팅
     func setProductData() {
         /*let product1 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
-        let product2 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
-        let product3 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")
-        let product4 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
-        let product5 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")*/
+         let product2 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
+         let product3 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")
+         let product4 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
+         let product5 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")*/
         productList = []
     }
     
     func setIngredient() {
-        
-        let ingredient1 = FunctionalIngredient(image: "liver60", name: "간건강")
-        let ingredient2 = FunctionalIngredient(image: "levelOfImmunity60", name: "면역력")
-        let ingredient3 = FunctionalIngredient(image: "fatigueRecovery60", name: "피로회복")
-        
-        functionalIngredientList2 = [ingredient1, ingredient2]
         
         NutrientService.shared.showNutrient() {
             [weak self]
@@ -373,24 +403,25 @@ extension HomeVC {
             switch data {
             case .success(let res) :
                 
-                self.functionalIngredient = res as! ResponseNutrient
+                self.functionalIngredient = res as! [FunctionalNutrient]
                 
-                self.functionalLabel.text = self.functionalIngredient.data.nutrient
-                
-                self.functionalIngredientList = self.functionalIngredient.data.efficacy!
-                
+                self.functionalLabel.text = self.functionalIngredient[0].nutrient
+                //self.functionalLabel2.text = self.functionalIngredient[1].nutrient
+                self.functionalIngredientList = self.functionalIngredient[0].efficacy!
+                //self.functionalIngredientList2 = self.functionalIngredient[1].efficacy
+                self.functionalCollectionView.dataSource = self
                 self.functionalCollectionView.reloadData()
                 
-            case .requestErr(_):
-                print("request err")
+            case .requestErr(let msg):
+                print("nutrient : request err")
             case .pathErr:
-                print("path err")
+                print("nutrient : path err")
             case .serverErr:
-                print("server err")
+                print("nutrient : server err")
             case .networkFail:
-                print("network fail")
+                print("nutrient : network fail")
             case .dbErr:
-                print("db err")
+                print("nutrient : db err")
             }
         }
     }
@@ -413,7 +444,7 @@ extension HomeVC {
             case .requestErr(let message):
                 print("\(message)")
             case .pathErr:
-                 print(".pathErr")
+                print(".pathErr")
             case .serverErr:
                 print(".serverErr")
             case .networkFail:

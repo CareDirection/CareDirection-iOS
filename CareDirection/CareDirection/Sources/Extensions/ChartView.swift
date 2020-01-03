@@ -94,11 +94,19 @@ class ChartView: MacawView {
         
         createDummyData()
         
-        let items = ChartList.map { _ in Group() }
+        var createPalette : [Int] = []
         
-        for i in 0..<11 {
-           
-        }
+//        for i in 0 ..< 11 {
+//            if ChartList[i].nutrient_percent < 100 && ChartList[i].nutrient_percent > 30{
+//                createPalette[i] = 0xb5e0e4
+//            } else {
+//                createPalette[i] = 0xffabab
+//            }
+//        }
+        
+        //palette = createPalette.map {zzz
+        
+        let items = ChartList.map { _ in Group() }
         
         animations = items.enumerated().map { (i: Int, item: Group) in
             item.contentsVar.animation(delay: Double(i) * 0.1) { t in

@@ -111,6 +111,11 @@
                                 <state key="normal" title="제품 보러가기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="Study"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="goToProductClick:" destination="BLO-qI-HXl" eventType="touchUpInside" id="D6H-lO-AcB"/>
                                 </connections>
@@ -155,6 +160,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cFA-8b-zqq"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Study"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="goToProductButton" destination="8P1-Od-oj3" id="91i-s0-e98"/>
                         <outlet property="ingredientTableView" destination="nOh-FA-fk9" id="JCo-gS-Gab"/>

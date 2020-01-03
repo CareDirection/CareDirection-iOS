@@ -422,6 +422,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I4P-27-Kqf"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Home"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="dateLabel" destination="dl1-Oq-8JY" id="1LW-dM-qdd"/>
                         <outlet property="datePickButton" destination="yEG-Nh-GNu" id="WBh-Qv-J65"/>

@@ -71,11 +71,11 @@ struct ArticleService {
             "Content-Type" : "application/json",
         ]
         
-        let paramaters : Parameters = [
-            "article_idx" : articleIdx
-        ]
+//        let paramaters : Parameters = [
+//            "article_idx" : articleIdx
+//        ]
         
-        Alamofire.request(URL, method: .get, parameters: paramaters, encoding: URLEncoding.queryString, headers: header)
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
                 
                 switch response.result {
@@ -88,10 +88,10 @@ struct ArticleService {
                             case 200:
                                 do {
                                     let decoder = JSONDecoder()
-                                    
                                     let result = try decoder.decode(ResponseArticle.self, from: value)
                                     print("Article Success")
-                                    completion(.success(result))
+                                    completion(.success(result.data))
+                                    print("Article Success")
                                     print(result)
                                 } catch {
                                     print("article path Err")

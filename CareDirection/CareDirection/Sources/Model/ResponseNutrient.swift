@@ -12,5 +12,5 @@ import UIKit
 struct ResponseNutrient: Codable {
     let status: Int
     let message: String
-    let data: FunctionalNutrient!
+    let data: [FunctionalNutrient]
 }

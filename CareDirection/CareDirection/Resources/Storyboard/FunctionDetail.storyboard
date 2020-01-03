@@ -189,14 +189,14 @@
                                                         </connections>
                                                     </collectionView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="홍삼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbD-tu-fMo">
-                                                        <rect key="frame" x="267.5" y="77" width="31.5" height="22"/>
+                                                        <rect key="frame" x="268" y="77" width="100" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
                                                         <color key="textColor" red="0.0" green="0.64705882349999999" blue="0.6588235294" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="오메가3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEX-y2-ojx">
-                                                        <rect key="frame" x="267.5" y="176" width="56.5" height="22"/>
+                                                        <rect key="frame" x="268" y="176" width="100" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
                                                         <color key="textColor" red="0.0" green="0.64705882349999999" blue="0.6588235294" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -725,12 +725,14 @@
                         <outlet property="caringFunctionView" destination="u7R-jE-8UZ" id="k1x-UT-l2L"/>
                         <outlet property="functionalCollectionView" destination="kmU-pt-M5A" id="cVt-GG-W1p"/>
                         <outlet property="functionalCollectionView2" destination="7e9-Su-yHO" id="5zZ-97-4vD"/>
+                        <outlet property="functionalLabel" destination="nbD-tu-fMo" id="eU9-sn-81V"/>
+                        <outlet property="functionalLabel2" destination="GEX-y2-ojx" id="ZOf-Kq-7ic"/>
                         <outlet property="navigationBar" destination="Sbn-yK-z44" id="5Ah-c8-MFS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1j-Gu-CH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="47"/>
+            <point key="canvasLocation" x="60" y="46.326836581709152"/>
         </scene>
     </scenes>
     <resources>

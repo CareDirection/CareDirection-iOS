@@ -20,11 +20,14 @@ class FunctionDetailVC: UIViewController {
     
     @IBOutlet weak var allFunctionView: UIView!
     
+    @IBOutlet weak var functionalLabel: UILabel!
+    @IBOutlet weak var functionalLabel2: UILabel!
     
-    var functionalIngredientList : [FunctionalIngredient] = []
+    
+    var functionalIngredientList : [FunctionalEfficacy] = []
     var functionalIngredientList2 : [FunctionalIngredient] = []
     var symptomList : [Symptom] = []
-    
+    var functionalIngredient : [FunctionalNutrient] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -187,9 +190,20 @@ extension FunctionDetailVC : UICollectionViewDataSource {
             
             let ingredient = functionalIngredientList[indexPath.row]
             
-        
-            cell.imageView.image = ingredient.ingredientImage
-            cell.label.text = ingredient.ingredientName
+            var imgName = ""
+            
+            //cell.imageView.image = ingredient.ingredientImage
+            cell.label.text = ingredient.efficacy_name
+            
+            if ingredient.efficacy_name == "간건강" {
+                print("간건강 true")
+                imgName = "liver60"
+            }
+            
+            cell.imageView.image = UIImage(named: imgName)
+            
+            print("이미지 이름" + ingredient.efficacy_name)
+            
         
         if indexPath.row == functionalIngredientList.count - 1 {
             cell.endCircleView.isHidden = false
@@ -219,13 +233,46 @@ extension FunctionDetailVC : UICollectionViewDataSource {
 
 extension FunctionDetailVC {
     func setIngredient() {
-        let ingredient1 = FunctionalIngredient(image: "liver60", name: "간건강")
+        /*let ingredient1 = FunctionalIngredient(image: "liver60", name: "간건강")
         let ingredient2 = FunctionalIngredient(image: "liver60", name: "면역력")
         let ingredient3 = FunctionalIngredient(image: "fatigue60", name: "피로회복")
         
         functionalIngredientList = [ingredient1, ingredient2, ingredient3]
         
-        functionalIngredientList2 = [ingredient1, ingredient2]
+        functionalIngredientList2 = [ingredient1, ingredient2]*/
+        
+        
+        NutrientService.shared.showNutrient() {
+            [weak self]
+            data in
+            guard let `self` = self else { return }
+            
+            switch data {
+            case .success(let res) :
+                
+                self.functionalIngredient = res as! [FunctionalNutrient]
+                
+                self.functionalLabel.text = self.functionalIngredient[0].nutrient
+                //self.functionalLabel2.text = self.functionalIngredient[1].nutrient
+                self.functionalIngredientList = self.functionalIngredient[0].efficacy!
+                //self.functionalIngredientList2 = self.functionalIngredient[1].efficacy
+                self.functionalCollectionView.dataSource = self
+                self.functionalCollectionView.reloadData()
+                
+            case .requestErr(let msg):
+                print("nutrient : request err")
+            case .pathErr:
+                print("nutrient : path err")
+            case .serverErr:
+                print("nutrient : server err")
+            case .networkFail:
+                print("nutrient : network fail")
+            case .dbErr:
+                print("nutrient : db err")
+            }
+        }
+        
+        
     }
     
     func setSymptom() {

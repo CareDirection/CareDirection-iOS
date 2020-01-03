@@ -695,6 +695,10 @@
                         <viewLayoutGuide key="safeArea" id="sGa-VI-8G9"/>
                     </view>
                     <size key="freeformSize" width="375" height="969"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Study"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="articleCollectionView" destination="EwG-rD-dV8" id="bzr-j1-NlW"/>
                         <outlet property="articleView" destination="PHV-ky-HGg" id="Vh1-1d-dMH"/>

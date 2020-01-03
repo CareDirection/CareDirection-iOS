@@ -34,7 +34,7 @@ struct Article : Codable {
     let article_title, image_key: String
 }
 struct ArticleContents : Codable {
-    let main_contents : [MainContents]?
+    let main_contents : MainContents?
     let sub_contents : [SubContents]?
 }
 

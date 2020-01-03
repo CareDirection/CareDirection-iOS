@@ -180,7 +180,6 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Ras-R2-aeI" id="5NQ-5z-R5Y"/>
                                     <outlet property="delegate" destination="Ras-R2-aeI" id="cj2-wM-YPB"/>
                                 </connections>
                             </tableView>
@@ -198,6 +197,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZFp-Lg-DIc"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Study"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="articleTableView" destination="fjw-Mv-YgC" id="RYH-1y-ve1"/>
                         <outlet property="navigationBarView" destination="ET9-eq-2SI" id="m2F-Q9-PN0"/>

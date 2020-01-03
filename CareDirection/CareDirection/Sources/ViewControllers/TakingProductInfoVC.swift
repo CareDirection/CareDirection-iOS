@@ -33,8 +33,8 @@ class TakingProductInfoVC: UIViewController {
     let datePicker = UIDatePicker()
     let timePicker = UIDatePicker()
     let today:Date = Date()
-    var dateInfo: String?
-    var alarmInfo: String?
+    var dateInfo: String = ""
+    var alarmInfo: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -152,11 +152,20 @@ class TakingProductInfoVC: UIViewController {
     }
     
     @IBAction func selectedRegistBtn(_ sender: Any) {
-
-        TakingProductService.shared.registTakingProduct(idx: productIdx!, quantity: selectedNum, startDate: dateInfo!, alarm: alarmInfo!){ data in
+        print(self.productIdx)
+        print(self.selectedNum)
+        print(self.dateInfo)
+        print(self.alarmInfo)
+        
+        TakingProductService.shared.registTakingProduct(idx: productIdx!, quantity: selectedNum, startDate: dateInfo, alarm: alarmInfo){ data in
+            
             switch data{
             case .success(let msg):
                 print(msg)
+                let storyBoard = UIStoryboard.init(name: "AfterSurveyResgistTakingProduct", bundle: nil)
+                let dvc = storyBoard.instantiateViewController(identifier: "AfterSurveyResgistTakingProduct") as! AfterSurveyResgistTakingProductVC
+                dvc.modalPresentationStyle = .fullScreen
+                self.present(dvc, animated: true)
             case .requestErr(let msg):
                 print(msg)
             case .pathErr:

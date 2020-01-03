@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import XLPagerTabStrip
 
 class SymptomVC: UIViewController {
 
@@ -17,6 +16,11 @@ class SymptomVC: UIViewController {
     
     @IBOutlet weak var tabBarCollectionView: UICollectionView!
     @IBOutlet weak var symptomTableView: UITableView!
+    
+    
+    // 특정 성분 정보 타이틀 띄우는 라벨
+    @IBOutlet weak var titleLabel: UILabel!
+    
     
     var categoryList : [Symptom] = []
     var symptomList : Symptom?

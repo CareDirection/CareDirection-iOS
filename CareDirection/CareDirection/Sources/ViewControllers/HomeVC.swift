@@ -32,6 +32,7 @@ class HomeVC: UIViewController {
     // 유저 선택 전체적인 뷰
     @IBOutlet weak var userTableView: SelfSizedTableView!
     @IBOutlet weak var dropDownButton: UIButton!
+    //MARK - 추후 dropDownButton.text에 설문조사에서 받은 이름 지정해줘야함!
     @IBOutlet weak var blurView: UIView!
     @IBOutlet weak var navigationBar: UIView!
     
@@ -55,9 +56,8 @@ class HomeVC: UIViewController {
     var userList : [User] = []
     var productList : [Product] = []
     var functionalIngredientList : [FunctionalEfficacy] = []
-    var functionalIngredientList2 : [FunctionalEfficacy] = []
+    var functionalIngredientList2 : [FunctionalIngredient] = []
     var chartList : [MainChart] = []
-    
     var functionalIngredient : ResponseNutrient!
     
     override func viewDidLoad() {
@@ -67,6 +67,7 @@ class HomeVC: UIViewController {
         setUserData()
         // 제품 리스트 더미 데이터 생성
         setProductData()
+        // 기능 성분 가져오기
         setIngredient()
         
         // navigation bar 사용자 추가 isHidden 설정해주기!
@@ -78,15 +79,11 @@ class HomeVC: UIViewController {
         functionView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
         takingView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 3)
         
-        setGraph()
-        
+        //setGraph()
         print(chartList)
-        //setupChartData()
         // 차트 뷰 나타내기
         ChartView.playAnimations()
-        //ChartView.createDummyData() = setGraph()
         
-        //chartView.chartlise
         // table view customize
         userTableView.clipsToBounds = true
         userTableView.layer.cornerRadius = 20
@@ -97,7 +94,6 @@ class HomeVC: UIViewController {
         // collection view delegate, dataSource 설정
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
-        
         
         // button custom 하기
         showDetailStandard.makeRounded(cornerRadius: 13)
@@ -113,43 +109,11 @@ class HomeVC: UIViewController {
             noRegistView.isHidden = false
             productCollectionView.isHidden = true
         }
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        NutrientService.shared.showNutrient() {
-            [weak self]
-            data in
-            guard let `self` = self else { return }
-            
-            switch data {
-            case .success(let res) :
-                self.functionalIngredient = res as! ResponseNutrient
-                
-                self.functionalLabel.text = self.functionalIngredient.data.nutrient
-                
-                self.functionalIngredientList = self.functionalIngredient.data.efficacy!
-                
-                self.functionalCollectionView.reloadData()
-                
-            case .requestErr(_):
-                print("request err")
-            case .pathErr:
-                print("path err")
-            case .serverErr:
-                print("server err")
-            case .networkFail:
-                print("network fail")
-            case .dbErr:
-                print("db err")
-            }
-            
-        }
+        setIngredient()
     }
-    
-    
-    
     
     // 유저 변경 drop down button
     @IBAction func userDropDown(_ sender: Any) {
@@ -214,7 +178,18 @@ class HomeVC: UIViewController {
         }
         present(dvc, animated: true)
     }
-}
+    
+    @IBAction func goToRegistButton(_ sender: Any) {
+        let addStoryboard = UIStoryboard.init(name: "ProductSearch", bundle: nil)
+        
+        guard let dvc = addStoryboard.instantiateViewController(withIdentifier: "ProductSearch") as? ProductSearchVC else {
+            return
+        }
+        
+        present(dvc, animated: true)
+        }
+    }
+    
 
 // 유저 등록 table view datasource & delegate
 extension HomeVC : UITableViewDataSource, UITableViewDelegate {
@@ -268,6 +243,17 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
         } else {
             dropDownButton.setTitle(userList[indexPath.row].userName, for: .normal)
             animate(toggle: false)
+            
+            
+            let alert = UIAlertController(title: "사용자를\n 변환하시겠습니까?", message: "", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+            let cancel = UIAlertAction(title: "취소", style: .destructive, handler: nil)
+            
+            alert.addAction(cancel)
+            alert.view.tintColor = UIColor.tealBlue
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+            
         }
     }
 }
@@ -276,11 +262,17 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
 extension HomeVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.productCollectionView {
-        return productList.count
+            
+            return productList.count
+            
         } else if collectionView == self.functionalCollectionView{
+            
             return functionalIngredientList.count
+        
         } else {
+        
             return functionalIngredientList2.count
+        
         }
     }
     
@@ -300,10 +292,6 @@ extension HomeVC : UICollectionViewDataSource {
             
             let ingredient = functionalIngredientList[indexPath.row]
             
-            
-            //cell.imageView.image = ingredient.
-            //cell.label.text = ingredient.ingredientName
-            
             cell.label.text = ingredient.efficacy_name
             print(ingredient.efficacy_name)
             cell.imageView.image = UIImage(named: ingredient.efficacy_name)
@@ -319,8 +307,8 @@ extension HomeVC : UICollectionViewDataSource {
             
             let ingredient = functionalIngredientList2[indexPath.row]
             
-            //cell.imageView.image = ingredient.ingredientImage
-            //cell.label.text = ingredient.ingredientName
+            cell.imageView.image = ingredient.ingredientImage
+            cell.label.text = ingredient.ingredientName
             
             if indexPath.row == functionalIngredientList2.count - 1 {
                 cell.endCircleView.isHidden = false
@@ -342,7 +330,6 @@ extension HomeVC : UICollectionViewDelegate {
         guard let dvc = recordStoryboard.instantiateViewController(withIdentifier: "TakingProductPopUp") as? TakingProductPopUpVC else {
             return
         }
-        
         present(dvc, animated: true)
     }
 }
@@ -352,69 +339,64 @@ extension HomeVC {
     
     // 유저 table view 에 넣을 데이터 세팅
     func setUserData() {
-        let user1 = User(name: "박진오")
+        //let user1 = User(name: "박진오")
         let user2 = User(name: "엄마")
-        let user3 = User(name: "안재은")
+        //let user3 = User(name: "안재은")
         let setting = User(name: "+ 사용자 추가하기")
         let info = User(name: "사랑하는 가족의 데이터를 추가하고,\n케어 파트너와 함께 해보세요!")
         
-        userList = [user1, user2, user3] + [setting] + [info]
+        userList = [user2] + [setting] + [info]
     }
     // 제품 collection view에 넣을 데이터 세팅
     func setProductData() {
-        let product1 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
+        /*let product1 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
         let product2 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
         let product3 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")
         let product4 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
-        let product5 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")
-        
+        let product5 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")*/
         productList = []
     }
     
     func setIngredient() {
-//        let ingredient1 = FunctionalIngredient(image: "liver60", name: "간건강")
-//        let ingredient2 = FunctionalIngredient(image: "liver60", name: "면역력")
-//        let ingredient3 = FunctionalIngredient(image: "liver60", name: "피로회복")
-//
-//        functionalIngredientList = [ingredient1, ingredient2, ingredient3]
-//
-//        functionalIngredientList2 = [ingredient1, ingredient2]
         
+        let ingredient1 = FunctionalIngredient(image: "liver60", name: "간건강")
+        let ingredient2 = FunctionalIngredient(image: "levelOfImmunity60", name: "면역력")
+        let ingredient3 = FunctionalIngredient(image: "fatigueRecovery60", name: "피로회복")
         
+        functionalIngredientList2 = [ingredient1, ingredient2]
+        
+        NutrientService.shared.showNutrient() {
+            [weak self]
+            data in
+            guard let `self` = self else { return }
+            
+            switch data {
+            case .success(let res) :
+                
+                self.functionalIngredient = res as! ResponseNutrient
+                
+                self.functionalLabel.text = self.functionalIngredient.data.nutrient
+                
+                self.functionalIngredientList = self.functionalIngredient.data.efficacy!
+                
+                self.functionalCollectionView.reloadData()
+                
+            case .requestErr(_):
+                print("request err")
+            case .pathErr:
+                print("path err")
+            case .serverErr:
+                print("server err")
+            case .networkFail:
+                print("network fail")
+            case .dbErr:
+                print("db err")
+            }
+        }
     }
     
     
     func setGraph() {
-        /*
-        let one = Chart(showNumber: "야 말 듣니?", viewCount: 12)
-        let two = Chart(showNumber: "비타민D", viewCount: 20)
-        let three = Chart(showNumber: "비타민A", viewCount: 40)
-        let four = Chart(showNumber: "아미노산", viewCount: 60)
-        let five = Chart(showNumber: "오메가3", viewCount: 66)
-        let six = Chart(showNumber: "철분", viewCount: 70)
-        let seven = Chart(showNumber: "비타민C", viewCount: 80)
-        let eight = Chart(showNumber: "비타민C", viewCount: 80)
-        let nine = Chart(showNumber: "비타민C", viewCount: 80)
-        let ten = Chart(showNumber: "비타민C", viewCount: 80)
-        let eleven = Chart(showNumber: "비타민C", viewCount: 160)
-
-        chartList = [one, two, three, four, five, six, seven, eight, nine, ten, eleven]
-        
-        let one = MainChart(nutrient_name: "야", nutrient_percent: 12)
-        let two = MainChart(nutrient_name: "야", nutrient_percent: 12)
-        let three = MainChart(nutrient_name: "야", nutrient_percent: 12)
-        let four = MainChart(nutrient_name: "야", nutrient_percent: 12)
-        let five = MainChart(nutrient_name: "야", nutrient_percent: 12)
-        let six = MainChart(nutrient_name: "야", nutrient_percent: 12)
-        let seven = MainChart(nutrient_name: "야", nutrient_percent: 12)
-        let eight = MainChart(nutrient_name: "야", nutrient_percent: 12)
-        let nine = MainChart(nutrient_name: "야", nutrient_percent: 12)
-        let ten = MainChart(nutrient_name: "야", nutrient_percent: 12)
-        let eleven = MainChart(nutrient_name: "야", nutrient_percent: 12)
-        */
-        
-        
-        
         ChartService.shared.showMainChart() {
             [weak self]
             data in
@@ -429,7 +411,6 @@ extension HomeVC {
                 self.chartList = res as! [MainChart]
                 print("success")
             case .requestErr(let message):
-                //self.simpleAlert(title: "차트 정보 받아오기 실패", message: "\(message)")
                 print("\(message)")
             case .pathErr:
                  print(".pathErr")
@@ -441,9 +422,7 @@ extension HomeVC {
                 print("db 오류")
             }
             
+            
         }
-        
-        
     }
-    
 }

@@ -214,6 +214,7 @@
                         <outlet property="navigationBar" destination="WO2-Ta-bgC" id="3RC-Ut-785"/>
                         <outlet property="symptomTableView" destination="v8O-ZJ-URA" id="MBi-qR-55W"/>
                         <outlet property="tabBarCollectionView" destination="BfT-Qm-T8A" id="TK0-pD-pxm"/>
+                        <outlet property="titleLabel" destination="Tbl-lX-hD2" id="Jq6-fu-cAB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBK-7a-rij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

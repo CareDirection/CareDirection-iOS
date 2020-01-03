@@ -18,7 +18,7 @@ struct FunctionalIngredient {
         self.ingredientName = name
     }
 }
-
+//MARK: - 기능성분 가져오기
 struct FunctionalNutrient : Codable {
     let nutrient: String
     let efficacy: [FunctionalEfficacy]?

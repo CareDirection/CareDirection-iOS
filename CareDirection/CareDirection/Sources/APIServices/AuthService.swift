@@ -185,6 +185,7 @@ func idDoubleCheck(_ id: String, completion: @escaping (NetworkResult<Any>) -> V
                     if let status = response.response?.statusCode {
                             
                             switch status {
+                                
                             case 200:
                                 do {
                                     let decoder = JSONDecoder()
@@ -200,7 +201,6 @@ func idDoubleCheck(_ id: String, completion: @escaping (NetworkResult<Any>) -> V
                                     completion(.pathErr)
                                     
                                 }
-                                
                             case 201:
                                 //print("400 pathERr")
                                 do {
@@ -218,6 +218,10 @@ func idDoubleCheck(_ id: String, completion: @escaping (NetworkResult<Any>) -> V
                                     
                                 }
                                 
+                            case 409:
+                                completion(.pathErr)
+                                print("중복된 ID 입니다.")
+                                
                             case 600:
                                 print("600 pathErr")
                                 completion(.dbErr)
@@ -225,6 +229,7 @@ func idDoubleCheck(_ id: String, completion: @escaping (NetworkResult<Any>) -> V
                             case 500:
                                 print("600 pathErr")
                                 completion(.serverErr)
+                                
                             default:
                                 print("default")
                                 break

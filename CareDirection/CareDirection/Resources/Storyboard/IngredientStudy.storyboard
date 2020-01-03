@@ -216,6 +216,7 @@
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="riZ-re-4Me" customClass="CustomImageView" customModule="CareDirection" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="1" width="66" height="66"/>
+                                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="66" id="1Rf-Oy-uD7"/>
                                                                                     <constraint firstAttribute="height" constant="66" id="rop-jH-Fmc"/>

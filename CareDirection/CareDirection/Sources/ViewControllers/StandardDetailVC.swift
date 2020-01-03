@@ -20,7 +20,7 @@ class StandardDetailVC: UIViewController {
         super.viewDidLoad()
 
         
-//        ChartView.playAnimations()
+        ChartView.playAnimations()
         
         //set single standard data
         setData()
@@ -54,7 +54,7 @@ extension StandardDetailVC : UICollectionViewDataSource {
     
         cell.standardTitle.text = standard.nutrient_name
         cell.standard1.text = standard.my_change_value_description
-        cell.standardDetail.text = standard.my_change_value_description
+        cell.standardDetail.text = standard.description
         
         cell.standardChart.makeRounded(cornerRadius: 4)
         cell.standardChart.backgroundColor = UIColor.paleSalmon

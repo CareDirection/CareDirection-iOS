@@ -29,7 +29,8 @@ class SignupVC: UIViewController {
         super.viewDidLoad()
         
         // navigation bar 역할하는 뷰 커스터마이즈
-        navigationBar.dropShadow(color: UIColor.black, offSet: CGSize(width: 1, height: 0), opacity: 0.1, radius: 3)
+        // navigation bar drop shadow
+        navigationBar.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
         
         // email textfield customize
         emailView.setBorder(borderColor: UIColor.brownishGrey30, borderWidth: 1)

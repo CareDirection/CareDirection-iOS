@@ -42,11 +42,11 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="7aT-KM-4RC" firstAttribute="centerX" secondItem="ET9-eq-2SI" secondAttribute="centerX" id="ON3-vN-0N6"/>
                                     <constraint firstAttribute="width" secondItem="ET9-eq-2SI" secondAttribute="height" multiplier="125:22" id="QQs-T1-4NV"/>
                                     <constraint firstAttribute="bottom" secondItem="qKq-DX-uda" secondAttribute="bottom" constant="7" id="SH2-hG-gEW"/>
                                     <constraint firstAttribute="bottom" secondItem="7aT-KM-4RC" secondAttribute="bottom" constant="10" id="Yns-vz-OnQ"/>
                                     <constraint firstItem="7aT-KM-4RC" firstAttribute="top" secondItem="ET9-eq-2SI" secondAttribute="top" constant="35" id="cAP-UB-28n"/>
-                                    <constraint firstAttribute="trailing" secondItem="7aT-KM-4RC" secondAttribute="trailing" constant="165" id="oru-Kh-0Eg"/>
                                     <constraint firstItem="qKq-DX-uda" firstAttribute="top" secondItem="ET9-eq-2SI" secondAttribute="top" constant="31" id="xHR-cX-lsx"/>
                                     <constraint firstItem="qKq-DX-uda" firstAttribute="leading" secondItem="ET9-eq-2SI" secondAttribute="leading" constant="11" id="xQ2-cS-og4"/>
                                 </constraints>
@@ -72,6 +72,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="dt1-bl-89G" firstAttribute="top" secondItem="XBA-EE-pRa" secondAttribute="top" id="Ii4-D4-VsO"/>
+                                                <constraint firstAttribute="trailing" secondItem="dt1-bl-89G" secondAttribute="trailing" id="Oa5-CG-CWe"/>
                                                 <constraint firstAttribute="bottom" secondItem="dt1-bl-89G" secondAttribute="bottom" id="UfB-fY-aCe"/>
                                                 <constraint firstItem="dt1-bl-89G" firstAttribute="leading" secondItem="XBA-EE-pRa" secondAttribute="leading" id="rDD-rF-dnb"/>
                                             </constraints>
@@ -165,6 +166,7 @@
                                                 <constraint firstItem="VZi-Ou-lXC" firstAttribute="leading" secondItem="MwE-R0-4Wh" secondAttribute="leading" constant="18" id="AmN-bp-a37"/>
                                                 <constraint firstAttribute="bottom" secondItem="gSX-h7-hfJ" secondAttribute="bottom" constant="11" id="G2b-nJ-yWx"/>
                                                 <constraint firstItem="gSX-h7-hfJ" firstAttribute="leading" secondItem="MwE-R0-4Wh" secondAttribute="leading" constant="18" id="JOw-55-pbi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9Gd-2T-kox" secondAttribute="trailing" constant="3" id="KVm-6Q-xqe"/>
                                                 <constraint firstItem="9Gd-2T-kox" firstAttribute="leading" secondItem="MwE-R0-4Wh" secondAttribute="leading" constant="18" id="lXm-VF-ilq"/>
                                                 <constraint firstItem="VZi-Ou-lXC" firstAttribute="top" secondItem="MwE-R0-4Wh" secondAttribute="top" constant="10" id="nCo-hZ-EIe"/>
                                                 <constraint firstItem="gSX-h7-hfJ" firstAttribute="top" secondItem="9Gd-2T-kox" secondAttribute="bottom" constant="15" id="uyz-g3-yA1"/>

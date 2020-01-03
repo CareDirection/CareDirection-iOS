@@ -23,7 +23,6 @@ struct  FunctionService {
             "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6OH0.1aTgLt9PjqIDpERitt0eOQMuoyQUypMBYw4JaGi6M6M"
             //"token" : "\(token.string(forKey: "token")!)"
         ]
-        print("before request")
         
         Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
             .responseData { response in

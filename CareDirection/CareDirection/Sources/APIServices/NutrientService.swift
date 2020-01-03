@@ -31,24 +31,22 @@ struct NutrientService {
                 case .success:
                     if let value = response.result.value {
                         if let status = response.response?.statusCode {
-                            print("inside response")
                             switch status {
-                                
                             case 200:
                                 do {
-                                    print("do")
+                                    
                                     let decoder = JSONDecoder()
-                                    print("do")
                                     let result = try decoder.decode(ResponseNutrient.self, from: value)
-                                    print("do")
-                                    completion(.success(result))
-                                    print("completion fail")
+                                    
+                                    completion(.success(result.data!))
+                                    
                                 } catch {
-                                    print("path err")
                                     completion(.pathErr)
                                 }
                             case 400, 401:
                                 completion(.pathErr)
+                            case 403:
+                                print("유효하지 않은 토큰")
                             case 600:
                                 completion(.serverErr)
                                 
@@ -58,7 +56,6 @@ struct NutrientService {
                         }
                     }
                     break
-                    
                 // 통신 실패
                 case .failure(let err):
                     print(err.localizedDescription)
@@ -67,5 +64,4 @@ struct NutrientService {
                 }
         }
     }
-    
 }

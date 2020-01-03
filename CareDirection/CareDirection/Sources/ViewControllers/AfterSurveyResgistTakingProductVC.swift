@@ -25,10 +25,12 @@ class AfterSurveyResgistTakingProductVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setInitLayout()
         setInitVar()
-        
-        
+        setInitLayout()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        setInitVar()
+
     }
     
     //
@@ -51,9 +53,15 @@ class AfterSurveyResgistTakingProductVC: UIViewController {
                 self.cvTopConstraint.constant = CGFloat((self.data.count + 1) * 140)
                 self.takingProductCV.delegate = self
                 self.takingProductCV.dataSource = self
+                self.takingProductCV.reloadData()
             case .requestErr(_):
                 print("getCurrentTakingList request err")
             case .pathErr:
+                self.data = []
+                self.cvTopConstraint.constant = CGFloat((self.data.count + 1) * 140)
+                self.takingProductCV.delegate = self
+                self.takingProductCV.dataSource = self
+                self.takingProductCV.reloadData()
                 print("getCurrentTakingList path err")
             case .serverErr:
                 print("getCurrentTakingList server err")

@@ -40,11 +40,12 @@ class TakingProductPopUpVC: UIViewController {
             switch data {
             case .success(let data):
                 self.productPopUpData = data as! [TakingProductPopUpData]
-                print(self.productPopUpData)
+                //print(self.productPopUpData[0].imageKey)
                     
                 self.productImg.imageFromUrl(self.productPopUpData[0].imageKey, defaultImgPath: "imgLogo")
                 self.productNameLbl.text = self.productPopUpData[0].productName
                 self.productTakeUsage.text = self.productPopUpData[0].productDailyDose
+                
                 self.productAlarmLbl.text = self.productPopUpData[0].doseAlarm
                 
                 self.productRestCount.text = "\(String(describing: self.productPopUpData[1].remain!))회"

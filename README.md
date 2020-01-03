@@ -88,7 +88,7 @@
 |:--------:|:--------:|:--------:|
 |<center> 로그인 / 회원가입 </center> | <center> ○ </center> |<center></center>|
 |<center> 설문조사 </center> | <center> ○ </center> |<center> </center> |
-|<center> 복용 중인 제품 등록 </center> | <center>  </center> |<center> </center> |
+|<center> 복용 중인 제품 등록 </center> | <center> ○ </center> |<center> </center> |
 |<center> 기준 상세 그래프 </center> | <center> ○ </center> |<center>  </center> |
 |<center> 기준 상세 개별 그래프 </center> | <center> ○ </center> |<center>  </center> |
 |<center> 기능성 원료 </center> | <center> ○ </center> |<center>  </center> |

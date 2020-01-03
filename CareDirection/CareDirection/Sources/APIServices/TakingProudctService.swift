@@ -14,11 +14,11 @@ struct TakingProductService {
     static let shared = TakingProductService()
     
     func getCurrentTakingList(date: String, completion: @escaping (NetworkResult<Any>) -> Void) {
-        //let token = UserDefaults.standard
+        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
         
         let header : HTTPHeaders = [
             "Content-Type" : "application/json",
-            "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
+            "token" : token
         ]
 
         let body : Parameters = [
@@ -66,7 +66,7 @@ struct TakingProductService {
     }
     
     func searchProductToRegist(keyword: String, completion: @escaping(NetworkResult<Any>)->Void){
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjR9.3M9PT1mj9u13eAAhtwBJ7Y4Gn2MaJ2D09Fyvt_MLEkE"
+        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
         
         let header: HTTPHeaders = [
             "Content-Type": "application/json",
@@ -117,7 +117,7 @@ struct TakingProductService {
     }
     func getProductSimpleData(idx: Int, completion: @escaping (NetworkResult<Any>) -> Void){
         let URL = APIConstants.ProductBaseURL + "/\(idx)/"
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
+        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
         
         let header: HTTPHeaders = [
             "token" : token

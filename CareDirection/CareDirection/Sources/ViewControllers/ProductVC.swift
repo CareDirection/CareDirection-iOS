@@ -322,6 +322,7 @@ extension ProductVC: UITableViewDataSource{
         switch viewType {
         case .defaultView:
             let cell = tableView.dequeueReusableCell(withIdentifier: "BestProductTVCell") as! BestProductTVCell
+            cell.rankImg.isHidden = false
             cell.nameLbl.text = productList[indexPath.row].productName
             cell.companyNameLbl.text = productList[indexPath.row].productCompanyName
             cell.priceLbl.text = "\(productList[indexPath.row].productQuantityPrice)"

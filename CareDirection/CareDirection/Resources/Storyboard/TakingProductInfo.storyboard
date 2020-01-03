@@ -10,7 +10,7 @@
         <!--Taking Product InfoVC-->
         <scene sceneID="t0N-rP-Fbg">
             <objects>
-                <viewController id="auw-P9-57f" customClass="TakingProductInfoVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TakingProductInfoVC" id="auw-P9-57f" customClass="TakingProductInfoVC" customModule="CareDirection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GKZ-DY-qro">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrd-v7-gRQ">
-                                        <rect key="frame" x="11" y="3" width="56" height="56"/>
+                                        <rect key="frame" x="11" y="31" width="28" height="28"/>
                                         <state key="normal" image="icBack"/>
                                         <connections>
                                             <action selector="selectedBackBtn:" destination="auw-P9-57f" eventType="touchUpInside" id="kHk-yg-T0T"/>
@@ -79,12 +79,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJc-yq-BZU">
                                 <rect key="frame" x="149" y="324" width="79" height="42"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20정" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-gC-IEw">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0정" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-gC-IEw">
                                         <rect key="frame" x="10" y="0.0" width="69" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowIcSelected" translatesAutoresizingMaskIntoConstraints="NO" id="y9r-Cg-BMR">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnDropdown" translatesAutoresizingMaskIntoConstraints="NO" id="y9r-Cg-BMR">
                                         <rect key="frame" x="45" y="9" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="DRM-67-Lfb"/>
@@ -106,12 +106,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYE-CO-0jo">
                                 <rect key="frame" x="111" y="409.5" width="154" height="42"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000년 00월 00일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Lp-ba-3fu">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="yyyy년 MM월 dd일" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Lp-ba-3fu">
                                         <rect key="frame" x="10" y="0.0" width="144" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowIcSelected" translatesAutoresizingMaskIntoConstraints="NO" id="OCH-7Z-1l2">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnDropdown" translatesAutoresizingMaskIntoConstraints="NO" id="OCH-7Z-1l2">
                                         <rect key="frame" x="120" y="9" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="F7l-Qg-IMw"/>
@@ -145,12 +145,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4E-gc-P8U">
                                 <rect key="frame" x="129" y="499" width="117" height="42"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00시 00분" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MB9-Oj-rAN">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="HH시 mm분" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MB9-Oj-rAN">
                                         <rect key="frame" x="10" y="0.0" width="107" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowIcSelected" translatesAutoresizingMaskIntoConstraints="NO" id="92w-uo-DzH">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnDropdown" translatesAutoresizingMaskIntoConstraints="NO" id="92w-uo-DzH">
                                         <rect key="frame" x="83" y="9" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="8Ub-Lp-NKW"/>
@@ -238,7 +238,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowIcSelected" width="23" height="12"/>
+        <image name="btnDropdown" width="24" height="24"/>
         <image name="icBack" width="28" height="28"/>
     </resources>
 </document>

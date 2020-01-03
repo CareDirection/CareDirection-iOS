@@ -12,6 +12,7 @@ class TakingProductCVCell: UICollectionViewCell {
     
     @IBOutlet var productImg: UIImageView!
     
+    @IBOutlet var restProductCountLbl: UILabel!
     @IBOutlet var productCompayNameLbl: UILabel!
     
     @IBOutlet var productPurchaseCountryLbl: UILabel!

@@ -20,6 +20,7 @@ class ProductSearchVC: UIViewController {
     
     @IBOutlet var searchResultTV: UITableView!
     
+    var searchResult: [TakingProductSearch] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class ProductSearchVC: UIViewController {
     func setInitVar(){
         self.searchResultTV.delegate = self
         self.searchTxtField.delegate = self
-        //self.searchResultTV.dataSource = self
+        self.searchResultTV.dataSource = self
         
         
     }
@@ -55,11 +56,32 @@ class ProductSearchVC: UIViewController {
 extension ProductSearchVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         print(textField.text ?? "Empty")
+        TakingProductService.shared.searchProductToRegist(keyword: textField.text ?? " "){ data in
+            switch data{
+            case .success(let data):
+                self.searchResult = data as! [TakingProductSearch]
+                self.searchResultCount.text = "\(self.searchResult.count)"
+                self.searchResultTV.reloadData()
+                self.searchResultView.isHidden = false
+            case .requestErr(_):
+                print("searchProductToRegist request err")
+            case .pathErr:
+                print("searchProductToRegist path err")
+            case .serverErr:
+                print("searchProductToRegist server err")
+            case .networkFail:
+                print("searchProductToRegist network err")
+            case .dbErr:
+                print("searchProductToRegist db err")
+            }
+            
+            
+        }
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("textFieldShouldReturn \((textField.text) ?? "Empty")") // Process of closing the Keyboard when the line feed button is pressed.
-        
+
         
         textField.resignFirstResponder()
         
@@ -73,21 +95,43 @@ extension ProductSearchVC: UITextFieldDelegate {
 }
 
 extension ProductSearchVC: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if searchResult[indexPath.row].productIsAlreadyManaged{
+            
+        }else{
+            let storyBoard = UIStoryboard.init(name: "TakingProductInfo", bundle: nil)
+            let dvc = storyBoard.instantiateViewController(identifier: "TakingProductInfoVC") as! TakingProductInfoVC
+            
+            dvc.productIdx = searchResult[indexPath.row].productIdx
+            dvc.modalPresentationStyle = .fullScreen
+            self.present(dvc, animated: true, completion: nil)
+        }
+    }
 }
-//
-//extension ProductSearchVC: UITableViewDataSource{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//}
-//
-//struct SearchResultTVData {
-//    let img: String?
-//    let company: String?
-//    let
-//}
+
+extension ProductSearchVC: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.searchResult.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TakingProductSearchResultTVCell") as! TakingProductSearchResultTVCell
+        cell.productImg.imageFromUrl(searchResult[indexPath.row].imageLocation, defaultImgPath: "imgLogo")
+        cell.companyNameLbl.text = searchResult[indexPath.row].productCompanyName
+        cell.productNameLbl.text = searchResult[indexPath.row].productName
+        cell.productPriceLbl.text = searchResult[indexPath.row].productPrice
+        cell.pricePerUnitLbl.text = searchResult[indexPath.row].productPricePerUnit
+        cell.productStandardLbl.text = searchResult[indexPath.row].productQuantity
+        
+        if !searchResult[indexPath.row].productIsImport{
+            cell.isImportLbl.isHidden = true
+        }
+        
+        if !searchResult[indexPath.row].productIsAlreadyManaged{
+            cell.isManagedLbl.isHidden = true
+        }
+        
+        return cell
+        
+    }
+}

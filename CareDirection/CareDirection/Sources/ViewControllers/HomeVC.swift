@@ -55,6 +55,8 @@ class HomeVC: UIViewController {
     //4. 차트 리스트
     var userList : [User] = []
     var productList : [Product] = []
+    var takingProductList: [TakingProductData] = []
+    
     var functionalIngredientList : [FunctionalEfficacy] = []
     //var functionalIngredientList2 : [FunctionalIngredient] = []
     var functionalIngredientList2 : [FunctionalEfficacy] = []
@@ -113,6 +115,7 @@ class HomeVC: UIViewController {
             noRegistView.isHidden = false
             productCollectionView.isHidden = true
         }
+        setTakingProductCV()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -142,6 +145,36 @@ class HomeVC: UIViewController {
                 self.blurView.isHidden = true
             }
             
+        }
+    }
+    
+    func setTakingProductCV(){
+        //takingProductList
+        TakingProductService.shared.getCurrentTakingList(date: "2020-01-03"){ data in
+            switch data {
+            case .success(let data):
+                self.takingProductList = data as! [TakingProductData]
+                self.productCollectionView.dataSource = self
+                self.productCollectionView.delegate = self
+                self.productCollectionView.reloadData()
+                
+                if self.takingProductList.count != 0{
+                    self.noRegistView.isHidden = true
+                    self.productCollectionView.isHidden = false
+                }
+
+            case .requestErr(let msg):
+                print("getCurrentTakingList")
+                print(msg)
+            case .pathErr:
+                print("getCurrentTakingList path err")
+            case .serverErr:
+                print("getCurrentTakingList server err")
+            case .networkFail:
+                print("getCurrentTakingList network err")
+            case .dbErr:
+                print("getCurrentTakingList db err")
+            }
         }
     }
     
@@ -181,6 +214,7 @@ class HomeVC: UIViewController {
         guard let dvc = recordStoryboard.instantiateViewController(withIdentifier: "takingProduct") as? TakingProductRegistVC else {
             return
         }
+        dvc.takingProductList = self.takingProductList
         present(dvc, animated: true)
     }
     
@@ -268,7 +302,7 @@ extension HomeVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.productCollectionView {
             
-            return productList.count
+            return takingProductList.count
             
         } else if collectionView == self.functionalCollectionView{
             
@@ -285,11 +319,19 @@ extension HomeVC : UICollectionViewDataSource {
         if collectionView == self.productCollectionView {
             let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! ProductCell
             
-            let product = productList[indexPath.row]
+            let product = takingProductList[indexPath.row]
             
             cell.productName.text = product.productName
-            cell.productImage.image = product.productImage
-            cell.productCheckImage.image = product.checkImage
+            cell.productImage.imageFromUrl(product.imageLocation, defaultImgPath: "imgLogo")
+            if product.productIsDosed{
+                cell.productCheckImage.image = UIImage.init(named: "checkCircleIc")
+            }
+            else{
+                 cell.productCheckImage.image = UIImage.init(named: "uncheckCircleIc")
+            }
+            cell.productImgBackgroudView.makeRounded(cornerRadius: 15)
+            //cell.productImgBackgroudView.dropShadow(color: UIColor.veryLightPink, offSet: CGSize(width: 0, height: 1), opacity: 1, radius: 5)
+
             
             return cell
         } else if collectionView ==  self.functionalCollectionView {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lty-k7-LUg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lty-k7-LUg">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -257,7 +257,7 @@
                                                     <rect key="frame" x="28" y="0.0" width="81" height="20"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRi-oa-YNQ">
-                                                            <rect key="frame" x="8" y="3" width="54" height="15"/>
+                                                            <rect key="frame" x="13.5" y="3" width="54" height="15"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QV-S4-s3i">
                                                                     <rect key="frame" x="0.0" y="0.0" width="19" height="15"/>
@@ -285,9 +285,8 @@
                                                     <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="IRi-oa-YNQ" secondAttribute="bottom" constant="2" id="1H1-kw-hLZ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="IRi-oa-YNQ" secondAttribute="trailing" constant="19" id="6DJ-8a-yQG"/>
                                                         <constraint firstItem="IRi-oa-YNQ" firstAttribute="top" secondItem="Lox-t4-6CA" secondAttribute="top" constant="3" id="Fp0-YJ-27O"/>
-                                                        <constraint firstItem="IRi-oa-YNQ" firstAttribute="leading" secondItem="Lox-t4-6CA" secondAttribute="leading" constant="8" id="SKr-3j-2OI"/>
+                                                        <constraint firstItem="IRi-oa-YNQ" firstAttribute="centerX" secondItem="Lox-t4-6CA" secondAttribute="centerX" id="ju0-v6-VIF"/>
                                                         <constraint firstAttribute="width" constant="81" id="xJa-sx-d99"/>
                                                         <constraint firstAttribute="height" constant="20" id="yyg-X0-7Ft"/>
                                                     </constraints>

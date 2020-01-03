@@ -31,7 +31,7 @@ struct TakingProductService {
                 if let value = response.result.value {
                     
                     if let status = response.response?.statusCode {
-                        
+                        //print(status)
                         switch status {
                         case 200:
                             do {
@@ -130,7 +130,7 @@ struct TakingProductService {
                     if let status = response.response?.statusCode {
                         
                         switch status {
-                        case 200:
+                        case 201:
                             do {
                                 let decoder = JSONDecoder()
                                 let result = try decoder.decode(SimpleProductResult.self, from: value)
@@ -197,12 +197,10 @@ struct TakingProductService {
                              completion(.requestErr("duplicated"))
                         case 400:
                             completion(.requestErr("입력값에 Null Value"))
-                        case 401:
-                            completion(.requestErr("유효하지 않은 token 입니다."))
                         case 500:
                             completion(.serverErr)
                         default:
-                            break
+                            print(status)
                         }// switch
                     }// iflet
                 }

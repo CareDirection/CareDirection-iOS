@@ -13,12 +13,13 @@ class ProductCell: UICollectionViewCell {
     @IBOutlet weak var productImage: UIImageView!
     
     @IBOutlet weak var productName: UILabel!
+    @IBOutlet var productImgBackgroudView: UIView!
     
     @IBOutlet weak var productCheckImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-    }
+        productImgBackgroudView.makeRounded(cornerRadius: 15)
+            }
     
 }

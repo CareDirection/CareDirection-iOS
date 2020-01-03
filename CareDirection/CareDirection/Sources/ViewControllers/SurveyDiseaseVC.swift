@@ -27,6 +27,7 @@ class SurveyDiseaseVC: UIViewController {
         surveyDiseaseCollectionView.delegate = self
         surveyDiseaseCollectionView.dataSource = self
 
+        setLayout()
         // Do any additional setup after loading the view.
     }
     func setLayout(){

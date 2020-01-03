@@ -19,6 +19,11 @@ class SurveyLifeStyleFouthPointVC: UIViewController {
     
     @IBOutlet var nextBtn: UIButton!
     
+    
+    @IBOutlet weak var nameLbl: UILabel!
+    
+    var name: String = "박진오"
+    
     var selectedAnswer: Int?
     let answerList:[String] = ["4회 이상", "2회 ~ 3회", "1회 이하"]
     var lifeCylcleBody: [String] = []
@@ -35,6 +40,7 @@ class SurveyLifeStyleFouthPointVC: UIViewController {
         nextBtn.backgroundColor = UIColor.white40
         nextBtn.setTitleColor(UIColor.white40, for: .disabled)
         nextBtn.isEnabled = false
+        nameLbl.text = "\(name)님은"
     }
     
     func setDynamicLayout(){
@@ -73,6 +79,7 @@ class SurveyLifeStyleFouthPointVC: UIViewController {
         resultToString()
         dvc.lifeCylcleBody = self.lifeCylcleBody
         dvc.modalPresentationStyle = .fullScreen
+        
         self.present(dvc, animated: true)
     
     }

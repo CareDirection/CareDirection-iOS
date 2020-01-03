@@ -189,6 +189,7 @@
                         <outlet property="answerOneBtn" destination="adf-h8-r9J" id="nTc-oM-Z2K"/>
                         <outlet property="answerThreeBtn" destination="RDR-Ml-1xm" id="QHD-Lg-TOh"/>
                         <outlet property="answerTwoBtn" destination="rKc-Bu-7N6" id="4wu-8K-FQf"/>
+                        <outlet property="nameLbl" destination="VnN-Wz-aek" id="8xR-vt-M00"/>
                         <outlet property="nextBtn" destination="LJq-vQ-TKB" id="f3t-q5-dQ6"/>
                     </connections>
                 </viewController>

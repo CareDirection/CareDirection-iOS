@@ -111,9 +111,10 @@ extension SurveySymptomVC: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SurveySymptomCell", for: indexPath) as! SurveySymptomCell
-        
         cell.symptomLbl.makeRounded(cornerRadius: 8)
-        cell.setBorder(borderColor: UIColor.white40, borderWidth: 1)
+        
+        //cell.symptomLbl.makeRounded(cornerRadius: 8)
+        cell.symptomLbl.setBorder(borderColor: UIColor.white40, borderWidth: 1)
         cell.symptomLbl.text = symptomList[indexPath.row]
         
         if selectedIndexList.contains(indexPath.row){

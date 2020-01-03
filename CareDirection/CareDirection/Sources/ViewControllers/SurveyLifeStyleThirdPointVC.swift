@@ -81,6 +81,9 @@ class SurveyLifeStyleThirdPointVC: UIViewController {
         
         dvc.modalPresentationStyle = .fullScreen
         dvc.lifeCylcleBody = self.lifeCylcleBody
+        
+        dvc.name = self.name
+        
         self.present(dvc, animated: true)
     }
     

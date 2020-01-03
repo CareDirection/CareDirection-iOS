@@ -11,4 +11,8 @@ import UIKit
 class SurveySymptomCell: UICollectionViewCell {
     @IBOutlet var symptomLbl: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.symptomLbl.makeRounded(cornerRadius: 8)
+    }
 }

@@ -22,7 +22,7 @@ class TakingProductRegistVC: UIViewController {
     
     @IBOutlet weak var navigationBar: UIView!
     
-    var takingProductList: [TakingProduct] = []
+    var takingProductList: [TakingProductData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +32,7 @@ class TakingProductRegistVC: UIViewController {
 
         datePickButton.dropShadow(color: UIColor.darkGray, offSet: CGSize(width: 0, height: 1), opacity: 0.3, radius: 4)
         
-        setTakingProduct()
-        
+
         datePickerView.addTarget(self, action: #selector(changed), for: .valueChanged)
         
         datePickerTotalView.isHidden = true
@@ -78,26 +77,39 @@ extension TakingProductRegistVC : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = takingProductCollectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! TakingProductRegistCell
-        
-        let addCell = takingProductCollectionView.dequeueReusableCell(withReuseIdentifier: "addCell", for: indexPath) as! AddTakingProductRegistCell
-        
-        let product = takingProductList[indexPath.row]
         
         
-        if indexPath.row == takingProductList.count - 1 {
+        
+        if indexPath.row == takingProductList.count {
+            
+            
+            let addCell = takingProductCollectionView.dequeueReusableCell(withReuseIdentifier: "addCell", for: indexPath) as! AddTakingProductRegistCell
+            
+            
+            
             return addCell
         } else {
+            let cell = takingProductCollectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! TakingProductRegistCell
             
-            cell.isCheckedImage.image = product.isChecked
-            cell.isShippingLabel.text = product.isShipping
-            cell.priceLabel.text = product.price
-            cell.pricePerOneLabel.text = product.pricePerOne
-            cell.companyLabel.text = product.companyName
-            cell.productImage.image = product.productImage
+            let product = takingProductList[indexPath.row]
+            cell.productImage.imageFromUrl(product.imageLocation, defaultImgPath: "imgLogo")
+            cell.remainingLabel.text = "\(product.productRemain)남음"
+            cell.companyLabel.text = product.productCompanyName
             cell.productNameLabel.text = product.productName
-            cell.remainingLabel.text = product.remaining
+            cell.priceLabel.text = product.productPrice
+            cell.pricePerOneLabel.text = product.productPricePerUnit
             
+            if product.productIsImport{
+                cell.isShippingLabel.isHidden = false
+            }
+            else {
+                cell.isShippingLabel.isHidden = true
+            }
+            if product.productIsDosed{
+                cell.isCheckedImage.image = UIImage.init(named: "checkCircleIc")
+            }else{
+                cell.isCheckedImage.image = UIImage.init(named: "uncheckCircleIc")
+            }
             return cell
         }
     }
@@ -117,22 +129,5 @@ extension TakingProductRegistVC : UICollectionViewDelegate {
         
         present(dvc, animated: true)
         }
-    }
-}
-
-extension TakingProductRegistVC {
-    func setTakingProduct() {
-        let product1 = TakingProduct(remaining: "10", companyName: "Vita Naturals Inc", isShipping: "해외배송", productName: "더리얼 알티지 오메가 3 맥스 1400", price: "36,800원", pricePerOne: "(1일 750원)", standard: "30정 기준", productImage: "", isChecked: "uncheckCircleIc")
-        let product2 = TakingProduct(remaining: "10", companyName: "NATURAL LIFE NUTRI…", isShipping: "", productName: "뉴트리디데이 프리미엄 오메가 3 골드 1100", price: "16,920원", pricePerOne: "(1일 750원)", standard: "30정 기준", productImage: "", isChecked: "uncheckCircleIc")
-        
-        let product3 = TakingProduct(remaining: "10", companyName: "NATURAL LIFE NUTRI…", isShipping: "", productName: "뉴트리디데이 프리미엄 오메가 3 골드 1100", price: "16,920원", pricePerOne: "(1일 750원)", standard: "30정 기준", productImage: "", isChecked: "uncheckCircleIc")
-        
-        let product4 = TakingProduct(remaining: "10", companyName: "NATURAL LIFE NUTRI…", isShipping: "", productName: "뉴트리디데이 프리미엄 오메가 3 골드 1100", price: "16,920원", pricePerOne: "(1일 750원)", standard: "30정 기준", productImage: "", isChecked: "uncheckCircleIc")
-        
-        let product5 = TakingProduct(remaining: "10", companyName: "NATURAL LIFE NUTRI…", isShipping: "", productName: "뉴트리디데이 프리미엄 오메가 3 골드 1100", price: "16,920원", pricePerOne: "(1일 750원)", standard: "30정 기준", productImage: "", isChecked: "uncheckCircleIc")
-        
-        let product6 = TakingProduct(remaining: "10", companyName: "NATURAL LIFE NUTRI…", isShipping: "", productName: "뉴트리디데이 프리미엄 오메가 3 골드 1100", price: "16,920원", pricePerOne: "(1일 750원)", standard: "30정 기준", productImage: "", isChecked: "uncheckCircleIc")
-        
-        takingProductList = [product1, product2, product3, product4, product5, product6]
     }
 }

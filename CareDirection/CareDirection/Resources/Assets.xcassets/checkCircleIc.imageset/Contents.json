@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "checkCircleIc.png"
+      "filename" : "checkCircleIc.png",
+      "scale" : "1x"
     },
     {
-      "idiom" : "universal",
+      "scale" : "2x",
       "filename" : "checkCircleIc@2x.png",
-      "scale" : "2x"
+      "idiom" : "universal"
     },
     {
+      "scale" : "3x",
       "filename" : "checkCircleIc@3x.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "universal"
     }
   ],
   "info" : {

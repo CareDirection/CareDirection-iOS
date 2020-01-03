@@ -289,12 +289,12 @@ class ProductFunctionCVExtension : UIViewController, UICollectionViewDelegate, U
     var data: [EfficacyName]?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return data?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductFunctionCVCell", for: indexPath) as! ProductFunctionCVCell
-        //cell.functionNameLbl.text = data![indexPath.row].efficacyName
+        cell.functionNameLbl.text = data![indexPath.row].efficacyName
         
         return cell
     }

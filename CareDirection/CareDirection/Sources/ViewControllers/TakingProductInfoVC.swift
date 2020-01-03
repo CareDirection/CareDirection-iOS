@@ -47,6 +47,8 @@ class TakingProductInfoVC: UIViewController {
             numOfList.append(i)
         }
         if let id = productIdx{
+            print("idididididid")
+            print(id)
             TakingProductService.shared.getProductSimpleData(idx: id) { data in
                 switch data{
                 case .success(let data):

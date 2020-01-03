@@ -20,7 +20,7 @@ class SurveyLifeStyleFouthPointVC: UIViewController {
     @IBOutlet var nextBtn: UIButton!
     
     var selectedAnswer: Int?
-    let answerList:[String] = ["7회 이상", "5회 ~ 6회", "3회 ~ 4회", "2회 이하"]
+    let answerList:[String] = ["4회 이상", "2회 ~ 3회", "1회 이하"]
     var lifeCylcleBody: [String] = []
     
     override func viewDidLoad() {

@@ -71,8 +71,6 @@ class HomeVC: UIViewController {
         
         // 유저 리스트 더미 데이터 생성
         setUserData()
-        // 제품 리스트 더미 데이터 생성
-        setProductData()
         // 기능 성분 가져오기
         setIngredient()
         
@@ -120,6 +118,7 @@ class HomeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setIngredient()
+        setTakingProductCV()
         self.functionalCollectionView.reloadData()
     }
     
@@ -408,6 +407,9 @@ extension HomeVC : UICollectionViewDelegate {
         guard let dvc = recordStoryboard.instantiateViewController(withIdentifier: "TakingProductPopUp") as? TakingProductPopUpVC else {
             return
         }
+        
+        dvc.productIdx = takingProductList[indexPath.row].productIdx
+        dvc.isDosed = takingProductList[indexPath.row].productIsDosed
         present(dvc, animated: true)
     }
 }
@@ -425,16 +427,7 @@ extension HomeVC {
         
         userList = [user2] + [setting] + [info]
     }
-    // 제품 collection view에 넣을 데이터 세팅
-    func setProductData() {
-        /*let product1 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
-         let product2 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
-         let product3 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")
-         let product4 = Product(productImg: "test1", name: "얼라이브", checkImg: "uncheckCircleIc")
-         let product5 = Product(productImg: "test1", name: "얼라이브", checkImg: "checkCircleIc")*/
-        productList = []
-    }
-    
+
     func setIngredient() {
         
         NutrientService.shared.showNutrient() {

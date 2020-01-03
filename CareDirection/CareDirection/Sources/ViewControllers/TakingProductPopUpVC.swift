@@ -11,10 +11,67 @@ import UIKit
 class TakingProductPopUpVC: UIViewController {
 
     @IBOutlet weak var popUpView: UIView!
+    @IBOutlet var productNameLbl: UILabel!
+    
+    @IBOutlet var productImg: UIImageView!
+    @IBOutlet var productRestCount: UILabel!
+    
+    @IBOutlet var productTakeUsage: UILabel!
+    @IBOutlet var productAlarmLbl: UILabel!
+    
+    @IBOutlet var dosedBtn: UIButton!
+    @IBOutlet var cancelBtn: UIButton!
+    
+    var productIdx: Int!
+    var isDosed: Bool = true
+    var productPopUpData: [TakingProductPopUpData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         popUpView.makeRounded(cornerRadius: 21)
+        
+        setData()
+        setLayout()
+    }
+    
+    func setData(){
+        ProductManagementService.shared.getTakingProductInfoAtPopUp(idx: self.productIdx)  { data in
+            switch data {
+            case .success(let data):
+                self.productPopUpData = data as! [TakingProductPopUpData]
+                print(self.productPopUpData)
+                    
+                self.productImg.imageFromUrl(self.productPopUpData[0].imageKey, defaultImgPath: "imgLogo")
+                self.productNameLbl.text = self.productPopUpData[0].productName
+                self.productTakeUsage.text = self.productPopUpData[0].productDailyDose
+                self.productAlarmLbl.text = self.productPopUpData[0].doseAlarm
+                
+                self.productRestCount.text = "\(String(describing: self.productPopUpData[1].remain!))회"
+                
+            case .requestErr(let msg):
+                print(msg)
+            case .pathErr:
+                print("getTakingProductInfoAtPopUp pathErr")
+            case .serverErr:
+                print("getTakingProductInfoAtPopUp serverErr")
+            case .networkFail:
+                print("getTakingProductInfoAtPopUp networkFail")
+            case .dbErr:
+                print("getTakingProductInfoAtPopUp dbErr")
+            }
+        }
+    }
+    
+    func setLayout(){
+        if self.isDosed{
+            self.dosedBtn.titleLabel?.textColor = UIColor.tealBlue
+            self.dosedBtn.titleLabel?.text = "복용"
+            
+        }
+        else{
+            self.dosedBtn.titleLabel?.textColor = UIColor.init(red: 255 / 255, green: 87 / 255, blue: 47 / 255, alpha: 1)
+            self.dosedBtn.titleLabel?.text = "복용취소"
+        }
     }
 
     //취소 버튼 클릭 시

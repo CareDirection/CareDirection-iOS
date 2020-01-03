@@ -83,6 +83,7 @@ extension AfterSurveyResgistTakingProductVC: UICollectionViewDelegate{
             print("registcell")
             let storyBoard = UIStoryboard.init(name: "ProductSearch", bundle: nil)
             let dvc = storyBoard.instantiateViewController(identifier: "ProductSearch") as! ProductSearchVC
+            dvc.entryType = .newUser
             
             dvc.modalPresentationStyle = .fullScreen
             self.present(dvc, animated: true)

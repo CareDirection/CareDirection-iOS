@@ -257,12 +257,11 @@
                                                     <rect key="frame" x="28" y="0.0" width="81" height="20"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRi-oa-YNQ">
-                                                            <rect key="frame" x="13.5" y="3" width="54" height="15"/>
+                                                            <rect key="frame" x="17" y="3" width="47" height="15"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QV-S4-s3i">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="19" height="15"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QV-S4-s3i">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="12" height="15"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="19" id="5Z3-xM-J4Q"/>
                                                                         <constraint firstAttribute="height" constant="15" id="wFC-Me-oV3"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
@@ -270,7 +269,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회 남음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dX-4Y-zcJ">
-                                                                    <rect key="frame" x="19" y="0.0" width="35" height="15"/>
+                                                                    <rect key="frame" x="12" y="0.0" width="35" height="15"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="15" id="9uH-6a-AYA"/>
                                                                         <constraint firstAttribute="width" constant="35" id="ZI2-g8-Coh"/>

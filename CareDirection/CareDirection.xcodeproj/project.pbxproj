@@ -38,6 +38,8 @@
 		7F5DD45823BE09970002DCAC /* ProductEfficacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD45723BE09970002DCAC /* ProductEfficacy.swift */; };
 		7F5DD45A23BE0ED80002DCAC /* ProductLowerPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD45923BE0ED80002DCAC /* ProductLowerPrice.swift */; };
 		7F5DD45C23BE2C930002DCAC /* ProductStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD45B23BE2C930002DCAC /* ProductStandard.swift */; };
+		7F603C3923BFB8B100A5E0B0 /* ProductManagementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F603C3823BFB8B100A5E0B0 /* ProductManagementService.swift */; };
+		7F603C3B23BFBA8F00A5E0B0 /* TakingProductPopUpResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F603C3A23BFBA8F00A5E0B0 /* TakingProductPopUpResult.swift */; };
 		7F626B7423B934C2005A4D36 /* ProductSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F626B7323B934C2005A4D36 /* ProductSearch.storyboard */; };
 		7F626B7623B941E7005A4D36 /* ProductSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626B7523B941E7005A4D36 /* ProductSearchVC.swift */; };
 		7F626B7823B94E39005A4D36 /* NewProductResgistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */; };
@@ -191,6 +193,8 @@
 		7F5DD45723BE09970002DCAC /* ProductEfficacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEfficacy.swift; sourceTree = "<group>"; };
 		7F5DD45923BE0ED80002DCAC /* ProductLowerPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLowerPrice.swift; sourceTree = "<group>"; };
 		7F5DD45B23BE2C930002DCAC /* ProductStandard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductStandard.swift; sourceTree = "<group>"; };
+		7F603C3823BFB8B100A5E0B0 /* ProductManagementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManagementService.swift; sourceTree = "<group>"; };
+		7F603C3A23BFBA8F00A5E0B0 /* TakingProductPopUpResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingProductPopUpResult.swift; sourceTree = "<group>"; };
 		7F626B7323B934C2005A4D36 /* ProductSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductSearch.storyboard; sourceTree = "<group>"; };
 		7F626B7523B941E7005A4D36 /* ProductSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchVC.swift; sourceTree = "<group>"; };
 		7F626B7723B94E39005A4D36 /* NewProductResgistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductResgistCell.swift; sourceTree = "<group>"; };
@@ -510,6 +514,7 @@
 				7FF1F00B23BE9281009A32B2 /* TakingProductList.swift */,
 				7FF1F00D23BE9D91009A32B2 /* TakingProductSearchList.swift */,
 				7FF1F01123BEB5C9009A32B2 /* SimpleProductResult.swift */,
+				7F603C3A23BFBA8F00A5E0B0 /* TakingProductPopUpResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				F47860DE23BD8446003D11D1 /* FunctionService.swift */,
 				F47860E223BD8B91003D11D1 /* ArticleSevice.swift */,
 				F47860E423BD9E06003D11D1 /* NutrientService.swift */,
+				7F603C3823BFB8B100A5E0B0 /* ProductManagementService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -794,6 +800,7 @@
 				F47860BB23BAF110003D11D1 /* SymptomCategoryCell.swift in Sources */,
 				7FC773B023B354B400449239 /* SurveyLifeStyleEntryVC.swift in Sources */,
 				F47860CF23BC95E9003D11D1 /* ResponseString2.swift in Sources */,
+				7F603C3923BFB8B100A5E0B0 /* ProductManagementService.swift in Sources */,
 				7F626B7C23BA3C3F005A4D36 /* TakingProductInfoVC.swift in Sources */,
 				F4DC233323B628C600A72919 /* TakingProduct.swift in Sources */,
 				F492FB6323B216C900FE5D11 /* UIViewController+Extensions.swift in Sources */,
@@ -822,6 +829,7 @@
 				7F90F49C23BBE260008D874F /* ComponentCategoryPopUpVC.swift in Sources */,
 				7F571A5E23B7E22D00D892B2 /* ProductVC.swift in Sources */,
 				F492FB6123B216A100FE5D11 /* UIView+Extensions.swift in Sources */,
+				7F603C3B23BFBA8F00A5E0B0 /* TakingProductPopUpResult.swift in Sources */,
 				F4DC232D23B555ED00A72919 /* SurveyFin.swift in Sources */,
 				7FF1F00E23BE9D91009A32B2 /* TakingProductSearchList.swift in Sources */,
 				F492FB4823B215B200FE5D11 /* SceneDelegate.swift in Sources */,

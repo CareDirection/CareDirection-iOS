@@ -21,6 +21,7 @@ class ProductSearchVC: UIViewController {
     @IBOutlet var searchResultTV: UITableView!
     
     var searchResult: [TakingProductSearch] = []
+    var entryType: EntryType = .newUser
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,8 @@ class ProductSearchVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+ 
+    
     func setInitLayout(){
         searchResultView.isHidden = true
         searchBackgroudView.dropShadow(color: UIColor.init(red: 0, green: 0, blue: 0, alpha: 1), offSet: CGSize(width: 0, height: 1), opacity: 0.16, radius: 3)
@@ -38,7 +41,6 @@ class ProductSearchVC: UIViewController {
         self.searchResultTV.delegate = self
         self.searchTxtField.delegate = self
         self.searchResultTV.dataSource = self
-        
         
     }
     
@@ -137,4 +139,10 @@ extension ProductSearchVC: UITableViewDataSource{
         return cell
         
     }
+}
+
+
+enum EntryType{
+    case newUser
+    case oldUser
 }

@@ -222,23 +222,11 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zl4-3j-fA1">
-                                                        <rect key="frame" x="11" y="31" width="28" height="28"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="Zl4-3j-fA1" secondAttribute="height" multiplier="1:1" id="Jfv-jo-S4F"/>
-                                                        </constraints>
-                                                        <state key="normal" image="icBack"/>
-                                                        <connections>
-                                                            <action selector="dissmiss:" destination="9yr-fU-qLR" eventType="touchUpInside" id="kdu-ts-c4O"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="4v1-ti-KEd" secondAttribute="bottom" constant="10" id="7zU-3U-M1G"/>
-                                                    <constraint firstItem="Zl4-3j-fA1" firstAttribute="leading" secondItem="E3H-1o-5tI" secondAttribute="leading" constant="11" id="Mcp-O2-Jvz"/>
                                                     <constraint firstItem="4v1-ti-KEd" firstAttribute="centerX" secondItem="E3H-1o-5tI" secondAttribute="centerX" id="Q4A-hM-lpS"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Zl4-3j-fA1" secondAttribute="bottom" constant="7" id="cX6-8g-6gM"/>
                                                     <constraint firstAttribute="width" secondItem="E3H-1o-5tI" secondAttribute="height" multiplier="125:22" id="l2C-hE-z80"/>
                                                 </constraints>
                                             </view>
@@ -292,7 +280,6 @@
     </scenes>
     <resources>
         <image name="flickrMarcoVerch" width="250" height="190"/>
-        <image name="icBack" width="28" height="28"/>
         <image name="icPlus" width="28" height="28"/>
     </resources>
 </document>

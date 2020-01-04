@@ -97,7 +97,17 @@ struct ProductManagementService {
                                    case 401:
                                        completion(.requestErr("유효하지 않은 토큰"))
                                    case 403:
-                                    completion(.requestErr("복용 제품 등록 실패"))
+                                    do {
+                                        let decoder = JSONDecoder()
+                                        let result = try decoder.decode(ResponseString2.self, from: value)
+                                        
+                                        completion(.requestErr(result.message))
+                                        
+                                    } catch {
+                                        print(error.localizedDescription)
+                                        print("nutrient pathERrr")
+                                        completion(.requestErr("No Data"))
+                                    }
                                        
                                    default:
                                        print(status)

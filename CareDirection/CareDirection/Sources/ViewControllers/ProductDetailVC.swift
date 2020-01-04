@@ -38,6 +38,7 @@ class ProductDetailVC: UIViewController {
     
     @IBOutlet var productFunctionCV: UICollectionView!
     
+    @IBOutlet var functionHeightConstraints: NSLayoutConstraint!
     @IBOutlet var productFeatureLbl: UILabel!
     
     @IBOutlet var productHowToTakeLbl: UILabel!
@@ -149,6 +150,7 @@ class ProductDetailVC: UIViewController {
                 self.productFunctionCVExtension.data = result
                 self.productFunctionCV.delegate = self.productFunctionCVExtension
                 self.productFunctionCV.dataSource = self.productFunctionCVExtension
+                self.functionHeightConstraints.constant = 0
                 
             case .requestErr(let msg):
                 print(msg)

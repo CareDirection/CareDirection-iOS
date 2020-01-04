@@ -42,7 +42,7 @@ class TakingProductRegistVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        TakingProductService.shared.getCurrentTakingList(date: "2020-01-03"){ data in
+        TakingProductService.shared.getCurrentTakingList(date: "2020-01-04"){ data in
             switch data {
             case .success(let data):
                 self.takingProductList = data as! [TakingProductData]

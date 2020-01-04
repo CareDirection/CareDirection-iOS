@@ -129,10 +129,13 @@ class HomeVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("view will appear")
         setIngredient()
         setTakingProductCV()
         self.functionalCollectionView.reloadData()
     }
+    
+
     
     // 유저 변경 drop down button
     @IBAction func userDropDown(_ sender: Any) {
@@ -161,7 +164,7 @@ class HomeVC: UIViewController {
     
     func setTakingProductCV(){
         //takingProductList
-        TakingProductService.shared.getCurrentTakingList(date: "2020-01-03"){ data in
+        TakingProductService.shared.getCurrentTakingList(date: "2020-01-04"){ data in
             switch data {
             case .success(let data):
                 self.takingProductList = data as! [TakingProductData]

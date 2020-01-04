@@ -16,12 +16,12 @@ struct ChartService {
         
         let URL = APIConstants.GetGraphURL
         
-        //let token = UserDefaults.standard
+        let token = UserDefaults.standard
         print("here okay")
         let header: HTTPHeaders = [
             "Content-Type" : "application/json",
-            "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
-            //"token" : "\(token.string(forKey: "token")!)"
+            //"token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         print("before request")
         
@@ -79,12 +79,12 @@ struct ChartService {
         
         let URL = APIConstants.GetMyNutrientDetailURL
         
-        //let token = UserDefaults.standard
+        let token = UserDefaults.standard
        
         let header: HTTPHeaders = [
             "Content-Type" : "application/json",
-            "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
-            //"token" : "\(token.string(forKey: "token")!)"
+            //"token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
             .responseData { response in

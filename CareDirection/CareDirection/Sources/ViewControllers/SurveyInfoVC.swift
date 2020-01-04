@@ -144,7 +144,7 @@ class SurveyInfoVC: UIViewController {
             case .pathErr:
                 print("path err")
             case .serverErr:
-                break
+                print("server err")
             case .networkFail:
                 break
             case .dbErr:

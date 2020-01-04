@@ -12,11 +12,14 @@ import Alamofire
 struct ProductTapService {
     static let shared = ProductTapService()
     
+    let token = UserDefaults.standard
+    
     func getTopTapList(completion: @escaping (NetworkResult<Any>) -> Void){
         let header : HTTPHeaders = [
             
             "Content-Type" : "application/json",
-            "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+            //"token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         
         Alamofire.request(APIConstants.ProductTapListURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseData { response in
@@ -226,9 +229,12 @@ struct ProductTapService {
     func getProductDetail(idx: Int, completion: @escaping (NetworkResult<Any>) -> Void){
         let URL = APIConstants.ProductBaseURL + "/\(idx)/info"
         
+        let token = UserDefaults.standard
+        
         let header: HTTPHeaders = [
             "Content-Type" : "application/json",
-            "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
+            //"token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
+            "token" : "\(token.string(forKey: "token")!)"
         ]
 
         
@@ -280,12 +286,13 @@ struct ProductTapService {
     
     func productDetailEfficacy(idx: Int, completion: @escaping (NetworkResult<Any>) -> Void){
         let URL = APIConstants.ProductBaseURL + "/\(idx)/efficacy"
-
+        let token = UserDefaults.standard
         
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
+        //let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6MjQsImlhdCI6MTU3Nzg3NzY1NiwiZXhwIjo4Nzk3Nzg3NzY1NiwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.WysKIH3-qDf3GTR-RKKl23hp_9byodzDm7TdISMTkmk"
         
         let header: HTTPHeaders = [
-            "token" : token
+            //"token" : token
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         
         Alamofire.request(URL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: header).responseData(){

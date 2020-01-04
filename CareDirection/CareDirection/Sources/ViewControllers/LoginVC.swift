@@ -68,6 +68,11 @@ class LoginVC: UIViewController {
                 let token = user_data.token
                 UserDefaults.standard.set(token, forKey: "token")
                 
+                print("-----------")
+                print("token:")
+                print(token)
+                print("-----------")
+                
                 let survey = UIStoryboard.init(name: "Survey", bundle: nil)
                 
                 guard let dvc = survey.instantiateViewController(withIdentifier: "SurveyVC") as? SurveyVC else {

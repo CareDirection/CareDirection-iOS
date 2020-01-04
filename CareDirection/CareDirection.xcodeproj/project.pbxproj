@@ -989,7 +989,7 @@
 			baseConfigurationReference = 7261AFEDA7F414A722F6F33D /* Pods-CareDirection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25UTG6U2R6;
 				INFOPLIST_FILE = CareDirection/Info.plist;
@@ -1010,7 +1010,7 @@
 			baseConfigurationReference = 4A39791A4DB28D8A95440297 /* Pods-CareDirection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25UTG6U2R6;
 				INFOPLIST_FILE = CareDirection/Info.plist;

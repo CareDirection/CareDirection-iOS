@@ -13,7 +13,14 @@ class SettingVC: UIViewController {
     
     @IBOutlet weak var nameLbl: UILabel!
     
+    @IBOutlet weak var topLbl: UILabel!
+    
     @IBOutlet weak var navigationBar: UIView!
+    
+    @IBOutlet weak var ageLbl: UILabel!
+    
+    @IBOutlet weak var idLbl: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +31,9 @@ class SettingVC: UIViewController {
         let user = UserDefaults.standard
         
         self.nameLbl.text = user.string(forKey: "user_name")
-
+        self.topLbl.text = user.string(forKey: "user_name")
+        self.ageLbl.text = user.string(forKey: "user_age")
+        self.idLbl.text = user.string(forKey: "user_id")
     }
 
     @IBAction func backButtonClick(_ sender: Any) {
@@ -70,5 +79,7 @@ class SettingVC: UIViewController {
                     
                     UserDefaults.standard.set(nil, forKey: "token")
                     let token = UserDefaults.standard
+        
+        present(alert, animated: true)
     }
 }

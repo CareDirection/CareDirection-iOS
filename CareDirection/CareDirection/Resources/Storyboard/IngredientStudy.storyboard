@@ -572,6 +572,10 @@
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="WYL-DH-Mi5" secondAttribute="height" multiplier="25:19" id="mQm-nB-H47"/>
                                                                             </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="articleImg"/>
+                                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </imageView>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7G2-Hy-qfx">
                                                                             <rect key="frame" x="0.0" y="131" width="250" height="59"/>

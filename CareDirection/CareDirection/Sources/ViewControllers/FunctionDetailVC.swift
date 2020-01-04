@@ -255,6 +255,8 @@ extension FunctionDetailVC {
                 
                 if self.functionalIngredient.count == 0 {
                     
+                    self.functionalLabel.isHidden = true
+                    self.functionalLabel2.isHidden = true
                     self.noCareView.isHidden = false
                     
                 } else if self.functionalIngredient.count == 1 {
@@ -274,7 +276,7 @@ extension FunctionDetailVC {
                 self.functionalCollectionView.reloadData()
                 
                 self.functionalCollectionView2.dataSource = self
-                self.functionalCollectionView2.reloadData()
+            self.functionalCollectionView2.reloadData()
                 
             case .requestErr(let msg):
                 print("nutrient : request err")

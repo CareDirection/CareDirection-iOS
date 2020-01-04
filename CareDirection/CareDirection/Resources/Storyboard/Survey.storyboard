@@ -59,7 +59,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고객님의 이름을 정해주시겠어요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQm-s3-qd1">
-                                <rect key="frame" x="18" y="149" width="327" height="49.5"/>
+                                <rect key="frame" x="18" y="149" width="327" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QQm-s3-qd1" secondAttribute="height" multiplier="109:10" id="iYq-2n-gZr"/>
                                 </constraints>
@@ -87,7 +87,6 @@
                             <constraint firstItem="s0z-sa-o8x" firstAttribute="bottom" secondItem="RuS-74-sBF" secondAttribute="bottom" constant="28" id="8ju-IQ-f7m"/>
                             <constraint firstItem="s0z-sa-o8x" firstAttribute="trailing" secondItem="u85-oT-QZj" secondAttribute="trailing" constant="257" id="AFJ-fc-44b"/>
                             <constraint firstItem="ytE-jQ-chE" firstAttribute="leading" secondItem="s0z-sa-o8x" secondAttribute="leading" id="Km4-Dh-KK8"/>
-                            <constraint firstItem="hYm-RM-LLJ" firstAttribute="top" secondItem="QQm-s3-qd1" secondAttribute="bottom" constant="118" id="PKh-I6-hqi"/>
                             <constraint firstItem="RuS-74-sBF" firstAttribute="centerX" secondItem="ytE-jQ-chE" secondAttribute="centerX" id="QT0-5n-FFx"/>
                             <constraint firstItem="ytE-jQ-chE" firstAttribute="bottom" secondItem="uOI-75-lSd" secondAttribute="bottom" id="SOj-4H-pI3"/>
                             <constraint firstItem="QQm-s3-qd1" firstAttribute="leading" secondItem="s0z-sa-o8x" secondAttribute="leading" constant="18" id="SU8-9p-msq"/>

@@ -136,6 +136,7 @@ class SurveyInfoVC: UIViewController {
                 dvc.name = self.userName!
                 
                 UserDefaults.standard.set(self.userName, forKey: "user_name")
+                UserDefaults.standard.set(self.userAgeTxtField.text, forKey: "user_age")
                 
                 self.present(dvc, animated: true)
                 

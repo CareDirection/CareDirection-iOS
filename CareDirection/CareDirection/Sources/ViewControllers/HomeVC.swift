@@ -48,6 +48,9 @@ class HomeVC: UIViewController {
     @IBOutlet weak var noRegistView: UIView!
     
     
+    @IBOutlet weak var noShowView: UIView!
+    
+    
     // 받아올 데이터 리스트들.
     //1. 유저 리스트
     //2. 등록한 제품들 리스트
@@ -72,9 +75,7 @@ class HomeVC: UIViewController {
         let user = UserDefaults.standard
         
         //self.dropDownButton.titleLabel?.text = user.string(forKey: "user_name")
-        
-        print("=============")
-        print(user.string(forKey: "user_name"))
+        noShowView.isHidden = true
         
     dropDownButton.setTitle(user.string(forKey: "user_name"), for: .normal)
         
@@ -494,7 +495,9 @@ extension HomeVC {
                 
                 if self.functionalIngredient.count == 0 {
                     
-                    
+                    self.functionalLabel.isHidden = true
+                    self.functionalLabel2.isHidden = true
+                    self.noShowView.isHidden = false
                     
                 } else if self.functionalIngredient.count == 1 {
                     self.functionalLabel.text = self.functionalIngredient[0].nutrient

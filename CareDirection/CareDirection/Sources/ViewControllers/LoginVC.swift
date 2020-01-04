@@ -68,6 +68,8 @@ class LoginVC: UIViewController {
                 let token = user_data.token
                 UserDefaults.standard.set(token, forKey: "token")
                 
+                UserDefaults.standard.set(self.idTextField.text, forKey: "user_id")
+                
                 print("-----------")
                 print("token:")
                 print(token)

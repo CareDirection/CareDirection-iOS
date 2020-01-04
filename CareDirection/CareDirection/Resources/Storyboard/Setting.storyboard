@@ -120,11 +120,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jinopark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hI-CL-C3o">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jinopark" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hI-CL-C3o">
                                                 <rect key="frame" x="284" y="0.0" width="54" height="22"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="54" id="ayv-VR-6vr"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -167,9 +164,6 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박진오" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5k-Fy-uuX">
                                         <rect key="frame" x="297" y="0.0" width="42" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="42" id="Y3A-ir-Vjb"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -177,7 +171,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="243" translatesAutoresizingMaskIntoConstraints="NO" id="ChE-hS-QSb">
-                                <rect key="frame" x="18" y="310" width="339" height="22"/>
+                                <rect key="frame" x="18.5" y="310" width="338.5" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출생연도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKS-FH-D2r">
                                         <rect key="frame" x="0.0" y="0.0" width="63" height="22"/>
@@ -189,10 +183,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1996" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FN-sw-Taj">
-                                        <rect key="frame" x="306" y="0.0" width="33" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="33" id="JBa-CI-nOs"/>
-                                        </constraints>
+                                        <rect key="frame" x="306" y="0.0" width="32.5" height="22"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -203,7 +194,6 @@
                                 <rect key="frame" x="18" y="548" width="70" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="Sxg-lC-Ej4"/>
-                                    <constraint firstAttribute="width" constant="70" id="dLX-kz-0xQ"/>
                                 </constraints>
                                 <connections>
                                     <action selector="logoutButton:" destination="xAC-vH-AcW" eventType="touchUpInside" id="qfh-ah-rCI"/>
@@ -235,8 +225,11 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="ageLbl" destination="4FN-sw-Taj" id="knh-jV-uSn"/>
+                        <outlet property="idLbl" destination="5hI-CL-C3o" id="glp-kj-Djn"/>
                         <outlet property="nameLbl" destination="l5k-Fy-uuX" id="Ffd-nk-vTc"/>
                         <outlet property="navigationBar" destination="B0h-ox-sEc" id="Lhx-eB-n6A"/>
+                        <outlet property="topLbl" destination="N8W-gz-aHq" id="V2w-QP-Hit"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QrR-FA-2Uy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

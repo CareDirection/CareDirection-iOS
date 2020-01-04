@@ -69,6 +69,10 @@
                                                         <constraint firstAttribute="width" constant="375" id="OtK-na-Qyq"/>
                                                         <constraint firstAttribute="height" constant="300" id="sjF-as-MWH"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="articleImg"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -122,7 +126,7 @@
                                                         <constraint firstAttribute="width" constant="342" id="z5m-JR-ULy"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -157,7 +161,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSX-h7-hfJ">
-                                                    <rect key="frame" x="18" y="270" width="339" height="20"/>
+                                                    <rect key="frame" x="18" y="269.5" width="339" height="19.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="339" id="zMj-18-2dz"/>
                                                     </constraints>

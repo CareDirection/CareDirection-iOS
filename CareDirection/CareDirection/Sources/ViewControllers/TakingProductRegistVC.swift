@@ -82,8 +82,8 @@ class TakingProductRegistVC: UIViewController {
     // date pick button click action
     @IBAction func datePickButtonClick(_ sender: Any) {
         
-        datePickerTotalView.isHidden = false
-        datePickerView.isHidden = false
+        //datePickerTotalView.isHidden = false
+        //datePickerView.isHidden = false
     }
     
     

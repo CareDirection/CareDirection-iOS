@@ -45,6 +45,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="368-ES-reJ"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Survey"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="nextButton" destination="sK3-Y9-2DS" id="mLw-OU-8Jo"/>
                     </connections>

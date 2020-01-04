@@ -57,7 +57,6 @@ class HomeVC: UIViewController {
     //3. 기능성 원료
     //4. 차트 리스트
     var userList : [User] = []
-    var productList : [Product] = []
     var takingProductList: [TakingProductData] = []
     
     var functionalIngredientList : [FunctionalEfficacy] = []
@@ -77,16 +76,13 @@ class HomeVC: UIViewController {
         //self.dropDownButton.titleLabel?.text = user.string(forKey: "user_name")
         noShowView.isHidden = true
         
-    dropDownButton.setTitle(user.string(forKey: "user_name"), for: .normal)
-        
-        //pr
-        
+        dropDownButton.setTitle(user.string(forKey: "user_name"), for: .normal)
         
         // 유저 리스트 더미 데이터 생성
         setUserData()
         // 기능 성분 가져오기
         setIngredient()
-        
+        //setTakingProductCV()
         // navigation bar 사용자 추가 isHidden 설정해주기!
         userTableView.isHidden = true
         blurView.isHidden = true
@@ -109,8 +105,8 @@ class HomeVC: UIViewController {
         userTableView.reloadData()
         
         // collection view delegate, dataSource 설정
-        productCollectionView.delegate = self
-        productCollectionView.dataSource = self
+//        productCollectionView.delegate = self
+//        productCollectionView.dataSource = self
         
         // button custom 하기
         showDetailStandard.makeRounded(cornerRadius: 13)
@@ -122,17 +118,18 @@ class HomeVC: UIViewController {
         noRegistView.makeRounded(cornerRadius: 18)
         noRegistView.dropShadow(color: UIColor.brownishGrey30, offSet: CGSize(width: 0, height: 1), opacity: 0.4, radius: 4)
         
-        if productList.count == 0 {
+        if takingProductList.count == 0 {
             noRegistView.isHidden = false
             productCollectionView.isHidden = true
         }
-        setTakingProductCV()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         print("view will appear")
         setIngredient()
         setTakingProductCV()
+        
         self.functionalCollectionView.reloadData()
     }
     
@@ -169,6 +166,10 @@ class HomeVC: UIViewController {
             switch data {
             case .success(let data):
                 self.takingProductList = data as! [TakingProductData]
+                
+                print("--------------------")
+                print(self.takingProductList)
+                print("--------------------")
                 self.productCollectionView.dataSource = self
                 self.productCollectionView.delegate = self
                 self.productCollectionView.reloadData()
@@ -359,6 +360,8 @@ extension HomeVC : UICollectionViewDataSource {
             
             cell.productName.text = product.productName
             cell.productImage.imageFromUrl(product.imageLocation, defaultImgPath: "imgLogo")
+            
+  
             if product.productIsDosed{
                 cell.productCheckImage.image = UIImage.init(named: "checkCircleIc")
             }
@@ -461,8 +464,7 @@ extension HomeVC : UICollectionViewDelegate {
         
         dvc.productIdx = takingProductList[indexPath.row].productIdx
         dvc.isDosed = takingProductList[indexPath.row].productIsDosed
-        print(dvc.productIdx)
-        print(dvc.isDosed)
+        
         present(dvc, animated: true)
     }
 }

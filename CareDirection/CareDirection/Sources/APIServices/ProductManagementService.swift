@@ -67,10 +67,10 @@ struct ProductManagementService {
     
     
     func takeProduct(idx: Int, completion: @escaping (NetworkResult<Any>) -> Void){
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+        let token = UserDefaults.standard
         
         let header: HTTPHeaders = [
-            "token" : token
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         
         let URL = APIConstants.ProductBaseURL + "/\(idx)/dose/check"

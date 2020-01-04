@@ -23,7 +23,7 @@ class TakingProductPopUpVC: UIViewController {
     @IBOutlet var cancelBtn: UIButton!
     
     var productIdx: Int = 0
-    var isDosed: Bool = true
+    var isDosed: Bool = false
     var productPopUpData: [TakingProductPopUpData] = []
     
     override func viewDidLoad() {
@@ -41,7 +41,7 @@ class TakingProductPopUpVC: UIViewController {
             switch data {
             case .success(let data):
                 self.productPopUpData = data as! [TakingProductPopUpData]
-                //print(self.productPopUpData[0].imageKey)
+                print(self.productPopUpData)
                     
                 self.productImg.imageFromUrl(self.productPopUpData[0].imageKey, defaultImgPath: "imgLogo")
                 self.productNameLbl.text = self.productPopUpData[0].productName
@@ -85,28 +85,25 @@ class TakingProductPopUpVC: UIViewController {
     // 복용, 복용 취소 체크 버튼
     // 버튼에 따른 복용여부 체크 이미지 변화주기
     @IBAction func takeButtonClick(_ sender: Any) {
-        if self.isDosed{
-            
-        }
-        else {
-            ProductManagementService.shared.takeProduct(idx: self.productIdx) { data in
-                switch data {
-                case .success(let data):
-                    let result = data as! String
-                    print(result)
-                    self.dismiss(animated: true)
-                case .requestErr(let msg):
-                    print(msg)
-                case .pathErr:
-                    print("getTakingProductInfoAtPopUp pathErr")
-                case .serverErr:
-                    print("getTakingProductInfoAtPopUp serverErr")
-                case .networkFail:
-                    print("getTakingProductInfoAtPopUp networkFail")
-                case .dbErr:
-                    print("getTakingProductInfoAtPopUp dbErr")
-                }
+        ProductManagementService.shared.takeProduct(idx: self.productIdx) { data in
+            switch data {
+            case .success(let data):
+                let result = data as! String
+                print(result)
+                self.dismiss(animated: true)
+            case .requestErr(let msg):
+                print(msg)
+                self.dismiss(animated: true)
+            case .pathErr:
+                print("getTakingProductInfoAtPopUp pathErr")
+            case .serverErr:
+                print("getTakingProductInfoAtPopUp serverErr")
+            case .networkFail:
+                print("getTakingProductInfoAtPopUp networkFail")
+            case .dbErr:
+                print("getTakingProductInfoAtPopUp dbErr")
             }
+
         }
         
         // 이미지 변화주기

@@ -14,11 +14,12 @@ struct TakingProductService {
     static let shared = TakingProductService()
     
     func getCurrentTakingList(date: String, completion: @escaping (NetworkResult<Any>) -> Void) {
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+        //let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+        let token = UserDefaults.standard
         
         let header : HTTPHeaders = [
             "Content-Type" : "application/json",
-            "token" : token
+            "token" : "\(token.string(forKey: "token")!)"
         ]
 
         let body : Parameters = [
@@ -66,11 +67,14 @@ struct TakingProductService {
     }
     
     func searchProductToRegist(keyword: String, completion: @escaping(NetworkResult<Any>)->Void){
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+        //let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+        
+        let token = UserDefaults.standard
         
         let header: HTTPHeaders = [
             "Content-Type": "application/json",
-            "token": token
+            //"token": token
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         let parameter: Parameters = [
             "query" : keyword
@@ -117,10 +121,12 @@ struct TakingProductService {
     }
     func getProductSimpleData(idx: Int, completion: @escaping (NetworkResult<Any>) -> Void){
         let URL = APIConstants.ProductBaseURL + "/\(idx)/"
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+        //let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+        let token = UserDefaults.standard
         
         let header: HTTPHeaders = [
-            "token" : token
+            //"token" : token
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         
         Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseData() { response in
@@ -166,10 +172,10 @@ struct TakingProductService {
     
     func registTakingProduct(idx: Int, quantity: Int, startDate: String, alarm: String, completion: @escaping(NetworkResult<Any>) -> Void){
         let URL = APIConstants.ProductBaseURL + "/\(idx)/dose"
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
-        
+        //let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6NjQsImlhdCI6MTU3ODAyODgxOCwiZXhwIjo4Nzk3ODAyODgxOCwiaXNzIjoiY2FyZS1kaXJlY3Rpb24ifQ.eR-912HpB7B9JCaYwUlkaGBEphLywOoRCyT4ZZB1DMI"
+        let token = UserDefaults.standard
         let headr: HTTPHeaders = [
-            "token":token
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         
         let body:Parameters = [

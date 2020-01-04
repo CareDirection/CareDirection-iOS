@@ -74,7 +74,7 @@ extension IngredientDetailVC : UITableViewDataSource {
             
             let imageCell = ingredientTableView.dequeueReusableCell(withIdentifier: "imageCell") as! IngredientImageCell
             
-            imageCell.ingredientImage.image = detailList?.ingredientDetailImage
+            imageCell.ingredientImage.imageFromUrl(detailList?.ingredientDetailImage, defaultImgPath: "imgLogo")
             
             return imageCell
             

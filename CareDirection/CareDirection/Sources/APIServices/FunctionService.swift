@@ -16,12 +16,12 @@ struct  FunctionService {
         
         let URL = APIConstants.GetNutrientFunctionURL
         
-        //let token = UserDefaults.standard
+        let token = UserDefaults.standard
         print("here okay")
         let header: HTTPHeaders = [
             "Content-Type" : "application/json",
-            "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6OH0.1aTgLt9PjqIDpERitt0eOQMuoyQUypMBYw4JaGi6M6M"
-            //"token" : "\(token.string(forKey: "token")!)"
+            //"token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkeCI6OH0.1aTgLt9PjqIDpERitt0eOQMuoyQUypMBYw4JaGi6M6M"
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         
         Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)

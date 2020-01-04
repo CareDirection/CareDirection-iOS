@@ -11,13 +11,13 @@ import UIKit
 
 struct Ingredient {
     let ingredientImage : UIImage?
-    let ingredientDetailImage : UIImage?
+    let ingredientDetailImage : String
     let ingredientName : String
     let ingredientDetail : String
     
     init(image : String, detailImage : String, name : String, detail : String) {
         self.ingredientImage = UIImage(named: image)
-        self.ingredientDetailImage = UIImage(named: detailImage)
+        self.ingredientDetailImage = detailImage
         self.ingredientName = name
         self.ingredientDetail = detail
     }

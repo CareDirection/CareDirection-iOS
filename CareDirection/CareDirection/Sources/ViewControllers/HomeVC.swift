@@ -50,6 +50,8 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var noShowView: UIView!
     
+    // 리팩토링할 때 신경쓸 것 : 주석처리
+    
     
     // 받아올 데이터 리스트들.
     //1. 유저 리스트
@@ -131,6 +133,7 @@ class HomeVC: UIViewController {
         setTakingProductCV()
         
         self.functionalCollectionView.reloadData()
+        self.functionalCollectionView2.reloadData()
     }
     
 
@@ -409,6 +412,9 @@ extension HomeVC : UICollectionViewDataSource {
             if indexPath.row == functionalIngredientList.count - 1 {
                 cell.endCircleView.isHidden = false
             }
+            
+            
+            
             return cell
         
         } else {

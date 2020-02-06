@@ -219,9 +219,12 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="Home"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="ageLbl" destination="ND9-uk-sSU" id="Hr9-to-Yhh"/>
                         <outlet property="finishButton" destination="9Hb-mF-0zG" id="dki-Vm-WUo"/>
                         <outlet property="idEditTextField" destination="omZ-cb-0NG" id="MvM-hE-ofE"/>
+                        <outlet property="idLbl" destination="ReI-Fu-Zdj" id="ibx-3A-KFf"/>
                         <outlet property="navigationBar" destination="NWg-Ae-cH3" id="6Wc-jB-4RP"/>
+                        <outlet property="nickname" destination="CTu-vS-gVL" id="8qX-fF-9t2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BH0-iV-F7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

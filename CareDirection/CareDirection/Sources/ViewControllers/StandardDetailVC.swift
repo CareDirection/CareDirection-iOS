@@ -58,6 +58,7 @@ extension StandardDetailVC : UICollectionViewDataSource {
         cell.chartHeight.constant = CGFloat(standard.my_current_value_percent)
         
         view.setNeedsLayout()
+        
         UIView.animate(withDuration: 1.3, delay: 0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         })

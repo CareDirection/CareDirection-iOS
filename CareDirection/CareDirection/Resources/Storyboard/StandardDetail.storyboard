@@ -271,13 +271,13 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lineBlue" translatesAutoresizingMaskIntoConstraints="NO" id="5kB-Qi-Lry">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="lineBlue" translatesAutoresizingMaskIntoConstraints="NO" id="5kB-Qi-Lry">
                                 <rect key="frame" x="62.5" y="236" width="312.5" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5kB-Qi-Lry" secondAttribute="height" multiplier="156:1" id="DtD-6G-Nu2"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lineRed" translatesAutoresizingMaskIntoConstraints="NO" id="GKT-Go-Z35">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="lineRed" translatesAutoresizingMaskIntoConstraints="NO" id="GKT-Go-Z35">
                                 <rect key="frame" x="59.5" y="126" width="311.5" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GKT-Go-Z35" secondAttribute="height" multiplier="156:1" id="owg-bu-wNq"/>
@@ -302,6 +302,7 @@
                             <constraint firstItem="dCE-Sj-bHb" firstAttribute="top" secondItem="LpK-bh-0eg" secondAttribute="bottom" constant="44" id="grp-R4-s8g"/>
                             <constraint firstItem="ty4-eA-OEE" firstAttribute="top" secondItem="JQR-gb-VDU" secondAttribute="bottom" constant="64" id="jZm-Mr-JwM"/>
                             <constraint firstItem="VEn-1C-2nV" firstAttribute="leading" secondItem="dCE-Sj-bHb" secondAttribute="trailing" constant="8" id="jmX-dq-mGu"/>
+                            <constraint firstItem="LpK-bh-0eg" firstAttribute="top" secondItem="p1Z-fb-6Yd" secondAttribute="top" id="lAe-4g-8cN"/>
                             <constraint firstItem="dCE-Sj-bHb" firstAttribute="leading" secondItem="p1Z-fb-6Yd" secondAttribute="leading" constant="20" id="ldU-SS-LU0"/>
                             <constraint firstItem="0gp-Qa-O4p" firstAttribute="trailing" secondItem="p1Z-fb-6Yd" secondAttribute="trailing" id="n6d-Tn-Qu3"/>
                             <constraint firstItem="0oL-a8-2cG" firstAttribute="top" secondItem="LpK-bh-0eg" secondAttribute="bottom" constant="4" id="oEv-Dh-9xI"/>

@@ -14,7 +14,16 @@ class EditVC: UIViewController {
     
     @IBOutlet weak var idEditTextField: UIView!
     
+    @IBOutlet weak var nickname: UITextField!
     @IBOutlet weak var navigationBar: UIView!
+    
+    @IBOutlet weak var ageLbl: UILabel!
+    
+    @IBOutlet weak var idLbl: UILabel!
+    
+    var name : String = ""
+    var age : String = ""
+    var id : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +35,16 @@ class EditVC: UIViewController {
         idEditTextField.setBorder(borderColor: UIColor.veryLightPink, borderWidth: 1)
         
         navigationBar.layer.addBorder([.bottom], color: UIColor.brownishGrey30, width: 1)
+        
+        let user = UserDefaults.standard
+        
+        name = user.string(forKey: "user_name")!
+        self.ageLbl.text = user.string(forKey: "user_age")!
+        self.ageLbl.text = user.string(forKey: "user_age")!
+        self.idLbl.text = user.string(forKey: "user_name")
+        
+        nickname.attributedPlaceholder = NSAttributedString(string: name,
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white40])
         
     }
     

@@ -262,9 +262,6 @@
                                                                         </connections>
                                                                     </collectionViewCell>
                                                                 </cells>
-                                                                <connections>
-                                                                    <outlet property="dataSource" destination="J9C-3r-fs6" id="GwR-G5-UU0"/>
-                                                                </connections>
                                                             </collectionView>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I2d-xK-1Xh">
                                                                 <rect key="frame" x="20" y="113" width="234" height="86"/>
@@ -341,9 +338,6 @@
                                                                         </connections>
                                                                     </collectionViewCell>
                                                                 </cells>
-                                                                <connections>
-                                                                    <outlet property="dataSource" destination="J9C-3r-fs6" id="OvM-2H-IiL"/>
-                                                                </connections>
                                                             </collectionView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="홍삼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfM-iX-6r6">
                                                                 <rect key="frame" x="269" y="35" width="88" height="22"/>
@@ -521,7 +515,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-3E-2Ls">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="953"/>
+                                                <rect key="frame" x="395" y="0.0" width="375" height="953"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="0.68999999999999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>

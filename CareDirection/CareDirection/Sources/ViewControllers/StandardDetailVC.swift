@@ -57,6 +57,8 @@ extension StandardDetailVC : UICollectionViewDataSource {
         cell.standardDetail.text = standard.description
         cell.chartHeight.constant = CGFloat(standard.my_current_value_percent)
         
+        // MARK:- 그래프만 쫙 올라오게 하는 방법 고민합시다.
+        
         view.setNeedsLayout()
         
         UIView.animate(withDuration: 1.3, delay: 0, options: .curveEaseOut, animations: {

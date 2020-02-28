@@ -50,8 +50,7 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var noShowView: UIView!
     
-    // 리팩토링할 때 신경쓸 것 : 주석처리
-    
+    //MARK: 리팩토링할 때 신경쓸 것 : 주석처리
     
     // 받아올 데이터 리스트들.
     //1. 유저 리스트
@@ -62,7 +61,6 @@ class HomeVC: UIViewController {
     var takingProductList: [TakingProductData] = []
     
     var functionalIngredientList : [FunctionalEfficacy] = []
-    //var functionalIngredientList2 : [FunctionalIngredient] = []
     var functionalIngredientList2 : [FunctionalEfficacy] = []
     var chartList : [MainChart] = []
     //var functionalIngredient : ResponseNutrient!

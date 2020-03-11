@@ -117,6 +117,8 @@ class LoginVC: UIViewController {
     
     @IBAction func testSimulationButton(_ sender: Any) {
         
+        let goToMain = UIStoryboard.init(name: "Home", bundle: nil)
+        
         
         
     }

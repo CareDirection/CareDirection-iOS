@@ -119,7 +119,9 @@ class LoginVC: UIViewController {
         
         let goToMain = UIStoryboard.init(name: "Home", bundle: nil)
         
-        
+        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
+            return
+        }
         
     }
     

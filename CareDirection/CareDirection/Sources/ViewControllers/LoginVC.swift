@@ -114,6 +114,14 @@ class LoginVC: UIViewController {
     present(dvc, animated: true)
     
 }
+    
+    @IBAction func testSimulationButton(_ sender: Any) {
+        
+        
+        
+    }
+    
+    
     // 키보드 제어하는 메소드
     override func viewWillAppear(_ animated: Bool) {
         registerForKeyboardNotifications()

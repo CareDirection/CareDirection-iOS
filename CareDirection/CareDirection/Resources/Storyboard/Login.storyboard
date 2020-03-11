@@ -104,12 +104,9 @@
                                     <action selector="signUpButtonClicked:" destination="yHb-rP-eIA" eventType="touchUpInside" id="ZpR-Fe-R7q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-UN-3YD">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-UN-3YD">
                                 <rect key="frame" x="0.0" y="513" width="375" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="VAb-rI-7UA"/>
-                                    <constraint firstAttribute="width" constant="52" id="fL8-Jk-FHA"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="바로가기"/>
                                 <connections>
                                     <action selector="testSimulationButton:" destination="yHb-rP-eIA" eventType="touchUpInside" id="qPj-vW-8Q6"/>
@@ -119,15 +116,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="0td-F3-9DU" secondAttribute="bottom" constant="207" id="1EM-I8-cti"/>
-                            <constraint firstItem="zS0-UN-3YD" firstAttribute="top" secondItem="AVB-NZ-VeP" secondAttribute="bottom" constant="20" id="7pg-1X-Foa"/>
                             <constraint firstItem="jjc-te-ExS" firstAttribute="leading" secondItem="qvW-Rf-FTi" secondAttribute="leading" id="DzY-0A-HvA"/>
-                            <constraint firstItem="qvW-Rf-FTi" firstAttribute="bottom" secondItem="zS0-UN-3YD" secondAttribute="bottom" constant="124" id="RBV-Jo-ts3"/>
                             <constraint firstItem="8he-2l-uwb" firstAttribute="centerY" secondItem="jjc-te-ExS" secondAttribute="centerY" constant="-2.5" id="TXi-wY-vIO"/>
                             <constraint firstItem="jjc-te-ExS" firstAttribute="trailing" secondItem="qvW-Rf-FTi" secondAttribute="trailing" id="XI5-Wf-RGZ"/>
                             <constraint firstItem="jjc-te-ExS" firstAttribute="bottom" secondItem="0gN-WL-abv" secondAttribute="bottom" id="ZA9-Me-gzV"/>
                             <constraint firstItem="MxR-EK-ogL" firstAttribute="centerX" secondItem="jjc-te-ExS" secondAttribute="centerX" id="aZx-xg-2x4"/>
-                            <constraint firstItem="zS0-UN-3YD" firstAttribute="leading" secondItem="jjc-te-ExS" secondAttribute="leading" id="fwU-Vy-1MZ"/>
-                            <constraint firstItem="zS0-UN-3YD" firstAttribute="trailing" secondItem="jjc-te-ExS" secondAttribute="trailing" id="gOJ-XS-LoT"/>
                             <constraint firstItem="AVB-NZ-VeP" firstAttribute="centerX" secondItem="jjc-te-ExS" secondAttribute="centerX" id="kDn-9D-Q83"/>
                             <constraint firstItem="jjc-te-ExS" firstAttribute="top" secondItem="0gN-WL-abv" secondAttribute="top" id="kbY-zG-zRR"/>
                             <constraint firstItem="8he-2l-uwb" firstAttribute="top" secondItem="MxR-EK-ogL" secondAttribute="bottom" constant="48.5" id="mXM-QT-S76"/>

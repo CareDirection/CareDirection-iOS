@@ -122,12 +122,8 @@ class LoginVC: UIViewController {
     
     @IBAction func testSimulationButton(_ sender: Any) {
         print("바로가기 눌림")
-        let goToMain = UIStoryboard.init(name: "Home", bundle: nil)
-        
-        guard let dvc = goToMain.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
-            return
-        }
-        
+        let homeStoryboard = UIStoryboard.init(name: "Home", bundle: nil)
+        let dvc = homeStoryboard.instantiateViewController(withIdentifier: "Home")
         present(dvc, animated: true)
         
     }

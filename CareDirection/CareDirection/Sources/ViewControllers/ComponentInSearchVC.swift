@@ -29,7 +29,7 @@ class ComponentInSearchVC: UIViewController {
     var productList: [SearchList]?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //self.searchCategoryTxtField.tintColor = UIColor.clear
         createPicker()
         createToolBar()
         
@@ -69,7 +69,6 @@ class ComponentInSearchVC: UIViewController {
         let categoryPicker = UIPickerView()
         categoryPicker.delegate = self
         categoryPicker.dataSource = self
-        
         searchCategoryTxtField.inputView = categoryPicker
     }
     func createToolBar(){

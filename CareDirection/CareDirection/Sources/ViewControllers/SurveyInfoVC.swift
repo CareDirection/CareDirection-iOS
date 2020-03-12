@@ -48,7 +48,9 @@ class SurveyInfoVC: UIViewController {
         
         checkSexGroupBtn(selectSexIndex: userSexIndex)
         setLayout()
-        // Do any additional setup after loading the view.
+        
+        userAgeTxtField.tintColor = UIColor.clear
+        
     }
     
     func createYearPicker(){

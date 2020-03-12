@@ -24,6 +24,8 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var viewYCenter: NSLayoutConstraint!
     
+    @IBOutlet weak var testButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +44,9 @@ class LoginVC: UIViewController {
         
         //sign up button customize
         signUpButton.setTitleColor(UIColor.lightTan, for: .normal)
+        
+        // 바로가기 버튼
+        testButton.setTitleColor(UIColor.lightTan, for: .normal)
         
         initGestureRecognizer()
         

@@ -104,9 +104,13 @@
                                     <action selector="signUpButtonClicked:" destination="yHb-rP-eIA" eventType="touchUpInside" id="ZpR-Fe-R7q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-UN-3YD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-UN-3YD">
                                 <rect key="frame" x="0.0" y="513" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LwA-lm-fDy"/>
+                                    <constraint firstAttribute="width" constant="375" id="T68-MF-dhg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                 <state key="normal" title="바로가기"/>
                                 <connections>
                                     <action selector="testSimulationButton:" destination="yHb-rP-eIA" eventType="touchUpInside" id="qPj-vW-8Q6"/>
@@ -115,8 +119,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="0td-F3-9DU" secondAttribute="bottom" constant="207" id="1EM-I8-cti"/>
+                            <constraint firstItem="0td-F3-9DU" firstAttribute="top" secondItem="8he-2l-uwb" secondAttribute="bottom" constant="30" id="1hF-WN-tAy"/>
+                            <constraint firstItem="zS0-UN-3YD" firstAttribute="centerX" secondItem="jjc-te-ExS" secondAttribute="centerX" id="3cr-tZ-lOK"/>
                             <constraint firstItem="jjc-te-ExS" firstAttribute="leading" secondItem="qvW-Rf-FTi" secondAttribute="leading" id="DzY-0A-HvA"/>
+                            <constraint firstItem="zS0-UN-3YD" firstAttribute="top" secondItem="AVB-NZ-VeP" secondAttribute="bottom" constant="20" id="IDf-zv-fkJ"/>
                             <constraint firstItem="8he-2l-uwb" firstAttribute="centerY" secondItem="jjc-te-ExS" secondAttribute="centerY" constant="-2.5" id="TXi-wY-vIO"/>
                             <constraint firstItem="jjc-te-ExS" firstAttribute="trailing" secondItem="qvW-Rf-FTi" secondAttribute="trailing" id="XI5-Wf-RGZ"/>
                             <constraint firstItem="jjc-te-ExS" firstAttribute="bottom" secondItem="0gN-WL-abv" secondAttribute="bottom" id="ZA9-Me-gzV"/>
@@ -141,6 +147,7 @@
                         <outlet property="pwTextField" destination="yS5-Ix-jLy" id="N9E-Eq-fNF"/>
                         <outlet property="pwView" destination="wkt-45-gg2" id="sfq-NZ-biq"/>
                         <outlet property="signUpButton" destination="AVB-NZ-VeP" id="pUm-RI-ZjB"/>
+                        <outlet property="testButton" destination="zS0-UN-3YD" id="bbp-Y2-4Ib"/>
                         <outlet property="viewYCenter" destination="TXi-wY-vIO" id="9hs-ux-Kiy"/>
                     </connections>
                 </viewController>

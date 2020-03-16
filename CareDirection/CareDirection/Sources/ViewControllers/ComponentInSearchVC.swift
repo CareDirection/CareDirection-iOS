@@ -69,6 +69,7 @@ class ComponentInSearchVC: UIViewController {
         let categoryPicker = UIPickerView()
         categoryPicker.delegate = self
         categoryPicker.dataSource = self
+        searchCategoryTxtField.tintColor = UIColor.clear
         searchCategoryTxtField.inputView = categoryPicker
     }
     func createToolBar(){
@@ -81,6 +82,7 @@ class ComponentInSearchVC: UIViewController {
         
         toolBar.isUserInteractionEnabled = true
         
+        searchCategoryTxtField.tintColor = UIColor.clear
         searchCategoryTxtField.inputAccessoryView = toolBar
     }
     
@@ -137,6 +139,7 @@ extension ComponentInSearchVC: UIPickerViewDelegate{
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedSearchCategory = pickerList[row]
+        searchCategoryTxtField.tintColor = UIColor.clear
         searchCategoryTxtField.text = selectedSearchCategory
     }
 }

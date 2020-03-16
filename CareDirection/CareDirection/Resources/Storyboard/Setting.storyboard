@@ -73,10 +73,12 @@
                                 <constraints>
                                     <constraint firstItem="Qae-63-LJw" firstAttribute="top" secondItem="B0h-ox-sEc" secondAttribute="top" constant="34" id="Dtb-8A-umx"/>
                                     <constraint firstItem="CHE-om-RT4" firstAttribute="top" secondItem="B0h-ox-sEc" secondAttribute="top" constant="31" id="KiH-ep-omf"/>
+                                    <constraint firstItem="Qae-63-LJw" firstAttribute="leading" secondItem="CHE-om-RT4" secondAttribute="trailing" constant="94" id="RiK-yh-XB5"/>
                                     <constraint firstItem="CHE-om-RT4" firstAttribute="leading" secondItem="B0h-ox-sEc" secondAttribute="leading" constant="11" id="YD5-NZ-cRs"/>
                                     <constraint firstItem="Qae-63-LJw" firstAttribute="centerX" secondItem="B0h-ox-sEc" secondAttribute="centerX" id="fIf-2H-YHh"/>
                                     <constraint firstItem="qkr-cT-a2i" firstAttribute="top" secondItem="B0h-ox-sEc" secondAttribute="top" constant="24" id="gzz-Sf-k8s"/>
                                     <constraint firstAttribute="trailing" secondItem="qkr-cT-a2i" secondAttribute="trailing" constant="18" id="i46-X0-6DC"/>
+                                    <constraint firstAttribute="bottom" secondItem="CHE-om-RT4" secondAttribute="bottom" constant="7" id="iZs-5i-RfK"/>
                                     <constraint firstAttribute="width" secondItem="B0h-ox-sEc" secondAttribute="height" multiplier="125:22" id="y6Z-pj-52c"/>
                                 </constraints>
                             </view>

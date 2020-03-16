@@ -704,8 +704,12 @@
                                             <constraint firstAttribute="bottom" secondItem="Jnn-2W-4Bc" secondAttribute="bottom" id="IXk-AU-nTj"/>
                                             <constraint firstItem="Jnn-2W-4Bc" firstAttribute="leading" secondItem="50t-CK-HSs" secondAttribute="leading" id="K8p-uM-zuw"/>
                                             <constraint firstAttribute="trailing" secondItem="u7R-jE-8UZ" secondAttribute="trailing" id="O9a-uX-LBA"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jnn-2W-4Bc" secondAttribute="trailing" id="Ujd-8r-KLT"/>
+                                            <constraint firstItem="Jnn-2W-4Bc" firstAttribute="leading" secondItem="50t-CK-HSs" secondAttribute="leading" id="Xja-b4-UzX"/>
+                                            <constraint firstItem="Jnn-2W-4Bc" firstAttribute="top" secondItem="u7R-jE-8UZ" secondAttribute="bottom" constant="15" id="ZUx-X7-qHS"/>
                                             <constraint firstItem="u7R-jE-8UZ" firstAttribute="leading" secondItem="50t-CK-HSs" secondAttribute="leading" id="icg-Te-Hfl"/>
                                             <constraint firstAttribute="trailing" secondItem="Jnn-2W-4Bc" secondAttribute="trailing" id="kxB-ji-shN"/>
+                                            <constraint firstAttribute="bottom" secondItem="Jnn-2W-4Bc" secondAttribute="bottom" id="qHu-Mw-ZRX"/>
                                             <constraint firstItem="u7R-jE-8UZ" firstAttribute="top" secondItem="50t-CK-HSs" secondAttribute="top" constant="46" id="sfF-su-3Pc"/>
                                             <constraint firstItem="Sbn-yK-z44" firstAttribute="top" secondItem="50t-CK-HSs" secondAttribute="top" id="yZy-aM-A08"/>
                                         </constraints>
